@@ -1,0 +1,2872 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Logo-favicon.ico/icon_636942875389538576.ico" rel="Shortcut Icon">
+
+
+    <title>Trang chủ kh&#225;ch sạn</title>
+
+
+    <link href="/Content/slider-pro.min.css" rel="stylesheet" />
+
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+    <script src="/Scripts/modernizr-2.8.3.js"></script>
+
+
+    <!-- Font-->
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/dalat_font.css" rel="stylesheet">
+    <link href="/Content/ionicons.min.css" rel="stylesheet" />
+    <link href="/Content/footer.css" rel="stylesheet" />
+    <!-- CSS -->
+    <link href="/Content/hotel-all-fonts.css" rel="stylesheet" />
+    <link href="/Content/hotel-child/book-table.css" rel="stylesheet" />
+    <link href="/Content/hotel-child/bootstrap-datepicker.css" rel="stylesheet" />
+    <!-- owl carousel styles-->
+    <link href="/Content/hotel-child/owl.carousel.css" rel="stylesheet" />
+    <link href="/Content/hotel-child/owl.transitions.css" rel="stylesheet" />
+    <!-- magnific popup styles -->
+
+    <!-- animation styles -->
+    <link href="/Content/hotel-child/animate.css" rel="stylesheet" />
+
+
+    <link href="/Content/style.css" rel="stylesheet" />
+
+
+
+
+    <!-- CSS Slide Banner -->
+    <link href="/Content/hotel-child/nivo-slider.css" rel="stylesheet" />
+    <!-- CSS Room List-->
+    <!-- CSS Image Hotel-->
+    <link href="/Content/hotel-child/images-hotel.css" rel="stylesheet" />
+    <!-- Css Menu-->
+    <link href="/Content/hotel-child/styles-menu.css" rel="stylesheet" />
+    <!-- comment css-->
+    <link href="/Content/hotel-child/sliders.css" rel="stylesheet" />
+    <link href="/Content/magnific-popup.css" rel="stylesheet" />
+    <link href="/Content/login.css" rel="stylesheet" />
+    <link href="/Content/iCheck/minimal.css" rel="stylesheet" />
+    <link href="/Content/hcm/custombootrap.css" rel="stylesheet" />
+    <link href="/Content/hcm/custom-language.css" rel="stylesheet" />
+
+
+    <link href="/Content/home-toppage.css" rel="stylesheet" />
+    <link href="/Content/stylehcm.css" rel="stylesheet" />
+    <link href="/Content/newstylehcm.css" rel="stylesheet" />
+    <link href="/Content/style.qnm.css" rel="stylesheet" />
+    <!-- JS -->
+    <script src="/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="/Scripts/hotel-child/jquery-ui-1.10.0.min.js"></script>
+    <script src="/Scripts/hotel-child/images-hotel.js"></script>
+    <script src="/Scripts/hotel-child/bootstrap-datepicker.js"></script>
+    <script src="/Scripts/hotel-child/owl.carousel.js"></script>
+    <script src="/Scripts/hotel-child/jquery.magnific-popup.js"></script>
+    <script src="/Scripts/bootstrap.js"></script>
+    <!-- script menu-->
+    <!-- JS Slide Banner -->
+    <script src="/Scripts/hotel-child/jquery.nivo.slider.pack.js"></script>
+
+    <script src="/Scripts/icheck.min.js"></script>
+    <script src="/Scripts/Utilities/badwords.js"></script>
+    <script src="/Scripts/jquery.simpleWeather.min.js"></script>
+    <script src="/Scripts/wow.min.js"></script>
+    <script src="/Scripts/unveil2.min.js"></script>
+    <script src="/Scripts/jquery.scrollUp.js"></script>
+    <script src="/Scripts/swiper.min.js"></script>
+    <script src="/Scripts/moment.min.js"></script>
+    <script src="/Scripts/custom-fun.js"></script>
+    <script src="/Scripts/respond.js"></script>
+    <script src="/Scripts/bootbox.min.js"></script>
+</head>
+
+<body id="bodychild" class="layout-6">
+    <!-- HEADER -->
+
+    <header id="banner" role="banner">
+        <div class="header-toolbar-app">
+            <div class="container">
+                <div class="col-md-16">
+                    <div id="toppage-header">
+                        <div class="hidden-xs date_time_sys col-md-8 col-sm-8">
+
+
+                            <span id="weather"></span>
+                            <script>
+                                $(document).ready(function() {
+                                    callAjax();
+                                    //jQuery.simpleWeather({
+                                    //  woeid: '',
+                                    // unit: 'c',
+                                    // success: function (weather) {
+                                    //    var html = '<i class="icon-' + weather.code + '"></i> <span class="data">' + weather.city +
+                                    //       ', ' + weather.region + ' ' + weather.temp + '&deg;' +
+                                    //       weather.units.temp + ' </span>';
+
+                                    //   var rootWeather = jQuery('body').find('#weather');
+                                    //  rootWeather.html(html);
+                                    //},
+                                    // error: function (error) {
+                                    //  var rootWeather = jQuery('body').find('#weather');
+                                    //  rootWeather.html('<p>' + error + '</p>');
+                                    //}
+                                    // });
+
+
+                                    function callAjax() {
+                                        $.ajax({
+                                            type: 'POST',
+                                            url: '/Modules/Utilities/GetWeathers',
+                                            data: {
+                                                UnitCode: 'QNM'
+                                            },
+                                            success: function(weather) {
+                                                //console.log(weather);
+                                                if (weather.list != null) {
+                                                    var html = '<img src="https://myquangnam.vn/Images/weathericon/' + weather.list[0].weather[0].icon + '.png" style="width:22px;height:22px"> <span class="data">' +
+                                                        Math.round(weather.list[0].main.temp_min) + '&deg;C </span>';
+                                                    var rootWeather = jQuery('body').find('#weather');
+                                                    rootWeather.html(html);
+                                                }
+
+                                            },
+                                            error: function(error) {
+                                                var rootWeather = jQuery('body').find('#weather');
+                                                rootWeather.html('<p>' + error + '</p>');
+                                            }
+                                        })
+                                    }
+
+                                });
+                            </script>
+
+                            <i class="ion-clock"></i><span id="time-date"></span>
+                        </div>
+                        <div id="" class="hidden-xs col-md-4 col-sm-4">
+                            <form action="/Modules/Home/SearchAll" autocomplete="off" method="post"> <input name="DisplayName" style="color: black; border-radius: 3px; border: 1px solid white; width: 100%; padding: 2px 5px; font-weight: 400; height: 21px;" type="text" />
+                                <button type="submit" style="position: absolute; right: 0; top: 0; padding-top: 4px; height: 21px; border-radius: 0 3px 3px 0; line-height: 13px;" class="btn btn-sm btn-search"><i class="ion-search"></i></button>
+                            </form>
+                        </div>
+                        <div id="login-system" class="col-md-2 col-sm-2 col-xs-8">
+                            <span id="login-btn">
+                            <span class="ion-locked dropdown nav-user">
+                                    <span data-toggle="dropdown" class="dropdown-toggle">dinhchau.qnm</span>
+                            <ul class="dropdown-menu fui-gray list-unstyled menu_login">
+                                <li class="inline_block">
+                                    <a href="#">
+                                        <img width="34" height="34" src="/Images/NoImage/WhiteBackground/NoImage300x200.png" class="fleft img-circle">
+                                        <b>dinhchau.qnm</b>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/accountprofile/?active=plan">
+                                        <i class="ion-clipboard"></i> Lịch trình
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/accountprofile/?active=booking">
+                                        <i class="ion-navicon-round"></i> Đặt phòng
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/accountprofile/?active=love">
+                                        <i class="ion-heart"></i> Yêu thích
+                                    </a>
+                                </li>
+                                <li><a href='http://myquangnam.vn/vi/accountprofile'><i class="ion-person"></i>Tài khoản</a></li>
+                                <li class="divider"></li>
+                                <form action="/Modules/Home/LogOff" autocomplete="off" method="post"><input name="__RequestVerificationToken" type="hidden" value="Mk7QnflN6IcJpyk9oWNRSYqVyVzaE_zBPRYy5zkyrI-6se9QDUdwIOuC8b6k9YtXkDctRFChvdze23phNkmZehkCmDS8cdAOCB9XyZsA6gxs6wmXO-MKzon6QOyjrUCS5IJOY2W139zNw6b6eZHUlHc9BOGN9IkRd-Q5rDlaQx-8J4-ob2CZLw82vjSOH3s90"
+                                    />
+                                    <li class="last">
+                                        <button type="submit"><i class="ion-log-out"></i> Đăng xuất</button>
+                                    </li>
+                                </form>
+                            </ul>
+                            </span>
+                            </span>
+                        </div>
+                        <div id="language-system" class="col-md-2 col-sm-2 col-xs-8">
+                            <a href="http://myquangnam.vn/en/hanksnlantanahoian">
+                                <img src="/Images/language/en.png" />
+                            </a>
+                            <a href="http://myquangnam.vn/vi/hanksnlantanahoian">
+                                <img src="/Images/language/vi.png" />
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header toolbar end -->
+
+        <div class="sticky-header">
+            <nav id="menu-home">
+                <div class="container menu-home-inner">
+                    <a class="logo" href="http://myquangnam.vn/vi/home">
+                        <img alt="Cổng TTĐT Du Lịch" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/superadminportal.qnm/Logo/logo512_637068974595415237.png" class="img-responsive">
+
+                    </a>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="ion-navicon-round"></span> </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav" role="menubar" id="m-menubar">
+
+
+                            <li class="dropdown ">
+                                <a class="dropbtn" href="http://myquangnam.vn/vi/news">Tin tức<span class="caret"></span></a>
+                                <ul class="dropdown-content">
+                                    <li>
+                                        <a href="http://myquangnam.vn/vi/baiviet">Tin tức</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://myquangnam.vn/vi/events">Sự kiện nổi bật</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://myquangnam.vn/vi/introduction">Về Quảng Nam</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown ">
+                                <a class="dropbtn" href="http://myquangnam.vn/vi/places">Địa điểm<span class="caret"></span></a>
+                                <ul class="dropdown-content">
+                                    <li>
+                                        <a href="http://myquangnam.vn/vi/places/?ps=2">Địa điểm nổi bật</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://myquangnam.vn/vi/places/?ps=1">Địa điểm tiềm năng</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a href="http://myquangnam.vn/vi/business">Tour</a>
+                            </li>
+                            <li class="">
+                                <a href="http://myquangnam.vn/vi/restaurants">Ẩm thực</a>
+                            </li>
+                            <li class="">
+                                <a href="http://myquangnam.vn/vi/hotels">Lưu tr&#250;</a>
+                            </li>
+                            <li class="">
+                                <a href="http://myquangnam.vn/vi/detailutilities/?id=3752&child=3755">Di chuyển</a>
+                            </li>
+                            <li class="">
+                                <a href="http://myquangnam.vn/vi/shops">Mua sắm</a>
+                            </li>
+                            <li class="">
+                                <a href="http://myquangnam.vn/vi/entertainments">Giải tr&#237;</a>
+                            </li>
+                            <li class="">
+                                <a href="http://myquangnam.vn/vi/utilities">Tiện &#237;ch</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+
+        </div>
+
+        <div class="new_hcm_menu hidden-xs">
+            <div class="container">
+                <ul>
+                    <li class="hm_sub1">
+                        <a href="http://myquangnam.vn/vi/tours">
+                            <span>Về Quảng Nam</span>
+                        </a>
+                    </li>
+                    <li class="hm_sub2">
+                        <a href="http://myquangnam.vn/vi/videos">
+                            <span>Video</span>
+                        </a>
+                    </li>
+                    <li class="hm_sub3">
+                        <a href="http://myquangnam.vn/vi/gallery">
+                            <span>Thư viện ảnh</span>
+                        </a>
+                    </li>
+                    <li class="hm_sub3">
+                        <a href="#">
+                            <span>Diễn đàn</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- END HEADER -->
+
+
+
+    <div class="container mg-top-50">
+        <nav class="breadcrumb box_radius_border bg-white padding-10">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="http://myquangnam.vn/vi/home">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a class="text-info" href="http://myquangnam.vn/vi/hotels">Khách sạn</a></li>
+                <li class="breadcrumb-item active"><a class="text-info" href="http://myquangnam.vn/vi/hanksnlantanahoian"><span id="hotelName"></span></a></li>
+            </ol>
+        </nav>
+    </div>
+    <!-- SLIDER -->
+    <div id="outerslider">
+        <div class="container">
+            <div id="slidercontainer">
+                <!-- jQuery nivo Slider -->
+                <section id="slider" class="box_radius_border bg-white">
+                    <div id="slidernivo" class="nivoSlider">
+                        <img style="width: 1116px; height: 331px" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/Lantana%20Riverside/Silde/105440131_636918280534242504_636929518637703486.jpg" />
+                        <img style="width: 1116px; height: 331px" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/Lantana%20Riverside/Silde/107653748_636918280535574671_636929518638413490.jpg" />
+                        <img style="width: 1116px; height: 331px" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/Lantana%20Riverside/Silde/107653842_636918280536424738_636929518638993421.jpg" />
+                        <img style="width: 1116px; height: 331px" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/Lantana%20Riverside/Silde/139477850_636918280537644834_636929518639574366.jpg" />
+                    </div>
+                    <div id="1" class="nivo-html-caption"></div>
+                </section>
+                <div class="slider-title hidden-xs">
+                    <div class="row">
+                        <div class="col-md-16">
+                            <form action="/Modules/HotelChild/SubmitSearch" autocomplete="off" id="form-check-toppage" method="post"><input name="__RequestVerificationToken" type="hidden" value="SAz2sDaieEfZnR4Mjrn4tCm2PmZJEAKiZO_sfJZTADdMqQzaSW9nU2q0SDoTtv_TjVj6qtHs_GBqJ2uxj-DcnnzBKdLGeGWIawtF9yZhXuIL0CnXaEhJfRX1dmP9SujQYh0E9l4j8x9bDoc7dWuQwbtfxMfvSRgsY_IoRVgHX58GXAqsA_OBm4C-ny84tuqq0"
+                                />
+                                <div class="row">
+                                    <div class="col-md-offset-2 col-sm-6 col-md-4">
+                                        <div class="form-group">
+                                            <label for="check_in_toppage">Ngày nhận</label>
+                                            <input type="text" class="form-control date-pick" id="check_in_toppage" name="check_in_toppage" value="05/10/2021" required />
+                                            <span class="ficon ficon-topic-calendar"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                        <div class="form-group">
+                                            <label for="check_out_toppage">Ngày trả</label>
+                                            <input type="text" class="form-control date-pick" id="check_out_toppage" name="check_out_toppage" value="06/10/2021" required />
+                                            <span class="ficon ficon-topic-calendar"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-4">
+                                        <div class="form-group">
+                                            <label></label>
+                                            <input type="submit" id="check-available-room" value="Tìm kiếm" class="btn btn-block btn-primary">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <script type="text/javascript">
+                    $(window).on("load", function() {
+                        jQuery('#slidernivo').nivoSlider({
+                            directionNav: false,
+                            controlNav: true,
+                            effect: 'random',
+                            slices: 15,
+                            boxCols: 8,
+                            boxRows: 4,
+                            animSpeed: 500,
+                            pauseTime: 6000
+                        });
+                    });
+                </script>
+            </div>
+
+
+
+            <div id="sub-info-slider">
+                <div class="row">
+                    <div class="col-md-7 col-sm-8 col-xs-8">
+                        <div class="sub-info-child">
+                            <i class="ficon footericon ficon-map-pin-fat"></i> 52 Huyền Tr&#226;n C&#244;ng Ch&#250;a Phường Cẩm Ch&#226;u, TP Hội An, Tỉnh Quảng Nam
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-8 col-xs-8">
+                        <div class="sub-info-child second-sub">
+                            <i class="ficon footericon ficon-room-promotion-for-mobiledeal"></i> 2353937668
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-8 col-xs-8">
+                        <div class="sub-info-child last">
+                            <i class="ficon footericon  ficon-email-envelope"></i> sales@lantanariverside.com
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-8 col-xs-8">
+                        <div class="btnCustom-htc">
+                            <a style="color:#ffffff" href="http://myquangnam.vn/vi/hanksnlantanahoian/bookinghotel">Đặt phòng</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- END MAIN CONTENT -->
+    <div id="outerafterheader" class="bg-white padding-tb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 wow fadeInTop animated" style="visibility: visible; animation-name: fadeInLeft;">
+                    <div class="logo-hotel">
+                        <img alt="Cổng TTĐT Du Lịch" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/superadminportal.qnm/Logo/logo512_637068974595415237.png" onerror="this.src='/Images/general/layout_set_logo.png'">
+                    </div>
+                    <h1 class="hotel-name">
+                        Kh&#225;ch sạn Lantana Riverside
+                        <p style="text-align: center;">
+                            <span class='ficon ficon-hotel-star stars'></span><span class='ficon ficon-hotel-star stars'></span><span class='ficon ficon-hotel-star stars'></span><span class='ficon ficon-hotel-star stars'></span> </p>
+                    </h1>
+                    <h2 class="title-hotel">Giới thiệu</h2>
+                    <div id="introduction-slider" class="owl-carousel owl-theme" style="padding-bottom: 20px;">
+                        <p style="padding: 0 35px; text-align: justify;">Lantana Riverside Hoi An Boutique Hotel &amp; Spa cung cấp chỗ ở ven s&#244;ng tại th&#224;nh phố Hội An. Kh&#225;ch sạn c&#243; hồ bơi ngo&#224;i trời v&#224; du kh&#225;ch c&#243; thể d&#249;ng bữa tại nh&#224; h&#224;ng trong
+                            khu&#244;n vi&#234;n hoặc nh&#226;m nhi đồ uống ở quầy bar. Wi-Fi được cung cấp miễn ph&#237; trong to&#224;n bộ khu&#244;n vi&#234;n. Lantana Riverside Hoi An Boutique Hotel &amp; Spa nằm trong b&#225;n k&#237;nh 1 ...</p>
+                        <p style="padding: 0 35px; text-align: justify;">km từ Hội qu&#225;n Hải Nam v&#224; 1,1 km từ Hội qu&#225;n Ph&#250;c Kiến. Bảo t&#224;ng lịch sử Hội An c&#225;ch kh&#225;ch sạn 1,5 km. S&#226;n bay gần nhất l&#224; s&#226;n bay quốc tế Đ&#224; Nẵng, c&#225;ch đ&#243; 24 km.
+                            Dịch vụ đưa đ&#243;n s&#226;n bay được cung cấp với một khoản phụ ph&#237;. Mỗi ph&#242;ng nghỉ tại kh&#225;ch sạn n&#224;y đều được trang bị m&#225;y điều h&#242;a v&#224; TV m&#224;n ...</p>
+                        <p style="padding: 0 35px; text-align: justify;">h&#236;nh phẳng. Đồ vệ sinh c&#225; nh&#226;n miễn ph&#237; v&#224; m&#225;y sấy t&#243;c cũng được cung cấp nhằm đem lại sự thoải m&#225;i cho du kh&#225;ch. Du kh&#225;ch c&#243; thể đến lễ t&#226;n 24 giờ để thu xếp c&#225;c
+                            dịch vụ thu đổi ngoại tệ, đặt tour du lịch, đặt v&#233; v&#224; trợ gi&#250;p đặc biệt. Kh&#225;ch sạn cũng cung cấp dịch vụ giữ trẻ v&#224; c&#243; b&#225;c sỹ theo y&#234;u ...</p>
+                        <p style="padding: 0 35px; text-align: justify;">cầu ngay trong khu&#244;n vi&#234;n. Du kh&#225;ch c&#242;n c&#243; thể thu&#234; xe đạp để kh&#225;m ph&#225; khu vực xung quanh. Ngo&#224;i ra, du kh&#225;ch c&#243; thể tận hưởng c&#225;c liệu ph&#225;p spa v&#224; m&#225;t-xa
+                            tại Lantana Spa. Nh&#224; h&#224;ng Lantana phục vụ đủ loại m&#243;n ăn cả ng&#224;y, bao gồm ẩm thực địa phương v&#224; quốc tế. Cẩm Ch&#226;u l&#224; lựa chọn tuyệt vời cho du kh&#225;ch th&#237;ch&#160;biển,&#160;thư gi&#227;n&#160;v&#224;&#160;mua
+                            sắm. C&#225;c cặp đ&#244;i ...</p>
+                        <p style="padding: 0 35px; text-align: justify;">đặc biệt th&#237;ch địa điểm n&#224;y — họ cho điểm&#160;8,5&#160;cho kỳ nghỉ d&#224;nh cho 2 người. Chỗ nghỉ n&#224;y cũng được đ&#225;nh gi&#225; l&#224; đ&#225;ng gi&#225; tiền nhất ở Hội An! Kh&#225;ch sẽ tiết kiệm được nhiều
+                            hơn so với nghỉ tại những chỗ nghỉ kh&#225;c ở th&#224;nh phố n&#224;y. Ch&#250;ng t&#244;i sử dụng ng&#244;n ngữ của bạn! </p>
+
+                    </div>
+                </div>
+
+                <div class="images-column col-md-9">
+                    <div id="slider-booking" class="slider-pro">
+                        <div class="sp-slides">
+                            <div class="sp-slide">
+                                <img class="sp-image" data-src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/SUA/10/4/139477850_636918280537644834_636929517706871108_636932523753563824.jpg" />
+                            </div>
+                            <div class="sp-slide">
+                                <img class="sp-image" data-src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/SUA/10/4/107653842_636918280536424738_636929517706135134_636932523752783451.jpg" />
+                            </div>
+                            <div class="sp-slide">
+                                <img class="sp-image" data-src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/SUA/10/4/107653748_636918280535574671_636929517705335164_636932523752043465.jpg" />
+                            </div>
+                            <div class="sp-slide">
+                                <img class="sp-image" data-src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/SUA/10/4/105440131_636918280534242504_636929517704494784_636932523751093380.jpg" />
+                            </div>
+                            <div class="sp-slide">
+                                <img class="sp-image" data-src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/SUA/10/4/194410137_636918280540295177_636929517708295906_636932523754963700.jpg" />
+                            </div>
+                            <div class="sp-slide">
+                                <img class="sp-image" data-src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/SUA/10/1/137347596_636918272979797846_636929511642085090_636932519597957319.jpg" />
+                            </div>
+                            <div class="sp-slide">
+                                <img class="sp-image" data-src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/SUA/10/1/137348394_636918272980198725_636929511642795257_636932519598587338.jpg" />
+                            </div>
+                            <div class="sp-slide">
+                                <img class="sp-image" data-src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/SUA/10/1/137346550_636929511641432201_636932519597227435.jpg" />
+                            </div>
+                            <div class="sp-slide">
+                                <img class="sp-image" data-src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/SUA/10/1/103697855_636918272979337700_636929511640782148_636932519596437426.jpg" />
+                            </div>
+                            <div class="sp-slide">
+                                <img class="sp-image" data-src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/SUA/10/2/137346012_636918267387845932_636929513050119500_636932520318813512.jpg" />
+                            </div>
+                        </div>
+                        <div class="sp-thumbnails">
+                            <img class="sp-thumbnail" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\duanph.qnm\V%20.%20ANH\SUA\10\4\thumb\139477850_636918280537644834_636929517706871108_636932523753563824.jpg" />
+                            <img class="sp-thumbnail" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\duanph.qnm\V%20.%20ANH\SUA\10\4\thumb\107653842_636918280536424738_636929517706135134_636932523752783451.jpg" />
+                            <img class="sp-thumbnail" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\duanph.qnm\V%20.%20ANH\SUA\10\4\thumb\107653748_636918280535574671_636929517705335164_636932523752043465.jpg" />
+                            <img class="sp-thumbnail" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\duanph.qnm\V%20.%20ANH\SUA\10\4\thumb\105440131_636918280534242504_636929517704494784_636932523751093380.jpg" />
+                            <img class="sp-thumbnail" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\duanph.qnm\V%20.%20ANH\SUA\10\4\thumb\194410137_636918280540295177_636929517708295906_636932523754963700.jpg" />
+                            <img class="sp-thumbnail" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\duanph.qnm\V%20.%20ANH\SUA\10\1\thumb\137347596_636918272979797846_636929511642085090_636932519597957319.jpg" />
+                            <img class="sp-thumbnail" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\duanph.qnm\V%20.%20ANH\SUA\10\1\thumb\137348394_636918272980198725_636929511642795257_636932519598587338.jpg" />
+                            <img class="sp-thumbnail" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\duanph.qnm\V%20.%20ANH\SUA\10\1\thumb\137346550_636929511641432201_636932519597227435.jpg" />
+                            <img class="sp-thumbnail" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\duanph.qnm\V%20.%20ANH\SUA\10\1\thumb\103697855_636918272979337700_636929511640782148_636932519596437426.jpg" />
+                            <img class="sp-thumbnail" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\duanph.qnm\V%20.%20ANH\SUA\10\2\thumb\137346012_636918267387845932_636929513050119500_636932520318813512.jpg" />
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <!-- Tien ich 3 Tab -->
+    <div id="outerbottom">
+        <div id="bottomcontainer">
+            <div class="container">
+                <div class="wow fadeInLeft">
+                    <ul class="nav nav-tabs">
+                        <li class="col-xs-8 col-sm-8 active"><a data-toggle="tab" href="#HotelService">Dịch vụ</a></li>
+                        <li class="col-xs-8 col-sm-8"><a data-toggle="tab" href="#Policy">Chính sách</a></li>
+                    </ul>
+
+                    <div class="tab-content box_radius_border bg-white">
+                        <div id="HotelService" class="col-xs-16 tab-pane fade in wow fadeInDown animated active">
+                            <ul class="amenities-list">
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-free-wifi-in-all-rooms" style="color:#2486c8;"></i> <span>Miễn ph&#237; wifi tất cả c&#225;c ph&#242;ng</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-wifi-in-public-areas" style="color:#2486c8;"></i> <span>Wifi c&#244;ng cộng</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-portable-wifi-rental" style="color:#2486c8;"></i> <span>Cho thu&#234; wifi bỏ t&#250;i</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-car-park-onsite" style="color:#69c824;"></i> <span>B&#227;i đậu xe [tại chỗ]</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-valet-parking" style="color:#69c824;"></i> <span>B&#227;i đậu xe c&#243; nh&#226;n vi&#234;n</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-shuttle-service" style="color:#69c824;"></i> <span>Xe đưa đ&#243;n</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-car-park-free-charge" style="color:#69c824;"></i> <span>B&#227;i đậu xe miễn ph&#237;</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-car-park-free-charge" style="color:#69c824;"></i> <span>B&#227;i đậu xe [miễn ph&#237;]</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-car-park" style="color:#69c824;"></i> <span>B&#227;i đổ xe</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-massage" style="color:#24c88d;"></i> <span>Dịch vụ Spa</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-indoor-poor" style="color:#24c88d;"></i> <span>Hồ bơi trong nh&#224;</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-towels" style="color:#c88824;"></i> <span>Khăn tắm</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-hair-dryer" style="color:#c88824;"></i> <span>M&#225;y sấy t&#243;c</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-complimentary-bottled-water" style="color:#c88824;"></i> <span>Nước đ&#243;ng chai miễn ph&#237;</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-bathrobes" style="color:#c88824;"></i> <span>&#193;o cho&#224;ng tắm</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-air-conditioning" style="color:#c88824;"></i> <span>M&#225;y điều h&#242;a</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-telephone" style="color:#c88824;"></i> <span>Điện thoại</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-tv" style="color:#c88824;"></i> <span>Tivi</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-mini-bar" style="color:#c88824;"></i> <span>Quầy bar mini</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-desk" style="color:#c88824;"></i> <span>B&#224;n</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-bathtub" style="color:#c88824;"></i> <span>Bồn tắm nước n&#243;ng</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-laptop-safe-box" style="color:#c88824;"></i> <span>K&#233;t an to&#224;n cho laptop</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-bathrooms" style="color:#c88824;"></i> <span>Ph&#242;ng tắm chung</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-alarm-clock" style="color:#c88824;"></i> <span>Đồng hồ b&#225;o thức</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-fire-extinguisher" style="color:#c88824;"></i> <span>B&#236;nh chữa ch&#225;y</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-wifi" style="color:#c88824;"></i> <span>Internet kh&#244;ng d&#226;y (miễn ph&#237;)</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-blackout-curtains" style="color:#c88824;"></i> <span>M&#224;n r&#232;m cửa</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-tv" style="color:#c88824;"></i> <span>Tivi m&#224;n h&#236;nh phẳng</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-blackout-curtains" style="color:#c88824;"></i> <span>R&#232;m chắn</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-slippers" style="color:#c88824;"></i> <span>D&#233;p</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-tv" style="color:#c88824;"></i> <span>Truyền h&#236;nh vệ tinh/ c&#225;p</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-carpeting" style="color:#c88824;"></i> <span>Thảm</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-shower" style="color:#c88824;"></i> <span>V&#242;i hoa sen</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-free-breakfast" style="color:#243ec8;"></i> <span>Bữa s&#225;ng [miễn ph&#237;]</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-shops" style="color:#243ec8;"></i> <span>Cửa h&#224;ng tiện lợi</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-refrigerator" style="color:#243ec8;"></i> <span>Tủ lạnh</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-coffee-tea-maker" style="color:#243ec8;"></i> <span>M&#225;y pha tr&#224;/c&#224; ph&#234;</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-express-check-in-check-out" style="color:#8a24c8;"></i> <span>Nhận/trả ph&#242;ng (ri&#234;ng)</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-lockers" style="color:#8a24c8;"></i> <span>K&#233;t sắt</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-salon" style="color:#8a24c8;"></i> <span>Dịch vụ l&#224;m đẹp</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-buzzer-wireless-intercom" style="color:#8a24c8;"></i> <span>Chu&#244;ng b&#225;o/li&#234;n lạc kh&#244;ng d&#226;y</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-laundromat" style="color:#8a24c8;"></i> <span>Tiệm giặt quần &#225;o</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-dryer" style="color:#8a24c8;"></i> <span>Giặt kh&#244;</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-daily-housekeeping" style="color:#8a24c8;"></i> <span>Dịch vụ ph&#242;ng h&#224;ng ng&#224;y</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-lockers" style="color:#8a24c8;"></i> <span>Tủ đựng đồ an to&#224;n</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-laundry-service" style="color:#8a24c8;"></i> <span>Dịch vụ giặt l&#224;</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-wake-up-service" style="color:#8a24c8;"></i> <span>B&#225;o thức</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-luggage-storage" style="color:#8a24c8;"></i> <span>Giữ h&#224;nh l&#253;</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-concierge" style="color:#8a24c8;"></i> <span>Nh&#226;n vi&#234;n hướng dẫn</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-24hour-check-in" style="color:#c82424;"></i> <span>Nhận ph&#242;ng (24h)</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-24hour-security" style="color:#c82424;"></i> <span>An ninh (24h)</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-facilities-for-disabled-guests" style="color:#c82424;"></i> <span>Tiện nghi cho người khuyết tật</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-24hour-frontdesk" style="color:#c82424;"></i> <span>Quầy lễ t&#226;n (24h)</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-shower" style="color:#c82424;"></i> <span>V&#242;i hoa sen</span>
+                                </li>
+                                <li class="col-xs-8 col-sm-4 ng-scope">
+                                    <i class="ficon ficon-pets-allowed" style="color:#c82424;"></i> <span>Cho ph&#233;p mang vật nu&#244;i</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="Policy" class="tab-pane">
+                            <div class="col-xs-16 tab-pane fade in wow fadeInDown animated active">
+                                <p><em><strong>I/ Ch&iacute;nh s&aacute;ch trẻ em</strong></em></p>
+
+                                <p>&nbsp;Trẻ em v&agrave; giường phụ</p>
+
+                                <p>&nbsp;Giường phụ t&ugrave;y thuộc v&agrave;o loại ph&ograve;ng bạn chọn, xin vui l&ograve;ng kiểm tra th&ocirc;ng tin ph&ograve;ng để biết th&ecirc;m chi tiết.</p>
+
+                                <p>&nbsp;Tất cả trẻ em đều được ch&agrave;o đ&oacute;n.</p>
+
+                                <p><em><strong>II/ Độ tuổi của kh&aacute;ch với ch&iacute;nh s&aacute;ch giường phụ v&agrave; phụ ph&iacute; ăn s&aacute;ng</strong></em></p>
+
+                                <p>&nbsp;- Trẻ em 0-12 tuổi: Ở miễn ph&iacute; nếu sử dụng giường c&oacute; sẵn.</p>
+
+                                <p>&nbsp;Nếu cần một giường phụ th&igrave; sẽ phụ thu th&ecirc;m.</p>
+
+                                <p>&nbsp;- Những kh&aacute;ch từ 13 tuổi trở l&ecirc;n t&iacute;nh l&agrave; người lớn;</p>
+
+                                <p>&nbsp;Cần đặt th&ecirc;m một giường phụ v&agrave; sẽ phụ thu th&ecirc;m. (Vui l&ograve;ng li&ecirc;n hệ lễ t&acirc;n để biết th&ecirc;m chi tiết)</p>
+
+                                <p>Phụ ph&iacute; ăn s&aacute;ng cho trẻ em: Vui l&ograve;ng li&ecirc;n hệ quầy lễ t&acirc;n.</p>
+
+                                <p><em><strong>III/ Quy định kh&aacute;c</strong></em></p>
+
+                                <p>&nbsp;Khi đặt tr&ecirc;n 5 ph&ograve;ng, ch&iacute;nh s&aacute;ch v&agrave; điều khoản bổ sung c&oacute; thể được &aacute;p dụng.</p>
+
+                                <p><em><strong>IV/ Thời gian nhận ph&ograve;ng v&agrave; trả ph&ograve;ng</strong></em></p>
+
+                                <p>&nbsp;Nhận ph&ograve;ng từ: 14:00</p>
+
+                                <p>&nbsp;Trả ph&ograve;ng đến: 12:00</p>
+
+                                <p>&nbsp;Quầy tiếp t&acirc;n mở cửa đến: 00:00</p>
+
+                                <p><em><strong>V/ Di chuyển</strong></em></p>
+
+                                <p>&nbsp;Ph&iacute; đưa đ&oacute;n s&acirc;n bay: Vui l&ograve;ng li&ecirc;n hệ quầy lễ t&acirc;n</p>
+
+                                <p>&nbsp;Thời gian đến s&acirc;n bay (ph&uacute;t): 40</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Het tien ich 4 tab -->
+    <div class="clearfix"></div>
+
+    <!-- Danh sach phong -->
+    <style>
+        #outerbottom .row {
+            margin-left: 0 !important;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+    <div id="outerbottom">
+        <div id="bottomcontainer">
+            <div class="container" id="rooms">
+                <div class="col-md-16 box_radius_border bg-white rooms-inner">
+                    <div class="animate-in fadeInTop" data-speed="0.7" data-show-screen="0.7">
+                        <div class="main_title text-center">
+
+                            <h1>Khám phá phòng</h1>
+                            <p>
+                                Đặt phòng để có không gian nghỉ ngơi và thư giãn thật hạnh phúc bên người thân và gia đình
+                            </p>
+                        </div>
+                    </div>
+                    <div class="animate-in fadeInLeft" data-speed="0.7" data-show-screen="0.7">
+                        <!-- Phan khong truot -->
+                        <div class="col-md-4 col-sm-8 wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft; padding-bottom: 5px;">
+                            <div class="room_item">
+                                <div class="img_zoom">
+                                    <a href="http://myquangnam.vn/vi/hanksnlantanahoian/bookinghotel?roomkind=20&roomtype=76"><img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/Lantana%20Riverside/Avata%20Room/3_636929509895030690.jpg" alt="" class="img-responsive"></a>
+                                </div>
+                                <h4 class="room_name">
+                                    <span class="pull-right price">
+2.000.000đ
+
+                                                                                    <em>/1 đêm</em>
+                                                                                </span>
+                                    <span class="name">Ph&#242;ng cao cấp nhất (Suite) 1 giường đ&#244;i</span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-8 wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft; padding-bottom: 5px;">
+                            <div class="room_item">
+                                <div class="img_zoom">
+                                    <a href="http://myquangnam.vn/vi/hanksnlantanahoian/bookinghotel?roomkind=6&roomtype=78"><img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/Lantana%20Riverside/Avata%20Room/4_636929509895422962.jpg" alt="" class="img-responsive"></a>
+                                </div>
+                                <h4 class="room_name">
+                                    <span class="pull-right price">
+1.700.000đ
+
+                                                                                    <em>/1 đêm</em>
+                                                                                </span>
+                                    <span class="name">Ph&#242;ng sang trọng (Deluxe) 2 giường đơn</span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-8 wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft; padding-bottom: 5px;">
+                            <div class="room_item">
+                                <div class="img_zoom">
+                                    <a href="http://myquangnam.vn/vi/hanksnlantanahoian/bookinghotel?roomkind=6&roomtype=76"><img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/Lantana%20Riverside/Avata%20Room/2_636929509894680649.jpg" alt="" class="img-responsive"></a>
+                                </div>
+                                <h4 class="room_name">
+                                    <span class="pull-right price">
+1.400.000đ
+
+                                                                                    <em>/1 đêm</em>
+                                                                                </span>
+                                    <span class="name">Ph&#242;ng sang trọng (Deluxe) 1 giường đ&#244;i</span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-8 wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft; padding-bottom: 5px;">
+                            <div class="room_item">
+                                <div class="img_zoom">
+                                    <a href="http://myquangnam.vn/vi/hanksnlantanahoian/bookinghotel?roomkind=20&roomtype=12"><img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/V%20.%20ANH/Lantana%20Riverside/Avata%20Room/1_636929509894247534.jpg" alt="" class="img-responsive"></a>
+                                </div>
+                                <h4 class="room_name">
+                                    <span class="pull-right price">
+4.500.000đ
+
+                                                                                    <em>/1 đêm</em>
+                                                                                </span>
+                                    <span class="name">Ph&#242;ng cao cấp nhất (Suite) 1 giường đ&#244;i v&#224; 1 giường đơn</span>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End row -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hết danh sach phong -->
+    <div class="clearfix"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-16 col-sm-16 wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+                <div class="box_style_1 box_radius_border bg-white padding-tb" id="place_review">
+                    <div class="main_title text-center">
+                        <h1>Nhận xét và đánh giá</h1>
+                    </div>
+                    <div class="row">
+                        <div class="restaurant-reviews-comment">
+                            <div class="col-md-16">
+                                <div class="col-md-3">
+                                    <div class="restaurant-reviews-container">
+                                        <div class="restaurant-reviews">
+                                            <div class="restaurant-reviews-info">
+                                                <span class="restaurant-reviews-title">
+                                            </span>
+                                                <br/>
+                                                <span class="restaurant-reviews-number avg_rate">
+                                            </span>
+                                            </div>
+                                            <svg class="restaurant-reviews-show">
+                                            <circle id="bar-status" r="70" cx="80" cy="80" style="stroke-dashoffset: 43.9823px;"></circle>
+                                        </svg>
+                                            <svg class="restaurant-reviews-disable">
+                                            <circle r="70" cx="80" cy="80"></circle>
+                                        </svg>
+                                        </div>
+                                        <div class="restaurant-reviews-info-tab">
+                                            <div class="text-df">
+                                                <i class="ion-folder"></i>
+                                                <span>Tất cả</span>
+                                            </div>
+                                            <span>
+                                            (Từ tổng số
+                                            <strong class="total_reviews">
+                                            </strong> nhận xét)
+                                        </span>
+                                            <a href="javascript:;" id="show-popup-write-comment" class="reviews-write-comment">
+                                                <i class="ion-edit"></i> Viết nhận xét
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div id="tour_reviews_html"></div>
+                                    <div id="pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-write-comment" class="comment-popup mfp-with-anim mfp-hide">
+
+            <form class="comment-form" id="tour_review_form">
+                <input name="__RequestVerificationToken" type="hidden" value="lmB7i-9tQaB6aEFqFXJCkTu72vV6RmMg6mMU3vgG5Ykckg0zjksWTHK2x68wbd6IY0jSMkNSgQPddwYUGojd6vSjc5ujK933ys1V9xWZQrnsSMlsrAqRY16R0kBrXy33F2ySX4NsdkEO1xg1XO_ve0-R_64Cnb57mMiRnCdcBA9DzG_81i00JjFcJi8CN8i40"
+                />
+                <h3>Nhận xét và đánh giá</h3>
+                <hr>
+                <div class="form-group">
+                    <label>Thang điểm <span class="cls-pointladder">(Kéo hoặc chọn trên thanh trượt)</span></label>
+                    <div id="controller-point" class="slider small sliderColor"></div>
+                    <p id="set-color-text-slider" class="label-point">
+                        điểm:
+                        <span class="sliderPointNumber">10 </span> -
+                        <span class="sliderPointLabel" style="color: #8FC63D">Rất hài lòng</span>
+                    </p>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" required="required" name="RATE" id="point_number" autocomplete="off" maxlength="3" onkeyup="setPointSlider($(this))" class="cls-readonly form-control" />
+                    <div class="cls-pointladder" id="point_number_err"></div>
+                </div>
+                <div class="form-group">
+                    <label>Nội dung</label>
+                    <textarea required name="CONTENT" id="review_text" class="checkbadword form-control" style="height:100px" placeholder="Nhập nội dung nhận xét"></textarea>
+                    <div class="cls-pointladder" id="review_text_err"></div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-16">
+
+                        <div id="recaptcha_tour_review"></div>
+                        <div class="cls-pointladder recaptcha-error-message" style="display: none;">Vui lòng nhập mã xác minh</div>
+
+                        <button type="submit" id="submit-review" class="btn btn-primary btn-outline pull-right btn-lg">Gửi đánh giá</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <input type="hidden" value="HOTEL" name="PLACE_CODE" id="place_code">
+    <input type="hidden" value="1122" name="PLACE_ID" id="place_id">
+    <input type="hidden" value="hanksnlantanahoian" name="subdomain" id="place_subdomain" />
+
+
+    <div class="clearfix"></div>
+    <div class="container">
+
+        <div class="col-md-8">
+
+            <h3 class="map">Bản đồ</h3>
+            <!-- <div id="map-toppage" style="height: 300px; position: relative; overflow: hidden;"></div> -->
+            <div id="div_id" style="height:500px; width:100%" class="box_radius_border"></div>
+
+            <script>
+                function initialize() {
+
+                    var directionsDisplay;
+                    var directionsService = new google.maps.DirectionsService();
+                    var directionsDisplay = new google.maps.DirectionsRenderer();
+                    var Latlng = new google.maps.LatLng(15.875819, 108.345434);
+                    var mapOptions = {
+                        zoom: 15,
+                        center: Latlng,
+                        scrollwheel: false
+                    }
+                    var map = new google.maps.Map(document.getElementById("div_id"), mapOptions);
+
+                    if (navigator.geolocation) {
+                        // timeout at 60000 milliseconds (60 seconds)
+                        var options = {
+                            timeout: 60000
+                        };
+                        //navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
+                        navigator.geolocation.getCurrentPosition(function(position) {
+
+                            var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+                            var request = {
+                                origin: geolocate,
+                                destination: Latlng,
+                                travelMode: 'DRIVING'
+                            };
+                            directionsService.route(request, function(result, status) {
+                                if (status == 'OK') {
+                                    directionsDisplay.setDirections(result);
+                                    directionsDisplay.setMap(map);
+                                }
+                            });
+                        }, function() {
+                            var marker = new google.maps.Marker({
+                                position: Latlng,
+                                map: map
+                            });
+                            map.setCenter(marker.getPosition());
+                        });
+
+                    } else {
+                        alert("Sorry, browser does not support geolocation!");
+                    }
+
+                    //var marker = new google.maps.Marker({
+                    //    position: Latlng
+                    //});
+                    //marker.setMap(map);
+                    isShowMap = true;
+                }
+            </script>
+
+        </div>
+        <!-- Nearby -->
+        <div class="col-md-8">
+            <h3 class="nearest">Điểm lân cận</h3>
+            <div id="nearbys">
+                <div class="row">
+                    <ul class="nav nav-pills mg-b-0" id="nearby-tab">
+                        <li class="active"><a data-toggle="pill" href="#hotel-tab">Lưu trú</a></li>
+                        <li class=""><a data-toggle="pill" href="#restaurant-tab">Ẩm thực</a></li>
+                        <li class=""><a data-toggle="pill" href="#travel-place-tab">Địa điểm</a></li>
+                    </ul>
+                </div>
+                <div class="tab-content box_radius_border bg-white">
+                    <div id="hotel-tab" class="tab-pane active">
+                        <div id="nearbys-hotel-slider" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hanhstgreenbudhomestay">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian2/Homestay%20Lo%cc%a3c%20Xanh-%20Green%20Bud%20homestay/avata/149974401_636929534953144528.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Homestay L&#244;̣c Xanh
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+150m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hanhstyellowhousehomestay">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian2/Homestay%20Nha%cc%80%20Va%cc%80ng-%20Yellow%20House%20Homestay/r1_636928370257023272.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Homestay Nhà Vàng
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+160m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hanhstmaihunghomestay">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian1/mai%20hung%20homestay/avata_636926675525543753.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Homestay Mai Hưng 
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+170m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hanhstjackfruithomestay">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian1/jackfruit%20homestay/ava_636926970129769027.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Homestay Vườn M&#237;t
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+190m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hanhststrawberrygardenhomestay">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian3/Strawberry%20Garden%20Homestay/59066351_636927443117118756.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Homestay Vườn D&#226;u
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+220m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hanhstthinhphuchomestay">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian1/thinh%20phuc%20homestay/ava_636928373535208278.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Homestay Thịnh Ph&#250;c
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+230m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hanksnpearlriverhoian">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/pearl%20river%20hoi%20an/hinh_ks_636917456931814212.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Kh&#225;ch Sạn S&#244;ng Ngọc
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+230m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hanhstquangxuonghomestay">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian1/Quang%20Xuong%20homestay/ava_636927880806434890.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Homestay Quang Xương
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+240m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hanhstlyphuchomestay">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian3/Homestay%20Ly%20Phu%cc%81c/43113669_636927919360897534.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Homestay Ly Phúc
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+330m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hanvilvuontrau">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian12/AVUON%20TRAU/172782256_636925798955985389.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Vườn Trầu- Betel Garden Villas
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+340m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hanhstcarambolahomestay">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian2/Homestay%20Khe%cc%81%20Va%cc%80ng-%20Carambola%20Homestay/avata/61486167_636926771768232765.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Homestay Kh&#234;́ Vàng
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+350m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hanhstjasminehomestay">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian3/%20Jasmine%20Homestay/40039373_636927890928719873.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Homestay Hoa Lài
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+370m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hanhstlaurushomestay">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian1/laurus%20homestay/ava_636938247697735789.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Homestay Tuy&#234;̀n Vít 
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+370m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hanhsthongloc">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian4/Homestay%20Hong%20Loc-%20Pink%20Buds%20Homestay/59378933_636927458236186010.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Homestay Hồng Lộc
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+380m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hanhsthomestaytrangque">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian4/Countryside%20Moon%20Homestay/112749200_636927488412337054.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Homestay Trăng Qu&#234;
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+390m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hanhstbougainvilleas">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian4/Homestay%20Hoa%20Giay-%20Bougain%20Villeas%20Homestay/157047478_636927548808796023.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Homestay Hoa Giấy
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+410m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hanhstgreenteahomestay">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian1/green%20tea%20homestay/ava_636926940230245080.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Homestay Ch&#232; Xanh
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+420m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <div id="restaurant-tab" class="tab-pane fade">
+                        <div id="nearbys-restaurant-slider" class="owl-carousel">
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hannhhpearlriverhoian">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian15/KHACH%20SAN/nha%20hang/pearl%20river/v1_636949129849607892.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; h&#224;ng Pearl river hội an
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+230m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hannhhcarambolarestaurant">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian2/Homestay%20Khe%cc%81%20Va%cc%80ng-%20Carambola%20Homestay/avata/61486167_636926771768232765.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; h&#224;ng Kh&#234;́ Vàng
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+350m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hannhhlyphucrestaurant">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian3/Homestay%20Ly%20Phu%cc%81c/43113661_636927919360416453.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; h&#224;ng L&#253; Phúc
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+360m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hannhhjasminerestaurant">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian3/%20Jasmine%20Homestay/55304827_636927895361923964.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; h&#224;ng Hoa Lài
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+400m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hannhhlepavillonhoialuxury">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian12/AAAA/127%20-%20Le%20Pavillon%20Hoi%20An%20Luxury/nha_hang_636929239716373399.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; h&#224;ng Bamboo
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+480m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hannhhvietsfamilyrestaurant">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian3/Homestay%20Gia%20Dinh%20Viet/544218_15011521260024634331_636929092357194913.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; h&#224;ng Gia Đ&#236;nh Việt
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+560m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hannhhthubonriversiderestaurant">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian3/Homestay%20Ven%20Song%20Thu%20Bon/82861031_636929151498126614.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; h&#224;ng Ven S&#244;ng Thu Bồn
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+600m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hannhhancienthouserestaurant">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian15/KHACH%20SAN/nha%20hang/NHACO/v1_636949097443667794.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; h&#224;ng Nh&#224; cổ
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+650m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hannhhricefieldrestaurantandbar">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian15/NHA%20HANG/canh%20dong/nha_hang_636919205982839232_636949328076360928.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; h&#224;ng C&#225;nh Đồng L&#250;a
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+660m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hannhhminutes">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian12/AAAA/134-ROSEMARY/hinh_nha_hang_636931269907303704.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; h&#224;ng Minutes
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+730m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hannhhmercurehoian">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian12/Mercure/nha_hang_636927830453715706.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; h&#224;ng Mercure
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+740m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hannhhlilyrestaurant">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian15/KHACH%20SAN/nha%20hang/PHU%20THINH/v1_636949089138440005.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; h&#224;ng Lily
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+780m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hannhhmemoriesrestaurant">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian2/Memories%20Homestay%20Hoi%20An/avata/445074_15031017440025964455_636926713639906763.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; h&#224;ng C&#244; Nhớ
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+790m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hannhhmemorityvillas">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/duanph.qnm/KS%20dong%20xanh%20hoi%20an/hinh_nha_hang_636925974501422336.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; h&#224;ng đồng xanh
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+860m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hannhhgardenpalace">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian15/KHACH%20SAN/nha%20hang/garden%20place/66176672_636949116139660532.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; h&#224;ng Garden Palace
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+860m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hannhhgialam">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian12/GIA%20LAM/hinh_nha_hang_636927802515325413.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; h&#224;ng Gia L&#226;m
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+880m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hannhhvuonxoai">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/myhoian12/CAM%20TIEN/LAN%205/24-VUON%20XOAI/hinh_nh_636939914209595451.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; h&#224;ng Vườn Xoài
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+920m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <div id="travel-place-tab" class="tab-pane fade">
+                        <div id="nearbys-travel-place-slider" class="owl-carousel">
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/dinhdevong">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/quyetthang.qnm/lqt_diemden/anhdaidien_01062021/dinh_devong_695452130.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Di t&#237;ch đ&#236;nh Đế V&#245;ng
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+850m                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/dothicohoian">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/dinhchau.qnm/diadiem/do-thi-co-hoi-an_636981959180353225.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Đ&#244; thị cổ Hội An - Di sản văn h&#243;a thế giới
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+1,01km                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hoian">
+                                            <img src="/Images/NoImage/Transparency/NoImage400x266.png" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Phố cổ Hội An
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+1,22km                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/dinhsonphong">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/quyetthang.qnm/lqt_diemden/anhdaidien_01062021/dinh_sonphong_649996376.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Đ&#236;nh Sơn Phong
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+1,31km                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hoiquantrieuchau">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Tin%20tuc/hoi_quan_trieu_chau_637000128971362710.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Hội Qu&#225;n Triều Ch&#226;u
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+1,50km                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hoiquanhainam">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/dinhchau.qnm/diadiem/hai_nam/hainam3_637097704352654353.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Hội qu&#225;n Hải Nam
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+1,58km                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/minhhuongtuytienduong">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/hoian.qnm/ttvh/dia_diem_du_lich/minh_huong/963678_cydvrquhehdlvhj2_zc5meuei5t2p_cikd6kf0kudds_669487353.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Minh Hương Tụy Ti&#234;n Đường
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+1,59km                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/chohoian">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/quyetthang.qnm/lqt_diemden/anhdaidien_01062021/cho_hoian_749296241.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Chợ Hội An
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+1,67km                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/chuaong">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/hoian.qnm/ttvh/dia_diem_du_lich/chua_ong/1_966044560.png" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Ch&#249;a &#212;ng Hội An
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+1,67km                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/nhacotanky">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Tin%20tuc/nha_co_tan_ky_637000797753427672.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; Cổ Tấn K&#253;
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+1,71km                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/xuongthucongmynghehoian">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/DiaDiem/xuong_tcmn_ha_1_637009647344698410.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Xưởng thủ c&#244;ng mỹ nghệ Hội An
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+1,73km                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hoiquanphuckien">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/DiaDiem/hoi_quan_phuc_kien_1_637012011500807102.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Hội Qu&#225;n Ph&#250;c Kiến
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+1,75km                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/chuaquanam">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/hoian.qnm/ttvh/dia_diem_du_lich/chua_quan_am/dscn1820_12239764.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Ch&#249;a Quan &#194;m 
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+1,79km                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/baotangvhhan">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/dinhchau.qnm/diadiem/bao-tang-van-hoa-dan-gian-hoi_636981965527677522.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Bảo t&#224;ng Văn h&#243;a d&#226;n gian Hội An
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+1,83km                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/hoiquanngubang">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/dinhchau.qnm/diadiem/ngu_bang/ngubang3_637097699351473212.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Hội qu&#225;n Ngũ Bang
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+1,83km                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/nhabieudiennghethuatcotruyen">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Tin%20tuc/nha_bieu_dien_nghe_thuat_co_truyen_2_637009562458570010.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Nh&#224; Biểu diễn Nghệ thuật Cổ truyền
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+1,85km                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nearby_item">
+                                <div class="nearby_item_inner">
+                                    <div class="img_zoom">
+                                        <a href="http://myquangnam.vn/vi/baotanggomsu">
+                                            <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Tin%20tuc/bao_tang_gom_su_637000154966963842.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="nearby_name row">
+                                        <div class="col-md-10 text-left col-sm-10 col-xs-10">
+                                            <span class="name">
+                                    Bảo t&#224;ng gốm sứ Mậu dịch
+                                </span>
+                                        </div>
+                                        <div class="col-md-6 text-right col-sm-6 col-xs-6">
+                                            <img class="img-distance" src="/Images/general/distance.png" width="14px" height="14px" alt="distance"><span class="distance">
+1,92km                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Nearby -->
+        <div class="clear"></div>
+        <!-- clear float -->
+        <!-- start outercontainer -->
+        <!-- end outercontainer -->
+    </div>
+    <script id="tour_reviews_data" type="x-tmpl-mustache">
+        <div>
+            <div class="review_strip_single">
+                <img width="80px" src="{{IMG_AVATAR}}" alt="">
+                <div class="info-user-comment">
+                    <h4>{{FULL_NAME}}</h4>
+                    <small>
+                    {{CREATEDATE}}
+                </small>
+                </div>
+                <div class="info-user-review {{BORDER_COLOR}}">
+                    <div class="box-review">
+                        <span class="rate {{RATE_COLOR}}">
+                        {{RATE}}
+                    </span>
+                        <span class="rate-info">{{STRINGSTATUS}}</span>
+                    </div>
+                </div>
+                <p class="content">
+                    {{CONTENT}}
+                </p>
+            </div>
+
+            <div class="review_strip_single" style="margin-left: 10%">
+                <img width="80px" src="{{PLACE_REVIEW_IMG}}" alt="">
+                <div class="info-user-comment">
+                    <h4>{{PLACE_REVIEW_NAME}}</h4>
+                    <small>
+                    {{PLACE_REVIEW_CREATEDATE}}
+                </small>
+                </div>
+                <div class="info-user-review {{BORDER_COLOR}}">
+                    <div class="box-review">
+                        <span class="rate {{RATE_COLOR}}">
+                        <i class="ion-android-arrow-back"></i>
+                    </span>
+                        <span class="rate-info">Đã trả lời</span>
+                    </div>
+                </div>
+                <p class="content">
+                    {{PLACE_REVIEW_CONTENT}}
+                </p>
+            </div>
+        </div>
+    </script>
+    <script id="tour_reviews_data_null" type="x-tmpl-mustache">
+        <div class="review_strip_single">
+            <img width="80px" src="{{IMG_AVATAR}}" alt="">
+            <div class="info-user-comment">
+                <h4>{{FULL_NAME}}</h4>
+                <small>
+                {{CREATEDATE}}
+            </small>
+            </div>
+            <div class="info-user-review {{BORDER_COLOR}}">
+                <div class="box-review">
+                    <span class="rate {{RATE_COLOR}}">
+                    {{RATE}}
+                </span>
+                    <span class="rate-info">{{STRINGSTATUS}}</span>
+                </div>
+            </div>
+            <p class="content">
+                {{CONTENT}}
+            </p>
+        </div>
+    </script>
+    <script id="pro_data" type="x-tmpl-mustache">
+        <div class="content-promotion">
+            <h3>Chương trình khuyến mãi</h3>
+            <h4>{{NAME}}</h4>
+            <p>Thời gian: {{FROM_DATE}} - {{TO_DATE}}</p>
+            <div class="content-pro">
+                {{{CONTENT}}}
+            </div>
+        </div>
+    </script>
+
+
+    <!-- Footer start -->
+    <footer>
+        <div class="footer-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-16 col-xs-16 footer-address">
+                        <div class="footer-address-outer">
+                            <h3 class="text-orag">Liên hệ với chúng tôi</h3>
+                            <div>
+                                <i class="ficon ficon-map-pin-fat"></i>52 Huyền Tr&#226;n C&#244;ng Ch&#250;a Phường Cẩm Ch&#226;u, TP Hội An, Tỉnh Quảng Nam
+                            </div>
+                            <div>
+                                <i class="ficon ficon-room-promotion-for-mobiledeal"></i>2353937668 - <i class="ficon ficon-email-envelope"></i>sales@lantanariverside.com
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-8 col-xs-8 footer-links">
+                        <h3 class="text-orag">Phòng khách sạn</h3>
+                        <div>
+                            <i class="ficon ficon-circle-1"></i><a href="http://myquangnam.vn/vi/hanksnlantanahoian/bookinghotel?roomkind=20&roomtype=76">Ph&#242;ng cao cấp nhất (Suite) 1 giường đ&#244;i</a>
+                        </div>
+                        <div>
+                            <i class="ficon ficon-circle-1"></i><a href="http://myquangnam.vn/vi/hanksnlantanahoian/bookinghotel?roomkind=6&roomtype=78">Ph&#242;ng sang trọng (Deluxe) 2 giường đơn</a>
+                        </div>
+                        <div>
+                            <i class="ficon ficon-circle-1"></i><a href="http://myquangnam.vn/vi/hanksnlantanahoian/bookinghotel?roomkind=6&roomtype=76">Ph&#242;ng sang trọng (Deluxe) 1 giường đ&#244;i</a>
+                        </div>
+                        <div>
+                            <i class="ficon ficon-circle-1"></i><a href="http://myquangnam.vn/vi/hanksnlantanahoian/bookinghotel?roomkind=20&roomtype=12">Ph&#242;ng cao cấp nhất (Suite) 1 giường đ&#244;i v&#224; 1 giường đơn</a>
+                        </div>
+
+                    </div>
+                    <div class="col-md-5 col-sm-8 col-xs-8">
+                        <div class="download-apps">
+                            <h3 class="text-orag">Trải nghiệm trên app</h3>
+                            <div class="list-download-app">
+                                <a href="https://play.google.com/store/apps/details?id=com.quangnam.tourism"><img alt="android-img" src="/Images/general/android.png" class="img-responsive" /></a>
+                                <a href="https://apps.apple.com/vn/app/quang-nam-tourism/id1436827272?l=vi"><img alt="ios-img" src="/Images/general/ios.png" class="img-responsive" /></a>
+                            </div>
+                        </div>
+                        <div class="socials-outer">
+                            <h3 class="text-orag">Tìm chúng tôi trên</h3>
+                            <ul class="socials">
+                                <li><a target="_blank" href="https://www.facebook.com/quangnamtourism.com.vn"><i class="ion-social-facebook"></i></a></li>
+                                <li><a target="_blank" href="http://lantanariverside.com/contact/"><i class="ion-home"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container copyright-inner">
+                Copyright &#169; 2019 - Trung t&#226;m Th&#244;ng Tin X&#250;c tiến Du lịch Tỉnh Quảng Nam
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Footer end -->
+    <!--Start like & share-->
+
+
+    <!--End like & share-->
+
+    <div id="show_download_my_app" style="display: none">
+        <div class="app-inner">
+            <span class="ion-close mobile_close"></span>
+            <div class="show_mobile_container">
+                <img class="img-responsive" src="/Images/general/Logo20.png" />
+                <div class="info_mobile">
+                    <a target="_blank" id="link_download" href="https://play.google.com/store/apps/details?id=com.quangnam.tourism">Trải nghiệm trên di động</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="modal-login-system" class="basic-popup mfp-with-anim mfp-hide" style="max-width: 380px">
+        <div class="mtp-header">
+            <h3 class="text-center text-uppercase">Đăng nhập</h3>
+        </div>
+        <div class="mtp-content">
+            <div id="login_form">
+                <form action="/Modules/Home/SubmitLogin" autocomplete="off" method="post"><input name="__RequestVerificationToken" type="hidden" value="RAH8w7dmaDctM2Tui4QtPp82jR0cJo16BGX_lMuQIRdZh8ikMkdNbOWI_CsjpCg3aMV4tDixuI18naLAQYQsxhVDNGJ3tbfFeghpZCxKcx0r9mPiBOzropb2asabw87r4VJgVQVZh5fsAl18_5lPRl5QbHG5W_BThM8f4hcYN3ZsZtM0AZ4v3rVsU2_Av3MA0"
+                    />
+                    <div class="col-md-16 fields form-group">
+
+                        <input class="form-control item_log" id="UserName" name="UserName" placeholder="Tên đăng nhập" type="text" value="" />
+                        <i class="ion-person"></i>
+
+                    </div>
+                    <div class="col-md-16 fields form-group">
+
+                        <input class="form-control item_log" id="Password" name="Password" placeholder="Mật khẩu" type="password" />
+                        <i class="ion-locked"></i>
+
+                    </div>
+                    <div class="col-md-16 fields">
+                        <button class="btn btn-primary btn-block">Đăng nhập</button>
+                    </div>
+                    <div class="col-md-16 fields text-center form-group">
+                        <div class="checkbox i-checks">
+
+                            <input id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" />
+                            <label class="pd-l-n" for="remember">Lưu tài khoản</label>
+                        </div>
+                    </div>
+                </form>
+                <div class="col-md-16 fields text-center hidden-xs">
+                    <p class="type_login">hoặc đăng nhập với</p>
+                </div>
+                <form action="/Modules/Home/ExternalLogin" method="post"><input name="__RequestVerificationToken" type="hidden" value="41Cd8_SOzzDHh7SuwGGgrB22SGcOSoBmgCAlbTmpTnt-tBmwvdShyaxowoKuH853a_IsJdIh6Zc1K4fHByJgL_fb8yzP9ggeMWbUZjhEPz0ORILaWFsYqqu_Wo5Qga2a5b2oEN7AOTftpgSstGSmkSBvH45F5wSyOUDT6Y-WiIgLNL9kFTEnXNZ30ysuPrOE0"
+                    />
+                    <div class="col-md-16 fields other_login">
+                        <div class="col-md-8 form-group col-sm-8 col-xs-16 pd-l-n">
+                            <button type="submit" class="btn btn-inverse pull-left btn-block btn-google" id="Google" name="provider" value="Google" title="Đăng nhập bằng tài khoản Google">
+                                        <i class="ion-social-google"></i> Google
+                                    </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <div class="mtp-footer">
+            <div class="row">
+                <a class="col-md-8 text-left col-sm-8 col-xs-8" href="http://myquangnam.vn/vi/signup"> <i class="ion-person-add"></i> Đăng ký</a>
+                <a class="col-md-8 text-right col-sm-8 col-xs-8" href="http://myquangnam.vn/vi/forgotpassword"> <i class="ion-refresh"></i> Quên mật khẩu</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-choose-register" class="basic-popup mfp-with-anim mfp-hide" style="max-width: 30%">
+        <div class="mtp-header">
+            <h3 class="text-center text-uppercase">Đăng ký</h3>
+        </div>
+        <div class="mtp-content">
+            <div class="row" style="text-align: center;font-size: 90px;">
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    <a href="http://myquangnam.vn/vi/signupguest">
+                        <i class="ion-android-contact"></i>
+                        <p style="font-size: 20px;">Khách</p>
+                    </a>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    <a href="http://myquangnam.vn/vi/signupcompany">
+                        <i class="ion-briefcase"></i>
+                        <p style="font-size: 20px;">Doanh nghiệp</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="/Scripts/mustache.min.js"></script>
+    <script src="/Scripts/jquery.twbsPagination.min.js"></script>
+    <script src="/Scripts/hni/function.js"></script>
+    <script src="/Scripts/jquery.validate.min.js"></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="/Scripts/bootbox.min.js"></script>
+    <script src="/Scripts/hotel-child/jquery.sliderPro.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2uPnpGi9NDtk5dPIhnmMY-ZL8xoZoADo" type="text/javascript"></script>
+    <script>
+        //jssor_1_slider_init();
+        if ($('#modal-write-comment').length > 0) {
+            var captcha_response = "";
+            var verifyCallback = function(response) {
+                captcha_response = response;
+            };
+
+            var onloadCallback = function() {
+                grecaptcha.render('recaptcha_tour_review', {
+                    'sitekey': '6LejYeQUAAAAAFSDLMCXWBXpRMAVsCOTx8kq-6HE',
+                    'callback': verifyCallback,
+                });
+            };
+        }
+        var reviewConfig = {
+            pageSize: 3,
+            pageIndex: 1
+        }
+
+        var reviewController = {
+            loadData: async function(isCreated) {
+                const dataset = await $.ajax({
+                    type: "POST",
+                    url: '/Modules/RestaurantChild/LoadDataReviews',
+                    data: {
+                        page: reviewConfig.pageIndex,
+                        pageSize: reviewConfig.pageSize,
+                        placeId: $("#place_id").val(),
+                        code: $("#place_code").val()
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            var data = response.data;
+                            var html = '';
+                            var template = $('#tour_reviews_data').html();
+                            var template2 = $('#tour_reviews_data_null').html();
+                            var hostname = window.location.origin;
+                            if (data.length > 0) {
+                                var stringText = "";
+                                var stringColor = "";
+                                var borderColor = "";
+                                $.each(data, function(key, item) {
+
+                                    if (item.RATE > 8) {
+                                        stringText = "Rất hài lòng";
+                                        stringColor = "rate-green";
+                                        borderColor = "border-green";
+                                    } else if ((item.RATE > 5) && (item.RATE <= 8)) {
+                                        stringText = "Hài lòng";
+                                        stringColor = "rate-blue";
+                                        borderColor = "border-blue";
+                                    } else if ((item.RATE > 3) && (item.RATE <= 5)) {
+                                        stringText = "Tạm được";
+                                        stringColor = "rate-yellow";
+                                        borderColor = "border-yellow";
+                                    } else if (item.RATE <= 3) {
+                                        stringText = "Không hài lòng";
+                                        stringColor = "rate-red";
+                                        borderColor = "border-red";
+                                    }
+                                    if (item.PLACE_REVIEW != null) {
+                                        html += Mustache.render(template, {
+                                            IMG_AVATAR: item.IMG_AVATAR == null ? hostname + "/Images/default-image.png" : config.UrlImage(item.IMG_AVATAR),
+                                            FULL_NAME: item.FULL_NAME == null ? "Họ và tên" : item.FULL_NAME,
+                                            CREATEDATE: item.CREATEDATE,
+                                            CONTENT: item.CONTENT,
+                                            RATE: item.RATE,
+                                            STRINGSTATUS: stringText,
+                                            RATE_COLOR: stringColor,
+                                            BORDER_COLOR: borderColor,
+                                            PLACE_REVIEW_CONTENT: item.PLACE_REVIEW.CONTENT,
+                                            PLACE_REVIEW_IMG: item.PLACE_REVIEW.IMG_AVATAR,
+                                            PLACE_REVIEW_NAME: item.PLACE_REVIEW.FULL_NAME,
+                                            PLACE_REVIEW_CREATEDATE: item.PLACE_REVIEW.CREATEDATE,
+                                        });
+                                    } else {
+                                        html += Mustache.render(template2, {
+                                            IMG_AVATAR: item.IMG_AVATAR == null ? hostname + "/Images/default-image.png" : config.UrlImage(item.IMG_AVATAR),
+                                            FULL_NAME: item.FULL_NAME == null ? "Họ và tên" : item.FULL_NAME,
+                                            CREATEDATE: item.CREATEDATE,
+                                            CONTENT: item.CONTENT,
+                                            RATE: item.RATE,
+                                            STRINGSTATUS: stringText,
+                                            RATE_COLOR: stringColor,
+                                            BORDER_COLOR: borderColor,
+
+
+                                        });
+                                    }
+
+                                });
+                                reviewController.pagingMakeByMvbinh(response.totalRow, function() {
+                                    reviewController.loadData(false);
+                                });
+
+                            } else {
+                                html = '<p class="fs16 text-center">Chưa có bình luận</p>';
+                            }
+                            $('#tour_reviews_html').html(html);
+
+
+                            $('.total_reviews').text(response.totalRow);
+                            $('.avg_rate').text(response.avgRate);
+                            $('#avg_rate').val(response.avgRate);
+                            $('#numberReviewUser').val(response.numberReviewUser);
+
+                            if (response.avgRate > 8) {
+                                $('.restaurant-reviews-title').text("Rất hài lòng");
+                                $("#bar-status").attr("class", "color-green");
+                            } else if ((response.avgRate > 5) && (response.avgRate <= 8)) {
+                                $('.restaurant-reviews-title').text("Hài lòng");
+                                $("#bar-status").attr("class", "color-blue");
+                            } else if ((response.avgRate > 3) && (response.avgRate <= 5)) {
+                                $('.restaurant-reviews-title').text("Tạm được");
+                                $("#bar-status").attr("class", "color-yellow");
+                            } else if ((response.avgRate > 0) && (response.avgRate <= 3)) {
+                                $('.restaurant-reviews-title').text("Không hài lòng");
+                                $("#bar-status").attr("class", "color-red");
+                            } else if (response.avgRate == 0) {
+                                $('.restaurant-reviews-title').text("Mời bạn là người đầu tiên nhận xét");
+                                $('.avg_rate').css("display", "none");
+                                $('.restaurant-reviews-info').css({
+                                    "width": "90%",
+                                    "padding-left": "15px"
+                                });
+                                $('#bar-status').css("stroke", "none");
+                            }
+                            var $circle = $('#bar-status');
+                            var val = response.avgRate;
+                            var r = $circle.attr('r');
+                            var c = Math.PI * (r * 2);
+                            if (val < 0) {
+                                val = 0;
+                            }
+                            if (val > 10) {
+                                val = 10;
+                            }
+                            var pct = ((10 - val) / 10) * c;
+                            $circle.css({
+                                strokeDashoffset: pct
+                            });
+
+                            if (isCreated) {
+                                bootbox.alert({
+                                    title: "Thông báo",
+                                    message: "Cảm ơn quý khách đã gửi đánh giá. Đánh giá của quý khách đang được duyệt. Vui lòng chờ trong giây lát !",
+                                });
+                            }
+                        }
+                    }
+                });
+            },
+            pagingMakeByMvbinh: function(totalRow, callback) {
+                var totalPage = Math.ceil(totalRow / reviewConfig.pageSize);
+                $("#pagination").twbsPagination({
+                    totalPages: totalPage,
+                    visiblePages: 6,
+                    first: "Đầu",
+                    next: "Tiếp",
+                    last: "Cuối",
+                    prev: "Trước",
+                    initiateStartPageClick: false,
+                    onPageClick: function(event, page) {
+                        reviewConfig.pageIndex = page;
+
+                        //if (document.readyState == 'complete') {
+                        //    $('html, body').animate({
+                        //        scrollTop: $("#place_review").offset().top - 40
+                        //    }, 500);
+                        //}
+
+                        setTimeout(callback, 200);
+                    }
+                });
+            }
+        };
+        $('#tour_review_form').validate({
+            rules: {
+                CONTENT: {
+                    required: true,
+                    maxlength: 400,
+                    minlength: 20
+                },
+                RATE: {
+                    required: true
+                }
+            },
+            messages: {
+                CONTENT: {
+                    required: "Nội dung bình luận không được để trống",
+                    maxlength: "Bình luận không vượt quá 200 ký tự.",
+                    minlength: "Nội dung đánh giá quá ngắn, vui lòng nhập nhiều hơn 20 ký tự"
+                },
+                RATE: {
+                    required: "Nội dung bình luận không được để trống"
+                }
+            },
+            submitHandler: function(form) {
+                if (grecaptcha.getResponse().length === 0) {
+                    $('.recaptcha-error-message').show();
+                    return false;
+                }
+                $("#tour_review_form button[type=submit]").text(' Đăng ...');
+                $("#tour_review_form button[type=submit]").css({
+                    "pointer-events": "none"
+                });
+                var message = $("#review_text").val();
+                var rate = $("#point_number").val();
+                var number = $("#numberReviewUser").val();
+
+                $.ajax({
+                    type: "POST",
+                    url: '/Modules/RestaurantChild/SubmitReviewV1',
+                    data: {
+                        message: message,
+                        captcha: grecaptcha.getResponse(),
+                        placeId: $("#place_id").val(),
+                        placeCode: $("#place_code").val(),
+                        placeSubdomain: $("#place_subdomain").val(),
+                        rate: rate
+                            //number: number
+                    },
+                    success: function() {
+                        reviewController.loadData(true);
+                        $("#review_text").val('');
+                        grecaptcha.reset();
+                        $("#tour_review_form button[type=submit]").css({
+                            "pointer-events": "auto"
+                        });
+                        $("#tour_review_form button[type=submit]").text(' Đăng bình luận');
+                        $('#modal-write-comment').magnificPopup('close');
+                        //$('html, body').animate({
+                        //    scrollTop: $("#place_review").offset().top - 40
+                        //}, 500);
+
+                    }
+                });
+
+            }
+        });
+        $('#slider-booking').sliderPro({
+            width: 862,
+            height: 500,
+            fade: true,
+            arrows: true,
+            buttons: false,
+            fullScreen: true,
+            shuffle: true,
+            thumbnailArrows: true,
+            autoplay: true
+        });
+
+
+        $(document).ready(function($) {
+            var hName = $(".hotel-name").text();
+            if (hName !== "") {
+                $("#hotelName").text(hName.trim().toLowerCase());
+            }
+
+            reviewController.loadData();
+            initialize();
+            //getPoint();
+
+            $('#promotion-note').on('click', '.title-action', function() {
+                $('#scroll-promotion').slideToggle();
+                $(this).children().toggleClass('ficon-control-expand');
+            });
+            setTimeout(function() {
+                $('#scroll-promotion').slideDown();
+                $('#promotion-note').find('.title-action').children().removeClass("ficon-control-expand").addClass('ficon-close-popup');
+            }, 3000);
+
+            var nowTemp = new Date();
+            var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+            var d1 = new Date(nowTemp);
+            var checkin = $('#check_in_toppage').datepicker({
+                todayHighlight: true,
+                beforeShowDay: function(date) {
+                    return date.valueOf() >= now.valueOf();
+                },
+                autoclose: true,
+                format: 'dd/mm/yyyy'
+            }).on('changeDate', function(ev) {
+                if (ev.date.valueOf() >= checkout.datepicker("getDate").valueOf() || !checkout.datepicker("getDate").valueOf()) {
+                    var newDate = new Date(ev.date);
+                    newDate.setDate(newDate.getDate() + 1);
+                    checkout.datepicker("update", newDate);
+                }
+                $('#check_out_toppage')[0].focus();
+            });
+
+            var checkout = $('#check_out_toppage').datepicker({
+                beforeShowDay: function(date) {
+                    if (!checkin.datepicker("getDate").valueOf()) {
+                        return date.valueOf() >= new Date().valueOf();
+                    } else {
+                        return date.valueOf() > checkin.datepicker("getDate").valueOf();
+                    }
+                },
+                autoclose: true,
+                format: 'dd/mm/yyyy'
+            }).on('changeDate', function(ev) {});
+
+        });
+        $('#introduction-slider').owlCarousel({
+            loop: true,
+            singleItem: true,
+            navigation: true,
+            pagination: false
+        });
+        $("#id_rooms").owlCarousel({
+            autoPlay: true, //Set AutoPlay to 3 seconds
+            navigation: true,
+            stopOnHover: true,
+            pagination: false,
+            items: 4,
+            itemsDesktop: [
+                1199,
+                4
+            ],
+            itemsDesktopSmall: [
+                979, 3
+            ],
+            itemsTablet: [768, 2],
+            itemsMobile: [479, 1],
+        });
+        //init slide point
+        $("#controller-point").slider({
+            range: "min",
+            value: 10,
+            min: 1,
+            max: 10,
+            step: 0.1,
+            slide: function(event, ui) {
+                var valPoint = ui.value;
+                var arrLabel = "";
+                if (valPoint >= 1 && valPoint <= 3) {
+                    arrLabel = "Không hài lòng";
+                    $('.sliderColor .ui-slider-range').css({
+                        'background': '#ff5454'
+                    });
+                    $("#set-color-text-slider .sliderPointLabel").css({
+                        'color': '#ff5454'
+                    });
+                } else if (valPoint > 3 && valPoint <= 5) {
+                    arrLabel = "Tạm được";
+                    $('.sliderColor .ui-slider-range').css({
+                        'background': '#eae874'
+                    });
+                    $("#set-color-text-slider .sliderPointLabel").css({
+                        'color': '#eae874'
+                    });
+                } else if (valPoint > 5 && valPoint <= 8) {
+                    arrLabel = "Hài lòng";
+                    $('.sliderColor .ui-slider-range').css({
+                        'background': '#36a9e1'
+                    });
+                    $("#set-color-text-slider .sliderPointLabel").css({
+                        'color': '#36a9e1'
+                    });
+                } else {
+                    arrLabel = "Rất hài lòng";
+                    $('.sliderColor .ui-slider-range').css({
+                        'background': '#8FC63D'
+                    });
+                    $("#set-color-text-slider .sliderPointLabel").css({
+                        'color': '#8FC63D'
+                    });
+                }
+                $("#point_number").val(ui.value);
+                $("#set-color-text-slider .sliderPointNumber").html(ui.value);
+                $("#set-color-text-slider .sliderPointLabel").html(arrLabel);
+            }
+        });
+
+        //get point
+        function setPointSlider(Root) {
+            var valPoint = Root.val();
+            var arrLabel = "";
+            $("#controller-point").slider({
+                value: valPoint
+            });
+
+            if (valPoint >= 1 && valPoint <= 3) {
+                arrLabel = "Không hài lòng";
+                $('.sliderColor .ui-slider-range').css({
+                    'background': '#ff5454'
+                });
+                $("#set-color-text-slider .sliderPointLabel").css({
+                    'color': '#ff5454'
+                });
+            } else if (valPoint > 3 && valPoint <= 5) {
+                arrLabel = "Tạm được";
+                $('.sliderColor .ui-slider-range').css({
+                    'background': '#eae874'
+                });
+                $("#set-color-text-slider .sliderPointLabel").css({
+                    'color': '#eae874'
+                });
+            } else if (valPoint > 5 && valPoint <= 8) {
+                arrLabel = "Hài lòng";
+                $('.sliderColor .ui-slider-range').css({
+                    'background': '#36a9e1'
+                });
+                $("#set-color-text-slider .sliderPointLabel").css({
+                    'color': '#36a9e1'
+                });
+            } else {
+                arrLabel = "Rất hài lòng";
+                $('.sliderColor .ui-slider-range').css({
+                    'background': '#8FC63D'
+                });
+                $("#set-color-text-slider .sliderPointLabel").css({
+                    'color': '#8FC63D'
+                });
+            }
+            $("#point_number").val(valPoint);
+            $("#set-color-text-slider .sliderPointNumber").html(valPoint);
+        }
+
+        //show popup write comment
+        $('#show-popup-write-comment').on('click', function() {
+            jQuery.magnificPopup.open({
+                removalDelay: 500,
+                items: {
+                    src: '#modal-write-comment'
+                },
+                callbacks: {
+                    beforeOpen: function(e) {
+                        this.st.mainClass = 'mfp-zoom-in';
+                    },
+                    close: function(e) {}
+                },
+                midClick: true,
+                closeOnBgClick: true
+            });
+        });
+        $("#nearbys-hotel-slider").owlCarousel({
+            autoPlay: true, //Set AutoPlay to 3 seconds
+            navigation: false,
+            stopOnHover: true,
+            pagination: false,
+            items: 2,
+            itemsDesktop: [
+                1199,
+                2
+            ],
+            itemsDesktopSmall: [
+                979, 3
+            ],
+            itemsTablet: [768, 2],
+            itemsMobile: [479, 1],
+        });
+
+        $("#nearbys-restaurant-slider").owlCarousel({
+            autoPlay: true, //Set AutoPlay to 3 seconds
+            navigation: false,
+            stopOnHover: true,
+            pagination: false,
+            items: 2,
+            itemsDesktop: [
+                1199,
+                2
+            ],
+            itemsDesktopSmall: [
+                979, 3
+            ],
+            itemsTablet: [768, 2],
+            itemsMobile: [479, 1],
+        });
+
+        $("#nearbys-travel-place-slider").owlCarousel({
+            autoPlay: true, //Set AutoPlay to 3 seconds
+            navigation: false,
+            stopOnHover: true,
+            pagination: false,
+            items: 2,
+            itemsDesktop: [
+                1199,
+                2
+            ],
+            itemsDesktopSmall: [
+                979, 3
+            ],
+            itemsTablet: [768, 2],
+            itemsMobile: [479, 1],
+        });
+        $('.pro-link').on('click', function() {
+            var idPro = $(this).attr('data-id');
+            var codePro = $(this).attr('data-code');
+            $.ajax({
+                type: 'POST',
+                url: '/Modules/RestaurantChild/GetDetailPromotion',
+                data: {
+                    id: idPro,
+                    code: codePro
+                },
+                success: function(response) {
+                    if (response.success) {
+                        var data = response.data;
+                        var template = $('#pro_data').html();
+
+                        var html = Mustache.render(template, {
+                            NAME: data.NAME,
+                            CONTENT: data.CONTENT,
+                            FROM_DATE: data.FROM_DATE,
+                            TO_DATE: data.TO_DATE,
+                        });
+
+                        $('#lst_pro').html(html);
+
+                        setTimeout(function() {
+                            jQuery.magnificPopup.open({
+                                removalDelay: 500,
+                                items: {
+                                    src: '#lst_pro'
+                                },
+                                callbacks: {
+                                    beforeOpen: function(e) {
+                                        this.st.mainClass = 'mfp-zoom-in';
+                                    },
+                                    close: function(e) {}
+                                },
+                                midClick: true,
+                                closeOnBgClick: true
+                            });
+
+                        }, 10);
+                    }
+                },
+                error: function() {
+                    console.log("Error connection!");
+                },
+                timeout: 100000
+            });
+
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_minimal'
+        });
+
+        $('.mobile_close').on('click', function() {
+            $('#show_download_my_app').removeClass('show_popup');
+            sessionStorage.setItem("show_mobile_app", 0);
+        });
+
+        $('#login_system, .login').on('click', function() {
+            $.magnificPopup.open({
+                removalDelay: 500,
+                items: {
+                    src: '#modal-login-system'
+                },
+                callbacks: {
+                    beforeOpen: function(e) {
+                        this.st.mainClass = 'mfp-zoom-in';
+                    },
+                    close: function(e) {}
+                },
+                midClick: true,
+                closeOnBgClick: false
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.bm-ct22 div').on("click", "[data-toggle-state=true]", function(e) {
+                var $this = $(this);
+                var url = $this.attr('data-url');
+                var args = $this.attr('data-args');
+                $.post(url, {
+                        "args": args
+                    },
+                    function(data) {
+                        if (data.Result) {
+                            $this.attr('data-args', data.Message);
+                            $this.toggleClass('true');
+                        } else {
+                            alert(data.Message);
+                        }
+                    });
+            });
+            if (window.innerWidth <= 767) {
+                var text = '<span class="sub-arrow"></span>';
+                $('#myNavbar .dropdown .dropbtn').append(text);
+                $('#myNavbar .dropdown .dropdown-content').css("display", "none");
+                $('#myNavbar .dropdown .dropbtn .sub-arrow').on('click', function(e) {
+                    e.preventDefault();
+                    var selector = $(this).closest(".dropdown");
+                    selector.find(".dropdown-content").toggle();
+                    return false;
+                });
+            } else {
+                //$('#myNavbar .dropdown .dropdown-content').css("display", "none");
+
+                //$("#myNavbar .dropdown").hover(
+                //  function () {
+                //      $(this).find(".dropdown-content").toggle();
+                //  }, function () {
+                //      $(this).find(".dropdown-content").toggle();
+                //  }
+                //);
+            }
+            $('#openChoosePopup').on('click', function() {
+                $.magnificPopup.open({
+                    removalDelay: 500,
+                    items: {
+                        src: '#modal-choose-register'
+                    },
+                    callbacks: {
+                        beforeOpen: function(e) {
+                            this.st.mainClass = 'mfp-zoom-in';
+                        },
+                        close: function(e) {}
+                    },
+                    midClick: true,
+                    closeOnBgClick: false
+                });
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>

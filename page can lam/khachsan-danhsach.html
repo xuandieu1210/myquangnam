@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Logo-favicon.ico/icon_636942875389538576.ico" rel="Shortcut Icon">
+
+
+    <title>Khách sạn</title>
+
+
+    <link href="/Content/place.css" rel="stylesheet" />
+    <link href="/Content/iCheck/minimal.css" rel="stylesheet" />
+    <link href="/Content/nav_menu.css" rel="stylesheet" />
+    <link href="/Content/perfect-scrollbar.css" rel="stylesheet" />
+    <link href="/Content/magnific-popup.css" rel="stylesheet" />
+    <link href="/Scripts/EasyAutocomplete/easy-autocomplete.min.css" rel="stylesheet" />
+
+
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/hotel-all-fonts.css" rel="stylesheet" />
+    <link href="/Content/footer.css" rel="stylesheet" />
+    <link href="/Content/dalat_font.css" rel="stylesheet" />
+    <link href="/Content/home-toppage.css" rel="stylesheet" />
+    <link href="/Content/animate.css" rel="stylesheet" />
+
+    <link href="/Content/style.css" rel="stylesheet" />
+    <link type="text/css" href="/Content/hcm/event.css" rel="stylesheet" />
+    <link href="/Content/ionicons.min.css" rel="stylesheet" />
+    <link href="/Content/define.css" rel="stylesheet" />
+    <link href="/Content/magnific-popup.css" rel="stylesheet" />
+    <link href="/Content/login.css" rel="stylesheet" />
+    <link href="/Content/owl.carousel.css" rel="stylesheet" />
+    <link href="/Content/owl.transitions.css" rel="stylesheet" />
+
+    <link href="/Content/stylehcm.css" rel="stylesheet" />
+    <link href="/Content/hcm/custom-language.css" rel="stylesheet" />
+    <link href="/Content/newstylehcm.css" rel="stylesheet" />
+    <link href="/Content/style.qnm.css" rel="stylesheet" />
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+    <script src="/Scripts/modernizr-2.8.3.js"></script>
+
+
+    <script src="/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="/Scripts/owl.carousel.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135264246-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-135264246-6');
+    </script>
+    <style>
+        .li-none-stype {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header id="banner" role="banner">
+            <div class="header-toolbar-app">
+                <div class="container">
+                    <div class="col-md-16">
+                        <div id="toppage-header">
+                            <div class="hidden-xs date_time_sys col-md-8 col-sm-8">
+
+
+                                <span id="weather"></span>
+                                <script>
+                                    $(document).ready(function() {
+                                        callAjax();
+                                        //jQuery.simpleWeather({
+                                        //  woeid: '',
+                                        // unit: 'c',
+                                        // success: function (weather) {
+                                        //    var html = '<i class="icon-' + weather.code + '"></i> <span class="data">' + weather.city +
+                                        //       ', ' + weather.region + ' ' + weather.temp + '&deg;' +
+                                        //       weather.units.temp + ' </span>';
+
+                                        //   var rootWeather = jQuery('body').find('#weather');
+                                        //  rootWeather.html(html);
+                                        //},
+                                        // error: function (error) {
+                                        //  var rootWeather = jQuery('body').find('#weather');
+                                        //  rootWeather.html('<p>' + error + '</p>');
+                                        //}
+                                        // });
+
+
+                                        function callAjax() {
+                                            $.ajax({
+                                                type: 'POST',
+                                                url: '/Modules/Utilities/GetWeathers',
+                                                data: {
+                                                    UnitCode: 'QNM'
+                                                },
+                                                success: function(weather) {
+                                                    //console.log(weather);
+                                                    if (weather.list != null) {
+                                                        var html = '<img src="https://myquangnam.vn/Images/weathericon/' + weather.list[0].weather[0].icon + '.png" style="width:22px;height:22px"> <span class="data">' +
+                                                            Math.round(weather.list[0].main.temp_min) + '&deg;C </span>';
+                                                        var rootWeather = jQuery('body').find('#weather');
+                                                        rootWeather.html(html);
+                                                    }
+
+                                                },
+                                                error: function(error) {
+                                                    var rootWeather = jQuery('body').find('#weather');
+                                                    rootWeather.html('<p>' + error + '</p>');
+                                                }
+                                            })
+                                        }
+
+                                    });
+                                </script>
+
+                                <i class="ion-clock"></i><span id="time-date"></span>
+                            </div>
+                            <div id="" class="hidden-xs col-md-4 col-sm-4">
+                                <form action="/Modules/Home/SearchAll" autocomplete="off" method="post"> <input name="DisplayName" style="color: black; border-radius: 3px; border: 1px solid white; width: 100%; padding: 2px 5px; font-weight: 400; height: 21px;" type="text" />
+                                    <button type="submit" style="position: absolute; right: 0; top: 0; padding-top: 4px; height: 21px; border-radius: 0 3px 3px 0; line-height: 13px;" class="btn btn-sm btn-search"><i class="ion-search"></i></button>
+                                </form>
+                            </div>
+                            <div id="login-system" class="col-md-2 col-sm-2 col-xs-8">
+                                <span id="login-btn">
+                            <span class="ion-locked dropdown nav-user">
+                                    <span data-toggle="dropdown" class="dropdown-toggle">dinhchau.qnm</span>
+                                <ul class="dropdown-menu fui-gray list-unstyled menu_login">
+                                    <li class="inline_block">
+                                        <a href="#">
+                                            <img width="34" height="34" src="/Images/NoImage/WhiteBackground/NoImage300x200.png" class="fleft img-circle">
+                                            <b>dinhchau.qnm</b>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="http://myquangnam.vn/vi/accountprofile/?active=plan">
+                                            <i class="ion-clipboard"></i> Lịch trình
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://myquangnam.vn/vi/accountprofile/?active=booking">
+                                            <i class="ion-navicon-round"></i> Đặt phòng
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://myquangnam.vn/vi/accountprofile/?active=love">
+                                            <i class="ion-heart"></i> Yêu thích
+                                        </a>
+                                    </li>
+                                    <li><a href='http://myquangnam.vn/vi/accountprofile'><i class="ion-person"></i>Tài khoản</a></li>
+                                    <li class="divider"></li>
+                                    <form action="/Modules/Home/LogOff" autocomplete="off" method="post"><input name="__RequestVerificationToken" type="hidden" value="ZIqMH2Xvn3Ve5IMDWu7GzK_yB3S7bCf9RPUctRKIkQ-LVFYrEJi5uQn7zmrQiFu7CxfsMBQa3KD6_8RQ7UwG9NPpZrQypfuMZ8wbhLUrnqgiGlqb-FIVOLuquSGofx-1kbLDRVP57VrYy1LyMxKvnGywtW0sVBqnMSw0_Sj8W-1IDFQ7Oh_55te2k2AgUcgk0"
+                                        />
+                                        <li class="last">
+                                            <button type="submit"><i class="ion-log-out"></i> Đăng xuất</button>
+                                        </li>
+                                    </form>
+                                </ul>
+                                </span>
+                                </span>
+                            </div>
+                            <div id="language-system" class="col-md-2 col-sm-2 col-xs-8">
+                                <a href="http://myquangnam.vn/en/hotels">
+                                    <img src="/Images/language/en.png" />
+                                </a>
+                                <a href="http://myquangnam.vn/vi/hotels">
+                                    <img src="/Images/language/vi.png" />
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header toolbar end -->
+
+            <div class="sticky-header">
+                <nav id="menu-home">
+                    <div class="container menu-home-inner">
+                        <a class="logo" href="http://myquangnam.vn/vi/home">
+                            <img alt="Cổng TTĐT Du Lịch" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/superadminportal.qnm/Logo/logo512_637068974595415237.png" class="img-responsive">
+
+                        </a>
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="ion-navicon-round"></span> </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav" role="menubar" id="m-menubar">
+
+
+                                <li class="dropdown ">
+                                    <a class="dropbtn" href="http://myquangnam.vn/vi/news">Tin tức<span class="caret"></span></a>
+                                    <ul class="dropdown-content">
+                                        <li>
+                                            <a href="http://myquangnam.vn/vi/baiviet">Tin tức</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://myquangnam.vn/vi/events">Sự kiện nổi bật</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://myquangnam.vn/vi/introduction">Về Quảng Nam</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown ">
+                                    <a class="dropbtn" href="http://myquangnam.vn/vi/places">Địa điểm<span class="caret"></span></a>
+                                    <ul class="dropdown-content">
+                                        <li>
+                                            <a href="http://myquangnam.vn/vi/places/?ps=2">Địa điểm nổi bật</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://myquangnam.vn/vi/places/?ps=1">Địa điểm tiềm năng</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="http://myquangnam.vn/vi/business">Tour</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://myquangnam.vn/vi/restaurants">Ẩm thực</a>
+                                </li>
+                                <li class="selected active">
+                                    <a href="http://myquangnam.vn/vi/hotels">Lưu tr&#250;</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://myquangnam.vn/vi/detailutilities/?id=3752&child=3755">Di chuyển</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://myquangnam.vn/vi/shops">Mua sắm</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://myquangnam.vn/vi/entertainments">Giải tr&#237;</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://myquangnam.vn/vi/utilities">Tiện &#237;ch</a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </nav>
+
+            </div>
+
+            <div class="new_hcm_menu hidden-xs">
+                <div class="container">
+                    <ul>
+                        <li class="hm_sub1">
+                            <a href="http://myquangnam.vn/vi/tours">
+                                <span>Về Quảng Nam</span>
+                            </a>
+                        </li>
+                        <li class="hm_sub2">
+                            <a href="http://myquangnam.vn/vi/videos">
+                                <span>Video</span>
+                            </a>
+                        </li>
+                        <li class="hm_sub3">
+                            <a href="http://myquangnam.vn/vi/gallery">
+                                <span>Thư viện ảnh</span>
+                            </a>
+                        </li>
+                        <li class="hm_sub3">
+                            <a href="#">
+                                <span>Diễn đàn</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+
+
+        <div data-toggle="1" class="cls_wrap hidden-xs" style="position:fixed; width:280px; height: 320px; ">
+            <span class="cls_x" style="">X</span>
+            <div class="fb-page" data-adapt-container-width="true" data-height="320" data-hide-cover="false" data-href="https://www.facebook.com/quangnamtourism.com.vn" data-show-facepile="true" data-show-posts="false" data-small-header="false" data-tabs="messages"
+                data-width="280" style="position:relative; z-index:9999999; right:0px; bottom:0;border: 1px solid #fff">
+            </div>
+        </div>
+        <div class="cls_tuvan hidden-xs" style="width: 278px;">
+            <a style="">Bạn cần tư vấn ?</a>
+            <i class="ion-chevron-up pull-right"></i>
+        </div>
+    </div>
+
+
+
+
+    <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Banner-AD/hotel_bg_637088284512184637.jpg" style="width: 100%" />
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <div class="col-md-16">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="http://myquangnam.vn/vi/home">Trang chủ</a></li>
+                    <li class="breadcrumb-item active"><a class="text-info" href="http://myquangnam.vn/vi/hotels">Khách sạn</a></li>
+                </ol>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+
+    </div>
+    <div id="container-data" class="container">
+
+        <div class="col-md-4">
+            <div id="filters">
+                <div id="sidebar-scroll">
+                    <div class="sidebar-top hidden-md hidden-lg">
+                        <button data-type="1" class="btn btn-close smartphone"><i class="ion-close"></i></button> Bộ lọc
+
+
+                    </div>
+                    <div class="sidebar">
+
+                        <form action=http://myquangnam.vn/vi/hotels method="get" id="filterForm">
+                            <input name="__RequestVerificationToken" type="hidden" value="Viq6W-kdJBgMl2b_KSR25-nAmOe_5uL-1bntCs_GaqbEI0FiGs6tZSKtPIXft6gXcLGQHPqqXrIMJyoF4YlXbzEZKUNvM78pTiP0TauGgLeVIF423OuFh93o7wjnZ6-Q2FhWEEgqgfMoRSNDAAkDdsQHhhkhq3i6fxWLoEt-KNf7B1WBMVcOWjfnD6N3n-CF0"
+                            />
+                            <div class="item-filter">
+                                <div class="service" data-service="1">
+                                    <div class="filter-title main-title-custom">Giá tham khảo</div>
+                                    <span class="ion-minus-circled filter-icon"></span>
+                                </div>
+                                <div class="service-1 service-data">
+                                    <fieldset id="price_icheck" class="checkboxes">
+                                        <div class="checkbox ">
+                                            <input id="price_1" type="checkbox" name="price" value="0-500000" />
+                                            <label class="pd-l-10" for="price_1">
+                           
+                            Dưới 500.000đ
+                        </label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox ">
+                                            <input id="price_2" type="checkbox" name="price" value="500001-1000000" />
+                                            <label class="pd-l-10" for="price_2">
+                           
+                            500.000đ - 1.000.000đ
+                        </label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox ">
+                                            <input id="price_3" type="checkbox" name="price" value="1000001-1500000" />
+                                            <label class="pd-l-10" for="price_3">
+                           
+                            1.000.000đ - 1.500.000đ 
+                        </label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox ">
+                                            <input id="price_4" type="checkbox" name="price" value="1500001-2000000" />
+                                            <label class="pd-l-10" for="price_4">
+                           
+                            1.500.000đ  - 2.000.000đ
+                        </label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox ">
+                                            <input id="price_5" type="checkbox" name="price" value="2000001-3000000" />
+                                            <label class="pd-l-10" for="price_5">
+                           
+                            2.000.000đ - 3.000.000đ
+                        </label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox ">
+                                            <input id="price_6" type="checkbox" name="price" value="3000001-5000000" />
+                                            <label class="pd-l-10" for="price_6">
+                           
+                            3.000.000đ - 5.000.000đ
+                        </label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox ">
+                                            <input id="price_7" type="checkbox" name="price" value="5000001-50000000" />
+                                            <label class="pd-l-10" for="price_7">
+                           
+                            Tr&#234;n 5.000.000đ
+                        </label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+
+                            <div class="item-filter">
+                                <div class="service" data-service="2">
+                                    <div class="filter-title main-title-custom">
+                                        Loại hình lưu trú
+                                    </div>
+                                    <span class="ion-minus-circled filter-icon"></span>
+                                </div>
+                                <div class="service-scroll service-2 service-data">
+                                    <fieldset id="type_icheck" class="checkboxes">
+                                        <div class="checkbox">
+                                            <input id="type_18" type="checkbox" name="hoteltype" value="18" data-htc="Nh&#224; nghỉ" />
+                                            <label class="pd-l-10" for="type_18">Nh&#224; nghỉ</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="type_25" type="checkbox" name="hoteltype" value="25" data-htc="ĐTC" />
+                                            <label class="pd-l-10" for="type_25">Đạt ti&#234;u chuẩn</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="type_3" type="checkbox" name="hoteltype" value="3" data-htc="" />
+                                            <label class="pd-l-10" for="type_3">Kh&#225;ch sạn 3 sao</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="type_4" type="checkbox" name="hoteltype" value="4" data-htc="" />
+                                            <label class="pd-l-10" for="type_4">Kh&#225;ch sạn 2 sao</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="type_5" type="checkbox" name="hoteltype" value="5" data-htc="" />
+                                            <label class="pd-l-10" for="type_5">Kh&#225;ch sạn 1 sao</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="type_6" type="checkbox" name="hoteltype" value="6" data-htc="" />
+                                            <label class="pd-l-10" for="type_6">Homestay</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="type_9" type="checkbox" name="hoteltype" value="9" data-htc="" />
+                                            <label class="pd-l-10" for="type_9">Bungalow</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="type_10" type="checkbox" name="hoteltype" value="10" data-htc="" />
+                                            <label class="pd-l-10" for="type_10">Resort</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="type_12" type="checkbox" name="hoteltype" value="12" data-htc="" />
+                                            <label class="pd-l-10" for="type_12">Nh&#224; trọ / nh&#224; nghỉ</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="type_13" type="checkbox" name="hoteltype" value="13" data-htc="" />
+                                            <label class="pd-l-10" for="type_13">Biệt thự</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="type_14" type="checkbox" name="hoteltype" value="14" data-htc="" />
+                                            <label class="pd-l-10" for="type_14">Cơ sở đạt chuẩn du lịch</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="type_16" type="checkbox" name="hoteltype" value="16" data-htc="" />
+                                            <label class="pd-l-10" for="type_16">Căn hộ dịch vụ</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="type_45" type="checkbox" name="hoteltype" value="45" data-htc="" />
+                                            <label class="pd-l-10" for="type_45">Cơ sở chưa xếp hạng</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="type_1" type="checkbox" name="hoteltype" value="1" data-htc="" />
+                                            <label class="pd-l-10" for="type_1">Kh&#225;ch sạn 5 sao</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="type_2" type="checkbox" name="hoteltype" value="2" data-htc="" />
+                                            <label class="pd-l-10" for="type_2">Kh&#225;ch sạn 4 sao</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+
+                            <div class="item-filter">
+                                <div class="service" data-service="3">
+                                    <div class="filter-title main-title-custom">
+                                        Dịch vụ
+                                    </div>
+                                    <span class="ion-minus-circled filter-icon"></span>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="service-scroll service-3 service-data">
+                                    <fieldset id="service_icheck" class="checkboxes">
+                                        <div class="checkbox">
+                                            <input id="service_1" type="checkbox" name="hotelservice" value="HSERVICE_1" />
+                                            <label class="pd-l-10" for="service_1">Bao gồm ăn s&#225;ng</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="service_3" type="checkbox" name="hotelservice" value="HSERVICE_3" />
+                                            <label class="pd-l-10" for="service_3">B&#227;i đậu xe miễn ph&#237;</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="service_8" type="checkbox" name="hotelservice" value="HSERVICE_8" />
+                                            <label class="pd-l-10" for="service_8">Bể bơi ngo&#224;i trời</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="service_9" type="checkbox" name="hotelservice" value="HSERVICE_9" />
+                                            <label class="pd-l-10" for="service_9">Dịch vụ Spa</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="service_4" type="checkbox" name="hotelservice" value="HSERVICE_4" />
+                                            <label class="pd-l-10" for="service_4">Dịch vụ giặt ủi</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="service_5" type="checkbox" name="hotelservice" value="HSERVICE_5" />
+                                            <label class="pd-l-10" for="service_5">Minibar</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="service_6" type="checkbox" name="hotelservice" value="HSERVICE_6" />
+                                            <label class="pd-l-10" for="service_6">Ph&#242;ng họp</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="service_2" type="checkbox" name="hotelservice" value="HSERVICE_2" />
+                                            <label class="pd-l-10" for="service_2">Wifi miễn ph&#237;</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="service_7" type="checkbox" name="hotelservice" value="HSERVICE_7" />
+                                            <label class="pd-l-10" for="service_7">Xe đ&#243;n tại s&#226;n bay</label>
+                                            <span class="badge pull-right"></span>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div id="menu-sort-price" class="text-right">
+                <div class="col-md-8 pd-l-n">
+                    <div class="input-group filter-search">
+                        <input type="text" id="keyword" class="form-control input-sm input-findname">
+                        <div class="input-group-btn">
+                            <button class="btn btn-sm btn-search"><i class="ion-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 pd-l-n">
+                    <div class="btn-group btn-group-justified m_menu_sort" role="group">
+                        <div class="btn-group" role="group">
+                            <a id="comments-text" sort="ion-chatbox-working" href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" role="button">
+                                <i class="ion-chatbox-working"></i> Bình luận
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:;" sort="ion-arrow-down-c" class="comment-click ASC"><i class="ion-arrow-down-c"></i>Nhiều</a></li>
+                                <li><a href="javascript:;" sort="ion-arrow-up-c" class="comment-click DESC"><i class="ion-arrow-up-c"></i>Ít</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <a id="like-text" sort="ion-thumbsup" href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" role="button">
+                                <i class="ion-thumbsup"></i> Thích
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:;" sort="ion-arrow-down-c" class="like-click ASClike"><i class="ion-arrow-down-c"></i>Nhiều</a></li>
+                                <li><a href="javascript:;" sort="ion-arrow-up-c" class="like-click DESClike"><i class="ion-arrow-up-c"></i>Ít</a></li>
+                            </ul>
+                        </div>
+                        <a href="javascript:;" class="btn btn-default hidden-lg hidden-md" onclick="openNav()" role="button"><i class="ion-levels"></i>Bộ lọc</a>
+                    </div>
+                </div>
+            </div>
+            <div id="left-show-data">
+                <ul id="data-pagination" class="guide-city-list">
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\duanph.qnm\V%20.%20ANH\Lantana%20Riverside\thumb\105440131_636918280534242504_636929508666670053.jpg" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/hanksnlantanahoian">Kh&#225;ch sạn Lantana Riverside</a>
+                                </h3>
+                                <span>52 Huyền Tr&#226;n C&#244;ng Ch&#250;a  Phường Cẩm Ch&#226;u, TP Hội An, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">52 Huyền Tr&#226;n C&#244;ng Ch&#250;a  Phường Cẩm Ch&#226;u, TP Hội An, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://myquangnam.vn/vi/hanksnlantanahoian ';" style="cursor:pointer">
+                                <p class="intro">
+                                    Lantana Riverside Hoi An Boutique Hotel & Spa cung cấp chỗ ở ven sông tại thành phố Hội An. Khách sạn có hồ bơi ngoài trời và du ... </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=1122&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(1122, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" href="http://myquangnam.vn/vi/hanksnlantanahoian">Chi tiết</a>
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-planner" href="http://myquangnam.vn/vi/hanksnlantanahoian/bookinghotel">
+                                Đặt phòng ngay
+                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\myhoian12\Trendy%20life%20villa\thumb\hinh_dai_dien_636925064448561808.jpg" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/hanksntrendylifevilla">Cu&#244;̣c S&#244;́ng Đương Đại Villa</a>
+                                </h3>
+                                <span>186 Trần Nhật Duật,  Phường Cẩm Ch&#226;u, TP Hội An, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">186 Trần Nhật Duật,  Phường Cẩm Ch&#226;u, TP Hội An, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://myquangnam.vn/vi/hanksntrendylifevilla ';" style="cursor:pointer">
+                                <p class="intro">
+                                    Trendy Life Villa tọa lạc tại phường Cẩm Châu, Hội An, là một lựa chọn lý tưởng dành cho du khách khi đến với Di sản Văn hóa ... </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=1235&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(1235, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" href="http://myquangnam.vn/vi/hanksntrendylifevilla">Chi tiết</a>
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-planner" href="http://myquangnam.vn/vi/hanksntrendylifevilla/bookinghotel">
+                                Đặt phòng ngay
+                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\tamlc.qnm\mymy\thumb\1_637120373889933265.jpg" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/detailhotel/?id=2134">DNTN Kh&#225;ch Sạn My My</a>
+                                </h3>
+                                <span>A1-A2 Phan Boi Chau, TP. Tam Ky, Quang Nam  Phường T&#226;n Thạnh, TP Tam Kỳ, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">A1-A2 Phan Boi Chau, TP. Tam Ky, Quang Nam  Phường T&#226;n Thạnh, TP Tam Kỳ, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://myquangnam.vn/vi/detailhotel/?id=2134 ';" style="cursor:pointer">
+                                <p class="intro">
+                                    Khách sạn My My xin gửi đến Quý khách lời chào trân trọng A1-A2 Phan Bội Châu, TP. Tam Kỳ Quảng Nam My My là khách sạn ** chính thức đi ... </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=2134&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(2134, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" href="http://myquangnam.vn/vi/detailhotel/?id=2134">Chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="/Images/NoImage/Transparency/NoImage400x266.png" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/detailhotel/?id=2147">Hamy Beachside villa</a>
+                                </h3>
+                                <span>phường Điện Dương, thị x&#227; Điện B&#224;n  Phường Điện Dương, TX Điện B&#224;n, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">phường Điện Dương, thị x&#227; Điện B&#224;n  Phường Điện Dương, TX Điện B&#224;n, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://myquangnam.vn/vi/detailhotel/?id=2147 ';" style="cursor:pointer">
+                                <p class="intro">
+                                    Thuộc phường Điện Dương, thị xã Điện Bàn, Ha My Beachside Villa Hoian nằm gần bãi biển. Phố cổ Hội An và Nhà thờ Gia đình họ Trần là ... </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=2147&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(2147, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" href="http://myquangnam.vn/vi/detailhotel/?id=2147">Chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\tamlc.qnm\muong_thanh\thumb\h1_637119603210670376_637120038949749523.jpg" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/detailhotel/?id=2129">Kh&#225;ch Sạn Mường Thanh Quảng Nam - Chi Nh&#225;nh C&#244;ng Ty Cổ Phần Tập Đo&#224;n Mường Thanh</a>
+                                </h3>
+                                <span>351A H&#249;ng Vương - Phường An Xu&#226;n - Th&#224;nh phố Tam Kỳ - Quảng Nam  Phường An Xu&#226;n, TP Tam Kỳ, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">351A H&#249;ng Vương - Phường An Xu&#226;n - Th&#224;nh phố Tam Kỳ - Quảng Nam  Phường An Xu&#226;n, TP Tam Kỳ, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://myquangnam.vn/vi/detailhotel/?id=2129 ';" style="cursor:pointer">
+                                <p class="intro">
+                                    Với hồ bơi ngoài trời quanh năm và sân chơi trẻ em, Mường Thanh Grand Quảng Nam nằm ở thành phố Tam Kỳ. Khách sạn có sân hiên ... </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=2129&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(2129, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" href="http://myquangnam.vn/vi/detailhotel/?id=2129">Chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\dienban.qnm\thumb\unnamed_191307428.jpg" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/thenamhai">Kh&#225;ch sạn The Nam Hải </a>
+                                </h3>
+                                <span>phường Điện Dương, thị x&#227; Điện B&#224;n  Phường Điện Dương, TX Điện B&#224;n, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">phường Điện Dương, thị x&#227; Điện B&#224;n  Phường Điện Dương, TX Điện B&#224;n, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://myquangnam.vn/vi/thenamhai ';" style="cursor:pointer">
+                                <p class="intro">
+                                    Nằm trên bờ biển hoang sơ của Bãi biển Hội An, Four Seasons The Nam Hai, Hoi An, Vietnam cung cấp các biệt thự sang trọng được trang ... </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=2125&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(2125, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" href="http://myquangnam.vn/vi/thenamhai">Chi tiết</a>
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-planner" href="http://myquangnam.vn/vi/thenamhai/bookinghotel">
+                                Đặt phòng ngay
+                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="/Images/NoImage/Transparency/NoImage400x266.png" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/detailhotel/?id=2142">KH&#193;CH SẠN TONY</a>
+                                </h3>
+                                <span>QL 1A, Thị Trấn H&#224; Lam, Huyện Thăng B&#236;nh, Tỉnh Quảng Nam  Thị trấn H&#224; Lam, Huyện Thăng B&#236;nh, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">QL 1A, Thị Trấn H&#224; Lam, Huyện Thăng B&#236;nh, Tỉnh Quảng Nam  Thị trấn H&#224; Lam, Huyện Thăng B&#236;nh, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://myquangnam.vn/vi/detailhotel/?id=2142 ';" style="cursor:pointer">
+                                <p class="intro">
+                                    Nằm trên trục đường chính, có bãi đỗ xe rộng rãi,Wifi đầy đủ. Khách sạn có 20 phòng, phòng từ 1 đến 3 giường ,mỗi phòng có trang bị ... </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=2142&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(2142, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" href="http://myquangnam.vn/vi/detailhotel/?id=2142">Chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\myhoian12\NGOI%20NHA%20HANH%20PHUC\thumb\31692155_636927487334233828.jpg" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/hanvilfullhouse1">Ng&#244;i nh&#224; hạnh ph&#250;c 1</a>
+                                </h3>
+                                <span>20 Xu&#226;n Diệu,  Phường T&#226;n An, TP Hội An, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">20 Xu&#226;n Diệu,  Phường T&#226;n An, TP Hội An, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://myquangnam.vn/vi/hanvilfullhouse1 ';" style="cursor:pointer">
+                                <p class="intro">
+                                    Tọa lạc tại số 20 Xuân Diệu, Hội An, cách trung tâm phố cổ khoảng 1,5 km, cách sân bay quốc tế Đà Nẵng 22,6 km với khoảng ... </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=1303&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(1303, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" href="http://myquangnam.vn/vi/hanvilfullhouse1">Chi tiết</a>
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-planner" href="http://myquangnam.vn/vi/hanvilfullhouse1/bookinghotel">
+                                Đặt phòng ngay
+                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\tinhdv.qnm\thumb\1cd9fab5-ca58-447d-bcfa-e90c6b3d8e82_636939615963071616.jpg" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/detailhotel/?id=1815">Nh&#224; Nghỉ Minh Qu&#226;n</a>
+                                </h3>
+                                <span>Th&#244;n 1, X&#227; Tr&#224; Mai, Huyện Nam Tr&#224; My  X&#227; Tr&#224; Mai, Huyện Nam Tr&#224; My, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">Th&#244;n 1, X&#227; Tr&#224; Mai, Huyện Nam Tr&#224; My  X&#227; Tr&#224; Mai, Huyện Nam Tr&#224; My, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://myquangnam.vn/vi/detailhotel/?id=1815 ';" style="cursor:pointer">
+                                <p class="intro">
+                                    Giới thiệu chung về nhà nghỉ </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=1815&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(1815, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" href="http://myquangnam.vn/vi/detailhotel/?id=1815">Chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\ttkd.qnm\thumb\add_gv1_636934420748437521.jpg" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/detailhotel/?id=1439">Grandvrio Ocean Resort Danang</a>
+                                </h3>
+                                <span>Lạc Long Qu&#226;n, Điện Ngọc, Điện B&#224;n, Quảng Nam  Phường Điện Ngọc, TX Điện B&#224;n, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">Lạc Long Qu&#226;n, Điện Ngọc, Điện B&#224;n, Quảng Nam  Phường Điện Ngọc, TX Điện B&#224;n, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://grandvriooceanresortcitydanang.com/ ';" style="cursor:pointer">
+                                <p class="intro">
+                                    Với hồ bơi ngoài trời, Grandvrio Ocean Resort Danang cung cấp chỗ nghỉ đẹp mắt tại thị trấn Điện Bàn. Resort nhìn ra biển này có 3 nhà ... </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=1439&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(1439, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" onclick="redirectURL('http://grandvriooceanresortcitydanang.com/')">Chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\duanph.qnm\V%20.%20ANH\HOANG%20GIA%20HOI%20AN\thumb\avata_dn_636926035263671692.jpg" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/hanksnhoanggiahoian">Ho&#224;ng Gia Hội An</a>
+                                </h3>
+                                <span>39 đường Đ&#224;o Duy Từ  Phường Cẩm Ph&#244;, TP Hội An, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">39 đường Đ&#224;o Duy Từ  Phường Cẩm Ph&#244;, TP Hội An, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://myquangnam.vn/vi/hanksnhoanggiahoian ';" style="cursor:pointer">
+                                <p class="intro">
+                                    Truyền tải câu chuyện tình giữa Sotaro và Wakaku thông qua sự hòa quyện hài hòa giữa văn hóa Nhật Bản và phong cách sang trọng kiểu Đông ... </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=1101&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(1101, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" href="http://myquangnam.vn/vi/hanksnhoanggiahoian">Chi tiết</a>
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-planner" href="http://myquangnam.vn/vi/hanksnhoanggiahoian/bookinghotel">
+                                Đặt phòng ngay
+                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\duanph.qnm\V%20.%20ANH\A%20Little%20Luxury\thumb\little-hoian_636917296597244304_636929034114457212.jpg" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/hanksnallegrohoian">Kh&#225;ch sạn Allegro Hội An</a>
+                                </h3>
+                                <span>L&#244; 86 Trần Hưng Đạo  Phường Cẩm Ph&#244;, TP Hội An, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">L&#244; 86 Trần Hưng Đạo  Phường Cẩm Ph&#244;, TP Hội An, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://myquangnam.vn/vi/hanksnallegrohoian ';" style="cursor:pointer">
+                                <p class="intro">
+                                    Tọa lạc tại số 86 Trần Hưng Đạo, Hội An, ngay tại trung tâm thành phố, khách sạn Alegro Hội An là một vị trí lý tưởng để ... </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=1104&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(1104, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" href="http://myquangnam.vn/vi/hanksnallegrohoian">Chi tiết</a>
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-planner" href="http://myquangnam.vn/vi/hanksnallegrohoian/bookinghotel">
+                                Đặt phòng ngay
+                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\nguyenntd.qnm\thumb\phuongtay_637133851278318261.png" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/detailhotel/?id=1646">Kh&#225;ch sạn Phương T&#226;y</a>
+                                </h3>
+                                <span>Đường L&#234; Hồng Phong, Khối 4, Thị Trấn N&#250;i Th&#224;nh , Huyện N&#250;i Th&#224;nh, Tỉnh Quảng Nam  Thị trấn N&#250;i Th&#224;nh, Huyện N&#250;i Th&#224;nh, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">Đường L&#234; Hồng Phong, Khối 4, Thị Trấn N&#250;i Th&#224;nh , Huyện N&#250;i Th&#224;nh, Tỉnh Quảng Nam  Thị trấn N&#250;i Th&#224;nh, Huyện N&#250;i Th&#224;nh, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://myquangnam.vn/vi/detailhotel/?id=1646 ';" style="cursor:pointer">
+                                <p class="intro">
+                                    nằm tại trung tâm TT.Núi Thành Gần với khu du lịch Biển Rạng, vị trí đẹp của khách sạn bảo đảm khách hàng có thể đến tham quan ... </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=1646&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(1646, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" href="http://myquangnam.vn/vi/detailhotel/?id=1646">Chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\nguyenntd.qnm\thumb\khach_san_thang_loi_637117384615580590.png" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/detailhotel/?id=1648">Kh&#225;ch sạn Thắng Lợi</a>
+                                </h3>
+                                <span>QL 1A, Th&#244;n Nam Sơn, x&#227; Tam Hiệp, Huyện N&#250;i Th&#224;nh, Tỉnh Quảng Nam  X&#227; Tam Hiệp, Huyện N&#250;i Th&#224;nh, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">QL 1A, Th&#244;n Nam Sơn, x&#227; Tam Hiệp, Huyện N&#250;i Th&#224;nh, Tỉnh Quảng Nam  X&#227; Tam Hiệp, Huyện N&#250;i Th&#224;nh, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://myquangnam.vn/vi/detailhotel/?id=1648 ';" style="cursor:pointer">
+                                <p class="intro">
+                                    Khách sạn Thắng Lợi, đối diện bệnh viện đa khoa trung ương quảng nam </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=1648&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(1648, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" href="http://myquangnam.vn/vi/detailhotel/?id=1648">Chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\giangctp.qnm\thumb\vinpearl_637117415369056406.jpg" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/detailhotel/?id=1812">Khu nghỉ dưỡng cao cấp VINPEARL NAM HỘI AN</a>
+                                </h3>
+                                <span>X&#227; B&#236;nh Minh, Thăng B&#236;nh, Qunagr Nam  Thị trấn H&#224; Lam, Huyện Thăng B&#236;nh, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">X&#227; B&#236;nh Minh, Thăng B&#236;nh, Qunagr Nam  Thị trấn H&#224; Lam, Huyện Thăng B&#236;nh, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://myquangnam.vn/vi/detailhotel/?id=1812 ';" style="cursor:pointer">
+                                <p class="intro">
+                                    View rất đẹp, trò chơi cảm giác mạnh kết hợp cùng công viên nước giải trí. Đầy đủ mọi tiện nghi. Có cả xe điện đưa đón đi ... </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=1812&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(1812, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" href="http://myquangnam.vn/vi/detailhotel/?id=1812">Chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\duanph.qnm\V%20.%20ANH\Vinpearl\thumb\107677784_636917262718138356_636926056535281420.jpg" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/hanksnvinpearlhoianresort">Vinpearl Hội An Resort </a>
+                                </h3>
+                                <span>Tổ 6, Khối Phố Hải,  Phường Cửa Đại, TP Hội An, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">Tổ 6, Khối Phố Hải,  Phường Cửa Đại, TP Hội An, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://myquangnam.vn/vi/hanksnvinpearlhoianresort ';" style="cursor:pointer">
+                                <p class="intro">
+                                    Tọa lạc ngay tại bãi biển thuộc phường Cửa Đại, khách sạn Vinpearl Hội An (Vinpearl Resort & Spa Hội An) là một lựa chọn tuyệt vời dành ... </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=1102&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(1102, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" href="http://myquangnam.vn/vi/hanksnvinpearlhoianresort">Chi tiết</a>
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-planner" href="http://myquangnam.vn/vi/hanksnvinpearlhoianresort/bookinghotel">
+                                Đặt phòng ngay
+                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\duanph.qnm\anio_boutique_hotel_hoian\thumb\anio_res_hoi_an_kitchen_1_637118410311697248.jpg" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/ksaanioboutiquehotel">Anio Boutique Hotel Hoi An </a>
+                                </h3>
+                                <span>03 L&#234; Đ&#236;nh Th&#225;m,  Phường Cẩm Ch&#226;u, TP Hội An, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">03 L&#234; Đ&#236;nh Th&#225;m,  Phường Cẩm Ch&#226;u, TP Hội An, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://myquangnam.vn/vi/ksaanioboutiquehotel ';" style="cursor:pointer">
+                                <p class="intro">
+                                    Khách sạn chỉ cách cách phố cổ Hội An chưa đầy 2km với dịch vụ xe đưa đón hàng ngày , cách chỉ hơn 2km đến Top 50 ... </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=1830&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(1830, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" href="http://myquangnam.vn/vi/ksaanioboutiquehotel">Chi tiết</a>
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-planner" href="http://myquangnam.vn/vi/ksaanioboutiquehotel/bookinghotel">
+                                Đặt phòng ngay
+                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pd-l-r-n col-md-5 col-sm-5 col-xs-8 text-center item-city">
+                        <div class="media">
+                            <a href="#" class="media-object pull-left">
+                                <img width="320" class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\myhoian3\Cty%20TNHH%20MTV%20TM&DV%20Kim%20Vinh\thumb\175988948_636920769634880111.jpg" />
+                            </a>
+                            <div class="media-body text-left">
+                                <h3 class="place-name">
+                                    <a href="http://myquangnam.vn/vi/hanksnhoianannretreat">Ann Retreat Resort &amp; Spa </a>
+                                </h3>
+                                <span>47 Thoại Ngọc Hầu,  Phường Cẩm Ph&#244;, TP Hội An, Tỉnh Quảng Nam</span>
+
+                                <div class="tags">
+                                    <span class="label label-info">47 Thoại Ngọc Hầu,  Phường Cẩm Ph&#244;, TP Hội An, Tỉnh Quảng Nam</span>
+                                </div>
+                            </div>
+                            <div class="city-opts" onclick="location.href='http://myquangnam.vn/vi/hanksnhoianannretreat ';" style="cursor:pointer">
+                                <p class="intro">
+                                    Ann Retreat Resort & Spa (trước đây là Hoi An River Town Hotel) cung cấp chỗ nghỉ đẹp mắt và hiện đại ở thành phố Hội An, cách ... </p>
+                                <div class="list-buttons">
+                                    <div class="buttons">
+                                        <a class="btn add-button-tour btn-create-tour" href="http://myquangnam.vn/vi/edittour/?tourid=0&placeid=1181&placecode=hotel">
+                                    Tạo tour mới
+                                </a>
+                                        <a class="btn add-button-tour add-tour" onclick="getForm(1181, 'HOTEL')">
+                                    Thêm vào tour
+                                </a>
+
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-explore" href="http://myquangnam.vn/vi/hanksnhoianannretreat">Chi tiết</a>
+                                    </div>
+                                    <div class="buttons">
+                                        <a class="btn btn-sm btn-default btn-planner" href="http://myquangnam.vn/vi/hanksnhoianannretreat/bookinghotel">
+                                Đặt phòng ngay
+                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                </ul>
+                <div class="row text-center load-more-page" style="display: none;">
+                    <div class="loading-page"></div>
+                    <p class="text-title">Đang tải...</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="footer">
+
+        <div class="footer-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-sm-8 col-xs-10 footer-gallery">
+                        <div class="footer-gallery-inner">
+                            <h3 class="text-orag">Thư viện hình ảnh</h3>
+                            <ul class="lst_img_footer">
+                                <li>
+                                    <a href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Thu%20vien%20anh/8.ngaylu_636940317772954681.jpg">
+                                        <img src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\adminqnm\Logo\Thu%20vien%20anh\thumb\8.ngaylu_636940317772954681.jpg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Thu%20vien%20anh/7.binhminhtrenbienqueem_636940317726130516.jpg">
+                                        <img src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\adminqnm\Logo\Thu%20vien%20anh\thumb\7.binhminhtrenbienqueem_636940317726130516.jpg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Thu%20vien%20anh/6.tinhvadong_636940317676410828.jpg">
+                                        <img src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\adminqnm\Logo\Thu%20vien%20anh\thumb\6.tinhvadong_636940317676410828.jpg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Thu%20vien%20anh/5.cautrexuquang_636940317617512377.jpg">
+                                        <img src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\adminqnm\Logo\Thu%20vien%20anh\thumb\5.cautrexuquang_636940317617512377.jpg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Thu%20vien%20anh/4.binhminhtrenbienqueem_636940317560622556.jpg">
+                                        <img src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\adminqnm\Logo\Thu%20vien%20anh\thumb\4.binhminhtrenbienqueem_636940317560622556.jpg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Thu%20vien%20anh/3.langbichhoa_636940317059439194.jpg">
+                                        <img src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\adminqnm\Logo\Thu%20vien%20anh\thumb\3.langbichhoa_636940317059439194.jpg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Thu%20vien%20anh/2.biencuadai_636940316993566514.jpg">
+                                        <img src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\adminqnm\Logo\Thu%20vien%20anh\thumb\2.biencuadai_636940316993566514.jpg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Thu%20vien%20anh/1.chieuque_636940316936775058.jpg">
+                                        <img src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\adminqnm\Logo\Thu%20vien%20anh\thumb\1.chieuque_636940316936775058.jpg" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-8 col-xs-6 footer-menu">
+                        <div class="footer-menu-inner">
+                            <h3 class="text-uppercase text-orag">Danh mục</h3>
+
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/hotels">Khách sạn</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/restaurants">Ẩm thực</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/places">Khám phá</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/shops">Mua sắm</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/tours">Lịch trình</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/business">Tour</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/events">Lễ hội & Sự kiện</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/news">Tin tức</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/introduction">Giới thiệu</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/utilities">Tiện ích</a></div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-16 col-xs-16 footer-address">
+                        <div class="download-apps">
+                            <h3 class="text-orag">Tải ứng dụng</h3>
+                            <div class="list-download-app">
+                                <a href="https://play.google.com/store/apps/details?id=com.quangnam.tourism"><img alt="android-img" src="/Images/general/android.png" class="img-responsive" /></a>
+                                <a href="https://apps.apple.com/vn/app/quang-nam-tourism/id1436827272?l=vi"><img alt="ios-img" src="/Images/general/ios.png" class="img-responsive" /></a>
+                            </div>
+                        </div>
+                        <div class="footer-address-outer">
+                            <ul>
+                                <li><strong>Trung t&#226;m Th&#244;ng Tin X&#250;c tiến Du lịch Tỉnh Quảng Nam</strong></li>
+                                <li><i class="ficon ficon-map-pin-fat"></i>Địa chỉ: 47, 49, 51 Phan Ch&#226;u Trinh, TP Hội An, Tỉnh Quảng Nam, Việt Nam.</li>
+                                <li><i class="ficon ficon-telephone"></i>Số điện thoại: (+84) 235 3916961 - <i class="ficon ficon-fax-or-photo"></i>Fax: (+84) 235 3916961</li>
+                            </ul>
+                        </div>
+                        <div class="socials">
+                            <ul>
+                                <li><a target="_blank" href="https://www.facebook.com/quangnamtourism.com.vn"><i class="ion-social-facebook"></i></a></li>
+                                <li><a target="_blank" href="https://www.instagram.com/quangnamtourism"><i class="ion-social-instagram"></i></a></li>
+                                <li><a target="_blank" href="https://www.youtube.com/channel/UCCV69qcb_ZtdzyPoGZeY2xg"><i class="ion-social-youtube"></i></a></li>
+                                <li><a target="_blank" href="https://twitter.com/quangnamtourism"><i class="ion-social-twitter"></i></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container copyright-inner">
+                Copyright &#169; 2019 - Trung t&#226;m Th&#244;ng Tin X&#250;c tiến Du lịch Tỉnh Quảng Nam
+            </div>
+        </div>
+
+    </footer>
+    <div id="show_download_my_app" style="display: none">
+        <div class="app-inner">
+            <span class="ion-close mobile_close"></span>
+            <div class="show_mobile_container">
+                <img class="img-responsive" src="/Images/general/Logo20.png" />
+                <div class="info_mobile">
+                    <a target="_blank" id="link_download" href="https://play.google.com/store/apps/details?id=com.quangnam.tourism">Trải nghiệm trên di động</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="modal-login-system" class="basic-popup mfp-with-anim mfp-hide" style="max-width: 380px">
+        <div class="mtp-header">
+            <h3 class="text-center text-uppercase">Đăng nhập</h3>
+        </div>
+        <div class="mtp-content">
+            <div id="login_form">
+                <form action="/Modules/Home/SubmitLogin" autocomplete="off" method="post"><input name="__RequestVerificationToken" type="hidden" value="QoIiIn7JxWD7P-2tQpBgRBRcEzvMGt5bo7js_LbWuiBgQGSlr5hja4vNTs_s_MiK-ru2TFkMhXx9AlZPzlNthZ5kuU83kDTx4rUWLKLnS7aHkc22vZclCFzEqcKFZ5bLW4_rGE4sgUpXIbiepPTDLvWP7gebuBtSXCbrbuezfoc1xTJd9DZZNLBlBqpOnoPL0"
+                    />
+                    <div class="col-md-16 fields form-group">
+
+                        <input class="form-control item_log" id="UserName" name="UserName" placeholder="Tên đăng nhập" type="text" value="" />
+                        <i class="ion-person"></i>
+
+                    </div>
+                    <div class="col-md-16 fields form-group">
+
+                        <input class="form-control item_log" id="Password" name="Password" placeholder="Mật khẩu" type="password" />
+                        <i class="ion-locked"></i>
+
+                    </div>
+                    <div class="col-md-16 fields">
+                        <button class="btn btn-primary btn-block">Đăng nhập</button>
+                    </div>
+                    <div class="col-md-16 fields text-center form-group">
+                        <div class="checkbox i-checks">
+
+                            <input id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" />
+                            <label class="pd-l-n" for="remember">Lưu tài khoản</label>
+                        </div>
+                    </div>
+                </form>
+                <div class="col-md-16 fields text-center hidden-xs">
+                    <p class="type_login">hoặc đăng nhập với</p>
+                </div>
+                <form action="/Modules/Home/ExternalLogin" method="post"><input name="__RequestVerificationToken" type="hidden" value="0KlheQPf4HLGpWG571icWXJCFM--Tm2b5A61wo6PXsO2xBK5z2T_xW8NJ58zl7bRSLcYPgjytmjWlTw5Y_f81b9lYqitmox4dnojJyK2CdNIlZYOeH5y1K3c00JDfxXO2lNLilhnIYa2-ay37Ne8iT9Sty4C92wl-TwApTNozdiuEG8bGQRasa9HJ5EJM5ei0"
+                    />
+                    <div class="col-md-16 fields other_login">
+                        <div class="col-md-8 form-group col-sm-8 col-xs-16 pd-l-n">
+                            <button type="submit" class="btn btn-inverse pull-left btn-block btn-google" id="Google" name="provider" value="Google" title="Đăng nhập bằng tài khoản Google">
+                                        <i class="ion-social-google"></i> Google
+                                    </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <div class="mtp-footer">
+            <div class="row">
+                <a class="col-md-8 text-left col-sm-8 col-xs-8" href="http://myquangnam.vn/vi/signup"> <i class="ion-person-add"></i> Đăng ký</a>
+                <a class="col-md-8 text-right col-sm-8 col-xs-8" href="http://myquangnam.vn/vi/forgotpassword"> <i class="ion-refresh"></i> Quên mật khẩu</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-choose-register" class="basic-popup mfp-with-anim mfp-hide" style="max-width: 30%">
+        <div class="mtp-header">
+            <h3 class="text-center text-uppercase">Đăng ký</h3>
+        </div>
+        <div class="mtp-content">
+            <div class="row" style="text-align: center;font-size: 90px;">
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    <a href="http://myquangnam.vn/vi/signupguest">
+                        <i class="ion-android-contact"></i>
+                        <p style="font-size: 20px;">Khách</p>
+                    </a>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    <a href="http://myquangnam.vn/vi/signupcompany">
+                        <i class="ion-briefcase"></i>
+                        <p style="font-size: 20px;">Doanh nghiệp</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="loading-box modal_load col-xs-16 text-center load-more-page-mobile" id="loading-box" aria-hidden="true" style="display: none;">
+        <div class="box-show">
+            <div class="loading-page-mobile col-xs-2"></div>
+            <div class="box-content col-xs-13">Đang tải...</div>
+        </div>
+    </div>
+
+    <script src="/Scripts/jquery.simpleWeather.min.js"></script>
+    <script src="/Scripts/jquery.magnific-popup.js"></script>
+    <script src="/Scripts/wow.min.js"></script>
+    <script src="/Scripts/unveil2.min.js"></script>
+    <script src="/Scripts/jquery.scrollUp.js"></script>
+    <script src="/Scripts/swiper.min.js"></script>
+    <script src="/Scripts/moment.min.js"></script>
+    <script src="/Scripts/custom-fun.js"></script>
+    <script src="/Scripts/bootstrap.js"></script>
+    <script src="/Scripts/respond.js"></script>
+    <script src="/Scripts/bootbox.min.js"></script>
+    <script src="/Scripts/Utilities/badwords.js"></script>
+
+
+
+
+
+    <script src="/Scripts/icheck.min.js"></script>
+    <script src="/Scripts/perfect-scrollbar.js"></script>
+    <script src="/Scripts/jquery.magnific-popup.js"></script>
+    <script src="/Scripts/jquery-ui.js"></script>
+    <script src="/Scripts/EasyAutocomplete/jquery.easy-autocomplete.min.js"></script>
+    <script type="text/javascript">
+        //set avariable default
+        var pageSize = 18;
+        var pageIndex = 2;
+        var arrPrice = [];
+        var arrService = [];
+        var arrType = [];
+        var status = true;
+        var sortComment = '';
+        var sortLike = '';
+        var keyword = '';
+        var resRequest = null;
+        var breakingCallBack = false;
+        var pricefrom = priceto = '';
+        var lservices = "",
+            ltypes = "",
+            placename = "";
+        var hotelsRequest = null;
+        var top10;
+        var isscroll;
+
+        $(window).scroll(function() {
+            if ($(this).scrollTop() + window.innerHeight >= ($(document).height() - $('footer').height())) {
+                if (status == "true") {
+                    if (pageIndex == 1) {
+                        pageIndex = 2;
+                    }
+                    if (!breakingCallBack) {
+                        breakingCallBack = true;
+                        hotelsRequest = $.ajax({
+                            type: 'POST',
+                            url: '/Modules/Hotel/GetListHotel',
+                            data: {
+                                placename: $("#keyword").val(),
+                                pageIndex: pageIndex,
+                                pricefrom: pricefrom,
+                                priceto: priceto,
+                                resservice: arrService,
+                                restype: arrType,
+                                sortComment: sortComment,
+                                sortLike: sortLike,
+                                top10: top10,
+                                isscroll: true
+                            },
+                            beforeSend: function() {
+                                if (hotelsRequest != null) {
+                                    hotelsRequest.abort();
+                                }
+                                $("body").css("overflow", "hidden");
+                                loading.showLoading();
+                            },
+                            success: function(result) {
+                                if (result.trim() == '') {
+                                    status = "false";
+                                } else {
+                                    $('#data-pagination').append(result);
+                                    pageIndex += 1;
+                                }
+                                breakingCallBack = false;
+                            },
+                            complete: function() {
+                                $("body").css("overflow", "auto");
+                                loading.hideLoading();
+                                breakingCallBack = false;
+                            },
+                            error: function() {
+                                $("body").css("overflow", "auto");
+                                loading.hideLoading();
+                                console.log("Error connection!");
+                                breakingCallBack = false;
+                            },
+                            timeout: 10000
+                        });
+                    }
+
+                }
+            }
+        });
+
+        //process sort comment
+        $('a.comment-click').click(function() {
+            loading.showLoadingMobile();
+
+            var id = $(this).attr('sort');
+            var text = $(this).text();
+            //nvt reset like
+            sortLike = '';
+            $('#like-text').html('<i class="ion-thumbsup"></i> ' + ' Thích');
+            $('.ASClike').html('<i class="ion-arrow-down-c"></i> ' + ' Nhiều');
+            $('.ASClike').attr('sort', 'ion-arrow-down-c');
+            $('.DESClike').html('<i class="ion-arrow-up-c"></i> ' + ' Ít');
+            $('.DESClike').attr('sort', 'ion-arrow-up-c');
+            //end
+            if (id == "ion-arrow-down-c") {
+                sortComment = 'ASC';
+                $('#comments-text').html('<i class="ion-arrow-down-c"></i>' + text);
+                $('.ASC').html('<i class="ion-chatbox-working"></i>' + 'Bỏ lọc');
+                $('.ASC').attr("sort", "ion-chatbox-working");
+                $('.DESC').html('<i class="ion-arrow-up-c"></i>' + 'Ít');
+                $('.DESC').attr('sort', 'ion-arrow-up-c');
+            }
+            if (id == "ion-arrow-up-c") {
+                sortComment = 'DESC';
+                $('#comments-text').html('<i class="ion-arrow-up-c"></i>' + text);
+                $('.ASC').html('<i class="ion-arrow-down-c"></i>' + 'Nhiều');
+                $('.ASC').attr('sort', 'ion-arrow-down-c');
+                $('.DESC').html('<i class="ion-chatbox-working"></i>' + 'Bỏ lọc');
+                $('.DESC').attr('sort', 'ion-chatbox-working');
+            }
+            if (id == "ion-chatbox-working") {
+                sortComment = '';
+                $('#comments-text').html('<i class="ion-chatbox-working"></i>' + 'Bình luận');
+                $('.ASC').html('<i class="ion-arrow-down-c"></i>' + 'Nhiều');
+                $('.ASC').attr('sort', 'ion-arrow-down-c');
+                $('.DESC').html('<i class="ion-arrow-up-c"></i>' + 'Ít');
+                $('.DESC').attr('sort', 'ion-arrow-up-c');
+            }
+
+            status = true;
+            pageIndex = 1;
+
+            //cal ajax process filter
+            callAjax();
+        });
+
+        //process sort like
+        $('a.like-click').click(function() {
+            loading.showLoadingMobile();
+
+            var id = $(this).attr('sort');
+            var text = $(this).text();
+
+            //nvt reset comment
+            sortComment = '';
+            $('#comments-text').html('<i class="ion-chatbox-working"></i>' + 'Bình luận');
+            $('.ASC').html('<i class="ion-arrow-down-c"></i>' + 'Nhiều');
+            $('.ASC').attr('sort', 'ion-arrow-down-c');
+            $('.DESC').html('<i class="ion-arrow-up-c"></i>' + 'Ít');
+            $('.DESC').attr('sort', 'ion-arrow-up-c');
+            //end
+            if (id == "ion-arrow-down-c") {
+                sortLike = 'ASC';
+                $('#like-text').html('<i class="ion-arrow-down-c"></i> ' + text);
+                $('.ASClike').html('<i class="ion-thumbsup"></i> ' + ' Bỏ lọc');
+                $('.ASClike').attr("sort", "ion-thumbsup");
+                $('.DESClike').html('<i class="ion-arrow-up-c"></i> ' + ' Ít');
+                $('.DESClike').attr('sort', 'ion-arrow-up-c');
+            }
+            if (id == "ion-arrow-up-c") {
+                sortLike = 'DESC';
+                $('#like-text').html('<i class="ion-arrow-up-c"></i> ' + text);
+                $('.ASClike').html('<i class="ion-arrow-down-c"></i> ' + ' Nhiều');
+                $('.ASClike').attr('sort', 'ion-arrow-down-c');
+                $('.DESClike').html('<i class="ion-thumbsup"></i> ' + ' Bỏ lọc');
+                $('.DESClike').attr('sort', 'ion-thumbsup');
+            }
+            if (id == "ion-thumbsup") {
+                sortLike = '';
+                $('#like-text').html('<i class="ion-thumbsup"></i> ' + ' Thích');
+                $('.ASClike').html('<i class="ion-arrow-down-c"></i> ' + ' Nhiều');
+                $('.ASClike').attr('sort', 'ion-arrow-down-c');
+                $('.DESClike').html('<i class="ion-arrow-up-c"></i> ' + ' Ít');
+                $('.DESClike').attr('sort', 'ion-arrow-up-c');
+            }
+
+            status = true;
+            pageIndex = 1;
+
+            //cal ajax process filter
+            callAjax();
+        });
+
+        //Process when click input filter
+        $('input[type=checkbox]').on('ifChanged change paste', function(event) {
+            loading.showLoadingMobile();
+            var selecttype = [];
+            var selectservice = [];
+            top10 = 0;
+            var setPrice = $('#price_icheck input:checked');
+            var lengthPrice = setPrice.length;
+            if (lengthPrice > 0) {
+                for (var i = 0; i < lengthPrice; i++) {
+
+                    pricefrom = $('#price_icheck input:checked')[0].value.split('-')[0];
+                    priceto = $('#price_icheck input:checked')[lengthPrice - 1].value.split('-')[1];
+                }
+            } else {
+                pricefrom = 0;
+                priceto = 0;
+            }
+            $("#type_icheck").find("input:checked").each(function(i, ob) {
+                if ($(ob).attr("data-htc") === "TOP_10_HOTEL") {
+                    top10 = $(ob).val();
+                } else
+                    selecttype.push($(ob).val());
+            });
+            $("#service_icheck").find("input:checked").each(function(i, ob) {
+                selectservice.push($(ob).val());
+            });
+            arrType = selecttype;
+            ltypes = arrType.join();
+            arrService = selectservice;
+            lservices = arrService.join();
+
+            status = true;
+            pageIndex = 1;
+            callAjax();
+        });
+
+        //function call ajax
+        function callAjax() {
+            $.ajax({
+                type: 'POST',
+                url: '/Modules/Hotel/GetListHotel',
+                data: {
+                    placename: $("#keyword").val(),
+                    pricefrom: pricefrom,
+                    priceto: priceto,
+                    resservice: lservices,
+                    restype: ltypes,
+                    sortComment: sortComment,
+                    sortLike: sortLike,
+                    top10: top10
+                },
+                success: function(result) {
+                    if (result.trim() == '') {
+                        var htmlNot = '<li class="pd-l-r-n col-md-16 col-sm-16 col-xs-16 text-center item-city"> <div class="alert alert-info fade in text-center"> <b class="fs18"><i class="ion-search"></i> Không tìm thấy dữ liệu nào phù hợp!</b> </div> </li>';
+                        $('#data-pagination').html(htmlNot);
+                    } else {
+                        $('#data-pagination').html(result);
+                    }
+                    loading.hideLoadingMobile();
+                },
+                error: function() {
+                    loading.hideLoadingMobile();
+                    console.log("Error connection!");
+                },
+                timeout: 10000
+            });
+        }
+
+        //process keyword search
+        $("#keyword").blur(function() {
+            placename = convertToUnsignChar($(this).val());
+            status = true;
+            pageIndex = pageSize;
+            callAjax();
+        });
+        $(document).keypress(function(e) {
+            if (e.which == 13) {
+                placename = convertToUnsignChar($(this).val());
+                status = true;
+                pageIndex = 1;
+                callAjax();
+            }
+        });
+        $("#keyword").keyup(function(e) {
+            if (e.which == 13) // Enter key
+                $(this).blur();
+        });
+
+        // event enter
+        $('#keyword').keypress(function(e) {
+            return e.which != 13;
+        });
+
+        function openNav() {
+            $('#sidebar-scroll').animate({
+                width: "toggle"
+            });
+        }
+
+        $('.smartphone').click(function() {
+            $('#sidebar-scroll').animate({
+                width: "toggle"
+            });
+        });
+
+        Ps.initialize(document.getElementById('sidebar-scroll'), {
+            useSelectionScroll: true
+        });
+
+        $(document).ready(function() {
+            $('.checkboxes input[type="checkbox"]').iCheck({
+                checkboxClass: 'icheckbox_minimal'
+            });
+            $("#hotels-slide-top").owlCarousel({
+                autoPlay: true,
+                navigation: false,
+                stopOnHover: true,
+                pagination: false,
+                items: 4,
+                itemsDesktop: [1199, 2],
+                itemsDesktopSmall: [979, 2],
+                itemsTablet: [768, 2],
+                itemsMobile: [479, 1],
+            });
+        });
+
+        $('.service').click(function() {
+            var id = $(this).attr('data-service');
+            var hasClass = $(this).find('.filter-icon');
+            if (hasClass.hasClass('ion-minus-circled')) {
+                hasClass.removeClass('ion-minus-circled');
+                hasClass.addClass('ion-plus-circled');
+            } else {
+                hasClass.removeClass('ion-plus-circled');
+                hasClass.addClass('ion-minus-circled');
+            }
+            $('.service-' + id).find('fieldset').slideToggle();
+        });
+
+        function getForm(paraid, placeCode) {
+            $.ajax({
+                type: 'POST',
+                url: '/Modules/Tour/AddTourFromListFilter',
+                data: {
+                    id: paraid,
+                    placeCode: placeCode
+                },
+                success: function(result) {
+                    $.magnificPopup.open({
+                        removalDelay: 500,
+                        items: {
+                            src: result,
+                            type: 'inline'
+                        },
+                        callbacks: {
+                            beforeOpen: function(e) {
+                                this.st.mainClass = 'mfp-zoom-in';
+                            },
+                            close: function(e) {}
+                        },
+                        midClick: true,
+                        closeOnBgClick: false
+                    });
+                    loading.showLoadingMobile();
+                },
+                error: function() {
+                    loading.showLoadingMobile();
+                    console.log("Error connection!");
+                },
+                timeout: 10000
+            });
+        }
+    </script>
+
+    <script type="text/javascript">
+        function geturl() {
+            return "https://myquangnam.vn/vi/restaurants/";
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            var raido = $(".cls_wrap").attr("data-toggle");
+            if (raido == 0) {
+                $(".cls_tuvan").css("display", "none");
+                $(".cls_x").click(function() {
+                    $(".cls_wrap").slideToggle();
+                    $(".cls_tuvan").slideToggle();
+                });
+                $(".cls_tuvan").click(function() {
+                    $(".cls_wrap").slideToggle();
+                    $(this).slideToggle();
+                });
+            } else {
+                $(".cls_wrap").css("display", "none");
+                $(".cls_x").click(function() {
+                    $(".cls_wrap").slideToggle();
+                    $(".cls_tuvan").slideToggle();
+                });
+                $(".cls_tuvan").click(function() {
+                    $(".cls_wrap").slideToggle();
+                    $(this).slideToggle();
+                });
+            }
+            //jQuery.simpleWeather({
+            //    woeid: '1252375',
+            //    unit: 'c',
+            //    success: function (weather) {
+            //        var html = '<i class="icon-' + weather.code + '"></i> <span class="data">' + weather.city +
+            //            ', ' + weather.region + ' ' + weather.temp + '&deg;' +
+            //            weather.units.temp + ' </span>';
+
+            //        var rootWeather = jQuery('body').find('#weather');
+            //        rootWeather.html(html);
+            //    },
+            //    error: function (error) {
+            //        var rootWeather = jQuery('body').find('#weather');
+            //        rootWeather.html('<p>' + error + '</p>');
+            //    }
+            //});
+
+            $('img.lazy').unveil();
+
+            if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0, 4))) {
+                $('#toggle_form_search').trigger('click');
+                if (sessionStorage.getItem("show_mobile_app") == null || sessionStorage.getItem("show_mobile_app") != 0) {
+                    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                    if (/windows phone/i.test(userAgent)) {} else if (/android/i.test(userAgent)) {
+                        $.ajax({
+                            type: 'POST',
+                            //url: "/Modules/Home/GetLinkDownLoadApp",
+                            url: "/Modules/Home/GetLinkDownLoadApp",
+                            data: {
+                                operatingSystem: "android"
+                            },
+                            success: function(result) {
+                                if (result.Success) {
+                                    $('#link_download').attr('href', result.LinkHref);
+                                    $('#android-app').attr('href', result.LinkHref);
+                                    $('#show_download_my_app').addClass('show_popup');
+                                }
+                            },
+                            error: function() {
+                                console.log("Error connection");
+                            },
+                            timeout: 10000
+                        });
+                    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                        $.ajax({
+                            type: 'POST',
+                            //url: "/Modules/Home/GetLinkDownLoadApp",
+                            url: "/Modules/Home/GetLinkDownLoadApp",
+                            data: {
+                                operatingSystem: "ios"
+                            },
+                            success: function(result) {
+                                if (result.Success) {
+                                    $('#link_download').attr('href', result.LinkHref);
+                                    $('#ios-app').attr('href', result.LinkHref);
+                                    $('#show_download_my_app').addClass('show_popup');
+                                }
+                            },
+                            error: function() {
+                                console.log("Error connection");
+                            },
+                            timeout: 10000
+                        });
+                    } else {
+                        $('#show_download_my_app').removeClass('show_popup');
+                    }
+                }
+            }
+        });
+
+        $('.mobile_close').on('click', function() {
+            $('#show_download_my_app').removeClass('show_popup');
+            sessionStorage.setItem("show_mobile_app", 0);
+        });
+
+        $('.lst_img_footer').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            closeOnContentClick: false,
+            closeBtnInside: false,
+            mainClass: 'mfp-with-zoom mfp-img-mobile',
+            image: {
+                verticalFit: true
+            },
+            gallery: {
+                enabled: true
+            },
+            zoom: {
+                enabled: true,
+                duration: 300,
+                opener: function(element) {
+                    return element.find('img');
+                }
+            }
+        });
+
+        $('#login_system, .login').on('click', function() {
+            $.magnificPopup.open({
+                removalDelay: 500,
+                items: {
+                    src: '#modal-login-system'
+                },
+                callbacks: {
+                    beforeOpen: function(e) {
+                        this.st.mainClass = 'mfp-zoom-in';
+                    },
+                    close: function(e) {}
+                },
+                midClick: true,
+                closeOnBgClick: false
+            });
+        });
+
+        $('#openChoosePopup').on('click', function() {
+            $.magnificPopup.open({
+                removalDelay: 500,
+                items: {
+                    src: '#modal-choose-register'
+                },
+                callbacks: {
+                    beforeOpen: function(e) {
+                        this.st.mainClass = 'mfp-zoom-in';
+                    },
+                    close: function(e) {}
+                },
+                midClick: true,
+                closeOnBgClick: false
+            });
+        });
+
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '1551808748211571',
+                cookie: true,
+                xfbml: true,
+                version: 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+        };
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        $(document).ready(function() {
+            if (window.innerWidth <= 767) {
+                var text = '<span class="sub-arrow"></span>';
+                $('#myNavbar .dropdown .dropbtn').append(text);
+                $('#myNavbar .dropdown .dropdown-content').css("display", "none");
+                $('#myNavbar .dropdown .dropbtn .sub-arrow').on('click', function(e) {
+                    e.preventDefault();
+                    var selector = $(this).closest(".dropdown");
+                    selector.find(".dropdown-content").toggle();
+                    return false;
+                });
+            } else {
+                //$('#myNavbar .dropdown .dropdown-content').css("display", "none");
+
+                //$("#myNavbar .dropdown").hover(
+                //  function () {
+                //      $(this).find(".dropdown-content").toggle();
+                //  }, function () {
+                //      $(this).find(".dropdown-content").toggle();
+                //  }
+                //);
+            }
+
+        });
+    </script>
+</body>
+
+</html>

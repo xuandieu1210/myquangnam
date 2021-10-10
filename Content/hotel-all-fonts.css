@@ -1,0 +1,3239 @@
+@font-face {
+    font-family: icons;
+    src: url(../fonts/icons-1.eot);
+    src: url(../fonts/icons-1.eot?#iefix) format("embedded-opentype"), 
+	url(../fonts/icons-2.woff) format("woff"), 
+	url(../fonts/icons-3.ttf) format("truetype"),
+	url(../fonts/icons-2.svg?#icons) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+.ficon-10 {
+    font-size: 10px
+}
+.ficon-12 {
+    font-size: 12px
+}
+.ficon-14 {
+    font-size: 14px
+}
+.ficon-16 {
+    font-size: 16px
+}
+.ficon-18 {
+    font-size: 18px
+}
+.ficon-22 {
+    font-size: 22px
+}
+.ficon-24 {
+    font-size: 24px
+}
+.ficon-32 {
+    font-size: 32px
+}
+.ficon-48 {
+    font-size: 48px
+}
+.ficon-64 {
+    font-size: 64px
+}
+.ficon {
+    font-family: icons;
+    display: inline-block;
+    line-height: 1;
+    font-weight: 400;
+    font-style: normal;
+    speak: none;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-bottom: 3px
+}
+.ficon-24-hour-finess-center {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf101;')
+}
+.ficon-24-hour-finess-center:before {
+    content: "\f101"
+}
+.ficon-24hour-check-in {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf102;')
+}
+.ficon-24hour-check-in:before {
+    content: "\f102"
+}
+.ficon-24hour-frontdesk {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf103;')
+}
+.ficon-24hour-frontdesk:before {
+    content: "\f103"
+}
+.ficon-24hour-room-service {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf104;')
+}
+.ficon-24hour-room-service:before {
+    content: "\f104"
+}
+.ficon-24hour-security {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf105;')
+}
+.ficon-24hour-security:before {
+    content: "\f105"
+}
+.ficon-desktop-ic-black-down {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf106;')
+}
+.ficon-desktop-ic-black-down:before {
+    content: "\f106"
+}
+.ficon-desktop-ic-black-down-arrow {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf107;')
+}
+.ficon-desktop-ic-black-down-arrow:before {
+    content: "\f107"
+}
+.ficon-desktop-ic-profile {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf108;')
+}
+.ficon-desktop-ic-profile:before {
+    content: "\f108"
+}
+.ficon-internet {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf109;')
+}
+.ficon-internet:before {
+    content: "\f109"
+}
+.ficon-iron {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf10a;')
+}
+.ficon-iron:before {
+    content: "\f10a"
+}
+.ficon-add-a-website {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf10b;')
+}
+.ficon-add-a-website:before {
+    content: "\f10b"
+}
+.ficon-additional-bathroom {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf10c;')
+}
+.ficon-additional-bathroom:before {
+    content: "\f10c"
+}
+.ficon-additional-fee-for-pets {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf10d;')
+}
+.ficon-additional-fee-for-pets:before {
+    content: "\f10d"
+}
+.ficon-additional-information {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf10e;')
+}
+.ficon-additional-information:before {
+    content: "\f10e"
+}
+.ficon-additional-toilet {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf10f;')
+}
+.ficon-additional-toilet:before {
+    content: "\f10f"
+}
+.ficon-after-hours {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf110;')
+}
+.ficon-after-hours:before {
+    content: "\f110"
+}
+.ficon-afternoon-tea {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf111;')
+}
+.ficon-afternoon-tea:before {
+    content: "\f111"
+}
+.ficon-air-bath-access {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf112;')
+}
+.ficon-air-bath-access:before {
+    content: "\f112"
+}
+.ficon-air-conditioning {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf113;')
+}
+.ficon-air-conditioning:before {
+    content: "\f113"
+}
+.ficon-air-purifier {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf114;')
+}
+.ficon-air-purifier:before {
+    content: "\f114"
+}
+.ficon-airport-transfer-big {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf115;')
+}
+.ficon-airport-transfer-big:before {
+    content: "\f115"
+}
+.ficon-airport-transfer-oneway {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf116;')
+}
+.ficon-airport-transfer-oneway:before {
+    content: "\f116"
+}
+.ficon-airport-transfer-roundtrip {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf117;')
+}
+.ficon-airport-transfer-roundtrip:before {
+    content: "\f117"
+}
+.ficon-airport-transfer-small {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf118;')
+}
+.ficon-airport-transfer-small:before {
+    content: "\f118"
+}
+.ficon-airport-transfer {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf119;')
+}
+.ficon-airport-transfer:before {
+    content: "\f119"
+}
+.ficon-airports {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf11a;')
+}
+.ficon-airports:before {
+    content: "\f11a"
+}
+.ficon-alarm-clock {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf11b;')
+}
+.ficon-alarm-clock:before {
+    content: "\f11b"
+}
+.ficon-american-express {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf11c;')
+}
+.ficon-american-express:before {
+    content: "\f11c"
+}
+.ficon-apartment {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf11d;')
+}
+.ficon-apartment:before {
+    content: "\f11d"
+}
+.ficon-app-android {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf11e;')
+}
+.ficon-app-android:before {
+    content: "\f11e"
+}
+.ficon-app-apple {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf11f;')
+}
+.ficon-app-apple:before {
+    content: "\f11f"
+}
+.ficon-app-windos {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf120;')
+}
+.ficon-app-windos:before {
+    content: "\f120"
+}
+.ficon-arrow-big-up {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf121;')
+}
+.ficon-arrow-big-up:before {
+    content: "\f121"
+}
+.ficon-arrow-right-box {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf122;')
+}
+.ficon-arrow-right-box:before {
+    content: "\f122"
+}
+.ficon-arrow-right {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf123;')
+}
+.ficon-arrow-right:before {
+    content: "\f123"
+}
+.ficon-assembly-pin-border {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf124;')
+}
+.ficon-assembly-pin-border:before {
+    content: "\f124"
+}
+.ficon-assembly-restaurant {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf125;')
+}
+.ficon-assembly-restaurant:before {
+    content: "\f125"
+}
+.ficon-atm-cash-machine-on-site {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf126;')
+}
+.ficon-atm-cash-machine-on-site:before {
+    content: "\f126"
+}
+.ficon-babysitting {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf127;')
+}
+.ficon-babysitting:before {
+    content: "\f127"
+}
+.ficon-badminton-court {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf128;')
+}
+.ficon-badminton-court:before {
+    content: "\f128"
+}
+.ficon-balcony-terrace {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf129;')
+}
+.ficon-balcony-terrace:before {
+    content: "\f129"
+}
+.ficon-balloon-minus {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf12a;')
+}
+.ficon-balloon-minus:before {
+    content: "\f12a"
+}
+.ficon-balloon-plus {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf12b;')
+}
+.ficon-balloon-plus:before {
+    content: "\f12b"
+}
+.ficon-balloon {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf12c;')
+}
+.ficon-balloon:before {
+    content: "\f12c"
+}
+.ficon-bathrobes {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf12d;')
+}
+.ficon-bathrobes:before {
+    content: "\f12d"
+}
+.ficon-bathroom-basics {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf12e;')
+}
+.ficon-bathroom-basics:before {
+    content: "\f12e"
+}
+.ficon-bathroom-phone {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf12f;')
+}
+.ficon-bathroom-phone:before {
+    content: "\f12f"
+}
+.ficon-bathrooms {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf130;')
+}
+.ficon-bathrooms:before {
+    content: "\f130"
+}
+.ficon-bathtub {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf131;')
+}
+.ficon-bathtub:before {
+    content: "\f131"
+}
+.ficon-bbq-facilities {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf132;')
+}
+.ficon-bbq-facilities:before {
+    content: "\f132"
+}
+.ficon-bc-global-card {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf133;')
+}
+.ficon-bc-global-card:before {
+    content: "\f133"
+}
+.ficon-beach {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf134;')
+}
+.ficon-beach:before {
+    content: "\f134"
+}
+.ficon-bed {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf135;')
+}
+.ficon-bed:before {
+    content: "\f135"
+}
+.ficon-bedroom {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf136;')
+}
+.ficon-bedroom:before {
+    content: "\f136"
+}
+.ficon-bicycle-rental {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf137;')
+}
+.ficon-bicycle-rental:before {
+    content: "\f137"
+}
+.ficon-billiards {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf138;')
+}
+.ficon-billiards:before {
+    content: "\f138"
+}
+.ficon-blackout-curtains {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf139;')
+}
+.ficon-blackout-curtains:before {
+    content: "\f139"
+}
+.ficon-boat {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf13a;')
+}
+.ficon-boat:before {
+    content: "\f13a"
+}
+.ficon-book-now-pay-later {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf13b;')
+}
+.ficon-book-now-pay-later:before {
+    content: "\f13b"
+}
+.ficon-book-without-a-creditcard {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf13c;')
+}
+.ficon-book-without-a-creditcard:before {
+    content: "\f13c"
+}
+.ficon-bottle-of-sparkling-wine {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf13d;')
+}
+.ficon-bottle-of-sparkling-wine:before {
+    content: "\f13d"
+}
+.ficon-bottle-of-wine {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf13e;')
+}
+.ficon-bottle-of-wine:before {
+    content: "\f13e"
+}
+.ficon-bowling-alley {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf13f;')
+}
+.ficon-bowling-alley:before {
+    content: "\f13f"
+}
+.ficon-bracket-left {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf140;')
+}
+.ficon-bracket-left:before {
+    content: "\f140"
+}
+.ficon-bracket-right {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf141;')
+}
+.ficon-bracket-right:before {
+    content: "\f141"
+}
+.ficon-breakfast-buffet {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf142;')
+}
+.ficon-breakfast-buffet:before {
+    content: "\f142"
+}
+.ficon-breakfast-one-person {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf143;')
+}
+.ficon-breakfast-one-person:before {
+    content: "\f143"
+}
+.ficon-breakfast {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf144;')
+}
+.ficon-breakfast:before {
+    content: "\f144"
+}
+.ficon-bullet {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf145;')
+}
+.ficon-bullet:before {
+    content: "\f145"
+}
+.ficon-bungalow {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf146;')
+}
+.ficon-bungalow:before {
+    content: "\f146"
+}
+.ficon-bunk-bed {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf147;')
+}
+.ficon-bunk-bed:before {
+    content: "\f147"
+}
+.ficon-bus-and-rail-stations {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf148;')
+}
+.ficon-bus-and-rail-stations:before {
+    content: "\f148"
+}
+.ficon-business-center {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf149;')
+}
+.ficon-business-center:before {
+    content: "\f149"
+}
+.ficon-business-facilities {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf14a;')
+}
+.ficon-business-facilities:before {
+    content: "\f14a"
+}
+.ficon-buzzer-wireless-intercom {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf14b;')
+}
+.ficon-buzzer-wireless-intercom:before {
+    content: "\f14b"
+}
+.ficon-c-coupon {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf14c;')
+}
+.ficon-c-coupon:before {
+    content: "\f14c"
+}
+.ficon-callcenter {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf14d;')
+}
+.ficon-callcenter:before {
+    content: "\f14d"
+}
+.ficon-cancellation-policy-non-refund-special-condition {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf14e;')
+}
+.ficon-cancellation-policy-non-refund-special-condition:before {
+    content: "\f14e"
+}
+.ficon-canoe {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf14f;')
+}
+.ficon-canoe:before {
+    content: "\f14f"
+}
+.ficon-capsule {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf150;')
+}
+.ficon-capsule:before {
+    content: "\f150"
+}
+.ficon-car-hire {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf151;')
+}
+.ficon-car-hire:before {
+    content: "\f151"
+}
+.ficon-car-park-charges {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf152;')
+}
+.ficon-car-park-charges:before {
+    content: "\f152"
+}
+.ficon-car-park-free-charge {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf153;')
+}
+.ficon-car-park-free-charge:before {
+    content: "\f153"
+}
+.ficon-car-park-nearby {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf154;')
+}
+.ficon-car-park-nearby:before {
+    content: "\f154"
+}
+.ficon-car-park-onsite {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf155;')
+}
+.ficon-car-park-onsite:before {
+    content: "\f155"
+}
+.ficon-car-park {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf156;')
+}
+.ficon-car-park:before {
+    content: "\f156"
+}
+.ficon-car-power-charging-station {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf157;')
+}
+.ficon-car-power-charging-station:before {
+    content: "\f157"
+}
+.ficon-carbon-monoxide-detector {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf158;')
+}
+.ficon-carbon-monoxide-detector:before {
+    content: "\f158"
+}
+.ficon-carpeting {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf159;')
+}
+.ficon-carpeting:before {
+    content: "\f159"
+}
+.ficon-carrouselarrow-left {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf15a;')
+}
+.ficon-carrouselarrow-left:before {
+    content: "\f15a"
+}
+.ficon-carrouselarrow-right {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf15b;')
+}
+.ficon-carrouselarrow-right:before {
+    content: "\f15b"
+}
+.ficon-cash {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf15c;')
+}
+.ficon-cash:before {
+    content: "\f15c"
+}
+.ficon-casino {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf15d;')
+}
+.ficon-casino:before {
+    content: "\f15d"
+}
+.ficon-cats-allowed {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf15e;')
+}
+.ficon-cats-allowed:before {
+    content: "\f15e"
+}
+.ficon-chapel {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf15f;')
+}
+.ficon-chapel:before {
+    content: "\f15f"
+}
+.ficon-check-box {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf160;')
+}
+.ficon-check-box:before {
+    content: "\f160"
+}
+.ficon-check-valid-state {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf161;')
+}
+.ficon-check-valid-state:before {
+    content: "\f161"
+}
+.ficon-child-icon {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf162;')
+}
+.ficon-child-icon:before {
+    content: "\f162"
+}
+.ficon-child {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf163;')
+}
+.ficon-child:before {
+    content: "\f163"
+}
+.ficon-children-high-chair {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf164;')
+}
+.ficon-children-high-chair:before {
+    content: "\f164"
+}
+.ficon-children-playground {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf165;')
+}
+.ficon-children-playground:before {
+    content: "\f165"
+}
+.ficon-china-only {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf166;')
+}
+.ficon-china-only:before {
+    content: "\f166"
+}
+.ficon-circle-05 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf167;')
+}
+.ficon-circle-05:before {
+    content: "\f167"
+}
+.ficon-circle-1 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf168;')
+}
+.ficon-circle-1:before {
+    content: "\f168"
+}
+.ficon-circle-15 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf169;')
+}
+.ficon-circle-15:before {
+    content: "\f169"
+}
+.ficon-circle-2 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf16a;')
+}
+.ficon-circle-2:before {
+    content: "\f16a"
+}
+.ficon-circle-25 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf16b;')
+}
+.ficon-circle-25:before {
+    content: "\f16b"
+}
+.ficon-circle-3 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf16c;')
+}
+.ficon-circle-3:before {
+    content: "\f16c"
+}
+.ficon-circle-35 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf16d;')
+}
+.ficon-circle-35:before {
+    content: "\f16d"
+}
+.ficon-circle-4 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf16e;')
+}
+.ficon-circle-4:before {
+    content: "\f16e"
+}
+.ficon-circle-45 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf16f;')
+}
+.ficon-circle-45:before {
+    content: "\f16f"
+}
+.ficon-circle-5 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf170;')
+}
+.ficon-circle-5:before {
+    content: "\f170"
+}
+.ficon-circle-arrow-left {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf171;')
+}
+.ficon-circle-arrow-left:before {
+    content: "\f171"
+}
+.ficon-circle-arrow-right {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf172;')
+}
+.ficon-circle-arrow-right:before {
+    content: "\f172"
+}
+.ficon-city-buses {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf173;')
+}
+.ficon-city-buses:before {
+    content: "\f173"
+}
+.ficon-city-view {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf174;')
+}
+.ficon-city-view:before {
+    content: "\f174"
+}
+.ficon-cleaning-products {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf175;')
+}
+.ficon-cleaning-products:before {
+    content: "\f175"
+}
+.ficon-clear-mark {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf176;')
+}
+.ficon-clear-mark:before {
+    content: "\f176"
+}
+.ficon-close-popup {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf177;')
+}
+.ficon-close-popup:before {
+    content: "\f177"
+}
+.ficon-closest-bar {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf178;')
+}
+.ficon-closest-bar:before {
+    content: "\f178"
+}
+.ficon-closest-market {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf179;')
+}
+.ficon-closest-market:before {
+    content: "\f179"
+}
+.ficon-closet {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf17a;')
+}
+.ficon-closet:before {
+    content: "\f17a"
+}
+.ficon-clothes-dryer-pay {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf17b;')
+}
+.ficon-clothes-dryer-pay:before {
+    content: "\f17b"
+}
+.ficon-clothes-rack {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf17c;')
+}
+.ficon-clothes-rack:before {
+    content: "\f17c"
+}
+.ficon-clothes-washer-free {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf17d;')
+}
+.ficon-clothes-washer-free:before {
+    content: "\f17d"
+}
+.ficon-club-lounge-access {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf17e;')
+}
+.ficon-club-lounge-access:before {
+    content: "\f17e"
+}
+.ficon-coffee-shop {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf17f;')
+}
+.ficon-coffee-shop:before {
+    content: "\f17f"
+}
+.ficon-coffee-tea-maker {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf180;')
+}
+.ficon-coffee-tea-maker:before {
+    content: "\f180"
+}
+.ficon-complimentary-bottled-water {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf181;')
+}
+.ficon-complimentary-bottled-water:before {
+    content: "\f181"
+}
+.ficon-complimentary-instant-coffee {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf182;')
+}
+.ficon-complimentary-instant-coffee:before {
+    content: "\f182"
+}
+.ficon-complimentary-tea {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf183;')
+}
+.ficon-complimentary-tea:before {
+    content: "\f183"
+}
+.ficon-concierge {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf184;')
+}
+.ficon-concierge:before {
+    content: "\f184"
+}
+.ficon-continental-breakfast {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf185;')
+}
+.ficon-continental-breakfast:before {
+    content: "\f185"
+}
+.ficon-control-close-circle {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf186;')
+}
+.ficon-control-close-circle:before {
+    content: "\f186"
+}
+.ficon-control-collapse {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf187;')
+}
+.ficon-control-collapse:before {
+    content: "\f187"
+}
+.ficon-control-expand {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf188;')
+}
+.ficon-control-expand:before {
+    content: "\f188"
+}
+.ficon-coupon-card-no-circle {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf189;')
+}
+.ficon-coupon-card-no-circle:before {
+    content: "\f189"
+}
+.ficon-coupon-card-solid {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf18a;')
+}
+.ficon-coupon-card-solid:before {
+    content: "\f18a"
+}
+.ficon-coupon-card {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf18b;')
+}
+.ficon-coupon-card:before {
+    content: "\f18b"
+}
+.ficon-coupon-promo {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf18c;')
+}
+.ficon-coupon-promo:before {
+    content: "\f18c"
+}
+.ficon-coupon {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf18d;')
+}
+.ficon-coupon:before {
+    content: "\f18d"
+}
+.ficon-credit-card-bf {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf18e;')
+}
+.ficon-credit-card-bf:before {
+    content: "\f18e"
+}
+.ficon-credit-card {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf18f;')
+}
+.ficon-credit-card:before {
+    content: "\f18f"
+}
+.ficon-currency-exchange {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf190;')
+}
+.ficon-currency-exchange:before {
+    content: "\f190"
+}
+.ficon-daily-housekeeping {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf191;')
+}
+.ficon-daily-housekeeping:before {
+    content: "\f191"
+}
+.ficon-daily-newspaper {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf192;')
+}
+.ficon-daily-newspaper:before {
+    content: "\f192"
+}
+.ficon-dart-board {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf193;')
+}
+.ficon-dart-board:before {
+    content: "\f193"
+}
+.ficon-dashboard {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf194;')
+}
+.ficon-dashboard:before {
+    content: "\f194"
+}
+.ficon-data-at-your-fingertips {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf195;')
+}
+.ficon-data-at-your-fingertips:before {
+    content: "\f195"
+}
+.ficon-deal-gift-card {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf196;')
+}
+.ficon-deal-gift-card:before {
+    content: "\f196"
+}
+.ficon-deal-insider {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf197;')
+}
+.ficon-deal-insider:before {
+    content: "\f197"
+}
+.ficon-desk {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf198;')
+}
+.ficon-desk:before {
+    content: "\f198"
+}
+.ficon-diners-clubs-card {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf199;')
+}
+.ficon-diners-clubs-card:before {
+    content: "\f199"
+}
+.ficon-dinner {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf19a;')
+}
+.ficon-dinner:before {
+    content: "\f19a"
+}
+.ficon-discover-card {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf19b;')
+}
+.ficon-discover-card:before {
+    content: "\f19b"
+}
+.ficon-dishwasher {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf19c;')
+}
+.ficon-dishwasher:before {
+    content: "\f19c"
+}
+.ficon-distance-from-city-center {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf19d;')
+}
+.ficon-distance-from-city-center:before {
+    content: "\f19d"
+}
+.ficon-distance-to-airport {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf19e;')
+}
+.ficon-distance-to-airport:before {
+    content: "\f19e"
+}
+.ficon-diving {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf19f;')
+}
+.ficon-diving:before {
+    content: "\f19f"
+}
+.ficon-dog-allowed {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1a0;')
+}
+.ficon-dog-allowed:before {
+    content: "\f1a0"
+}
+.ficon-domestic-rates {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1a1;')
+}
+.ficon-domestic-rates:before {
+    content: "\f1a1"
+}
+.ficon-dot-seperater {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1a2;')
+}
+.ficon-dot-seperater:before {
+    content: "\f1a2"
+}
+.ficon-double-bed {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1a3;')
+}
+.ficon-double-bed:before {
+    content: "\f1a3"
+}
+.ficon-dressing-room {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1a4;')
+}
+.ficon-dressing-room:before {
+    content: "\f1a4"
+}
+.ficon-drinks {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1a5;')
+}
+.ficon-drinks:before {
+    content: "\f1a5"
+}
+.ficon-drug-stores {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1a6;')
+}
+.ficon-drug-stores:before {
+    content: "\f1a6"
+}
+.ficon-dryer {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1a7;')
+}
+.ficon-dryer:before {
+    content: "\f1a7"
+}
+.ficon-dvd-cd-player {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1a8;')
+}
+.ficon-dvd-cd-player:before {
+    content: "\f1a8"
+}
+.ficon-dynamic-banner {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1a9;')
+}
+.ficon-dynamic-banner:before {
+    content: "\f1a9"
+}
+.ficon-early-check-in {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1aa;')
+}
+.ficon-early-check-in:before {
+    content: "\f1aa"
+}
+.ficon-easy-integration {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1ab;')
+}
+.ficon-easy-integration:before {
+    content: "\f1ab"
+}
+.ficon-edge-arrow-left {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1ac;')
+}
+.ficon-edge-arrow-left:before {
+    content: "\f1ac"
+}
+.ficon-edge-arrow-right {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1ad;')
+}
+.ficon-edge-arrow-right:before {
+    content: "\f1ad"
+}
+.ficon-edit {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1ae;')
+}
+.ficon-edit:before {
+    content: "\f1ae"
+}
+.ficon-electric-blanket {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1af;')
+}
+.ficon-electric-blanket:before {
+    content: "\f1af"
+}
+.ficon-elevator {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1b0;')
+}
+.ficon-elevator:before {
+    content: "\f1b0"
+}
+.ficon-email-envelope {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1b1;')
+}
+.ficon-email-envelope:before {
+    content: "\f1b1"
+}
+.ficon-essentials {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1b2;')
+}
+.ficon-essentials:before {
+    content: "\f1b2"
+}
+.ficon-executive-floor {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1b3;')
+}
+.ficon-executive-floor:before {
+    content: "\f1b3"
+}
+.ficon-executive-lounge-access {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1b4;')
+}
+.ficon-executive-lounge-access:before {
+    content: "\f1b4"
+}
+.ficon-express-check-in-check-out {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1b5;')
+}
+.ficon-express-check-in-check-out:before {
+    content: "\f1b5"
+}
+.ficon-exterior {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1b6;')
+}
+.ficon-exterior:before {
+    content: "\f1b6"
+}
+.ficon-extra-long-beds {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1b7;')
+}
+.ficon-extra-long-beds:before {
+    content: "\f1b7"
+}
+.ficon-facebook-logo {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1b8;')
+}
+.ficon-facebook-logo:before {
+    content: "\f1b8"
+}
+.ficon-facilities-for-disabled-guests {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1b9;')
+}
+.ficon-facilities-for-disabled-guests:before {
+    content: "\f1b9"
+}
+.ficon-family-room {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1ba;')
+}
+.ficon-family-room:before {
+    content: "\f1ba"
+}
+.ficon-fan {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1bb;')
+}
+.ficon-fan:before {
+    content: "\f1bb"
+}
+.ficon-faq {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1bc;')
+}
+.ficon-faq:before {
+    content: "\f1bc"
+}
+.ficon-favorite-filled {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1bd;')
+}
+.ficon-favorite-filled:before {
+    content: "\f1bd"
+}
+.ficon-favorite {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1be;')
+}
+.ficon-favorite:before {
+    content: "\f1be"
+}
+.ficon-fax-machine {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1bf;')
+}
+.ficon-fax-machine:before {
+    content: "\f1bf"
+}
+.ficon-fax-or-photo {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1c0;')
+}
+.ficon-fax-or-photo:before {
+    content: "\f1c0"
+}
+.ficon-feedback {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1c1;')
+}
+.ficon-feedback:before {
+    content: "\f1c1"
+}
+.ficon-filter-line {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1c2;')
+}
+.ficon-filter-line:before {
+    content: "\f1c2"
+}
+.ficon-fire-extinguisher {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1c3;')
+}
+.ficon-fire-extinguisher:before {
+    content: "\f1c3"
+}
+.ficon-fireplace {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1c4;')
+}
+.ficon-fireplace:before {
+    content: "\f1c4"
+}
+.ficon-first-aid-kit {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1c5;')
+}
+.ficon-first-aid-kit:before {
+    content: "\f1c5"
+}
+.ficon-fishing {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1c6;')
+}
+.ficon-fishing:before {
+    content: "\f1c6"
+}
+.ficon-fitness-center-charge {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1c7;')
+}
+.ficon-fitness-center-charge:before {
+    content: "\f1c7"
+}
+.ficon-fitness-center {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1c8;')
+}
+.ficon-fitness-center:before {
+    content: "\f1c8"
+}
+.ficon-fitness-club {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1c9;')
+}
+.ficon-fitness-club:before {
+    content: "\f1c9"
+}
+.ficon-flash-deal {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1ca;')
+}
+.ficon-flash-deal:before {
+    content: "\f1ca"
+}
+.ficon-flight-earn {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1cb;')
+}
+.ficon-flight-earn:before {
+    content: "\f1cb"
+}
+.ficon-free-bicycle {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1cc;')
+}
+.ficon-free-bicycle:before {
+    content: "\f1cc"
+}
+.ficon-free-breakfast {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1cd;')
+}
+.ficon-free-breakfast:before {
+    content: "\f1cd"
+}
+.ficon-free-cancellation {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1ce;')
+}
+.ficon-free-cancellation:before {
+    content: "\f1ce"
+}
+.ficon-free-fitness-center {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1cf;')
+}
+.ficon-free-fitness-center:before {
+    content: "\f1cf"
+}
+.ficon-free-night {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1d0;')
+}
+.ficon-free-night:before {
+    content: "\f1d0"
+}
+.ficon-free-welcome-drink {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1d1;')
+}
+.ficon-free-welcome-drink:before {
+    content: "\f1d1"
+}
+.ficon-free-wifi-in-all-rooms {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1d2;')
+}
+.ficon-free-wifi-in-all-rooms:before {
+    content: "\f1d2"
+}
+.ficon-g-giftcard {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1d3;')
+}
+.ficon-g-giftcard:before {
+    content: "\f1d3"
+}
+.ficon-garden {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1d4;')
+}
+.ficon-garden:before {
+    content: "\f1d4"
+}
+.ficon-gca-wreath-left {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1d5;')
+}
+.ficon-gca-wreath-left:before {
+    content: "\f1d5"
+}
+.ficon-gca-wreath-right {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1d6;')
+}
+.ficon-gca-wreath-right:before {
+    content: "\f1d6"
+}
+.ficon-gift-card {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1d7;')
+}
+.ficon-gift-card:before {
+    content: "\f1d7"
+}
+.ficon-gift-souvenir-shop {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1d8;')
+}
+.ficon-gift-souvenir-shop:before {
+    content: "\f1d8"
+}
+.ficon-global {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1d9;')
+}
+.ficon-global:before {
+    content: "\f1d9"
+}
+.ficon-golf-course-on-site {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1da;')
+}
+.ficon-golf-course-on-site:before {
+    content: "\f1da"
+}
+.ficon-golf-course-within-3k {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1db;')
+}
+.ficon-golf-course-within-3k:before {
+    content: "\f1db"
+}
+.ficon-grocery-deliveries {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1dc;')
+}
+.ficon-grocery-deliveries:before {
+    content: "\f1dc"
+}
+.ficon-ground-floor {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1dd;')
+}
+.ficon-ground-floor:before {
+    content: "\f1dd"
+}
+.ficon-guest-house {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1de;')
+}
+.ficon-guest-house:before {
+    content: "\f1de"
+}
+.ficon-gym {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1df;')
+}
+.ficon-gym:before {
+    content: "\f1df"
+}
+.ficon-hair-dryer {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1e0;')
+}
+.ficon-hair-dryer:before {
+    content: "\f1e0"
+}
+.ficon-halal-restaurant {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1e1;')
+}
+.ficon-halal-restaurant:before {
+    content: "\f1e1"
+}
+.ficon-half-full-board {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1e2;')
+}
+.ficon-half-full-board:before {
+    content: "\f1e2"
+}
+.ficon-hangers {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1e3;')
+}
+.ficon-hangers:before {
+    content: "\f1e3"
+}
+.ficon-heating {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1e4;')
+}
+.ficon-heating:before {
+    content: "\f1e4"
+}
+.ficon-high-floor {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1e5;')
+}
+.ficon-high-floor:before {
+    content: "\f1e5"
+}
+.ficon-hiking-trails {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1e6;')
+}
+.ficon-hiking-trails:before {
+    content: "\f1e6"
+}
+.ficon-holiday-house {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1e7;')
+}
+.ficon-holiday-house:before {
+    content: "\f1e7"
+}
+.ficon-homestay {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1e8;')
+}
+.ficon-homestay:before {
+    content: "\f1e8"
+}
+.ficon-horse-riding {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1e9;')
+}
+.ficon-horse-riding:before {
+    content: "\f1e9"
+}
+.ficon-hospitals-clinics {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1ea;')
+}
+.ficon-hospitals-clinics:before {
+    content: "\f1ea"
+}
+.ficon-hot-spring-access {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1eb;')
+}
+.ficon-hot-spring-access:before {
+    content: "\f1eb"
+}
+.ficon-hot-spring-bath {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1ec;')
+}
+.ficon-hot-spring-bath:before {
+    content: "\f1ec"
+}
+.ficon-hot-tub {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1ed;')
+}
+.ficon-hot-tub:before {
+    content: "\f1ed"
+}
+.ficon-hotel-book-last {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1ee;')
+}
+.ficon-hotel-book-last:before {
+    content: "\f1ee"
+}
+.ficon-hotel-data {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1ef;')
+}
+.ficon-hotel-data:before {
+    content: "\f1ef"
+}
+.ficon-hotel-great-location {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1f0;')
+}
+.ficon-hotel-great-location:before {
+    content: "\f1f0"
+}
+.ficon-hotel-people-looking {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1f1;')
+}
+.ficon-hotel-people-looking:before {
+    content: "\f1f1"
+}
+.ficon-hotel-star-half {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1f2;')
+}
+.ficon-hotel-star-half:before {
+    content: "\f1f2"
+}
+.ficon-hotel-star {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1f3;')
+}
+.ficon-hotel-star:before {
+    content: "\f1f3"
+}
+.ficon-hotel-wifi {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1f4;')
+}
+.ficon-hotel-wifi:before {
+    content: "\f1f4"
+}
+.ficon-hover-details {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1f5;')
+}
+.ficon-hover-details:before {
+    content: "\f1f5"
+}
+.ficon-humidifier {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1f6;')
+}
+.ficon-humidifier:before {
+    content: "\f1f6"
+}
+.ficon-icon-arrow-down {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1f7;')
+}
+.ficon-icon-arrow-down:before {
+    content: "\f1f7"
+}
+.ficon-icon-arrow-up {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1f8;')
+}
+.ficon-icon-arrow-up:before {
+    content: "\f1f8"
+}
+.ficon-iftar {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1f9;')
+}
+.ficon-iftar:before {
+    content: "\f1f9"
+}
+.ficon-in-room-safe {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1fa;')
+}
+.ficon-in-room-safe:before {
+    content: "\f1fa"
+}
+.ficon-in-room-tablet {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1fb;')
+}
+.ficon-in-room-tablet:before {
+    content: "\f1fb"
+}
+.ficon-in-room-video-games {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1fc;')
+}
+.ficon-in-room-video-games:before {
+    content: "\f1fc"
+}
+.ficon-indoor-poor {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1fd;')
+}
+.ficon-indoor-poor:before {
+    content: "\f1fd"
+}
+.ficon-infant {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1fe;')
+}
+.ficon-infant:before {
+    content: "\f1fe"
+}
+.ficon-infirmary {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf1ff;')
+}
+.ficon-infirmary:before {
+    content: "\f1ff"
+}
+.ficon-info-alert {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf200;')
+}
+.ficon-info-alert:before {
+    content: "\f200"
+}
+.ficon-info-with-circle {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf201;')
+}
+.ficon-info-with-circle:before {
+    content: "\f201"
+}
+.ficon-inhouse-movies {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf202;')
+}
+.ficon-inhouse-movies:before {
+    content: "\f202"
+}
+.ficon-insider-deal-desktop {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf203;')
+}
+.ficon-insider-deal-desktop:before {
+    content: "\f203"
+}
+.ficon-interconnecting-room-available {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf204;')
+}
+.ficon-interconnecting-room-available:before {
+    content: "\f204"
+}
+.ficon-ipod-docking-station {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf205;')
+}
+.ficon-ipod-docking-station:before {
+    content: "\f205"
+}
+.ficon-islamic-prayer-room {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf206;')
+}
+.ficon-islamic-prayer-room:before {
+    content: "\f206"
+}
+.ficon-jacuzzi-bathtub {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf207;')
+}
+.ficon-jacuzzi-bathtub:before {
+    content: "\f207"
+}
+.ficon-japanese-futon {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf208;')
+}
+.ficon-japanese-futon:before {
+    content: "\f208"
+}
+.ficon-jcb {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf209;')
+}
+.ficon-jcb:before {
+    content: "\f209"
+}
+.ficon-karaoke {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf20a;')
+}
+.ficon-karaoke:before {
+    content: "\f20a"
+}
+.ficon-kids-club {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf20b;')
+}
+.ficon-kids-club:before {
+    content: "\f20b"
+}
+.ficon-king-bed {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf20c;')
+}
+.ficon-king-bed:before {
+    content: "\f20c"
+}
+.ficon-kitchen {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf20d;')
+}
+.ficon-kitchen:before {
+    content: "\f20d"
+}
+.ficon-kitchenette {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf20e;')
+}
+.ficon-kitchenette:before {
+    content: "\f20e"
+}
+.ficon-kitchenware {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf20f;')
+}
+.ficon-kitchenware:before {
+    content: "\f20f"
+}
+.ficon-kosher-restaurant {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf210;')
+}
+.ficon-kosher-restaurant:before {
+    content: "\f210"
+}
+.ficon-laptop-friendly-workspace {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf211;')
+}
+.ficon-laptop-friendly-workspace:before {
+    content: "\f211"
+}
+.ficon-laptop-safe-box {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf212;')
+}
+.ficon-laptop-safe-box:before {
+    content: "\f212"
+}
+.ficon-late-check-out {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf213;')
+}
+.ficon-late-check-out:before {
+    content: "\f213"
+}
+.ficon-laundromat {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf214;')
+}
+.ficon-laundromat:before {
+    content: "\f214"
+}
+.ficon-laundry-service {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf215;')
+}
+.ficon-laundry-service:before {
+    content: "\f215"
+}
+.ficon-length-of-stay {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf216;')
+}
+.ficon-length-of-stay:before {
+    content: "\f216"
+}
+.ficon-library {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf217;')
+}
+.ficon-library:before {
+    content: "\f217"
+}
+.ficon-limit-deal {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf218;')
+}
+.ficon-limit-deal:before {
+    content: "\f218"
+}
+.ficon-limited-access-floor {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf219;')
+}
+.ficon-limited-access-floor:before {
+    content: "\f219"
+}
+.ficon-line-close {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf21a;')
+}
+.ficon-line-close:before {
+    content: "\f21a"
+}
+.ficon-line-empty-circle {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf21b;')
+}
+.ficon-line-empty-circle:before {
+    content: "\f21b"
+}
+.ficon-linens {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf21c;')
+}
+.ficon-linens:before {
+    content: "\f21c"
+}
+.ficon-lobby {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf21d;')
+}
+.ficon-lobby:before {
+    content: "\f21d"
+}
+.ficon-lockers {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf21e;')
+}
+.ficon-lockers:before {
+    content: "\f21e"
+}
+.ficon-logo-wechat {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf21f;')
+}
+.ficon-logo-wechat:before {
+    content: "\f21f"
+}
+.ficon-long-stays {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf220;')
+}
+.ficon-long-stays:before {
+    content: "\f220"
+}
+.ficon-low-floor {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf221;')
+}
+.ficon-low-floor:before {
+    content: "\f221"
+}
+.ficon-luggage-storage {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf222;')
+}
+.ficon-luggage-storage:before {
+    content: "\f222"
+}
+.ficon-luggage {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf223;')
+}
+.ficon-luggage:before {
+    content: "\f223"
+}
+.ficon-lunch {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf224;')
+}
+.ficon-lunch:before {
+    content: "\f224"
+}
+.ficon-male-capsule {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf225;')
+}
+.ficon-male-capsule:before {
+    content: "\f225"
+}
+.ficon-map-airport {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf226;')
+}
+.ficon-map-airport:before {
+    content: "\f226"
+}
+.ficon-map-attraction {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf227;')
+}
+.ficon-map-attraction:before {
+    content: "\f227"
+}
+.ficon-map-city {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf228;')
+}
+.ficon-map-city:before {
+    content: "\f228"
+}
+.ficon-map-night {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf229;')
+}
+.ficon-map-night:before {
+    content: "\f229"
+}
+.ficon-map-pin-fat {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf22a;')
+}
+.ficon-map-pin-fat:before {
+    content: "\f22a"
+}
+.ficon-map-room {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf22b;')
+}
+.ficon-map-room:before {
+    content: "\f22b"
+}
+.ficon-map-transportation {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf22c;')
+}
+.ficon-map-transportation:before {
+    content: "\f22c"
+}
+.ficon-map-view {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf22d;')
+}
+.ficon-map-view:before {
+    content: "\f22d"
+}
+.ficon-massage {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf22e;')
+}
+.ficon-massage:before {
+    content: "\f22e"
+}
+.ficon-mastercard {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf22f;')
+}
+.ficon-mastercard:before {
+    content: "\f22f"
+}
+.ficon-max-occupancy-plus {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf230;')
+}
+.ficon-max-occupancy-plus:before {
+    content: "\f230"
+}
+.ficon-max-occupancy {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf231;')
+}
+.ficon-max-occupancy:before {
+    content: "\f231"
+}
+.ficon-meeting-banquet {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf232;')
+}
+.ficon-meeting-banquet:before {
+    content: "\f232"
+}
+.ficon-meeting-facilities {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf233;')
+}
+.ficon-meeting-facilities:before {
+    content: "\f233"
+}
+.ficon-menu-bookings {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf234;')
+}
+.ficon-menu-bookings:before {
+    content: "\f234"
+}
+.ficon-message-left {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf235;')
+}
+.ficon-message-left:before {
+    content: "\f235"
+}
+.ficon-message-right {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf236;')
+}
+.ficon-message-right:before {
+    content: "\f236"
+}
+.ficon-microwave {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf237;')
+}
+.ficon-microwave:before {
+    content: "\f237"
+}
+.ficon-mini-bar {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf238;')
+}
+.ficon-mini-bar:before {
+    content: "\f238"
+}
+.ficon-minus-thin {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf239;')
+}
+.ficon-minus-thin:before {
+    content: "\f239"
+}
+.ficon-minus-with-circle {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf23a;')
+}
+.ficon-minus-with-circle:before {
+    content: "\f23a"
+}
+.ficon-mirror {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf23b;')
+}
+.ficon-mirror:before {
+    content: "\f23b"
+}
+.ficon-mmb-account {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf23c;')
+}
+.ficon-mmb-account:before {
+    content: "\f23c"
+}
+.ficon-mmb-booking {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf23d;')
+}
+.ficon-mmb-booking:before {
+    content: "\f23d"
+}
+.ficon-mmb-g-giftcard {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf23e;')
+}
+.ficon-mmb-g-giftcard:before {
+    content: "\f23e"
+}
+.ficon-mmb-my-rewards {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf23f;')
+}
+.ficon-mmb-my-rewards:before {
+    content: "\f23f"
+}
+.ficon-mmb-payment-methods {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf240;')
+}
+.ficon-mmb-payment-methods:before {
+    content: "\f240"
+}
+.ficon-mmb-pointsmax {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf241;')
+}
+.ficon-mmb-pointsmax:before {
+    content: "\f241"
+}
+.ficon-mmb-reviews {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf242;')
+}
+.ficon-mmb-reviews:before {
+    content: "\f242"
+}
+.ficon-more-money {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf243;')
+}
+.ficon-more-money:before {
+    content: "\f243"
+}
+.ficon-mosquitonet {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf244;')
+}
+.ficon-mosquitonet:before {
+    content: "\f244"
+}
+.ficon-motorbike {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf245;')
+}
+.ficon-motorbike:before {
+    content: "\f245"
+}
+.ficon-mountain-view {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf246;')
+}
+.ficon-mountain-view:before {
+    content: "\f246"
+}
+.ficon-nav-back {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf247;')
+}
+.ficon-nav-back:before {
+    content: "\f247"
+}
+.ficon-nav-down-bold {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf248;')
+}
+.ficon-nav-down-bold:before {
+    content: "\f248"
+}
+.ficon-nav-down-thin {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf249;')
+}
+.ficon-nav-down-thin:before {
+    content: "\f249"
+}
+.ficon-nav-left-bold {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf24a;')
+}
+.ficon-nav-left-bold:before {
+    content: "\f24a"
+}
+.ficon-nav-left-thin {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf24b;')
+}
+.ficon-nav-left-thin:before {
+    content: "\f24b"
+}
+.ficon-nav-right-bold {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf24c;')
+}
+.ficon-nav-right-bold:before {
+    content: "\f24c"
+}
+.ficon-nav-right-thin {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf24d;')
+}
+.ficon-nav-right-thin:before {
+    content: "\f24d"
+}
+.ficon-nav-up-bold {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf24e;')
+}
+.ficon-nav-up-bold:before {
+    content: "\f24e"
+}
+.ficon-nav-up-thin {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf24f;')
+}
+.ficon-nav-up-thin:before {
+    content: "\f24f"
+}
+.ficon-negative {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf250;')
+}
+.ficon-negative:before {
+    content: "\f250"
+}
+.ficon-nightclub {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf251;')
+}
+.ficon-nightclub:before {
+    content: "\f251"
+}
+.ficon-non-smoking-room {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf252;')
+}
+.ficon-non-smoking-room:before {
+    content: "\f252"
+}
+.ficon-non-smoking {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf253;')
+}
+.ficon-non-smoking:before {
+    content: "\f253"
+}
+.ficon-noti-balloon-answer {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf254;')
+}
+.ficon-noti-balloon-answer:before {
+    content: "\f254"
+}
+.ficon-noti-balloon-question {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf255;')
+}
+.ficon-noti-balloon-question:before {
+    content: "\f255"
+}
+.ficon-noti-check-mark-rounded-inner {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf256;')
+}
+.ficon-noti-check-mark-rounded-inner:before {
+    content: "\f256"
+}
+.ficon-noti-check-mark-sharp {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf257;')
+}
+.ficon-noti-check-mark-sharp:before {
+    content: "\f257"
+}
+.ficon-notice-info {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf258;')
+}
+.ficon-notice-info:before {
+    content: "\f258"
+}
+.ficon-number-of-floors {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf259;')
+}
+.ficon-number-of-floors:before {
+    content: "\f259"
+}
+.ficon-number-of-rooms {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf25a;')
+}
+.ficon-number-of-rooms:before {
+    content: "\f25a"
+}
+.ficon-number-reviews {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf25b;')
+}
+.ficon-number-reviews:before {
+    content: "\f25b"
+}
+.ficon-outdoor-pool {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf25c;')
+}
+.ficon-outdoor-pool:before {
+    content: "\f25c"
+}
+.ficon-pay-at-the-place {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf25d;')
+}
+.ficon-pay-at-the-place:before {
+    content: "\f25d"
+}
+.ficon-payment-option-no-credit-card {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf25e;')
+}
+.ficon-payment-option-no-credit-card:before {
+    content: "\f25e"
+}
+.ficon-personal-cheque {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf25f;')
+}
+.ficon-personal-cheque:before {
+    content: "\f25f"
+}
+.ficon-personal-details {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf260;')
+}
+.ficon-personal-details:before {
+    content: "\f260"
+}
+.ficon-pet-allowed-room {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf261;')
+}
+.ficon-pet-allowed-room:before {
+    content: "\f261"
+}
+.ficon-pets-allowed {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf262;')
+}
+.ficon-pets-allowed:before {
+    content: "\f262"
+}
+.ficon-photocopying {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf263;')
+}
+.ficon-photocopying:before {
+    content: "\f263"
+}
+.ficon-pin {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf264;')
+}
+.ficon-pin:before {
+    content: "\f264"
+}
+.ficon-pin-star {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf265;')
+}
+.ficon-pin-star:before {
+    content: "\f265"
+}
+.ficon-plus-thin {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf266;')
+}
+.ficon-plus-thin:before {
+    content: "\f266"
+}
+.ficon-plus-with-circle {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf267;')
+}
+.ficon-plus-with-circle:before {
+    content: "\f267"
+}
+.ficon-pointsmax-line-logo {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf268;')
+}
+.ficon-pointsmax-line-logo:before {
+    content: "\f268"
+}
+.ficon-pointsmax-logo {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf269;')
+}
+.ficon-pointsmax-logo:before {
+    content: "\f269"
+}
+.ficon-pointsmax {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf26a;')
+}
+.ficon-pointsmax:before {
+    content: "\f26a"
+}
+.ficon-police {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf26b;')
+}
+.ficon-police:before {
+    content: "\f26b"
+}
+.ficon-pool-kids {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf26c;')
+}
+.ficon-pool-kids:before {
+    content: "\f26c"
+}
+.ficon-pool {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf26d;')
+}
+.ficon-pool:before {
+    content: "\f26d"
+}
+.ficon-poolside-bar {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf26e;')
+}
+.ficon-poolside-bar:before {
+    content: "\f26e"
+}
+.ficon-portable-wifi-rental {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf26f;')
+}
+.ficon-portable-wifi-rental:before {
+    content: "\f26f"
+}
+.ficon-positive {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf270;')
+}
+.ficon-positive:before {
+    content: "\f270"
+}
+.ficon-postal-service {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf271;')
+}
+.ficon-postal-service:before {
+    content: "\f271"
+}
+.ficon-price-messaging {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf272;')
+}
+.ficon-price-messaging:before {
+    content: "\f272"
+}
+.ficon-printer {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf273;')
+}
+.ficon-printer:before {
+    content: "\f273"
+}
+.ficon-private-bath {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf274;')
+}
+.ficon-private-bath:before {
+    content: "\f274"
+}
+.ficon-private-beach {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf275;')
+}
+.ficon-private-beach:before {
+    content: "\f275"
+}
+.ficon-private-entrance {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf276;')
+}
+.ficon-private-entrance:before {
+    content: "\f276"
+}
+.ficon-private-pool {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf277;')
+}
+.ficon-private-pool:before {
+    content: "\f277"
+}
+.ficon-profiles {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf278;')
+}
+.ficon-profiles:before {
+    content: "\f278"
+}
+.ficon-promotion-right {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf279;')
+}
+.ficon-promotion-right:before {
+    content: "\f279"
+}
+.ficon-properties {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf27a;')
+}
+.ficon-properties:before {
+    content: "\f27a"
+}
+.ficon-property-owner {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf27b;')
+}
+.ficon-property-owner:before {
+    content: "\f27b"
+}
+.ficon-queen-bed {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf27c;')
+}
+.ficon-queen-bed:before {
+    content: "\f27c"
+}
+.ficon-question-mark {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf27d;')
+}
+.ficon-question-mark:before {
+    content: "\f27d"
+}
+.ficon-questions {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf27e;')
+}
+.ficon-questions:before {
+    content: "\f27e"
+}
+.ficon-reception {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf27f;')
+}
+.ficon-reception:before {
+    content: "\f27f"
+}
+.ficon-refrigerator {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf280;')
+}
+.ficon-refrigerator:before {
+    content: "\f280"
+}
+.ficon-reporting {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf281;')
+}
+.ficon-reporting:before {
+    content: "\f281"
+}
+.ficon-residence {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf282;')
+}
+.ficon-residence:before {
+    content: "\f282"
+}
+.ficon-resort-property-plan {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf283;')
+}
+.ficon-resort-property-plan:before {
+    content: "\f283"
+}
+.ficon-restaurant-credit {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf284;')
+}
+.ficon-restaurant-credit:before {
+    content: "\f284"
+}
+.ficon-restaurant {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf285;')
+}
+.ficon-restaurant:before {
+    content: "\f285"
+}
+.ficon-ribbon-card-no-circle {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf286;')
+}
+.ficon-ribbon-card-no-circle:before {
+    content: "\f286"
+}
+.ficon-ribbon-card-solid {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf287;')
+}
+.ficon-ribbon-card-solid:before {
+    content: "\f287"
+}
+.ficon-ribbon-card {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf288;')
+}
+.ficon-ribbon-card:before {
+    content: "\f288"
+}
+.ficon-right-tick {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf289;')
+}
+.ficon-right-tick:before {
+    content: "\f289"
+}
+.ficon-room-plan {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf28a;')
+}
+.ficon-room-plan:before {
+    content: "\f28a"
+}
+.ficon-room-promotion-for-flashdeal {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf28b;')
+}
+.ficon-room-promotion-for-flashdeal:before {
+    content: "\f28b"
+}
+.ficon-room-promotion-for-mobiledeal {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf28c;')
+}
+.ficon-room-promotion-for-mobiledeal:before {
+    content: "\f28c"
+}
+.ficon-room-promotion-for-otherdeal {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf28d;')
+}
+.ficon-room-promotion-for-otherdeal:before {
+    content: "\f28d"
+}
+.ficon-room-promotion-for-smartdeal {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf28e;')
+}
+.ficon-room-promotion-for-smartdeal:before {
+    content: "\f28e"
+}
+.ficon-room-promotion-super-savedeal {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf28f;')
+}
+.ficon-room-promotion-super-savedeal:before {
+    content: "\f28f"
+}
+.ficon-room-promotion {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf290;')
+}
+.ficon-room-promotion:before {
+    content: "\f290"
+}
+.ficon-room-service {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf291;')
+}
+.ficon-room-service:before {
+    content: "\f291"
+}
+.ficon-room-voltage {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf292;')
+}
+.ficon-room-voltage:before {
+    content: "\f292"
+}
+.ficon-safety-deposit-boxes {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf293;')
+}
+.ficon-safety-deposit-boxes:before {
+    content: "\f293"
+}
+.ficon-salon {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf294;')
+}
+.ficon-salon:before {
+    content: "\f294"
+}
+.ficon-sauna {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf295;')
+}
+.ficon-sauna:before {
+    content: "\f295"
+}
+.ficon-scale {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf296;')
+}
+.ficon-scale:before {
+    content: "\f296"
+}
+.ficon-search-box {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf297;')
+}
+.ficon-search-box:before {
+    content: "\f297"
+}
+.ficon-search-calendar {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf298;')
+}
+.ficon-search-calendar:before {
+    content: "\f298"
+}
+.ficon-search-icon {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf299;')
+}
+.ficon-search-icon:before {
+    content: "\f299"
+}
+.ficon-seating-area {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf29a;')
+}
+.ficon-seating-area:before {
+    content: "\f29a"
+}
+.ficon-secure-icon {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf29b;')
+}
+.ficon-secure-icon:before {
+    content: "\f29b"
+}
+.ficon-self-parking {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf29c;')
+}
+.ficon-self-parking:before {
+    content: "\f29c"
+}
+.ficon-semi-double-bed {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf29d;')
+}
+.ficon-semi-double-bed:before {
+    content: "\f29d"
+}
+.ficon-separate-dining-area {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf29e;')
+}
+.ficon-separate-dining-area:before {
+    content: "\f29e"
+}
+.ficon-separate-living-room {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf29f;')
+}
+.ficon-separate-living-room:before {
+    content: "\f29f"
+}
+.ficon-separate-shower-and-tub {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2a0;')
+}
+.ficon-separate-shower-and-tub:before {
+    content: "\f2a0"
+}
+.ficon-seriously-multilingual {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2a1;')
+}
+.ficon-seriously-multilingual:before {
+    content: "\f2a1"
+}
+.ficon-sewing-kit {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2a2;')
+}
+.ficon-sewing-kit:before {
+    content: "\f2a2"
+}
+.ficon-shampoo {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2a3;')
+}
+.ficon-shampoo:before {
+    content: "\f2a3"
+}
+.ficon-share {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2a4;')
+}
+.ficon-share:before {
+    content: "\f2a4"
+}
+.ficon-shared-bath {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2a5;')
+}
+.ficon-shared-bath:before {
+    content: "\f2a5"
+}
+.ficon-shared-kitchen {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2a6;')
+}
+.ficon-shared-kitchen:before {
+    content: "\f2a6"
+}
+.ficon-shoeshine-kit {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2a7;')
+}
+.ficon-shoeshine-kit:before {
+    content: "\f2a7"
+}
+.ficon-shopping {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2a8;')
+}
+.ficon-shopping:before {
+    content: "\f2a8"
+}
+.ficon-shops {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2a9;')
+}
+.ficon-shops:before {
+    content: "\f2a9"
+}
+.ficon-shower {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2aa;')
+}
+.ficon-shower:before {
+    content: "\f2aa"
+}
+.ficon-shrine {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2ab;')
+}
+.ficon-shrine:before {
+    content: "\f2ab"
+}
+.ficon-shuttle-service {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2ac;')
+}
+.ficon-shuttle-service:before {
+    content: "\f2ac"
+}
+.ficon-single-bed {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2ad;')
+}
+.ficon-single-bed:before {
+    content: "\f2ad"
+}
+.ficon-ski-equipment-rentals {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2ae;')
+}
+.ficon-ski-equipment-rentals:before {
+    content: "\f2ae"
+}
+.ficon-ski-lessons {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2af;')
+}
+.ficon-ski-lessons:before {
+    content: "\f2af"
+}
+.ficon-skiing {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2b0;')
+}
+.ficon-skiing:before {
+    content: "\f2b0"
+}
+.ficon-slippers {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2b1;')
+}
+.ficon-slippers:before {
+    content: "\f2b1"
+}
+.ficon-smoke-detector {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2b2;')
+}
+.ficon-smoke-detector:before {
+    content: "\f2b2"
+}
+.ficon-smoking-allowed {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2b3;')
+}
+.ficon-smoking-allowed:before {
+    content: "\f2b3"
+}
+.ficon-smoking-area {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2b4;')
+}
+.ficon-smoking-area:before {
+    content: "\f2b4"
+}
+.ficon-smorking-yes-no {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2b5;')
+}
+.ficon-smorking-yes-no:before {
+    content: "\f2b5"
+}
+.ficon-snorkeling {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2b6;')
+}
+.ficon-snorkeling:before {
+    content: "\f2b6"
+}
+.ficon-sofa-bed {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2b7;')
+}
+.ficon-sofa-bed:before {
+    content: "\f2b7"
+}
+.ficon-sofa {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2b8;')
+}
+.ficon-sofa:before {
+    content: "\f2b8"
+}
+.ficon-solarium {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2b9;')
+}
+.ficon-solarium:before {
+    content: "\f2b9"
+}
+.ficon-sort-line {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2ba;')
+}
+.ficon-sort-line:before {
+    content: "\f2ba"
+}
+.ficon-soundproofing {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2bb;')
+}
+.ficon-soundproofing:before {
+    content: "\f2bb"
+}
+.ficon-spa-credit {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2bc;')
+}
+.ficon-spa-credit:before {
+    content: "\f2bc"
+}
+.ficon-spa-sauna {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2bd;')
+}
+.ficon-spa-sauna:before {
+    content: "\f2bd"
+}
+.ficon-special-condition {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2be;')
+}
+.ficon-special-condition:before {
+    content: "\f2be"
+}
+.ficon-sqm {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2bf;')
+}
+.ficon-sqm:before {
+    content: "\f2bf"
+}
+.ficon-squash-courts {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2c0;')
+}
+.ficon-squash-courts:before {
+    content: "\f2c0"
+}
+.ficon-star-1 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2c1;')
+}
+.ficon-star-1:before {
+    content: "\f2c1"
+}
+.ficon-star-15 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2c2;')
+}
+.ficon-star-15:before {
+    content: "\f2c2"
+}
+.ficon-star-2 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2c3;')
+}
+.ficon-star-2:before {
+    content: "\f2c3"
+}
+.ficon-star-25 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2c4;')
+}
+.ficon-star-25:before {
+    content: "\f2c4"
+}
+.ficon-star-3 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2c5;')
+}
+.ficon-star-3:before {
+    content: "\f2c5"
+}
+.ficon-star-35 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2c6;')
+}
+.ficon-star-35:before {
+    content: "\f2c6"
+}
+.ficon-star-4 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2c7;')
+}
+.ficon-star-4:before {
+    content: "\f2c7"
+}
+.ficon-star-45 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2c8;')
+}
+.ficon-star-45:before {
+    content: "\f2c8"
+}
+.ficon-star-5 {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2c9;')
+}
+.ficon-star-5:before {
+    content: "\f2c9"
+}
+.ficon-steamroom {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2ca;')
+}
+.ficon-steamroom:before {
+    content: "\f2ca"
+}
+.ficon-subways {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2cb;')
+}
+.ficon-subways:before {
+    content: "\f2cb"
+}
+.ficon-suitable-for-events {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2cc;')
+}
+.ficon-suitable-for-events:before {
+    content: "\f2cc"
+}
+.ficon-super-king-bed {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2cd;')
+}
+.ficon-super-king-bed:before {
+    content: "\f2cd"
+}
+.ficon-surfing-lessons {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2ce;')
+}
+.ficon-surfing-lessons:before {
+    content: "\f2ce"
+}
+.ficon-swimming-pool-access {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2cf;')
+}
+.ficon-swimming-pool-access:before {
+    content: "\f2cf"
+}
+.ficon-table-tennis {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2d0;')
+}
+.ficon-table-tennis:before {
+    content: "\f2d0"
+}
+.ficon-tamil {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2d1;')
+}
+.ficon-tamil:before {
+    content: "\f2d1"
+}
+.ficon-tax-id {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2d2;')
+}
+.ficon-tax-id:before {
+    content: "\f2d2"
+}
+.ficon-tax-receipt-available {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2d3;')
+}
+.ficon-tax-receipt-available:before {
+    content: "\f2d3"
+}
+.ficon-taxi-service {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2d4;')
+}
+.ficon-taxi-service:before {
+    content: "\f2d4"
+}
+.ficon-telephone {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2d5;')
+}
+.ficon-telephone:before {
+    content: "\f2d5"
+}
+.ficon-tennis-courts {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2d6;')
+}
+.ficon-tennis-courts:before {
+    content: "\f2d6"
+}
+.ficon-text-links {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2d7;')
+}
+.ficon-text-links:before {
+    content: "\f2d7"
+}
+.ficon-theme-park {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2d8;')
+}
+.ficon-theme-park:before {
+    content: "\f2d8"
+}
+.ficon-thin-arrow-left {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2d9;')
+}
+.ficon-thin-arrow-left:before {
+    content: "\f2d9"
+}
+.ficon-thin-arrow-right {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2da;')
+}
+.ficon-thin-arrow-right:before {
+    content: "\f2da"
+}
+.ficon-thumb-up-line {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2db;')
+}
+.ficon-thumb-up-line:before {
+    content: "\f2db"
+}
+.ficon-thumb-up-solid {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2dc;')
+}
+.ficon-thumb-up-solid:before {
+    content: "\f2dc"
+}
+.ficon-thumb-up {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2dd;')
+}
+.ficon-thumb-up:before {
+    content: "\f2dd"
+}
+.ficon-ticket-service {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2de;')
+}
+.ficon-ticket-service:before {
+    content: "\f2de"
+}
+.ficon-time-icon {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2df;')
+}
+.ficon-time-icon:before {
+    content: "\f2df"
+}
+.ficon-time-to-airport {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2e0;')
+}
+.ficon-time-to-airport:before {
+    content: "\f2e0"
+}
+.ficon-toiletries {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2e1;')
+}
+.ficon-toiletries:before {
+    content: "\f2e1"
+}
+.ficon-tonight-only {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2e2;')
+}
+.ficon-tonight-only:before {
+    content: "\f2e2"
+}
+.ficon-tools {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2e3;')
+}
+.ficon-tools:before {
+    content: "\f2e3"
+}
+.ficon-tooltip-details {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2e4;')
+}
+.ficon-tooltip-details:before {
+    content: "\f2e4"
+}
+.ficon-tooltip {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2e5;')
+}
+.ficon-tooltip:before {
+    content: "\f2e5"
+}
+.ficon-top-floor {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2e6;')
+}
+.ficon-top-floor:before {
+    content: "\f2e6"
+}
+.ficon-topic-calendar {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2e7;')
+}
+.ficon-topic-calendar:before {
+    content: "\f2e7"
+}
+.ficon-topic-filter {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2e8;')
+}
+.ficon-topic-filter:before {
+    content: "\f2e8"
+}
+.ficon-topic-hotel-highlight {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2e9;')
+}
+.ficon-topic-hotel-highlight:before {
+    content: "\f2e9"
+}
+.ficon-topic-search {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2ea;')
+}
+.ficon-topic-search:before {
+    content: "\f2ea"
+}
+.ficon-topic-user {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2eb;')
+}
+.ficon-topic-user:before {
+    content: "\f2eb"
+}
+.ficon-total-support {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2ec;')
+}
+.ficon-total-support:before {
+    content: "\f2ec"
+}
+.ficon-tours {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2ed;')
+}
+.ficon-tours:before {
+    content: "\f2ed"
+}
+.ficon-towels {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2ee;')
+}
+.ficon-towels:before {
+    content: "\f2ee"
+}
+.ficon-train-new {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2ef;')
+}
+.ficon-train-new:before {
+    content: "\f2ef"
+}
+.ficon-transfer-both-ways {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2f0;')
+}
+.ficon-transfer-both-ways:before {
+    content: "\f2f0"
+}
+.ficon-transfer-one-ways {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2f1;')
+}
+.ficon-transfer-one-ways:before {
+    content: "\f2f1"
+}
+.ficon-trash {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2f2;')
+}
+.ficon-trash:before {
+    content: "\f2f2"
+}
+.ficon-triangle-warning {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2f3;')
+}
+.ficon-triangle-warning:before {
+    content: "\f2f3"
+}
+.ficon-trouser-press {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2f4;')
+}
+.ficon-trouser-press:before {
+    content: "\f2f4"
+}
+.ficon-tv-area {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2f5;')
+}
+.ficon-tv-area:before {
+    content: "\f2f5"
+}
+.ficon-tv {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2f6;')
+}
+.ficon-tv:before {
+    content: "\f2f6"
+}
+.ficon-umbrella {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2f7;')
+}
+.ficon-umbrella:before {
+    content: "\f2f7"
+}
+.ficon-unionpay {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2f8;')
+}
+.ficon-unionpay:before {
+    content: "\f2f8"
+}
+.ficon-upload-your-logo {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2f9;')
+}
+.ficon-upload-your-logo:before {
+    content: "\f2f9"
+}
+.ficon-user-font-icon {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2fa;')
+}
+.ficon-user-font-icon:before {
+    content: "\f2fa"
+}
+.ficon-valet-parking {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2fb;')
+}
+.ficon-valet-parking:before {
+    content: "\f2fb"
+}
+.ficon-vending-machine {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2fc;')
+}
+.ficon-vending-machine:before {
+    content: "\f2fc"
+}
+.ficon-views {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2fd;')
+}
+.ficon-views:before {
+    content: "\f2fd"
+}
+.ficon-villa {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2fe;')
+}
+.ficon-villa:before {
+    content: "\f2fe"
+}
+.ficon-visa {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf2ff;')
+}
+.ficon-visa:before {
+    content: "\f2ff"
+}
+.ficon-wake-up-service {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf300;')
+}
+.ficon-wake-up-service:before {
+    content: "\f300"
+}
+.ficon-walking {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf301;')
+}
+.ficon-walking:before {
+    content: "\f301"
+}
+.ficon-want-to-talk {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf302;')
+}
+.ficon-want-to-talk:before {
+    content: "\f302"
+}
+.ficon-washer {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf303;')
+}
+.ficon-washer:before {
+    content: "\f303"
+}
+.ficon-watch {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf304;')
+}
+.ficon-watch:before {
+    content: "\f304"
+}
+.ficon-water-park {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf305;')
+}
+.ficon-water-park:before {
+    content: "\f305"
+}
+.ficon-water-sports-motorized {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf306;')
+}
+.ficon-water-sports-motorized:before {
+    content: "\f306"
+}
+.ficon-water-sports-non-motorized {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf307;')
+}
+.ficon-water-sports-non-motorized:before {
+    content: "\f307"
+}
+.ficon-watersports-equipment-rentals {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf308;')
+}
+.ficon-watersports-equipment-rentals:before {
+    content: "\f308"
+}
+.ficon-wheelchair-accessible {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf309;')
+}
+.ficon-wheelchair-accessible:before {
+    content: "\f309"
+}
+.ficon-wifi-additional-charge {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf30a;')
+}
+.ficon-wifi-additional-charge:before {
+    content: "\f30a"
+}
+.ficon-wifi-in-public-areas {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf30b;')
+}
+.ficon-wifi-in-public-areas:before {
+    content: "\f30b"
+}
+.ficon-wifi {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf30c;')
+}
+.ficon-wifi:before {
+    content: "\f30c"
+}
+.ficon-wind-surfing {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf30d;')
+}
+.ficon-wind-surfing:before {
+    content: "\f30d"
+}
+.ficon-wired-internet {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf30e;')
+}
+.ficon-wired-internet:before {
+    content: "\f30e"
+}
+.ficon-wooden-parqueted-flooring {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf30f;')
+}
+.ficon-wooden-parqueted-flooring:before {
+    content: "\f30f"
+}
+.ficon-x-icon {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf310;')
+}
+.ficon-x-icon:before {
+    content: "\f310"
+}
+.ficon-year-hotel-built {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf311;')
+}
+.ficon-year-hotel-built:before {
+    content: "\f311"
+}
+.ficon-year-hotel-last-renovated {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf312;')
+}
+.ficon-year-hotel-last-renovated:before {
+    content: "\f312"
+}
+.ficon-yoga-room {
+    *zoom: expression( this.runtimeStyle['zoom'] '1', this.innerHTML '&#xf313;')
+}
+.ficon-yoga-room:before {
+    content: "\f313"
+}

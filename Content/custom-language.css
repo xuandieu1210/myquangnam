@@ -1,0 +1,67 @@
+/*Tra custom ngon ngu tren cong hcm*/
+#language_select {
+    padding-left: 5px;
+    border: 0;
+    outline: 0;
+    background: #d10123;
+}
+#login-system span.ion-locked {
+    top: -1px;   
+}
+/*.language-cus{
+  position: absolute;
+  z-index: 1000;
+  top: -17px !important;
+  right: 0;
+}
+
+.languagepicker {
+ background: transparent;
+ display: inline-block;
+ padding: 0;
+ height: 40px;
+ overflow: hidden;
+ transition: all .3s ease;
+ vertical-align: middle;
+ text-align: center;
+}
+
+.languagepicker:hover {
+ height: 81px;
+    background-color: #d10123;
+}
+
+.languagepicker a{
+ color: #fff;
+ text-decoration: none;
+}
+
+.languagepicker li {
+ display: block;
+ padding: 4px 10px;
+ line-height: 40px;
+}
+
+.languagepicker li:hover{
+ background-color: #f3f3f3!important;
+    border-top: 1px solid #f4f4f4;
+}
+
+.languagepicker a:first-child li {
+ border: none;
+ background: transparent;
+ height: 40px;
+}
+
+.languagepicker li img {
+ margin-right: 5px;
+}
+
+.roundborders {
+ border-radius: 5px;
+}
+
+.large:hover {
+ height: 80px;
+}*/
+/*End Tra custom ngon ngu tren cong hcm*/

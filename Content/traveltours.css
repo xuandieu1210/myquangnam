@@ -1,0 +1,484 @@
+﻿.btn-search-business{
+    box-shadow: 0 1px #ccc;
+}
+.btn-search-business .btn-search{
+    background: #47a0ff;
+}
+.btn-search-business .btn-search .ion-search{
+    color: #fff;
+}
+
+.left-col {
+    padding: 10px 20px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.left-col .bolx-1 {
+    margin-bottom: 20px;
+}
+
+.bolx-1 .filter-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0A2D49;
+}
+
+.left-col #start_date .input-group-addon {
+    border: 1px solid #ededed;
+}
+
+.left-col #start_date input {
+    position: relative;
+    right: 1px;
+}
+
+#travel-tour-lst #range-price, #travel-tour-lst #range-nday {
+    height: 10px;
+    border: 0;
+    background: #EAE8E8;
+}
+
+#travel-tour-lst .noUi-handle {
+    width: 26px;
+    height: 18px;
+    top: -5px;
+    background: #F59C1A;
+    border: 0;
+    box-shadow: none;
+}
+
+#travel-tour-lst .noUi-handle:before {
+    left: 10px;
+    top: 4px;
+    background: #fff;
+    height: 10px
+}
+
+#travel-tour-lst .noUi-handle:after {
+    height: 10px;
+    top: 4px;
+    background: #fff;
+    left: 15px;
+}
+
+#travel-tour-lst .noUi-connect {
+    background: #078ca9!important;
+}
+
+#travel-tour-lst .value-range {
+    margin-bottom: 10px;
+    color: #D13438;
+    font-weight: bold;
+  
+}
+
+.result-list:after,.result-list:before,.result-list>li:after,.result-list>li:before{
+    display:table;
+    content:'';
+    clear:both
+}
+.tab-overflow .nav-tabs>li.prev-button+li.active>a{
+    border-radius:0 3px 0 0
+}
+.result-list{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    width:100%;
+    margin-bottom: 10px;
+}
+.result-list>li{
+    background:#fff;
+    box-shadow:0 1px #ccc;
+    border-radius:3px;
+    margin-bottom: 10px;
+}
+        
+.result-list>li>div{
+    display:table-cell;
+    vertical-align:top;
+    padding: 10px 10px 20px 10px;
+    position:relative
+}
+.result-list .result-image{
+    width:240px;
+    padding:0;
+    overflow:hidden;
+    background:center #2d353c;
+    vertical-align:middle;
+    display:table-cell;
+    background-size:100% 100%;
+}
+.result-list li .rate-info {
+    display: inline;
+    position: relative;
+    top: -4px;
+    left: 10px;
+    color: #000;
+}
+.result-list li .result-price span{
+    margin-top: 16px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+}
+.result-list .result-image a{
+    display:block
+}
+.result-list .result-image a:focus,.result-list .result-image a:hover{
+    opacity:.8
+}
+.result-list .result-image img{
+    width:100%
+}
+
+    .result-list .result-image .type_point {
+        width: 200px;
+        height: 35px;
+        line-height: 35px;
+        position: relative;
+        top: -72px;
+        left: -63px;
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        color: #fefefe;
+        text-align: center;
+        font-size: 0.867em;
+        font-weight: 700;
+        font-style: normal;
+    }
+h1.title-business{
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-top: 0px;
+}
+.result-list .item-title{
+    margin:0;
+}
+.result-list .item-title a{
+    font-size: 20px;
+    line-height:28px;
+}
+.result-list .location{
+    color:#929ba1;
+    margin-bottom:15px
+}
+.result-list .desc{
+    margin-bottom: 4px;
+    margin-top: 4px;
+    max-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 20px;
+}
+.result-list .btn-row:after,.result-list .btn-row:before{
+    content:'';
+    display:table;
+    clear:both
+}
+.result-list .btn-row a {
+    color: #2e353c;
+    font-size: 14px;
+    line-height: 18px;
+    float: left;
+    padding: 5px 0px !important;
+}
+    .result-list .btn-row a i {
+        color: #a95c05;
+        width: 16px;
+        font-size: 85%;
+    }
+.result-list .btn-row a:focus,.result-list .btn-row a:hover{
+    opacity:1
+}
+.result-list .result-price{
+    width:165px;
+    font-size:24px;
+    text-align:center;
+    background:#f2f3f4;
+    color:#D13438;
+    vertical-align:bottom
+}
+.result-list .result-price small{
+    display:block;
+    font-size:10px;
+    font-weight:600;
+    color:#929ba1
+}
+.result-list .result-price .btn{
+    margin-top:10px;
+    background: rgba(249,146,13,0.8);
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+}
+
+.result-list .result-price .btn:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.15);
+    left: 0;
+    top: 0;
+    -moz-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    -webkit-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+}
+
+.filter-form-select-wrapper {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.filter-form-select-wrapper .glyphicon-filter {
+    position: absolute;
+    left: 10px;
+    top: 11px;
+    z-index: 12;
+}
+
+    .filter-form-select-wrapper label {
+        width: 20px;
+        height: 20px;
+        top: 3px;
+        right: 9px;
+        position: absolute;
+        font-size: 20px;
+        color: #ababab;
+        z-index: 12;
+    }
+
+.filter-form-select-wrapper select {
+        height: 34px;
+    border: 1px solid #e0e0e0;
+    padding-left: 30px;
+    padding-right: 48px;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+/**info*/
+#info-business {
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+    padding: 15px;
+    -webkit-box-shadow: 0 0 2px 0px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 2px 0px rgba(0, 0, 0, .1);
+    margin-bottom: 5px;
+    border: solid 1px #ddd;
+}
+
+#info-business .rate-info {
+    display: inline;
+    position: relative;
+    top: -5px;
+    right: -5px;
+}
+
+#info-business > div {
+  color: #0A2D49
+}
+
+#info-business .col-md-12 {
+    padding-left: 15px!important;
+}
+
+#info-business .info-icon {
+    display: inline-block; 
+    width: 100%;
+}
+
+#info-business .info-icon i {
+    color: #c50000
+}
+
+#info-business .info-icon div {
+    padding: 5px 
+}
+
+#info-business .des_i {
+    text-align: justify;
+    word-wrap: break-word;
+    line-height: 20px;
+    margin: 10px 0;
+}
+
+/*CHekbox*/
+#travel-tour-lst .bolx-1 .check_box {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#travel-tour-lst .bolx-1 .check_box .checkboxFive {
+    width: 25px;
+    position: relative;
+    float: left;
+}
+
+#travel-tour-lst .bolx-1 .check_box .checkboxFive input {
+    opacity: 0;
+}
+
+#travel-tour-lst .bolx-1 .check_box .checkboxFive label {
+    border: 1px solid #555555;
+    width: 16px;
+    height: 16px;
+    top: 3px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    background: none;
+}
+
+#travel-tour-lst .bolx-1 .check_box .checkboxFive input[type=checkbox]:checked + label {
+    border: 1px solid #1a94d3;
+}
+
+#travel-tour-lst .bolx-1 .check_box .checkboxFive label:after {
+    opacity: 1;
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 6px;
+    background: transparent;
+    top: 2px;
+    left: 2px;
+    border: 2px solid white;
+    border-top: none;
+    border-right: none;
+    opacity: 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#travel-tour-lst .bolx-1 .check_box .checkboxFive input[type=checkbox]:checked + label:after {
+    opacity: 1;
+}
+
+#travel-tour-lst .bolx-1 .check_box .checkboxFive label:after {
+    border: 2px solid #1a94d3;
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    background: #1a94d3;
+    height: 8px;
+    top: calc(50% - 4px);
+    left: calc(50% - 4px);
+}
+
+#travel-tour-lst .bolx-1 .check_box span {
+    position: relative;
+    top: 1px;
+    color: #0A2D49;
+}
+
+#travel-tour-lst .bolx-1 .check_box .active {
+    color: #1a94d3;
+    font-weight: 700;
+}
+
+@media (max-width:1024px){
+    .result-list-business .figure .result-image {
+        display: block;
+        height: 200px;
+        width: 100% !important;
+    }
+}
+@media(max-width:979px){
+    .result-list .result-price{
+        width:200px
+    }
+}
+@media (max-width:767px){
+    .result-list .result-price{
+        width:100px;
+        font-size:20px
+    }
+    .result-list>li>div{
+        padding:15px;
+        width: 100%;
+    }
+
+    .result-list .btn-row a {
+        text-align: left
+    }
+    .result-list .result-image .type_point {
+        top: 17px;
+    }
+
+    .result-list li .btn-row {
+        position: relative!important;
+    }
+}
+@media(max-width:480px){
+    .result-list .result-image{
+        width:100%;
+        float:none
+    }
+    .result-list .result-image a{
+        position:relative
+    }
+    .result-list>li>div{
+        display:block;
+        width:100%
+    }
+    .result-list>li>.result-price{
+        width:100%;
+        padding:15px
+    }
+    .result-list .btn-row{
+        text-align:center
+    }
+    .result-list .result-price .btn{
+        margin-top:15px
+    }
+}
+@media (min-width:768px) and (max-width:1024px){
+    .result-list .result-image .type_point {
+        top: -110px;
+        left: -60px;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px){
+    .result-list li .btn-row {
+        position: relative!important;
+    }
+}
+
+.result-list-business .figure { padding: 0px !important; overflow: hidden;}
+    .result-list-business .figure .result-image {
+        
+    }
+.result-list-business .result-item {
+    padding: 10px 10px 10px 15px !important;
+}
+    .result-list-business .result-item .rate-info {
+        margin-bottom: 10px;
+    }
+    .result-list-business .result-item .rate-text-info {
+        display: inline-block;
+        font-size: 90%;
+    }
+.result-list-business .result-item-outer { margin-left: 0px !important; margin-right: 0px !important;}

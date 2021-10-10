@@ -1,0 +1,306 @@
+﻿.result-list .result-image {
+    width: 289px !important;
+    height: 216px !important;
+}
+
+#bodychild {
+}
+
+#myNavbar ul li ul {
+    background: rgba(150,83,6,.9) !important;
+}
+
+    #myNavbar ul li ul li a {
+        color: #fff;
+    }
+
+#scrollUp:hover {
+    opacity: 1;
+}
+
+#menu-home {
+    padding: 0 !important;
+}
+
+    #menu-home a.logo {
+        position: absolute;
+        top: 3px;
+        z-index: 101;
+        left: 10px;
+    }
+
+    #menu-home #m-menubar {
+        padding-left: 18rem;
+        width: 100%;
+        height: 60px;
+        padding-top: 14px;
+        font-size: 14px;
+    }
+
+.new_hcm_menu {
+    height: 35px;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+}
+
+    .new_hcm_menu .container {
+        position: relative;
+    }
+
+    .new_hcm_menu::before {
+        z-index: 0;
+        content: ' ';
+        display: block;
+        background: #fff;
+        position: absolute;
+        top: 0;
+        right: 65%;
+        bottom: 0;
+        left: 0;
+    }
+
+    .new_hcm_menu ul {
+        /*width: 81rem !important;*/
+        max-width: 712px;
+        height: 37px;
+        margin-left: 170px;
+        background: url(Images/submenu-top-qnm.png) no-repeat center center/cover;
+        padding: 0;
+    }
+
+        .new_hcm_menu ul li {
+            text-align: center;
+            width: 19%;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            cursor: pointer;
+            padding: 8px 10px;
+        }
+
+            .new_hcm_menu ul li a {
+                color: #fff;
+                font-weight: normal;
+                font-family: 'Oswald', sans-serif;
+            }
+
+    .new_hcm_menu li.hm_sub1 a {
+        margin-left: 20px;
+    }
+
+    .new_hcm_menu li.hm_sub2 a {
+        margin-left: 15px;
+    }
+
+    .new_hcm_menu .hm_sub1:hover a,
+    .new_hcm_menu .hm_sub2:hover a,
+    .new_hcm_menu .hm_sub3:hover a {
+        border-radius: 10px;
+        background: #fff;
+        color: #6160ca;
+        padding: 2px 5px;
+    }
+
+/*.new_hcm_menu .hm_sub2:hover a {
+    border-radius: 10px;
+    background: #fff;
+    color: #DF3E43;
+    padding: 2px 5px;
+}
+
+.new_hcm_menu .hm_sub3:hover a {
+    border-radius: 10px;
+    background: #fff;
+    color: #BB3B73;
+    padding: 2px 5px;
+}*/
+
+@media (max-width: 767px) {
+    #menu-home #m-menubar {
+        padding-left: 0px;
+        height: auto;
+    }
+    #menu-home a.logo {
+    position: absolute;
+    top: 3px;
+    z-index: 101;
+    left: 41%;
+}
+    .new_hcm_menu::before {        
+        right: 77%;       
+    }
+
+    .new_hcm_menu ul {
+        /*width: 81rem !important;*/
+        height: 27px;
+        margin-left: 0px;
+        background: url(Images/submenu-top-qnm_mobi.png) no-repeat center center;
+        padding: 0;
+        background-size: cover;
+    }
+
+        .new_hcm_menu ul li {
+            text-align: center;
+            width: 19%;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            cursor: pointer;
+            padding: 0px 5px;
+            line-height: 10px;
+        }
+
+            .new_hcm_menu ul li a {
+                font-size: 10px;
+            }
+
+    .new_hcm_menu {
+        height: 0;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+    }
+
+        .new_hcm_menu li.hm_sub1 a {
+            margin-left: auto;
+        }
+
+        .new_hcm_menu li.hm_sub2 a {
+            margin-left: auto;
+        }
+}
+
+.rm-div-htc {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    font-size: 14px !important;
+    font-family: 'Quicksand', sans-serif !important;
+    vertical-align: baseline;
+    z-index: 100;
+}
+
+.rm-ul-htc {
+    margin: 0 auto !important;
+}
+
+.search-btn-back-color {
+    background-color: buttonface !important;
+}
+
+.login-btn-htc {
+    top: 4px;
+    text-transform: uppercase;
+    position: relative;
+    text-align: right;
+}
+
+.f-size-htc {
+    font-size: 11px !important;
+}
+
+.none-boder {
+    border: none !important;
+}
+
+.padding-none {
+    padding: 0px !important;
+}
+
+.border-rad-3 {
+    border-radius: 3px !important;
+}
+
+.border-rad-2 {
+    border-radius: 2px !important;
+}
+
+.pd-btm-0 {
+    padding-bottom: 0px !important;
+}
+
+.breadcrumb-htc {
+    float: left;
+    position: absolute;
+    z-index: 999;
+    margin-left: auto;
+    width: 100%;
+    background-color: #eae8e8;
+    color: black;
+    top: 7%;
+}
+
+.breadcrumb-htc-ol {
+    float: left !important;
+    margin-bottom: 0px !important;
+    font-size: 16px !important;
+}
+
+    .breadcrumb-htc-ol li {
+        font-weight: normal !important;
+    }
+
+.active-htc {
+    font-weight: bold !important;
+}
+
+.btnCustom-htc {
+    margin-top: 11px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+    .btnCustom-htc:hover,
+    .btnCustom-htc:focus,
+    .btnCustom-htc.focus {
+        text-decoration: none;
+    }
+
+    .btnCustom-htc:active,
+    .btnCustom-htc.active {
+        background-image: none;
+    }
+
+.mg-top {
+    margin-top: 88px !important;
+}
+
+.mg-top-15 {
+    margin-top: 15px !important;
+}
+
+.mg-top-50 {
+    margin-top: 50px !important;
+}
+
+.bg-white-mb10 {
+    background-color: #ffffff;
+    margin-bottom: 10px !important;
+}
+
+.language-menu button:hover {
+    background-color: #ffffff !important;
+    color: #D10123 !important;
+}
+
+#login-system span.ion-locked {
+    top: 0px !important;
+}
+
+ol {
+    margin: 0px;
+    padding: 0px;
+}

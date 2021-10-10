@@ -1,0 +1,2060 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Logo-favicon.ico/icon_636942875389538576.ico" rel="Shortcut Icon">
+
+
+    <title>Chỉnh sửa lịch trình</title>
+
+
+    <link href="/Content/editplan.css" rel="stylesheet" />
+    <link href="/Content/perfect-scrollbar.css" rel="stylesheet" />
+    <link href="/Content/iCheck/minimal.css" rel="stylesheet" />
+    <link href="/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="/Content/select2.min.css" rel="stylesheet" />
+    <link href="/Content/select2-bootstrap.min.css" rel="stylesheet" />
+
+
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/hotel-all-fonts.css" rel="stylesheet" />
+    <link href="/Content/footer.css" rel="stylesheet" />
+    <link href="/Content/dalat_font.css" rel="stylesheet" />
+    <link href="/Content/home-toppage.css" rel="stylesheet" />
+    <link href="/Content/animate.css" rel="stylesheet" />
+
+    <link href="/Content/style.css" rel="stylesheet" />
+    <link type="text/css" href="/Content/hcm/event.css" rel="stylesheet" />
+    <link href="/Content/ionicons.min.css" rel="stylesheet" />
+    <link href="/Content/define.css" rel="stylesheet" />
+    <link href="/Content/magnific-popup.css" rel="stylesheet" />
+    <link href="/Content/login.css" rel="stylesheet" />
+    <link href="/Content/owl.carousel.css" rel="stylesheet" />
+    <link href="/Content/owl.transitions.css" rel="stylesheet" />
+
+    <link href="/Content/stylehcm.css" rel="stylesheet" />
+    <link href="/Content/hcm/custom-language.css" rel="stylesheet" />
+    <link href="/Content/newstylehcm.css" rel="stylesheet" />
+    <link href="/Content/style.qnm.css" rel="stylesheet" />
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+    <script src="/Scripts/modernizr-2.8.3.js"></script>
+
+
+    <script src="/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="/Scripts/owl.carousel.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135264246-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-135264246-6');
+    </script>
+    <style>
+        .li-none-stype {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header id="banner" role="banner">
+            <div class="header-toolbar-app">
+                <div class="container">
+                    <div class="col-md-16">
+                        <div id="toppage-header">
+                            <div class="hidden-xs date_time_sys col-md-8 col-sm-8">
+
+
+                                <span id="weather"></span>
+                                <script>
+                                    $(document).ready(function() {
+                                        callAjax();
+                                        //jQuery.simpleWeather({
+                                        //  woeid: '',
+                                        // unit: 'c',
+                                        // success: function (weather) {
+                                        //    var html = '<i class="icon-' + weather.code + '"></i> <span class="data">' + weather.city +
+                                        //       ', ' + weather.region + ' ' + weather.temp + '&deg;' +
+                                        //       weather.units.temp + ' </span>';
+
+                                        //   var rootWeather = jQuery('body').find('#weather');
+                                        //  rootWeather.html(html);
+                                        //},
+                                        // error: function (error) {
+                                        //  var rootWeather = jQuery('body').find('#weather');
+                                        //  rootWeather.html('<p>' + error + '</p>');
+                                        //}
+                                        // });
+
+
+                                        function callAjax() {
+                                            $.ajax({
+                                                type: 'POST',
+                                                url: '/Modules/Utilities/GetWeathers',
+                                                data: {
+                                                    UnitCode: 'QNM'
+                                                },
+                                                success: function(weather) {
+                                                    //console.log(weather);
+                                                    if (weather.list != null) {
+                                                        var html = '<img src="https://myquangnam.vn/Images/weathericon/' + weather.list[0].weather[0].icon + '.png" style="width:22px;height:22px"> <span class="data">' +
+                                                            Math.round(weather.list[0].main.temp_min) + '&deg;C </span>';
+                                                        var rootWeather = jQuery('body').find('#weather');
+                                                        rootWeather.html(html);
+                                                    }
+
+                                                },
+                                                error: function(error) {
+                                                    var rootWeather = jQuery('body').find('#weather');
+                                                    rootWeather.html('<p>' + error + '</p>');
+                                                }
+                                            })
+                                        }
+
+                                    });
+                                </script>
+
+                                <i class="ion-clock"></i><span id="time-date"></span>
+                            </div>
+                            <div id="" class="hidden-xs col-md-4 col-sm-4">
+                                <form action="/Modules/Home/SearchAll" autocomplete="off" method="post"> <input name="DisplayName" style="color: black; border-radius: 3px; border: 1px solid white; width: 100%; padding: 2px 5px; font-weight: 400; height: 21px;" type="text" />
+                                    <button type="submit" style="position: absolute; right: 0; top: 0; padding-top: 4px; height: 21px; border-radius: 0 3px 3px 0; line-height: 13px;" class="btn btn-sm btn-search"><i class="ion-search"></i></button>
+                                </form>
+                            </div>
+                            <div id="login-system" class="col-md-2 col-sm-2 col-xs-8">
+                                <span id="login-btn">
+                            <span class="ion-locked dropdown nav-user">
+                                    <span data-toggle="dropdown" class="dropdown-toggle">dinhchau.qnm</span>
+                                <ul class="dropdown-menu fui-gray list-unstyled menu_login">
+                                    <li class="inline_block">
+                                        <a href="#">
+                                            <img width="34" height="34" src="/Images/NoImage/WhiteBackground/NoImage300x200.png" class="fleft img-circle">
+                                            <b>dinhchau.qnm</b>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="http://myquangnam.vn/vi/accountprofile/?active=plan">
+                                            <i class="ion-clipboard"></i> Lịch trình
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://myquangnam.vn/vi/accountprofile/?active=booking">
+                                            <i class="ion-navicon-round"></i> Đặt phòng
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://myquangnam.vn/vi/accountprofile/?active=love">
+                                            <i class="ion-heart"></i> Yêu thích
+                                        </a>
+                                    </li>
+                                    <li><a href='http://myquangnam.vn/vi/accountprofile'><i class="ion-person"></i>Tài khoản</a></li>
+                                    <li class="divider"></li>
+                                    <form action="/Modules/Home/LogOff" autocomplete="off" method="post"><input name="__RequestVerificationToken" type="hidden" value="oCVLEWU5dLwsLcwwzIuUQ6aZuTOJm_I_6aE65sz6ZErUNYWgHcQAu8NIIbGAn9_AMPg9ahnRPdFIeoBpQia9xs6JPfbtCX6SP62k4qOUHjdX4CvOnUfjW8wyR344WOhG5vxxWdhe_z3WncmMsi_F5cpgJv50C-TkK48Fu1MfHq5cWHCUinhCP2uQIkOWIY-C0"
+                                        />
+                                        <li class="last">
+                                            <button type="submit"><i class="ion-log-out"></i> Đăng xuất</button>
+                                        </li>
+                                    </form>
+                                </ul>
+                                </span>
+                                </span>
+                            </div>
+                            <div id="language-system" class="col-md-2 col-sm-2 col-xs-8">
+                                <a href="http://myquangnam.vn/en/edittour/?tourid=0">
+                                    <img src="/Images/language/en.png" />
+                                </a>
+                                <a href="http://myquangnam.vn/vi/edittour/?tourid=0">
+                                    <img src="/Images/language/vi.png" />
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header toolbar end -->
+
+            <div class="sticky-header">
+                <nav id="menu-home">
+                    <div class="container menu-home-inner">
+                        <a class="logo" href="http://myquangnam.vn/vi/home">
+                            <img alt="Cổng TTĐT Du Lịch" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/superadminportal.qnm/Logo/logo512_637068974595415237.png" class="img-responsive">
+
+                        </a>
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="ion-navicon-round"></span> </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav" role="menubar" id="m-menubar">
+
+
+                                <li class="dropdown ">
+                                    <a class="dropbtn" href="http://myquangnam.vn/vi/news">Tin tức<span class="caret"></span></a>
+                                    <ul class="dropdown-content">
+                                        <li>
+                                            <a href="http://myquangnam.vn/vi/baiviet">Tin tức</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://myquangnam.vn/vi/events">Sự kiện nổi bật</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://myquangnam.vn/vi/introduction">Về Quảng Nam</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown ">
+                                    <a class="dropbtn" href="http://myquangnam.vn/vi/places">Địa điểm<span class="caret"></span></a>
+                                    <ul class="dropdown-content">
+                                        <li>
+                                            <a href="http://myquangnam.vn/vi/places/?ps=2">Địa điểm nổi bật</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://myquangnam.vn/vi/places/?ps=1">Địa điểm tiềm năng</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="http://myquangnam.vn/vi/business">Tour</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://myquangnam.vn/vi/restaurants">Ẩm thực</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://myquangnam.vn/vi/hotels">Lưu tr&#250;</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://myquangnam.vn/vi/detailutilities/?id=3752&child=3755">Di chuyển</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://myquangnam.vn/vi/shops">Mua sắm</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://myquangnam.vn/vi/entertainments">Giải tr&#237;</a>
+                                </li>
+                                <li class="">
+                                    <a href="http://myquangnam.vn/vi/utilities">Tiện &#237;ch</a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </nav>
+
+            </div>
+
+            <div class="new_hcm_menu hidden-xs">
+                <div class="container">
+                    <ul>
+                        <li class="hm_sub1">
+                            <a href="http://myquangnam.vn/vi/tours">
+                                <span>Về Quảng Nam</span>
+                            </a>
+                        </li>
+                        <li class="hm_sub2">
+                            <a href="http://myquangnam.vn/vi/videos">
+                                <span>Video</span>
+                            </a>
+                        </li>
+                        <li class="hm_sub3">
+                            <a href="http://myquangnam.vn/vi/gallery">
+                                <span>Thư viện ảnh</span>
+                            </a>
+                        </li>
+                        <li class="hm_sub3">
+                            <a href="#">
+                                <span>Diễn đàn</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+
+
+        <div data-toggle="1" class="cls_wrap hidden-xs" style="position:fixed; width:280px; height: 320px; ">
+            <span class="cls_x" style="">X</span>
+            <div class="fb-page" data-adapt-container-width="true" data-height="320" data-hide-cover="false" data-href="https://www.facebook.com/quangnamtourism.com.vn" data-show-facepile="true" data-show-posts="false" data-small-header="false" data-tabs="messages"
+                data-width="280" style="position:relative; z-index:9999999; right:0px; bottom:0;border: 1px solid #fff">
+            </div>
+        </div>
+        <div class="cls_tuvan hidden-xs" style="width: 278px;">
+            <a style="">Bạn cần tư vấn ?</a>
+            <i class="ion-chevron-up pull-right"></i>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <img src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Banner-AD/general_bg_637088284511324595.jpg" style="width: 100%" />
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <div class="col-md-16">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="http://myquangnam.vn/vi/tours">Lịch trình</a></li>
+                    <li class="breadcrumb-item active"><a class="text-primary" href="http://myquangnam.vn/vi/edittour/?tourid=0">Lịch tr&#236;nh của t&#244;i</a></li>
+                </ol>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="edit_tour-form">
+        <div class="row">
+            <div class="col-md-11">
+                <div class="form-tour">
+                    <div class="tour-input-data">
+                        <div class="col-md-8">
+                            <form class="form-info-tour">
+                                <input name="__RequestVerificationToken" type="hidden" value="sZRwg4DFlfdKWBVdrkrTsfTPgx3BfKXU2Mk-dP3FZKno3dVVytAj6m9yq_Y0pmZkFT6VHOzz9VDhh2OB8amqNYiFVmooIHwSgqgdwQED3_wzM72Izy9v6f_Mg9s0VDnBzAXLzgy9NOLR5HK0yLWN4MU4TE2xflfeKMU-G4ircP50Q-Bbpp2y17UHfWBGISad0"
+                                />
+                                <div class="form-group">
+                                    <label class="label-type" for="tour-time-input">Chọn ngày bắt đầu</label>
+                                    <input type="text" class="form-control" id="tour-time-input" value="">
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0">
+                                    <label class="label-type" for="tour-name-input">Tên lịch trình</label>
+                                    <input type="text" maxlength="100" class="form-control" id="tour-name-input" value="Lịch tr&#236;nh của t&#244;i">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="lst-hobby" id="Filters">
+                                <label class="label-type">Sở thích du lịch</label>
+                                <fieldset class="filter-group" id="scroll_hobby_list">
+                                    <!-- for -->
+                                    <div class="checkbox col-md-8">
+                                        <input id="edit_6" type="checkbox" value="6" name="edit_hobby" />
+                                        <label for="edit_6" class="pd-l-10">M&#243;n ăn đường phố</label>
+                                    </div>
+                                    <div class="checkbox col-md-8">
+                                        <input id="edit_4" type="checkbox" value="4" name="edit_hobby" />
+                                        <label for="edit_4" class="pd-l-10">Trung t&#226;m th&#224;nh phố</label>
+                                    </div>
+                                    <div class="checkbox col-md-8">
+                                        <input id="edit_9" type="checkbox" value="9" name="edit_hobby" />
+                                        <label for="edit_9" class="pd-l-10">Độc đ&#225;o</label>
+                                    </div>
+                                    <div class="checkbox col-md-8">
+                                        <input id="edit_10" type="checkbox" value="10" name="edit_hobby" />
+                                        <label for="edit_10" class="pd-l-10">Cảnh đẹp</label>
+                                    </div>
+                                    <div class="checkbox col-md-8">
+                                        <input id="edit_7" type="checkbox" value="7" name="edit_hobby" />
+                                        <label for="edit_7" class="pd-l-10">Gia đ&#236;nh</label>
+                                    </div>
+                                    <div class="checkbox col-md-8">
+                                        <input id="edit_2" type="checkbox" value="2" name="edit_hobby" />
+                                        <label for="edit_2" class="pd-l-10">Tiện nghi</label>
+                                    </div>
+                                    <div class="checkbox col-md-8">
+                                        <input id="edit_3" type="checkbox" value="3" name="edit_hobby" />
+                                        <label for="edit_3" class="pd-l-10">Y&#234;n tĩnh</label>
+                                    </div>
+                                    <div class="checkbox col-md-8">
+                                        <input id="edit_5" type="checkbox" value="5" name="edit_hobby" />
+                                        <label for="edit_5" class="pd-l-10">Sống về đ&#234;m</label>
+                                    </div>
+                                    <div class="checkbox col-md-8">
+                                        <input id="edit_8" type="checkbox" value="8" name="edit_hobby" />
+                                        <label for="edit_8" class="pd-l-10">Chụp ảnh</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tour-note-text">
+                        <p>
+                            <i class="ion-information-circled"></i><span class="note">Ghi chú: </span>
+                            <span class="text-info">- Kéo thả và sắp xếp các địa điểm trong lịch trình theo ý muốn của bạn.</span>
+                            <span class="text-info">- Thời gian đến địa điểm tiếp theo bằng khoảng 
+                thời gian di chuyển tới địa điểm đó cộng khoảng thời gian ở lại địa điểm.</span>
+                        </p>
+                    </div>
+                    <div class="tour-item-edit tour-item-edit-header" id="addday">
+
+                        <div class="tour-item-timeline" id="edit-tour-1" date-no="1">
+                            <div class="tour-item-timeline-header">
+                                <span class="tour-item-timeline-icon ion-calendar"></span>
+                                <div class="tour-item-timeline-title">Ngày 1</div>
+                                <span class="place-tour-day"><i class="ion-trash-a"></i></span>
+                            </div>
+                            <div class="tour-item-timeline-body">
+                                <ul class="lst-date-item" id="lst_place_date_1">
+                                    <!-- for -->
+                                    <li class="li-parent" data-time-open="06:00" data-time-close="17:00" data-id="834_TPLACE" data-geo="14.996330297405972, 108.13402608264975" data-tour="1_47_305" data-day="1" data-detail="0" data-visit-time="">
+                                        <div class="place-tour-img">
+                                            <img class="lazy" onerror="this.src='/Images/NoImage/Transparency/NoImage400x266.png'" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/namtramy.qnm/tre_783103257.jpg" />
+                                        </div>
+                                        <div class="place-tour-info">
+                                            <p class="name mg-b-0">Vườn Tre Khổng Lồ</p>
+                                            <div class="place-tour-info-time">
+                                                <div class="time_o">
+                                                    <div><i class="ion-clock"></i> Mở cửa: 06:00</div>
+                                                    <div><i class="ion-clock"></i> Đóng cửa: 17:00</div>
+                                                </div>
+                                                <input class="change-time" type="text" value="07:30" /><span class="ion-clock clock" style="color: #00B7C3"></span>
+                                                <span class="time-error"></span>
+                                            </div>
+                                            <div class="place-tour-action remove-place"><i class="ion-close-round"></i></div>
+                                        </div>
+                                        <div class="calculater-route-info"></div>
+                                    </li>
+                                    <li class="li-parent" data-time-open="06:00" data-time-close="22:00" data-id="658_RESTAURANT" data-geo="15.15563333727567, 108.1105079391571" data-tour="1_47_305" data-day="1" data-detail="0" data-visit-time="">
+                                        <div class="place-tour-img">
+                                            <img class="lazy" onerror="this.src='/Images/NoImage/Transparency/NoImage400x266.png'" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/namtramy.qnm/z2707321614905_5550043807fcbcdf3c0ceee5accfc967_609303538.jpg" />
+                                        </div>
+                                        <div class="place-tour-info">
+                                            <p class="name mg-b-0">Nh&#224; h&#224;ng Tuấn Quy&#234;n</p>
+                                            <div class="place-tour-info-time">
+                                                <div class="time_o">
+                                                    <div><i class="ion-clock"></i> Mở cửa: 06:00</div>
+                                                    <div><i class="ion-clock"></i> Đóng cửa: 22:00</div>
+                                                </div>
+                                                <input class="change-time" type="text" value="09:06" /><span class="ion-clock clock" style="color: #00B7C3"></span>
+                                                <span class="time-error"></span>
+                                            </div>
+                                            <div class="place-tour-action remove-place"><i class="ion-close-round"></i></div>
+                                        </div>
+                                        <div class="calculater-route-info"></div>
+                                    </li>
+                                    <li class="li-parent" data-time-open="07:00" data-time-close="21:00" data-id="381_SHOP" data-geo="15.149854,108.121879" data-tour="1_47_305" data-day="1" data-detail="0" data-visit-time="">
+                                        <div class="place-tour-img">
+                                            <img class="lazy" onerror="this.src='/Images/NoImage/Transparency/NoImage400x266.png'" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/tinhdv.qnm/1234_637118310066908224.jpg" />
+                                        </div>
+                                        <div class="place-tour-info">
+                                            <p class="name mg-b-0">Nh&#224; Kh&#225;ch Nam Tr&#224; My</p>
+                                            <div class="place-tour-info-time">
+                                                <div class="time_o">
+                                                    <div><i class="ion-clock"></i> Mở cửa: 07:00</div>
+                                                    <div><i class="ion-clock"></i> Đóng cửa: 21:00</div>
+                                                </div>
+                                                <input class="change-time" type="text" value="13:30" /><span class="ion-clock clock" style="color: #00B7C3"></span>
+                                                <span class="time-error"></span>
+                                            </div>
+                                            <div class="place-tour-action remove-place"><i class="ion-close-round"></i></div>
+                                        </div>
+                                        <div class="calculater-route-info"></div>
+                                    </li>
+                                    <li class="li-parent" data-time-open="08:00" data-time-close="23:59" data-id="1327_RESTAURANT" data-geo="15.145017820042327, 108.1185898453003" data-tour="1_47_305" data-day="1" data-detail="0" data-visit-time="">
+                                        <div class="place-tour-img">
+                                            <img class="lazy" onerror="this.src='/Images/NoImage/Transparency/NoImage400x266.png'" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/namtramy.qnm/nhoclinh2_147370382.jpg" />
+                                        </div>
+                                        <div class="place-tour-info">
+                                            <p class="name mg-b-0">Nh&#224; H&#224;ng Ngọc Linh</p>
+                                            <div class="place-tour-info-time">
+                                                <div class="time_o">
+                                                    <div><i class="ion-clock"></i> Mở cửa: 08:00</div>
+                                                    <div><i class="ion-clock"></i> Đóng cửa: 23:59</div>
+                                                </div>
+                                                <input class="change-time" type="text" value="17:00" /><span class="ion-clock clock" style="color: #00B7C3"></span>
+                                                <span class="time-error"></span>
+                                            </div>
+                                            <div class="place-tour-action remove-place"><i class="ion-close-round"></i></div>
+                                        </div>
+                                        <div class="calculater-route-info"></div>
+                                    </li>
+                                    <li class="li-parent" data-time-open="05:00" data-time-close="22:00" data-id="49_ENTERTAINMENT" data-geo="15.147993247002718, 108.12212689682933" data-tour="1_47_305" data-day="1" data-detail="0" data-visit-time="">
+                                        <div class="place-tour-img">
+                                            <img class="lazy" onerror="this.src='/Images/NoImage/Transparency/NoImage400x266.png'" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/namtramy.qnm/tanthanh_670800712.jpg" />
+                                        </div>
+                                        <div class="place-tour-info">
+                                            <p class="name mg-b-0">Karaoke T&#226;n Thanh</p>
+                                            <div class="place-tour-info-time">
+                                                <div class="time_o">
+                                                    <div><i class="ion-clock"></i> Mở cửa: 05:00</div>
+                                                    <div><i class="ion-clock"></i> Đóng cửa: 22:00</div>
+                                                </div>
+                                                <input class="change-time" type="text" value="22:07" /><span class="ion-clock clock" style="color: #00B7C3"></span>
+                                                <span class="time-error">Thời gian đến địa điểm đã đóng cửa</span>
+                                            </div>
+                                            <div class="place-tour-action remove-place"><i class="ion-close-round"></i></div>
+                                        </div>
+                                        <div class="calculater-route-info"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both;">
+                        <button class="btn-addDayTour" onclick="AddDay($(this))"><i class="ion-plus-round"></i> Thêm ngày</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="form-tour-search">
+                    <h3>Lọc địa điểm</h3>
+                    <div class="form-group col-md-8">
+                        <label class="label-type">Quốc gia</label>
+                        <select disabled id="tour-choose-nation" class="form-control">
+                                <option value="1">Việt nam</option>
+                                <option value="3">NICARAGUA</option>
+                                <option value="4">NIGER</option>
+                                <option value="5">NIGERIA</option>
+                                <option value="6">NIUE</option>
+                                <option value="7">NORFOLK ISLAND</option>
+                                <option value="8">NORTHERN MARIANA ISLANDS</option>
+                                <option value="9">NORWAY</option>
+                                <option value="10">OMAN</option>
+                                <option value="11">PAKISTAN</option>
+                                <option value="12">PALAU</option>
+                                <option value="13">PALESTINIAN TERRITORY, OCCUPIED</option>
+                                <option value="14">PANAMA</option>
+                                <option value="15">PAPUA NEW GUINEA</option>
+                                <option value="16">PARAGUAY</option>
+                                <option value="17">PERU</option>
+                                <option value="18">PHILIPPINES</option>
+                                <option value="19">PITCAIRN</option>
+                                <option value="20">POLAND</option>
+                                <option value="21">PORTUGAL</option>
+                                <option value="22">PUERTO RICO</option>
+                                <option value="23">QATAR</option>
+                                <option value="24">R&#201;UNION</option>
+                                <option value="25">ROMANIA</option>
+                                <option value="26">RUSSIAN FEDERATION</option>
+                                <option value="27">RWANDA</option>
+                                <option value="28">SAINT HELENA</option>
+                                <option value="29">SAINT KITTS AND NEVIS</option>
+                                <option value="30">SAINT LUCIA</option>
+                                <option value="31">SAINT PIERRE AND MIQUELON</option>
+                                <option value="32">SAINT VINCENT AND THE GRENADINES</option>
+                                <option value="33">SAMOA</option>
+                                <option value="34">SAN MARINO</option>
+                                <option value="35">SAO TOME AND PRINCIPE</option>
+                                <option value="36">SAUDI ARABIA</option>
+                                <option value="37">SENEGAL</option>
+                                <option value="38">SERBIA AND MONTENEGRO</option>
+                                <option value="39">SEYCHELLES</option>
+                                <option value="40">SIERRA LEONE</option>
+                                <option value="41">SINGAPORE</option>
+                                <option value="42">SLOVAKIA</option>
+                                <option value="43">SLOVENIA</option>
+                                <option value="44">SOLOMON ISLANDS</option>
+                                <option value="45">SOMALIA</option>
+                                <option value="46">SOUTH AFRICA</option>
+                                <option value="47">SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</option>
+                                <option value="48">SPAIN</option>
+                                <option value="49">SRI LANKA</option>
+                                <option value="50">SUDAN</option>
+                                <option value="51">SURINAME</option>
+                                <option value="52">SVALBARD AND JAN MAYEN</option>
+                                <option value="53">SWAZILAND</option>
+                                <option value="54">SWEDEN</option>
+                                <option value="55">SWITZERLAND</option>
+                                <option value="56">SYRIAN ARAB REPUBLIC</option>
+                                <option value="57">TAIWAN, PROVINCE OF CHINA</option>
+                                <option value="58">TAJIKISTAN</option>
+                                <option value="59">TANZANIA, UNITED REPUBLIC OF</option>
+                                <option value="60">THAILAND</option>
+                                <option value="61">TIMOR-LESTE</option>
+                                <option value="62">TOGO</option>
+                                <option value="63">TOKELAU</option>
+                                <option value="64">TONGA</option>
+                                <option value="65">TRINIDAD AND TOBAGO</option>
+                                <option value="66">TUNISIA</option>
+                                <option value="67">TURKEY</option>
+                                <option value="68">TURKMENISTAN</option>
+                                <option value="69">TURKS AND CAICOS ISLANDS</option>
+                                <option value="70">TUVALU</option>
+                                <option value="71">UGANDA</option>
+                                <option value="72">UKRAINE</option>
+                                <option value="73">UNITED ARAB EMIRATES</option>
+                                <option value="74">UNITED KINGDOM</option>
+                                <option value="75">UNITED STATES</option>
+                                <option value="76">UNITED STATES MINOR OUTLYING ISLANDS</option>
+                                <option value="77">URUGUAY</option>
+                                <option value="78">UZBEKISTAN</option>
+                                <option value="79">VANUATU</option>
+                                <option value="80">Vatican City State see HOLY SEE</option>
+                                <option value="81">VENEZUELA</option>
+                                <option value="83">VIRGIN ISLANDS, BRITISH</option>
+                                <option value="84">VIRGIN ISLANDS, U.S.</option>
+                                <option value="85">WALLIS AND FUTUNA</option>
+                                <option value="86">WESTERN SAHARA</option>
+                                <option value="87">YEMEN</option>
+                                <option value="88">ZAMBIA</option>
+                                <option value="89">ZIMBABWE</option>
+                                <option value="90">AFGHANISTAN</option>
+                                <option value="91">&#197;LAND ISLANDS</option>
+                                <option value="92">ALBANIA</option>
+                                <option value="93">ALGERIA</option>
+                                <option value="94">AMERICAN SAMOA</option>
+                                <option value="95">ANDORRA</option>
+                                <option value="96">ANGOLA</option>
+                                <option value="97">ANGUILLA</option>
+                                <option value="98">ANTARCTICA</option>
+                                <option value="99">ANTIGUA AND BARBUDA</option>
+                                <option value="100">ARGENTINA</option>
+                                <option value="101">ARMENIA</option>
+                                <option value="102">ARUBA</option>
+                                <option value="103">AUSTRALIA</option>
+                                <option value="104">AUSTRIA</option>
+                                <option value="105">AZERBAIJAN</option>
+                                <option value="106">BAHAMAS</option>
+                                <option value="107">BAHRAIN</option>
+                                <option value="108">BANGLADESH</option>
+                                <option value="109">BARBADOS</option>
+                                <option value="110">BELARUS</option>
+                                <option value="111">BELGIUM</option>
+                                <option value="112">BELIZE</option>
+                                <option value="113">BENIN</option>
+                                <option value="114">BERMUDA</option>
+                                <option value="115">BHUTAN</option>
+                                <option value="116">BOLIVIA</option>
+                                <option value="117">BOSNIA AND HERZEGOVINA</option>
+                                <option value="118">BOTSWANA</option>
+                                <option value="119">BOUVET ISLAND</option>
+                                <option value="120">BRAZIL</option>
+                                <option value="121">BRITISH INDIAN OCEAN TERRITORY</option>
+                                <option value="122">BRUNEI DARUSSALAM</option>
+                                <option value="123">BULGARIA</option>
+                                <option value="124">BURKINA FASO</option>
+                                <option value="125">BURUNDI</option>
+                                <option value="126">CAMBODIA</option>
+                                <option value="127">CAMEROON</option>
+                                <option value="128">CANADA</option>
+                                <option value="129">CAPE VERDE</option>
+                                <option value="130">CAYMAN ISLANDS</option>
+                                <option value="131">CENTRAL AFRICAN REPUBLIC</option>
+                                <option value="132">CHAD</option>
+                                <option value="133">CHILE</option>
+                                <option value="134">CHINA</option>
+                                <option value="135">CHRISTMAS ISLAND</option>
+                                <option value="136">COCOS (KEELING) ISLANDS</option>
+                                <option value="137">COLOMBIA</option>
+                                <option value="138">COMOROS</option>
+                                <option value="139">CONGO</option>
+                                <option value="140">CONGO, THE DEMOCRATIC REPUBLIC OF THE</option>
+                                <option value="141">COOK ISLANDS</option>
+                                <option value="142">COSTA RICA</option>
+                                <option value="143">C&#212;TE D&#39;IVOIRE</option>
+                                <option value="144">CROATIA</option>
+                                <option value="145">CUBA</option>
+                                <option value="146">CYPRUS</option>
+                                <option value="147">CZECH REPUBLIC</option>
+                                <option value="148">DENMARK</option>
+                                <option value="149">DJIBOUTI</option>
+                                <option value="150">DOMINICA</option>
+                                <option value="151">DOMINICAN REPUBLIC</option>
+                                <option value="152">ECUADOR</option>
+                                <option value="153">EGYPT</option>
+                                <option value="154">EL SALVADOR</option>
+                                <option value="155">EQUATORIAL GUINEA</option>
+                                <option value="156">ERITREA</option>
+                                <option value="157">ESTONIA</option>
+                                <option value="158">ETHIOPIA</option>
+                                <option value="159">FALKLAND ISLANDS (MALVINAS)</option>
+                                <option value="160">FAROE ISLANDS</option>
+                                <option value="161">FIJI</option>
+                                <option value="162">FINLAND</option>
+                                <option value="163">FRANCE</option>
+                                <option value="164">FRENCH GUIANA</option>
+                                <option value="165">FRENCH POLYNESIA</option>
+                                <option value="166">FRENCH SOUTHERN TERRITORIES</option>
+                                <option value="167">GABON</option>
+                                <option value="168">GAMBIA</option>
+                                <option value="169">GEORGIA</option>
+                                <option value="170">GERMANY</option>
+                                <option value="171">GHANA</option>
+                                <option value="172">GIBRALTAR</option>
+                                <option value="173">GREECE</option>
+                                <option value="174">GREENLAND</option>
+                                <option value="175">GRENADA</option>
+                                <option value="176">GUADELOUPE</option>
+                                <option value="177">GUAM</option>
+                                <option value="178">GUATEMALA</option>
+                                <option value="179">GUINEA</option>
+                                <option value="180">GUINEA-BISSAU</option>
+                                <option value="181">GUYANA</option>
+                                <option value="182">HAITI</option>
+                                <option value="183">HEARD ISLAND AND MCDONALD ISLANDS</option>
+                                <option value="184">HONDURAS</option>
+                                <option value="185">HONG KONG</option>
+                                <option value="186">HUNGARY</option>
+                                <option value="187">ICELAND</option>
+                                <option value="188">INDIA</option>
+                                <option value="189">INDONESIA</option>
+                                <option value="190">IRAN, ISLAMIC REPUBLIC OF</option>
+                                <option value="191">IRAQ</option>
+                                <option value="192">IRELAND</option>
+                                <option value="193">ISRAEL</option>
+                                <option value="194">ITALY</option>
+                                <option value="195">JAMAICA</option>
+                                <option value="196">JAPAN</option>
+                                <option value="197">JORDAN</option>
+                                <option value="198">KAZAKHSTAN</option>
+                                <option value="199">KENYA</option>
+                                <option value="200">KIRIBATI</option>
+                                <option value="201">KOREA, DEMOCRATIC PEOPLE&#39;S REPUBLIC OF</option>
+                                <option value="202">KOREA, REPUBLIC OF</option>
+                                <option value="203">KUWAIT</option>
+                                <option value="204">KYRGYZSTAN</option>
+                                <option value="205">LAO PEOPLE&#39;S DEMOCRATIC REPUBLIC</option>
+                                <option value="206">LATVIA</option>
+                                <option value="207">LEBANON</option>
+                                <option value="208">LESOTHO</option>
+                                <option value="209">LIBERIA</option>
+                                <option value="210">LIBYAN ARAB JAMAHIRIYA</option>
+                                <option value="211">LIECHTENSTEIN</option>
+                                <option value="212">LITHUANIA</option>
+                                <option value="213">LUXEMBOURG</option>
+                                <option value="214">MACAO</option>
+                                <option value="215">MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</option>
+                                <option value="216">MADAGASCAR</option>
+                                <option value="217">MALAWI</option>
+                                <option value="218">MALAYSIA</option>
+                                <option value="219">MALDIVES</option>
+                                <option value="220">MALI</option>
+                                <option value="221">MALTA</option>
+                                <option value="222">MARSHALL ISLANDS</option>
+                                <option value="223">MARTINIQUE</option>
+                                <option value="224">MAURITANIA</option>
+                                <option value="225">MAURITIUS</option>
+                                <option value="226">MAYOTTE</option>
+                                <option value="227">MEXICO</option>
+                                <option value="228">MICRONESIA, FEDERATED STATES OF</option>
+                                <option value="229">MOLDOVA, REPUBLIC OF</option>
+                                <option value="230">MONACO</option>
+                                <option value="231">MONGOLIA</option>
+                                <option value="232">MONTSERRAT</option>
+                                <option value="233">MOROCCO</option>
+                                <option value="234">MOZAMBIQUE</option>
+                                <option value="235">MYANMAR</option>
+                                <option value="236">NAMIBIA</option>
+                                <option value="237">NAURU</option>
+                                <option value="238">NEPAL</option>
+                                <option value="239">NETHERLANDS</option>
+                                <option value="240">NETHERLANDS ANTILLES</option>
+                                <option value="241">NEW CALEDONIA</option>
+                                <option value="2">NEW ZEALAND</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-8">
+                        <label class="label-type">Tỉnh/Thành phố</label>
+                        <select id="tour-choose-province" class="form-control"></select>
+                    </div>
+                    <div class="form-group col-md-16">
+                        <label class="label-type">Thành phố, quận, huyện, xã</label>
+                        <select id="tour-choose-city" class="form-control">
+                            <option value="0">Tất cả</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-16">
+                        <div id="search-place-tour">
+                            <ul class="nav nav-pills mg-b-6">
+                                <li class="active"><a data-toggle="pill" href="#places">Địa điểm</a></li>
+                                <li><a data-toggle="pill" href="#restaurants">Ẩm thực</a></li>
+                                <li><a data-toggle="pill" href="#shop">Mua sắm</a></li>
+                                <li><a data-toggle="pill" href="#hotels">Lưu trú</a></li>
+                                <li><a data-toggle="pill" href="#entertainment">Giải trí</a></li>
+                            </ul>
+                            <div class="input-group filter-search">
+                                <input type="text" onkeyup="searchPlaceOfTour($(this))" class="form-control input-sm input-findname">
+                                <div class="input-group-btn">
+                                    <button class="btn-sm btn-search"><i class="ion-search"></i></button>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div id="places" class="tab-pane fade in active">
+                                    <div class="lst-item-form" id="list_place_tplace"></div>
+                                </div>
+                                <div id="restaurants" class="tab-pane fade">
+                                    <div class="lst-item-form" id="list_place_res"></div>
+                                </div>
+                                <div id="shop" class="tab-pane fade">
+                                    <div class="lst-item-form" id="list_place_shop"></div>
+                                </div>
+                                <div id="hotels" class="tab-pane fade">
+                                    <div class="lst-item-form" id="list_place_hotel"></div>
+                                </div>
+                                <div id="entertainment" class="tab-pane fade">
+                                    <div class="lst-item-form" id="list_place_ent"></div>
+                                </div>
+                            </div>
+                            <div class="input-group create-tour" style="display: initial;padding: 0!important">
+                                <form action="/Modules/Tour/CreateOrUpdateTour" id="form-create-tour" method="post"><input name="__RequestVerificationToken" type="hidden" value="fk935HOgmTbVPdqhZ0jcW2RSgLqnwVluXYr36j86EvmhGNiwVcukGzyLXeaCZrI7pEcqXKvNHBf8sbRekDdVFN1xlrzqJFdfdm2mnJOxwnu6VfuU5VUBcCxXttoGiECC96K4cXiNjc3CsbX2ziBRdRZQig0wbQQUDpauGMpmJwOi-bt0rEw5-tHMZdE97H-H0"
+                                    /> <input type="hidden" name="tourId" id="input_tour_id" value="0" />
+                                    <input type="hidden" name="data" id="input_detail" />
+                                    <input type="hidden" name="checkTour" id="input_detail_check" />
+                                    <input type="hidden" name="name" id="input_name" />
+                                    <input type="hidden" name="hobby" id="input_hobby" />
+                                    <input type="hidden" name="fromDate" id="input_from_date" />
+                                    <input type="hidden" name="tourType" value="1" />
+                                    <button type="submit" class="btn btn-block btn-lg btn-primary">Lưu lịch trình</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <input type="hidden" id="numberday" value="1" />
+        </div>
+    </div>
+
+
+    <script id="tour_edit_places" type="x-tmpl-mustache">
+        <div class="place-tour-edit" data-time-open="{{TimeOpen}}" data-time-close="{{TimeClose}}" data-geo="{{Geo}}" data-tour="{{NationID}}_{{ProvinceID}}_{{CityID}}" data-id="{{ID}}_{{Code}}" data-visit-time="{{VisitTime}}">
+            <div class="place-tour-img">
+                <img src="{{Image}}" onerror="this.src='/Images/NoImage/Transparency/NoImage400x266.png'" />
+            </div>
+            <div class="place-tour-info">
+                <p class="name">{{Name}}</p>
+                <p class="address"><i class="ion-location"></i> {{Address}}</p>
+            </div>
+        </div>
+    </script>
+
+    <script id="item_tour_detail" type="x-tmpl-mustache">
+        <li class="li-parent" data-time-open="{{TimeOpen1}}" data-time-close="{{TimeClose}}" data-id="{{PlaceInfo}}" data-geo="{{Geo}}" data-tour="{{DataNation}}" data-day="{{Day}}" data-detail="0" data-visit-time="{{VisitTime}}">
+            <div class="place-tour-img">
+                <img src="{{Image}}" onerror="this.src='/Images/NoImage/Transparency/NoImage400x266.png'">
+            </div>
+            <div class="place-tour-info">
+                <p class="name mg-b-0">{{PlaceName}}</p>
+                <div class="place-tour-info-time">
+                    <div class="time_o">
+                        <div><i class="ion-clock"></i> Mở cửa: {{TimeOpen}}</div>
+                        <div><i class="ion-clock"></i> Đóng cửa: {{TimeClose}}</div>
+                    </div>
+                    <input class="change-time" type="text" value="{{Time}}" /><span class="ion-clock clock" style="color: #00B7C3"></span>
+                    <span class="time-error"></span>
+                </div>
+                <div class="place-tour-action remove-place">
+                    <i class="ion-close-round"></i>
+                </div>
+
+            </div>
+            <div class="calculater-route-info"></div>
+        </li>
+    </script>
+
+    <script id="item_tour_addday" type="x-tmpl-mustache">
+        <div class="tour-item-timeline" id="edit-tour-{{Day}}" date-no="{{Day}}">
+            <div class="tour-item-timeline-header">
+                <span class="tour-item-timeline-icon ion-calendar"></span>
+                <div class="tour-item-timeline-title">Ngày {{Day}}</div><span class="place-tour-day"><i class="ion-trash-a"></i></span>
+            </div>
+            <div class="tour-item-timeline-body">
+                <ul class="lst-date-item" id="lst_place_date_{{Day}}"></ul>
+            </div>
+        </div>
+    </script>
+
+    <script id="info_distance" type="x-tmpl-mustache">
+        <div class="col-md-4 col-xs-4 col-sm-4">
+            <i class="ion-arrow-down-c style-route"></i> <span class="style-route-km">{{DISTANCE}}</span>
+        </div>
+        <div class="col-md-4 col-xs-4 col-sm-4">
+            <i class="ion-clock"></i> <span class="style-route-time">{{TIMERUN}}</span>
+        </div>
+    </script>
+
+
+    <footer class="footer">
+
+        <div class="footer-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-sm-8 col-xs-10 footer-gallery">
+                        <div class="footer-gallery-inner">
+                            <h3 class="text-orag">Thư viện hình ảnh</h3>
+                            <ul class="lst_img_footer">
+                                <li>
+                                    <a href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Thu%20vien%20anh/8.ngaylu_636940317772954681.jpg">
+                                        <img src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\adminqnm\Logo\Thu%20vien%20anh\thumb\8.ngaylu_636940317772954681.jpg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Thu%20vien%20anh/7.binhminhtrenbienqueem_636940317726130516.jpg">
+                                        <img src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\adminqnm\Logo\Thu%20vien%20anh\thumb\7.binhminhtrenbienqueem_636940317726130516.jpg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Thu%20vien%20anh/6.tinhvadong_636940317676410828.jpg">
+                                        <img src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\adminqnm\Logo\Thu%20vien%20anh\thumb\6.tinhvadong_636940317676410828.jpg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Thu%20vien%20anh/5.cautrexuquang_636940317617512377.jpg">
+                                        <img src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\adminqnm\Logo\Thu%20vien%20anh\thumb\5.cautrexuquang_636940317617512377.jpg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Thu%20vien%20anh/4.binhminhtrenbienqueem_636940317560622556.jpg">
+                                        <img src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\adminqnm\Logo\Thu%20vien%20anh\thumb\4.binhminhtrenbienqueem_636940317560622556.jpg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Thu%20vien%20anh/3.langbichhoa_636940317059439194.jpg">
+                                        <img src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\adminqnm\Logo\Thu%20vien%20anh\thumb\3.langbichhoa_636940317059439194.jpg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Thu%20vien%20anh/2.biencuadai_636940316993566514.jpg">
+                                        <img src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\adminqnm\Logo\Thu%20vien%20anh\thumb\2.biencuadai_636940316993566514.jpg" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Thu%20vien%20anh/1.chieuque_636940316936775058.jpg">
+                                        <img src="https://scontent.smarttourism.vn/resources/portal\Images\QNM\adminqnm\Logo\Thu%20vien%20anh\thumb\1.chieuque_636940316936775058.jpg" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-8 col-xs-6 footer-menu">
+                        <div class="footer-menu-inner">
+                            <h3 class="text-uppercase text-orag">Danh mục</h3>
+
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/hotels">Khách sạn</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/restaurants">Ẩm thực</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/places">Khám phá</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/shops">Mua sắm</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/tours">Lịch trình</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/business">Tour</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/events">Lễ hội & Sự kiện</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/news">Tin tức</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/introduction">Giới thiệu</a></div>
+                            <div class="col-xs-8"><a href="http://myquangnam.vn/vi/utilities">Tiện ích</a></div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-16 col-xs-16 footer-address">
+                        <div class="download-apps">
+                            <h3 class="text-orag">Tải ứng dụng</h3>
+                            <div class="list-download-app">
+                                <a href="https://play.google.com/store/apps/details?id=com.quangnam.tourism"><img alt="android-img" src="/Images/general/android.png" class="img-responsive" /></a>
+                                <a href="https://apps.apple.com/vn/app/quang-nam-tourism/id1436827272?l=vi"><img alt="ios-img" src="/Images/general/ios.png" class="img-responsive" /></a>
+                            </div>
+                        </div>
+                        <div class="footer-address-outer">
+                            <ul>
+                                <li><strong>Trung t&#226;m Th&#244;ng Tin X&#250;c tiến Du lịch Tỉnh Quảng Nam</strong></li>
+                                <li><i class="ficon ficon-map-pin-fat"></i>Địa chỉ: 47, 49, 51 Phan Ch&#226;u Trinh, TP Hội An, Tỉnh Quảng Nam, Việt Nam.</li>
+                                <li><i class="ficon ficon-telephone"></i>Số điện thoại: (+84) 235 3916961 - <i class="ficon ficon-fax-or-photo"></i>Fax: (+84) 235 3916961</li>
+                            </ul>
+                        </div>
+                        <div class="socials">
+                            <ul>
+                                <li><a target="_blank" href="https://www.facebook.com/quangnamtourism.com.vn"><i class="ion-social-facebook"></i></a></li>
+                                <li><a target="_blank" href="https://www.instagram.com/quangnamtourism"><i class="ion-social-instagram"></i></a></li>
+                                <li><a target="_blank" href="https://www.youtube.com/channel/UCCV69qcb_ZtdzyPoGZeY2xg"><i class="ion-social-youtube"></i></a></li>
+                                <li><a target="_blank" href="https://twitter.com/quangnamtourism"><i class="ion-social-twitter"></i></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container copyright-inner">
+                Copyright &#169; 2019 - Trung t&#226;m Th&#244;ng Tin X&#250;c tiến Du lịch Tỉnh Quảng Nam
+            </div>
+        </div>
+
+    </footer>
+    <div id="show_download_my_app" style="display: none">
+        <div class="app-inner">
+            <span class="ion-close mobile_close"></span>
+            <div class="show_mobile_container">
+                <img class="img-responsive" src="/Images/general/Logo20.png" />
+                <div class="info_mobile">
+                    <a target="_blank" id="link_download" href="https://play.google.com/store/apps/details?id=com.quangnam.tourism">Trải nghiệm trên di động</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="modal-login-system" class="basic-popup mfp-with-anim mfp-hide" style="max-width: 380px">
+        <div class="mtp-header">
+            <h3 class="text-center text-uppercase">Đăng nhập</h3>
+        </div>
+        <div class="mtp-content">
+            <div id="login_form">
+                <form action="/Modules/Home/SubmitLogin" autocomplete="off" method="post"><input name="__RequestVerificationToken" type="hidden" value="ogmq-VKon4BuSmMcUQI4BrpI2Ibmsl4AlNvY-ynTp8i_j0cDi51cCh-6lr1orVloy_beiP8K06wfNg4XolLGlqUr5l2QdV2pNN7QecC0_5IdPsSHcP_MWlgLiTeUe1jqzJrVFq2MkdQZUKEucX5Sph5EZyoADezxTAjDQdsBNr4kww8O6F4aNIcPF94St03U0"
+                    />
+                    <div class="col-md-16 fields form-group">
+
+                        <input class="form-control item_log" id="UserName" name="UserName" placeholder="Tên đăng nhập" type="text" value="" />
+                        <i class="ion-person"></i>
+
+                    </div>
+                    <div class="col-md-16 fields form-group">
+
+                        <input class="form-control item_log" id="Password" name="Password" placeholder="Mật khẩu" type="password" />
+                        <i class="ion-locked"></i>
+
+                    </div>
+                    <div class="col-md-16 fields">
+                        <button class="btn btn-primary btn-block">Đăng nhập</button>
+                    </div>
+                    <div class="col-md-16 fields text-center form-group">
+                        <div class="checkbox i-checks">
+
+                            <input id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" />
+                            <label class="pd-l-n" for="remember">Lưu tài khoản</label>
+                        </div>
+                    </div>
+                </form>
+                <div class="col-md-16 fields text-center hidden-xs">
+                    <p class="type_login">hoặc đăng nhập với</p>
+                </div>
+                <form action="/Modules/Home/ExternalLogin" method="post"><input name="__RequestVerificationToken" type="hidden" value="TxQQ4EqT4l_TccHa-9sutWC2S2lYnYOw0P5oF7NyDcUeEqE_zVfxUvAwWf_xSbpsPkvHm57C8oJ2K6D5_VXTWTj5Y4F6hHdkXoznja2SXE7qWoRCoWJp9Jdrg2BzlKmIGAo4L7slcUo8i6BARnkp4yn6jfqg3LkE2_-zJNVMV1i5vpdQlqqu7IjfOrb2zBWo0"
+                    />
+                    <div class="col-md-16 fields other_login">
+                        <div class="col-md-8 form-group col-sm-8 col-xs-16 pd-l-n">
+                            <button type="submit" class="btn btn-inverse pull-left btn-block btn-google" id="Google" name="provider" value="Google" title="Đăng nhập bằng tài khoản Google">
+                                        <i class="ion-social-google"></i> Google
+                                    </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <div class="mtp-footer">
+            <div class="row">
+                <a class="col-md-8 text-left col-sm-8 col-xs-8" href="http://myquangnam.vn/vi/signup"> <i class="ion-person-add"></i> Đăng ký</a>
+                <a class="col-md-8 text-right col-sm-8 col-xs-8" href="http://myquangnam.vn/vi/forgotpassword"> <i class="ion-refresh"></i> Quên mật khẩu</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-choose-register" class="basic-popup mfp-with-anim mfp-hide" style="max-width: 30%">
+        <div class="mtp-header">
+            <h3 class="text-center text-uppercase">Đăng ký</h3>
+        </div>
+        <div class="mtp-content">
+            <div class="row" style="text-align: center;font-size: 90px;">
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    <a href="http://myquangnam.vn/vi/signupguest">
+                        <i class="ion-android-contact"></i>
+                        <p style="font-size: 20px;">Khách</p>
+                    </a>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    <a href="http://myquangnam.vn/vi/signupcompany">
+                        <i class="ion-briefcase"></i>
+                        <p style="font-size: 20px;">Doanh nghiệp</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="loading-box modal_load col-xs-16 text-center load-more-page-mobile" id="loading-box" aria-hidden="true" style="display: none;">
+        <div class="box-show">
+            <div class="loading-page-mobile col-xs-2"></div>
+            <div class="box-content col-xs-13">Đang tải...</div>
+        </div>
+    </div>
+
+    <script src="/Scripts/jquery.simpleWeather.min.js"></script>
+    <script src="/Scripts/jquery.magnific-popup.js"></script>
+    <script src="/Scripts/wow.min.js"></script>
+    <script src="/Scripts/unveil2.min.js"></script>
+    <script src="/Scripts/jquery.scrollUp.js"></script>
+    <script src="/Scripts/swiper.min.js"></script>
+    <script src="/Scripts/moment.min.js"></script>
+    <script src="/Scripts/custom-fun.js"></script>
+    <script src="/Scripts/bootstrap.js"></script>
+    <script src="/Scripts/respond.js"></script>
+    <script src="/Scripts/bootbox.min.js"></script>
+    <script src="/Scripts/Utilities/badwords.js"></script>
+
+
+
+    <script src="/Scripts/mustache.min.js"></script>
+    <script src="/Scripts/perfect-scrollbar.js"></script>
+    <script src="/Scripts/icheck.min.js"></script>
+    <script src="/Scripts/Sortable.min.js"></script>
+    <script src="/Scripts/bootstrap-datetimepicker2.min.js"></script>
+    <script src="/Scripts/select2.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2uPnpGi9NDtk5dPIhnmMY-ZL8xoZoADo"></script>
+
+    <script type="text/javascript">
+        var directionsService = new google.maps.DirectionsService;
+
+        var numberday = parseInt($("#numberday").val());
+
+        var select = $('select[id*=tour-choose-date]');
+
+        var byId1 = function(id) {
+            return document.getElementById(id);
+        };
+
+        async function getAllPlaces() {
+            const dataset = await $.ajax({
+                type: "POST",
+                url: '/Modules/Tour/GetListProvinces',
+                success: function(data) {
+                    var listProvinces = data.Provinces;
+                    var options = '';
+                    if (listProvinces.length > 0) {
+                        $.each(listProvinces, function(key, item) {
+                            options += '<option value="' + item.UNIT_CODE + '">' + item.NAME + '</option>'
+                        });
+                    }
+
+                    $('#tour-choose-province').html(options);
+                    $("#tour-choose-province").select2().val("QNM").trigger("change");
+                }
+            });
+        }
+
+        getAllPlaces();
+
+        // add date function
+        function AddDay(Root) {
+            if ($('#lst_place_date_' + numberday + ' .li-parent').length == 0 && numberday != 0) {
+                bootbox.alert({
+                    title: "Thông báo",
+                    message: "Vui lòng thêm địa điểm vào ngày đang trống để tiếp tục!",
+                });
+                return false;
+            }
+            numberday = numberday + 1;
+            var template = $("#item_tour_addday").html();
+            var html = Mustache.render(template, {
+                Day: numberday
+            });
+            $('#addday').append(html);
+            if (numberday == 7) {
+                Root.hide();
+            }
+            addOption(numberday);
+            initDatePlaceSortDrop();
+        }
+        // function delete date
+        $('#addday').on('click', '.place-tour-day', function() {
+            $(this).closest('.tour-item-timeline').attr("id", "date-remove");
+            $('#date-remove').nextAll('.tour-item-timeline').each(function() {
+                var no = $(this).attr("date-no");
+                if (no > 1) {
+                    no = no - 1;
+                }
+                $(this).attr("id", "edit-tour-" + no);
+                $(this).attr("date-no", no);
+                $(this).find(".tour-item-timeline-title").html("Ngày " + no);
+                $(this).find("ul.lst-date-item").attr("id", "lst_place_date_" + no);
+                $(this).find("ul.lst-date-item").children().attr("data-day", no);
+            });
+            $(this).closest('.tour-item-timeline').remove();
+            numberday = numberday - 1;
+            addOption(numberday);
+            if (numberday < 7) {
+                $('.iti-day-add').show();
+            }
+            $('.form-tour-search').removeAttr("style");
+
+            $('.form-tour-search').css({
+                "position": "relative;",
+                "top": "0px;"
+            });
+        });
+
+        //add option to select date
+        function addOption(data) {
+            select.html('');
+            if (data > 0) {
+                for (var i = 1; i <= data; i++) {
+                    var option = document.createElement("option");
+                    option.text = "Ngày " + i;
+                    option.value = i;
+                    select.append(option);
+                }
+            }
+        }
+
+        function initTimeAllPlace() {
+            $('#addday').find('.change-time').each(function() {
+                var timeOpen = $(this).closest("li.li-parent").attr("data-time-open").split(":");
+                var timeClose = $(this).closest("li.li-parent").attr("data-time-close").split(":");
+                $(this).datetimepicker({
+                    format: 'HH:mm',
+                    allowInputToggle: true,
+                    //disabledTimeIntervals: [
+                    //    [ moment().hour(0), moment().hour(timeOpen[0]).minutes(timeOpen[1]) ],
+                    //    [ moment().hour(timeClose[0]).minutes(timeClose[1]), moment().hour(24) ]
+                    //]
+                }).on('dp.change', function(e) {
+                    var $this = $(this);
+                    var closeTimeAttr = $this.closest("li.li-parent").attr("data-time-close");
+                    var closeTime = moment(closeTimeAttr, "HH:mm");
+                    var timeClick = moment($(this).val(), "HH:mm");
+                    if (closeTime.isBefore(timeClick)) {
+                        $this.closest("li.li-parent").find('.time-error').text("Thời gian đến địa điểm đã đóng cửa");
+                    } else {
+                        $this.closest("li.li-parent").find('.time-error').text('');
+                    }
+                    $this.attr("value", $(this).val())
+                });
+            });
+        }
+
+        //custom append html at index
+        $.fn.insertAtIndex = function(index, selector) {
+            var opts = $.extend({
+                index: 0,
+                selector: '<div/>'
+            }, {
+                index: index,
+                selector: selector
+            });
+            return this.each(function() {
+                var p = $(this);
+                var i = ($.isNumeric(opts.index) ? parseInt(opts.index) : 0);
+                if (i <= 0)
+                    p.prepend(opts.selector);
+                else if (i > p.children().length - 1)
+                    p.append(opts.selector);
+                else
+                    p.children().eq(i).before(opts.selector);
+            });
+        };
+
+        // init drop list date
+        function initDatePlaceSortDrop() {
+            for (var i = 1; i <= numberday; i++) {
+                Sortable.create(byId1('lst_place_date_' + i), {
+                    sort: true,
+                    group: {
+                        name: 'place_item',
+                        pull: false,
+                        put: true
+                    },
+                    scroll: true,
+                    animation: 250,
+                    onAdd: function(evt) {
+                        var newIDItem = evt.item.attributes.getNamedItem("data-id").value;
+                        var imgSrc = evt.item.childNodes[1].children[0].src;
+                        var placeName = evt.item.children[1].children[0].textContent;
+                        var areaDay = evt.target.attributes.getNamedItem("id").value.split("_")[3];
+                        var data_tour = evt.item.attributes.getNamedItem("data-tour").value;
+                        var data_geo = evt.item.attributes.getNamedItem("data-geo").value;
+                        var timeopen = evt.item.attributes.getNamedItem("data-time-open").value;
+                        var timeclose = evt.item.attributes.getNamedItem("data-time-close").value;
+                        var visittime = evt.item.attributes.getNamedItem("data-visit-time").value;
+
+                        var lstDayOfTourOnMapOnAdd = [];
+                        var arrayCheck = [];
+                        $('#lst_place_date_' + areaDay).find("li.li-parent").each(function() {
+                            var itemAttr = $(this).attr("data-id");
+                            if (itemAttr == newIDItem) {
+                                arrayCheck.push(newIDItem);
+                            }
+                        });
+                        //if(evt.from.id == "list_place_tplace" || evt.from.id == "list_place_res"
+                        //    ||evt.from.id == "list_place_hotel" || evt.from.id == "list_place_shop") {
+                        if (arrayCheck.length > 0) {
+                            var itemAdd = $(evt.item);
+                            itemAdd.remove();
+                            bootbox.alert({
+                                title: "Thông báo",
+                                message: "Không thể chọn hai địa điểm giống nhau trong một ngày của lịch trình!",
+                            });
+                        } else {
+                            var timeopen1;
+                            if (timeopen == "00:00") {
+                                timeopen1 = "07:30";
+                            } else {
+                                timeopen1 = timeopen;
+                            }
+                            var html = Mustache.render($("#item_tour_detail").html(), {
+                                Geo: data_geo,
+                                DataNation: data_tour,
+                                Day: areaDay,
+                                PlaceInfo: newIDItem,
+                                Image: imgSrc,
+                                Time: timeopen1,
+                                PlaceName: placeName,
+                                TimeOpen1: timeopen1,
+                                TimeOpen: timeopen1,
+                                TimeClose: timeclose,
+                                VisitTime: visittime
+                            });
+                            evt.item.outerHTML = html;
+                            $('#lst_place_date_' + areaDay).find("li.li-parent").each(function() {
+                                lstDayOfTourOnMapOnAdd.push({
+                                    "location": $(this).attr("data-geo")
+                                });
+                            });
+                            calculateAndDisplayRoute(lstDayOfTourOnMapOnAdd, areaDay, true);
+                            //Init all choose time
+                            initTimeAllPlace();
+                        }
+
+                    },
+                    onSort: function(evt) {
+                        var lstDayOfTourOnMapOnAdd = [];
+                        var areaDay = evt.to.attributes[1].value.split("_")[3];
+                        $('#lst_place_date_' + areaDay).find("li.li-parent").each(function() {
+                            lstDayOfTourOnMapOnAdd.push({
+                                "location": $(this).attr("data-geo")
+                            });
+                        });
+                        $('#lst_place_date_' + areaDay + ' li.li-parent:last-child').children(".calculater-route-info").html('');
+                        if (lstDayOfTourOnMapOnAdd.length > 0) {
+                            //calc distance
+                            calculateAndDisplayRoute(lstDayOfTourOnMapOnAdd, areaDay, true);
+                        }
+                    }
+                });
+            }
+        }
+
+        var lengthE = $(".tour-item-timeline").length;
+
+        for (var i = 1; i <= lengthE; i++) {
+            var lstDayOfTourOnMap = [];
+            $('#lst_place_date_' + i).find("li.li-parent").each(function() {
+                lstDayOfTourOnMap.push({
+                    "location": $(this).attr("data-geo")
+                });
+            });
+            calculateAndDisplayRoute(lstDayOfTourOnMap, i, false);
+        }
+
+        function calculateAndDisplayRoute(lstDayOfTourOnMap, aui, isInit) {
+            var waypts = [];
+            for (var i = 1; i < lstDayOfTourOnMap.length - 1; i++) {
+                waypts.push({
+                    location: lstDayOfTourOnMap[i].location,
+                    stopover: true
+                });
+            }
+            directionsService.route({
+                origin: lstDayOfTourOnMap[0].location,
+                destination: lstDayOfTourOnMap[lstDayOfTourOnMap.length - 1].location,
+                waypoints: waypts,
+                travelMode: 'DRIVING'
+            }, function(response, status) {
+                if (status === 'OK') {
+                    var templateHtml = $('#info_distance').html();
+                    var html = '';
+                    var checkLength = $("#edit-tour-" + aui).find("li").length;
+                    if (checkLength > 1) {
+                        $("#edit-tour-" + aui).find("li:not(:last-child)").each(function(i) {
+                            html = Mustache.render(templateHtml, {
+                                DISTANCE: response.routes[0].legs[i].distance.text,
+                                TIMERUN: response.routes[0].legs[i].duration.text
+                            });
+                            $(this).children(".calculater-route-info").html(html);
+                        });
+                    }
+                    if (isInit) {
+                        var lengthResponse = response.routes["0"].legs.length;
+                        var listCheck = [];
+                        $("#edit-tour-" + aui).find("li.li-parent").each(function() {
+                            listCheck.push($(this));
+                        });
+                        if (listCheck.length > 1) {
+                            var currentTime = "";
+                            for (var i = 0; i < lengthResponse; i++) {
+
+                                if (i == 0) {
+                                    currentTime = listCheck[i][0].attributes[1].value; // lấy thời gian mở cửa địa điểm đầu tiên
+                                } else {
+                                    currentTime = listCheck[i].find(".change-time").val(); // lấy thời gian mở cửa địa điểm tiếp theo
+                                }
+
+                                var toptime = moment(currentTime.split(":")[0] + ':' + currentTime.split(":")[1], 'HH:mm');
+
+                                var time = moment(currentTime.split(":")[0] + ':' + currentTime.split(":")[1], 'HH:mm');
+
+                                var visitTime = listCheck[i][0].attributes[8].value;
+
+                                response.routes[0].legs[i].duration.value = parseInt(response.routes[0].legs[i].duration.value + (visitTime * 60));
+
+                                time.add(response.routes[0].legs[i].duration.value, 's');
+
+                                var timeCalc = moment(time, "HH:mm");
+
+                                var openTime = moment(listCheck[i + 1][0].attributes[1].value, "HH:mm");
+
+                                var closeTime = moment(listCheck[i + 1][0].attributes[2].value, "HH:mm");
+
+                                listCheck[i].find(".change-time").val(toptime.format("HH:mm"));
+
+                                listCheck[i + 1].find(".change-time").val(time.format("HH:mm"));
+
+                                if (closeTime.isBefore(timeCalc) || timeCalc.isBefore(openTime)) {
+                                    listCheck[i + 1].find(".time-error").text("Thời gian đến địa điểm đã đóng cửa");
+                                } else {
+                                    listCheck[i + 1].find(".time-error").text("");
+                                }
+
+                            }
+                        }
+                    }
+                } else {
+                    bootbox.alert({
+                        title: "Thông báo",
+                        message: "Không thể vẽ đường đi trên bản đồ do thiếu dữ liệu tọa độ!",
+                    });
+                }
+            });
+        }
+
+        function randomIntFromInterval(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        function searchPlaceOfTour(Root) {
+            var value = Root.val().toLowerCase();
+            $('.lst-item-form .place-tour-info').find('.name').each(function() {
+                var newElement = convertToUnsignChar($(this).text().toLowerCase());
+                var arrayElementSplit = $(this).text().toLowerCase().split(" ");
+                var arrayElementSplitInput = value.split(" ");
+                var booleanMatch = false;
+                for (var i = 0; i < arrayElementSplit.length; i++) {
+                    if (arrayElementSplitInput.length > 0) {
+                        for (var j = 0; j < arrayElementSplitInput.length; j++) {
+                            if (arrayElementSplitInput[j] == arrayElementSplit[i]) {
+                                booleanMatch = true;
+                            }
+                        }
+                    }
+                }
+
+                if (newElement.search(value) > -1 || $(this).text().toLowerCase().search(value) > -1 || booleanMatch) {
+                    $(this).closest('.place-tour-edit').show();
+                } else {
+                    $(this).closest('.place-tour-edit').hide();
+                }
+            });
+        }
+
+        //Xoa dia diem trong ngay
+        $('#addday').on('click', '.remove-place', function() {
+            var $this = $(this);
+            bootbox.confirm({
+                title: "Xác nhận",
+                message: "Bạn muốn xóa địa điểm này khỏi lịch trình?",
+                buttons: {
+                    cancel: {
+                        label: '<i class="fa fa-times"></i> Đóng'
+                    },
+                    confirm: {
+                        label: '<i class="fa fa-check"></i> Đồng ý'
+                    }
+                },
+                callback: function(result) {
+                    //console.log('This was logged in the callback: ' + result);
+                    if (result) {
+                        var dayId = $this.closest('li').attr("data-day");
+                        $this.closest('li').remove();
+                        var checkLength = $("#lst_place_date_" + dayId).find("li").length;
+                        if (checkLength == 0) {
+                            $('#edit-tour-' + dayId).find(".place-tour-day").trigger("click");
+                        }
+                        var lstDayOfTourOnMapOnAdd = [];
+                        $('#lst_place_date_' + dayId).find("li.li-parent").each(function() {
+                            lstDayOfTourOnMapOnAdd.push({
+                                "location": $(this).attr("data-geo")
+                            });
+                        });
+
+                        $('#lst_place_date_' + dayId + ' li.li-parent:last-child').children(".calculater-route-info").html('');
+
+                        if (lstDayOfTourOnMapOnAdd.length > 0) {
+                            //calc distance
+                            calculateAndDisplayRoute(lstDayOfTourOnMapOnAdd, dayId, true);
+                        }
+                    }
+                }
+            });
+        });
+
+        ////Them 1 dia diem vao ngay trong tour
+        //$('.lst-item-form').on('click', '.place-tour-edit', function () {
+        //    var $this = $(this);
+        //    confirm("Bạn muốn thêm địa điểm này vào lịch trình?", function(itOk) {
+        //        if(itOk) {
+        //            var chooseDate = $('#tour-choose-date').val();
+        //            var time = $('#value_item').val();
+        //            var template = $("#item_tour_detail").html();
+        //            var newTourItem = {
+        //                id: $this.attr("data-id"),
+        //                image: $this.find('.place-tour-img img').attr('src'),
+        //                name: $this.find('.name').text(),
+        //                tour: $this.attr("data-tour")
+        //            };
+        //            var html = Mustache.render(template,
+        //            {
+        //                DataNation: newTourItem.tour,
+        //                Day: chooseDate,
+        //                PlaceInfo: newTourItem.id,
+        //                Image: newTourItem.image,
+        //                Time: time,
+        //                PlaceName: newTourItem.name
+        //            });
+        //            var rootDate = $('#edit-tour-' + chooseDate).find('.lst-date-item');
+        //            rootDate.append(html);
+        //            initTimeAllPlace();
+        //        }
+        //    });
+        //});
+
+        $('#form-create-tour').on("submit", function() {
+            var i = 1;
+            var str = '[';
+            $('.lst-date-item').find('li').each(function() {
+                var itemSp = $(this).attr('data-id').split('_');
+                var obj_id = itemSp[0];
+                var obj_type = itemSp[1];
+                var id = $(this).attr('data-detail');
+                var day = $(this).attr('data-day');
+                var time = $(this).find(".change-time").val();
+                var tourId = $("#input_tour_id").val();
+                str += '{' +
+                    '\"ID\":' + id + ',' +
+                    '\"TOUR_ID\":' + tourId + ',' +
+                    '\"SORT_DAY\":' + i + ',' +
+                    '\"STATUS\":' + 1 + ',' +
+                    '\"DAY\":' + day + ',' +
+                    '\"PLACE_ID\":' + obj_id + ',' +
+                    '\"PLACE_CODE\":\"' + obj_type + '\",' +
+                    '\"START_TIME\":\"' + time + ':00\"' +
+                    '},';
+                i += 1;
+            });
+            str += ']';
+
+            var j = 1;
+            var str_check = '[';
+            $('.lst-date-item').find('li').each(function() {
+                var item = $(this).attr('data-tour').split('_');
+                var nation = item[0];
+                var province = item[1];
+                var city = item[2];
+                var obj_id = $(this).attr('data-id').split('_')[0];
+                str_check += '{' +
+                    '\"PLACE_ID\":' + obj_id + ',' +
+                    '\"NATION_ID\":' + nation + ',' +
+                    '\"PROVINCE_ID\":' + province + ',' +
+                    '\"CITY_ID\":' + city +
+                    '},';
+                j += 1;
+            });
+            str_check += ']';
+
+            $("#input_detail_check").val(str_check);
+
+            var names = [];
+            $('input[name="edit_hobby"]:checked').each(function() {
+                names.push(this.value);
+            });
+            $("#input_hobby").val(names);
+            $("#input_detail").val(str);
+            $("#input_from_date").val($('#tour-time-input').val());
+            $("#input_name").val($('#tour-name-input').val());
+
+            return true;
+        });
+
+        $(document).ready(function() {
+
+            $('input[name="edit_hobby"]').iCheck({
+                checkboxClass: 'icheckbox_minimal',
+                radioClass: 'iradio_minimal',
+                increaseArea: '20%'
+            });
+
+            //init drop list item place search right
+            Sortable.create(byId1('list_place_tplace'), {
+                sort: false,
+                group: {
+                    name: 'place_item',
+                    pull: 'clone',
+                    put: false
+                },
+                animation: 150,
+                scroll: true
+            });
+
+            //init drop list item place search right
+            Sortable.create(byId1('list_place_hotel'), {
+                sort: false,
+                group: {
+                    name: 'place_item',
+                    pull: 'clone',
+                    put: false
+                },
+                animation: 150,
+                scroll: true
+            });
+
+            //init drop list item place search right
+            Sortable.create(byId1('list_place_res'), {
+                sort: false,
+                group: {
+                    name: 'place_item',
+                    pull: 'clone',
+                    put: false
+                },
+                animation: 150,
+                scroll: true
+            });
+
+            //init drop list item place search right
+            Sortable.create(byId1('list_place_shop'), {
+                sort: false,
+                group: {
+                    name: 'place_item',
+                    pull: 'clone',
+                    put: false
+                },
+                animation: 150,
+                scroll: true
+            });
+
+            initDatePlaceSortDrop();
+
+            initTimeAllPlace();
+
+            var allowDesktop = true;
+            if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0, 4))) {
+                allowDesktop = false;
+            } else {
+                allowDesktop = true;
+            }
+
+            Ps.initialize(document.getElementById('scroll_hobby_list'), {
+                useSelectionScroll: true
+            });
+
+            Ps.initialize(document.getElementById('list_place_tplace'), {
+                useSelectionScroll: true
+            });
+
+            Ps.initialize(document.getElementById('list_place_hotel'), {
+                useSelectionScroll: true
+            });
+
+            Ps.initialize(document.getElementById('list_place_res'), {
+                useSelectionScroll: true
+            });
+
+            Ps.initialize(document.getElementById('list_place_shop'), {
+                useSelectionScroll: true
+            });
+
+            $(window).scroll(function() {
+                var widthScroll = $('.form-tour-search').outerWidth();
+                var topHeight = $('#banner').outerHeight() + 54;
+                var currentScroll = $(window).scrollTop();
+                if ($('.form-tour').height() >= 600) {
+                    if (currentScroll >= topHeight && allowDesktop) {
+                        $('.form-tour-search').css({
+                            position: 'fixed',
+                            width: widthScroll,
+                            top: "10px",
+                            "z-index": 4,
+                            "margin-top": '0px'
+                        });
+                        //if ($(window).scrollTop() + $(window).height() > $(document).height() - $('footer').height()) {
+                        if ($('.form-tour-search').offset().top + $('.form-tour-search').height() > $("footer").offset().top && $(this).width() >= 992) {
+                            $('.form-tour-search').css({
+                                position: 'fixed',
+                                width: widthScroll,
+                                top: "10px",
+                                "z-index": 4,
+                                "margin-top": '-548.5px'
+                            });
+                        }
+                    } else {
+                        $('.form-tour-search').css({
+                            position: 'relative',
+                            top: '0px'
+                        });
+                    }
+                }
+            });
+
+            if ($('#tour-time-input').val().length != 0) {
+                $('#tour-time-input').datetimepicker({
+                    format: 'DD/MM/YYYY'
+                });
+            } else {
+                $('#tour-time-input').datetimepicker({
+                    format: 'DD/MM/YYYY',
+                    defaultDate: new Date(),
+                    minDate: moment().subtract(1, 'd')
+                });
+            }
+        });
+
+        $.fn.select2.defaults.set("theme", "bootstrap");
+
+        $("#tour-choose-nation").select2().val("1").trigger("change");
+
+        $('#tour-choose-nation').on('change', function() {
+            alert('Hiện tại hệ thống chỉ hỗ trợ tạo lịch trình trong nước!');
+            return false;
+        });
+
+        $('#tour-choose-province').on('change', function() {
+            $.ajax({
+                type: "POST",
+                url: '/Modules/Tour/GetAllCityByPortalCode',
+                data: {
+                    portalCode: $(this).val()
+                },
+                success: function(data) {
+                    var optionCity = '<option value="0">Tất cả</option>';
+                    if (data.length > 0) {
+                        $.each(data, function(key, item) {
+                            optionCity += '<option value="' + item.ID + '">' + item.NAME + '</option>'
+                        });
+                    }
+                    $('#tour-choose-city').html(optionCity);
+                    $('#tour-choose-city').select2().val("0").trigger("change");
+                }
+            });
+        });
+
+        $('#tour-choose-city').on('change', function() {
+
+            var portalCode = $('#tour-choose-province').val();
+            var cityId = $(this).val();
+            $.ajax({
+                type: "POST",
+                url: '/Modules/Tour/GetAllPlacesByPortalCode',
+                data: {
+                    portalCode: portalCode,
+                    cityId: cityId
+                },
+                success: function(data) {
+                    var template = $('#tour_edit_places').html();
+                    var html0 = '',
+                        html1 = '',
+                        html2 = '',
+                        html3 = '';
+
+                    if (data.Tplaces.length > 0) {
+                        $.each(data.Tplaces, function(key, item) {
+                            html0 += Mustache.render(template, {
+                                Image: config.UrlImage(item.Image),
+                                Code: item.Code,
+                                Name: item.Name,
+                                Address: item.Address,
+                                ID: item.ID,
+                                NationID: item.NationID,
+                                ProvinceID: item.ProvinceID,
+                                CityID: item.CityID,
+                                Geo: item.Geo,
+                                TimeOpen: item.OpenTime,
+                                TimeClose: item.CloseTime,
+                                VisitTime: item.VisitTime
+                            });
+                        });
+                    } else {
+                        html0 = '<p class="fs18 text-center">Không tìm thấy dữ liệu nào phù hợp!</p>';
+                    }
+
+                    if (data.Hotels.length > 0) {
+                        $.each(data.Hotels, function(key, item) {
+                            html1 += Mustache.render(template, {
+                                Image: config.UrlImage(item.Image),
+                                Code: item.Code,
+                                Name: item.Name,
+                                Address: item.Address,
+                                ID: item.ID,
+                                NationID: item.NationID,
+                                ProvinceID: item.ProvinceID,
+                                CityID: item.CityID,
+                                Geo: item.Geo,
+                                TimeOpen: item.OpenTime,
+                                TimeClose: item.CloseTime,
+                                VisitTime: item.VisitTime
+                            });
+                        });
+                    } else {
+                        html1 = '<p class="fs18 text-center">Không tìm thấy dữ liệu nào phù hợp!</p>';
+                    }
+
+                    if (data.Restaurants.length > 0) {
+                        $.each(data.Restaurants, function(key, item) {
+                            html2 += Mustache.render(template, {
+                                Image: config.UrlImage(item.Image),
+                                Code: item.Code,
+                                Name: item.Name,
+                                Address: item.Address,
+                                ID: item.ID,
+                                NationID: item.NationID,
+                                ProvinceID: item.ProvinceID,
+                                CityID: item.CityID,
+                                Geo: item.Geo,
+                                TimeOpen: item.OpenTime,
+                                TimeClose: item.CloseTime,
+                                VisitTime: item.VisitTime
+                            });
+                        });
+                    } else {
+                        html2 = '<p class="fs18 text-center">Không tìm thấy dữ liệu nào phù hợp!</p>';
+                    }
+
+                    if (data.Shops.length > 0) {
+                        $.each(data.Shops, function(key, item) {
+                            html3 += Mustache.render(template, {
+                                Image: config.UrlImage(item.Image),
+                                Code: item.Code,
+                                Name: item.Name,
+                                Address: item.Address,
+                                ID: item.ID,
+                                NationID: item.NationID,
+                                ProvinceID: item.ProvinceID,
+                                CityID: item.CityID,
+                                Geo: item.Geo,
+                                TimeOpen: item.OpenTime,
+                                TimeClose: item.CloseTime,
+                                VisitTime: item.VisitTime
+                            });
+                        });
+                    } else {
+                        html3 = '<p class="fs18 text-center">Không tìm thấy dữ liệu nào phù hợp!</p>';
+                    }
+
+                    $('#list_place_tplace').html(html0);
+                    $('#list_place_hotel').html(html1);
+                    $('#list_place_res').html(html2);
+                    $('#list_place_shop').html(html3);
+                }
+            });
+        });
+    </script>
+
+
+
+    <script type="text/javascript">
+        function geturl() {
+            return "https://myquangnam.vn/vi/restaurants/";
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            var raido = $(".cls_wrap").attr("data-toggle");
+            if (raido == 0) {
+                $(".cls_tuvan").css("display", "none");
+                $(".cls_x").click(function() {
+                    $(".cls_wrap").slideToggle();
+                    $(".cls_tuvan").slideToggle();
+                });
+                $(".cls_tuvan").click(function() {
+                    $(".cls_wrap").slideToggle();
+                    $(this).slideToggle();
+                });
+            } else {
+                $(".cls_wrap").css("display", "none");
+                $(".cls_x").click(function() {
+                    $(".cls_wrap").slideToggle();
+                    $(".cls_tuvan").slideToggle();
+                });
+                $(".cls_tuvan").click(function() {
+                    $(".cls_wrap").slideToggle();
+                    $(this).slideToggle();
+                });
+            }
+            //jQuery.simpleWeather({
+            //    woeid: '1252375',
+            //    unit: 'c',
+            //    success: function (weather) {
+            //        var html = '<i class="icon-' + weather.code + '"></i> <span class="data">' + weather.city +
+            //            ', ' + weather.region + ' ' + weather.temp + '&deg;' +
+            //            weather.units.temp + ' </span>';
+
+            //        var rootWeather = jQuery('body').find('#weather');
+            //        rootWeather.html(html);
+            //    },
+            //    error: function (error) {
+            //        var rootWeather = jQuery('body').find('#weather');
+            //        rootWeather.html('<p>' + error + '</p>');
+            //    }
+            //});
+
+            $('img.lazy').unveil();
+
+            if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0, 4))) {
+                $('#toggle_form_search').trigger('click');
+                if (sessionStorage.getItem("show_mobile_app") == null || sessionStorage.getItem("show_mobile_app") != 0) {
+                    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                    if (/windows phone/i.test(userAgent)) {} else if (/android/i.test(userAgent)) {
+                        $.ajax({
+                            type: 'POST',
+                            //url: "/Modules/Home/GetLinkDownLoadApp",
+                            url: "/Modules/Home/GetLinkDownLoadApp",
+                            data: {
+                                operatingSystem: "android"
+                            },
+                            success: function(result) {
+                                if (result.Success) {
+                                    $('#link_download').attr('href', result.LinkHref);
+                                    $('#android-app').attr('href', result.LinkHref);
+                                    $('#show_download_my_app').addClass('show_popup');
+                                }
+                            },
+                            error: function() {
+                                console.log("Error connection");
+                            },
+                            timeout: 10000
+                        });
+                    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                        $.ajax({
+                            type: 'POST',
+                            //url: "/Modules/Home/GetLinkDownLoadApp",
+                            url: "/Modules/Home/GetLinkDownLoadApp",
+                            data: {
+                                operatingSystem: "ios"
+                            },
+                            success: function(result) {
+                                if (result.Success) {
+                                    $('#link_download').attr('href', result.LinkHref);
+                                    $('#ios-app').attr('href', result.LinkHref);
+                                    $('#show_download_my_app').addClass('show_popup');
+                                }
+                            },
+                            error: function() {
+                                console.log("Error connection");
+                            },
+                            timeout: 10000
+                        });
+                    } else {
+                        $('#show_download_my_app').removeClass('show_popup');
+                    }
+                }
+            }
+        });
+
+        $('.mobile_close').on('click', function() {
+            $('#show_download_my_app').removeClass('show_popup');
+            sessionStorage.setItem("show_mobile_app", 0);
+        });
+
+        $('.lst_img_footer').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            closeOnContentClick: false,
+            closeBtnInside: false,
+            mainClass: 'mfp-with-zoom mfp-img-mobile',
+            image: {
+                verticalFit: true
+            },
+            gallery: {
+                enabled: true
+            },
+            zoom: {
+                enabled: true,
+                duration: 300,
+                opener: function(element) {
+                    return element.find('img');
+                }
+            }
+        });
+
+        $('#login_system, .login').on('click', function() {
+            $.magnificPopup.open({
+                removalDelay: 500,
+                items: {
+                    src: '#modal-login-system'
+                },
+                callbacks: {
+                    beforeOpen: function(e) {
+                        this.st.mainClass = 'mfp-zoom-in';
+                    },
+                    close: function(e) {}
+                },
+                midClick: true,
+                closeOnBgClick: false
+            });
+        });
+
+        $('#openChoosePopup').on('click', function() {
+            $.magnificPopup.open({
+                removalDelay: 500,
+                items: {
+                    src: '#modal-choose-register'
+                },
+                callbacks: {
+                    beforeOpen: function(e) {
+                        this.st.mainClass = 'mfp-zoom-in';
+                    },
+                    close: function(e) {}
+                },
+                midClick: true,
+                closeOnBgClick: false
+            });
+        });
+
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '1551808748211571',
+                cookie: true,
+                xfbml: true,
+                version: 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+        };
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        $(document).ready(function() {
+            if (window.innerWidth <= 767) {
+                var text = '<span class="sub-arrow"></span>';
+                $('#myNavbar .dropdown .dropbtn').append(text);
+                $('#myNavbar .dropdown .dropdown-content').css("display", "none");
+                $('#myNavbar .dropdown .dropbtn .sub-arrow').on('click', function(e) {
+                    e.preventDefault();
+                    var selector = $(this).closest(".dropdown");
+                    selector.find(".dropdown-content").toggle();
+                    return false;
+                });
+            } else {
+                //$('#myNavbar .dropdown .dropdown-content').css("display", "none");
+
+                //$("#myNavbar .dropdown").hover(
+                //  function () {
+                //      $(this).find(".dropdown-content").toggle();
+                //  }, function () {
+                //      $(this).find(".dropdown-content").toggle();
+                //  }
+                //);
+            }
+
+        });
+    </script>
+</body>
+
+</html>

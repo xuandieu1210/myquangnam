@@ -1,0 +1,184 @@
+/* Css tien ich hien thi khoang cach */ 
+
+section.apst-facility-details .boot-tab-slider .tab-content .content-left .list-item .item h3 a {
+    width: calc(100% - 100px) !important;
+}
+/* Css tien ich mau nen phan cap 
+section.apst-facility-details .boot-tab-slider ul.nav-tabs li.active a {
+background : #b4f7b0;
+}*/ 
+
+/* Css map trang chu */
+.map-list {
+    max-height: 380px;
+    overflow: auto;
+}
+.map-each {
+    /*height: 22px;*/
+    overflow: hidden;
+    margin: 6px 0;
+}
+    .map-each a {
+        cursor: pointer;
+        color: #ab4f4f;
+        font-size: 14px;
+        padding-left: 7px;
+        line-height: 20px;
+        font-weight: bold;
+    }
+    .map-each img {
+        width: 14px;
+        float: left;
+        margin-top: 4px;
+    }
+.map-each a:hover {
+    text-decoration: underline;
+}
+.left-tabs div.map-list::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+}
+.left-tabs div.map-list::-webkit-scrollbar
+{
+	width: 5px;
+}
+.left-tabs div.map-list::-webkit-scrollbar-thumb
+{
+	background-color: #EAE8E8;
+}
+section.aps-elite .content-primary .tabs-elite .tabs-big .left-tabs .content {
+   width: 105%;
+}
+.search-map {
+    width: 100% ;
+}
+.map-input {
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+#view .list-item {
+     height: 420px;
+}
+ #view .list-item .item {
+     position: relative;
+     padding-left: 45px;
+     float: left;
+     width: 100%;
+     border-bottom: 2px dotted #eaeaea;
+     margin-bottom: 10px;
+     height: auto;
+}
+ #view .list-item .item .icon {
+     position: absolute;
+     width: 32px;
+     height: 32px;
+     left: 0;
+     top: calc(50% - 22px);
+     background: #3ab645;
+     color: white;
+     text-align: center;
+     line-height: 32px;
+     text-transform: uppercase;
+     border-radius: 50%;
+}
+ #view .list-item .item h3 a {
+     width: 100%;
+     font-weight: 800;
+     float: left;
+     font-size: 13.33px;
+     color: #2b2b2b;
+}
+ #view .list-item .item h3 {
+     font-weight: 800;
+     float: left;
+     width: 100%;
+     margin-top: 0;
+}
+
+ #view .map-input input {
+    height: 35px;
+    font-family: "SFUIDisplay", sans-serif;
+    color: #505050;
+    border-radius: 0;
+    border: 1px solid #e8e8e8;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#view .map-input {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+#view .map-input button:before {
+  background: url(../../Images/hni/icons/icon-bt-search.png) no-repeat center center;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+#view .map-input button {
+  background: #3ab645;
+position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 100%;
+    background: #ffcc00;
+    background: -moz-linear-gradient(top, #ffcc00 0%, #ff8d00 100%);
+    background: -webkit-linear-gradient(top, #ffcc00 0%, #ff8d00 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffcc00), to(#ff8d00));
+    background: -o-linear-gradient(top, #ffcc00 0%, #ff8d00 100%);
+    background: linear-gradient(to bottom, #ffcc00 0%, #ff8d00 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcc00', endColorstr='#ff8d00',GradientType=0 );
+    border-radius: 0;
+    border: none;
+    outline: none;
+}
+
+#view .list-item {
+     height: 420px;
+}
+#view .list-item .item {
+     position: relative;
+     padding-left: 45px;
+     float: left;
+     width: 100%;
+     border-bottom: 2px dotted #eaeaea;
+     margin-bottom: 10px;
+}
+#view .list-item .item .icon {
+     position: absolute;
+     width: 32px;
+     height: 32px;
+     left: 0;
+     top: calc(50% - 22px);
+     background: #3ab645;
+     color: white;
+     text-align: center;
+     line-height: 32px;
+     text-transform: uppercase;
+     border-radius: 50%;
+}
+#view .list-item .item h3 a {
+     width: 100%;
+     font-weight: 800;
+     float: left;
+     font-size: 13.33px;
+     color: #2b2b2b;
+}
+#view .list-item .item h3 {
+     font-weight: 800;
+     float: left;
+     width: 100%;
+     margin-top: 0;
+}
+#view .list-item .item p {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 5px;  
+}

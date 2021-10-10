@@ -1,0 +1,1829 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Logo/Logo-favicon.ico/icon_636942875389538576.ico" rel="Shortcut Icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Sự kiện</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="Content/easy-autocomplete.min.css" rel="stylesheet" />
+    <link href="Content/owl.carousel.css" rel="stylesheet" />
+    <link href="Content/owl.transitions.css" rel="stylesheet" />
+    <link href="Content/perfect-scrollbar.css" rel="stylesheet" />
+    <link href="Content/form-search.css" rel="stylesheet" />
+    <link href="Content/place.css" rel="stylesheet" />
+    <link href="Content/swiper.min.css" rel="stylesheet" />
+    <link href="Content/iCheck/minimal.css" rel="stylesheet" />
+    <link href="Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="Content/hotel-all-fonts.css" rel="stylesheet" />
+
+    <link type="text/css" href="Content/event.css" rel="stylesheet" />
+    <link type="text/css" href="Content/news.css" rel="stylesheet" />
+    <link href="Content/qnm/calendar.css" rel="stylesheet" />
+
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/hotel-all-fonts.css" rel="stylesheet" />
+    <link href="Content/footer.css" rel="stylesheet" />
+    <link href="Content/dalat_font.css" rel="stylesheet" />
+    <link href="Content/home-toppage.css" rel="stylesheet" />
+    <link href="Content/animate.css" rel="stylesheet" />
+
+    <link href="Content/style.css" rel="stylesheet" />
+    <link type="text/css" href="Content/hcm/event.css" rel="stylesheet" />
+    <link href="Content/ionicons.min.css" rel="stylesheet" />
+    <link href="Content/define.css" rel="stylesheet" />
+    <link href="Content/magnific-popup.css" rel="stylesheet" />
+    <link href="Content/login.css" rel="stylesheet" />
+    <link href="Content/owl.carousel.css" rel="stylesheet" />
+    <link href="Content/owl.transitions.css" rel="stylesheet" />
+
+    <link href="Content/stylehcm.css" rel="stylesheet" />
+    <link href="Content/hcm/custom-language.css" rel="stylesheet" />
+    <link href="Content/newstylehcm.css" rel="stylesheet" />
+    <link href="Content/style.qnm.css" rel="stylesheet" />
+    <script src="Scripts/modernizr-2.6.2.js"></script>
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+
+
+    <script src="Scripts/jquery-3.2.1.min.js"></script>
+    <script src="Scripts/owl.carousel.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135264246-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-135264246-6');
+    </script>
+    <style>
+        .li-none-stype {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="banner" role="banner">
+        <div class="header-toolbar-app">
+            <div class="container">
+                <div class="col-md-16">
+                    <div id="toppage-header">
+                        <div class="date_time_sys col-md-8 col-sm-8">
+                            <ul class="utilities">
+                                <li class="item"><i class="far fa-clock"></i> <span id="time-date">20-08-2021, 02:18:24 </span> </li>
+                                <li class="item"><i class="fas fa-umbrella"></i> <a href="#"><span>Thời tiết</span></a></li>
+                                <li class="item"><i class="fab fa-acquisitions-incorporated"></i>
+                                    <a href="#"> <span>Tỷ giá ngoại tệ</span></a>
+                                </li>
+                                <li class="item"><i class="fas fa-coins"></i> <a href="#"><span>Giá vàng</span></a></li>
+                                <li class="item hidden-sm hidden-lg">
+                                    <span id="login-btn">
+                                            <span class="dropdown nav-user">
+                                                <i class="fas fa-lock"></i><a id="login_system" class="login" href="javascript:;"><span> Đăng nhập</span></a>
+                                    </span>
+                                    </span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div id="" class="hidden-xs col-md-4 col-sm-4 ">
+                            <form action="https://myquangnam.vn/Modules/Home/SearchAll" autocomplete="off" method="post">
+                                <input name="DisplayName" style="color: black; border-radius: 3px; border: 1px solid white; width: 100%; padding: 2px 5px; font-weight: 400; height: 24px;" type="text">
+                                <button type="submit" style="position: absolute; right: 0; top: 0; padding-top: 4px; height: 24px; border-radius: 0 3px 3px 0; line-height: 13px;" class="btn btn-sm btn-search"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div id="login-system" class="col-sm-4 col-xs-16 hidden-xs ">
+
+                            <div class="dropdown" id="language-system">
+                                <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="images/vi.png">
+                                </div>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a href="#">
+                                        <img src="images/vi.png">
+                                    </a>
+                                    <a href="#">
+                                        <img src="images/en.png">
+                                    </a>
+                                </div>
+                            </div>
+                            <span id="login-btn">
+                                    <span class="dropdown nav-user">
+                                        <i class="fas fa-lock"></i>
+                                        <a id="login_system" class="login" href="javascript:;">Đăng nhập</a>
+                                    </span>
+                            </span>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header toolbar end -->
+        <div class="sticky-header">
+            <nav id="menu-home">
+                <div class="container menu-home-inner">
+                    <a class="logo" href="/">
+                        <img alt="Cổng TTĐT Du Lịch" src="images/logo512_637068974595415237.png" class="img-responsive">
+                    </a>
+
+                    <div class="navbar-header">
+
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                    </div>
+
+                    <div class="navbar-collapse collapse text-right" id="myNavbar" style="height: 1px;">
+                        <ul class="nav navbar-nav" role="menubar" id="m-menubar">
+
+                            <li class="dropdown ">
+                                <a class="dropbtn" href="#">Tin tức</a>
+                                <ul class="dropdown-content">
+                                    <li>
+                                        <a href="danhsachtin.html">Tin tức</a>
+                                    </li>
+                                    <li>
+                                        <a href="sukien.html">Sự kiện nổi bật</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Về Quảng Nam</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown ">
+                                <a class="dropbtn" href="diadiem.html">Khu, điểm du lịch</a>
+                                <ul class="dropdown-content">
+                                    <li>
+                                        <a href="diadiem.html">Thiên nhiên</a>
+                                    </li>
+                                    <li>
+                                        <a href="diadiem.html">Văn hóa</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropbtn" href="tour.html">Tour</a>
+                                <ul class="dropdown-content">
+                                    <li>
+                                        <a href="tour.html">Chương trình tour</a>
+                                    </li>
+                                    <li>
+                                        <a href="luhanh.html">Danh sách lữ hành</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropbtn" href="luutru-danhsach.html">Lưu trú</a>
+                                <ul class="dropdown-content">
+                                    <li>
+                                        <a href="">Khách sạn 1 sao </a>
+                                    </li>
+                                    <li>
+                                        <a href="">Khách sạn 2 sao</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Khách sạn 3 sao </a>
+                                    </li>
+                                    <li>
+                                        <a href="">Khách sạn 4 sao</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Khách sạn 5 sao </a>
+                                    </li>
+                                    <li>
+                                        <a href="">Nhà nghỉ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropbtn" href="monannoitieng.html">Ẩm thực</a>
+                                <ul class="dropdown-content">
+                                    <li>
+                                        <a href="monannoitieng.html">Món ngon Quảng Nam </a>
+                                    </li>
+                                    <li>
+                                        <a href="nhahang.html">Danh sách nhà hàng</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropbtn" href="cuahang-danhsach.html">Mua sắm</a>
+                                <ul class="dropdown-content">
+                                    <li>
+                                        <a href="">Đặc sản</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Hàng thủ công mỹ nghệ</a>
+                                    </li>
+                                    <li>
+                                        <a href="">May đo</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Giày dép, đồ gia</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Hàng lưu niệm</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Tranh nghệ thuật, tranh thêu</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Chợ</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Trung tâm mua sắm</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a href="tienich-chitiet.html">Vận chuyển</a>
+                            </li>
+
+                            <li class="">
+                                <a href="giaitri-danhsach.html">Giải trí</a>
+                            </li>
+                            <li class="">
+                                <a href="tienich-danhsach.html">Tiện ích</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item hidden-sm hidden-lg" style="right: 10px;top: 0; position: absolute;">
+                        <div class="dropdown" id="language-system">
+                            <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="images/vi.png">
+                            </div>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a href="#">
+                                    <img src="images/vi.png">
+                                </a>
+                                <a href="#">
+                                    <img src="images/en.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="new_hcm_menu">
+            <div class="container" style="padding:0;">
+                <ul>
+                    <li class="hm_sub1">
+                        <a href="#">
+                            <span>Về Quảng Nam</span>
+                        </a>
+                    </li>
+                    <li class="hm_sub2">
+                        <a href="#">
+                            <span>Video</span>
+                        </a>
+                    </li>
+                    <li class="hm_sub2">
+                        <a href="#">
+                            <span>Khám phá 3D</span>
+                        </a>
+                    </li>
+                    <li class="hm_sub2">
+                        <a href="#">
+                            <span>Thư viện ảnh</span>
+                        </a>
+                    </li>
+                    <li class="hm_sub3">
+                        <a href="#">
+                            <span>Diễn đàn</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <img src="Images/general/general-bg.jpg" style="width: 100%" />
+    <nav class="breadcrumb">
+        <div class="container">
+            <div class="col-md-16">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="http://myquangnam.vn/vi/home">Trang chủ</a></li>
+                    <li class="breadcrumb-item active"><a class="text-info" href="http://myquangnam.vn/vi/events">Lễ hội & Sự kiện</a></li>
+                </ol>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-16">
+                <div class="detail-content-events box_radius_border">
+                    <div class="row">
+                        <div class="n-pd col-md-16">
+                            <div class="n-pd col-md-15 col-sm-15 col-xs-15">
+                                <h2 class="title-event">Rough Guides c&#244;ng bố 10 điểm đến đẹp nhất Việt Nam</h2>
+                            </div>
+                            <div class="col-md-1 col-sm-1 col-xs-1">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="detail_events_item">
+                            <div class="info_events text-danger">
+
+                                <span>
+                                        <i class="icon ion-calendar"></i>
+                                        21/12/2018
+                                    </span>
+                                <span>
+                                        <i class="icon ion-calendar"></i>
+                                        21/12/2018
+                                    </span>
+                                <span>
+                                        <i class="ion-eye icon"></i>
+                                        617
+                                    </span>
+                                <span>
+                                        <i class="ion-heart icon"></i>
+                                        0
+                                    </span>
+                                <span>
+                                        <i class="ion-location icon"></i>
+                                    </span>
+                            </div>
+
+                            <div class="content-events">
+                                <p>C&ugrave;ng nh&igrave;n ngắm một Việt Nam thật kh&aacute;c qua bức tranh to&agrave;n cảnh 10 điểm đến được Rough Guides b&igrave;nh chọn l&agrave; đẹp nhất đất nước.</p>
+
+                                <p><em><strong>1. Hội An</strong></em></p>
+
+                                <p>Đứng đầu trong danh s&aacute;ch l&agrave; phố cổ h&agrave;ng trăm năm tuổi, với những ng&ocirc;i nh&agrave; gỗ, những c&acirc;y cầu duy&ecirc;n d&aacute;ng v&agrave; đ&egrave;n lồng trang tr&iacute; c&ocirc;ng phu.</p>
+
+                                <p><img alt="" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/dinhchau.qnm/othernews/daffaa5763e5_636985480358176703.jpg" style="height:356px; width:650px" /></p>
+
+                                <p><em><strong>2. Sa Pa</strong></em></p>
+
+                                <p>Đ&acirc;y l&agrave; thị trấn nhỏ tựa như vi&ecirc;n ngọc qu&yacute; của v&ugrave;ng cao T&acirc;y Bắc.</p>
+
+                                <p><img alt="" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/dinhchau.qnm/othernews/5956118129fe_636985480360791424.jpg" style="height:435px; width:650px" /></p>
+
+                                <p><em><strong>3. Vịnh Hạ Lon</strong></em>g</p>
+
+                                <p>Ch&uacute;ng ta kh&ocirc;ng cần phải n&oacute;i nhiều về địa điểm n&agrave;y, chỉ cần nh&igrave;n bức ảnh dưới đ&acirc;y.</p>
+
+                                <p><img alt="" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/dinhchau.qnm/othernews/42e04216ad5f_636985480363559675.jpg" style="height:366px; width:650px" /></p>
+
+                                <p><em><strong>4. Đồng bằng s&ocirc;ng Cửu Long</strong></em></p>
+
+                                <p>Nhiều nơi của đồng bằng s&ocirc;ng Cửu Long xứng đ&aacute;ng nằm trong danh s&aacute;ch n&agrave;y, từ c&aacute;c dịch vụ ẩm thực cho đến vẻ đẹp th&ocirc;n qu&ecirc; hoang sơ của n&oacute;.</p>
+
+                                <p><img alt="" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/dinhchau.qnm/othernews/0d949bbe66ef_636985480365949948.jpg" style="height:406px; width:650px" /></p>
+
+                                <p><em><strong>5. Th&agrave;nh phố Hồ Ch&iacute; Minh</strong></em></p>
+
+                                <p>Năm ngo&aacute;i, đ&acirc;y l&agrave; th&agrave;nh phố được xếp hạng 18 trong danh s&aacute;ch c&aacute;c th&agrave;nh phố du lịch ph&aacute;t triển nhanh nhất to&agrave;n cầu của Master Card. C&aacute;c đ&ocirc; thị khu
+                                    vực ph&iacute;a Nam cung cấp cho du kh&aacute;ch sự lựa chọn đa dạng, từ cuộc sống h&agrave;ng ng&agrave;y đến c&aacute;c qu&aacute;n c&agrave; ph&ecirc; ngon, c&aacute;c lễ hội v&agrave; c&aacute;c sự kiện thể thao.</p>
+
+                                <p><img alt="" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/dinhchau.qnm/othernews/5956118129fe_636985480360791424.jpg" style="height:435px; width:650px" /></p>
+
+                                <p><em><strong>6. H&agrave; Giang</strong></em></p>
+
+                                <p>Được biết đến như l&agrave; nơi tốt nhất của đất nước để điều khiển xe m&aacute;y nh&igrave;n ngắm vẻ đẹp của n&uacute;i v&agrave; thung lũng.</p>
+
+                                <p><img alt="" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/dinhchau.qnm/othernews/4afdfed512d5_636985480371906432.jpg" style="height:434px; width:650px" /></p>
+
+                                <p><em><strong>7. Ph&uacute; Quốc</strong></em></p>
+
+                                <p>Đ&acirc;y l&agrave; quần đảo kh&ocirc;ng thể kh&ocirc;ng bị m&ecirc; hoặc tại miền Nam. Kh&aacute;ch du lịch từ khắp nơi tr&ecirc;n thế giới đều đến đ&acirc;y để thưởng thức những b&atilde;i biển với nắng v&agrave;ng, c&aacute;t
+                                    trắng v&agrave; hải sản tuyệt vời với gi&aacute; rất rẻ.</p>
+
+                                <p><img alt="" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/dinhchau.qnm/othernews/e311baf0d0e9_636985480374231274.jpg" style="height:434px; width:650px" /></p>
+
+                                <p><em><strong>8. Đ&agrave; Nẵng</strong></em></p>
+
+                                <p>L&agrave; một th&agrave;nh phố ven biển, Đ&agrave; Nẵng như một &quot;ng&ocirc;i sao đang l&ecirc;n&quot; của Việt Nam trong ng&agrave;nh du lịch, thường được ca ngợi về c&aacute;c dịch vụ th&acirc;n thiện v&agrave; chất
+                                    lượng cao của n&oacute;. Với c&aacute;c biểu tượng như cầu Rồng, s&ocirc;ng H&agrave;n v&agrave; n&uacute;i Ngũ H&agrave;nh Sơn, Đ&agrave; Nẵng l&agrave; một lựa chọn tuyệt vời ở miền trung Việt Nam, sau Hội An.</p>
+
+                                <p><img alt="" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/dinhchau.qnm/othernews/44a226e6dbe9_636985480377340925.jpg" style="height:319px; width:650px" /></p>
+
+                                <p><em><strong>9. Đ&agrave; Lạt</strong></em></p>
+
+                                <p>Đ&agrave; Lạt l&agrave; một th&agrave;nh phố thuộc T&acirc;y Nguy&ecirc;n, được biết đến với &quot;biệt thự thuộc địa thời Ph&aacute;p&quot; v&agrave; &quot;kh&iacute; hậu m&aacute;t mẻ v&agrave; &ocirc;n đới&quot;. Tuy
+                                    nhi&ecirc;n, Rough Guides đ&atilde; qu&ecirc;n đề cập đến thức ăn đường phố đ&aacute;ng kinh ngạc tại nơi đ&acirc;y.</p>
+
+                                <p><img alt="" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/dinhchau.qnm/othernews/3db928ff664d_636985480380012093.jpg" style="height:412px; width:650px" /></p>
+
+                                <p><em><strong>10. C&aacute;t B&agrave;</strong></em></p>
+
+                                <p>C&aacute;t B&agrave; l&agrave; một h&ograve;n đảo vẫn giữ nguy&ecirc;n n&eacute;t nguy&ecirc;n sơ thuộc quần thể thắng cảnh Vịnh Hạ Long. Một nửa của đảo C&aacute;t B&agrave; l&agrave; c&ocirc;ng vi&ecirc;n Quốc gia, Rough
+                                    Guides đ&atilde; m&ocirc; tả n&oacute; như l&agrave; &quot;một thi&ecirc;n đường cho những ai đến đ&acirc;y để đi lang thang, leo n&uacute;i v&agrave; ch&egrave;o thuyền kayak&quot;. B&ecirc;n cạnh đ&oacute;, c&aacute;c
+                                    v&ugrave;ng biển v&agrave; rạn san h&ocirc; được bảo vệ rất nghi&ecirc;m ngặt.</p>
+
+                                <p><img alt="" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/dinhchau.qnm/othernews/9e45ddf16fd1_636985480382512861.jpg" style="height:271px; width:650px" /></p>
+
+                            </div>
+                            <div class="dir-map">
+                                <h2>Bản đồ</h2>
+                                <div id="div_id" style="height: 300px; width: 100%; position: relative; overflow: hidden;">
+                                    <div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);">
+                                        <div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;">
+                                            <div><button draggable="false" aria-label="Keyboard shortcuts" title="Keyboard shortcuts" type="button" style="background: none transparent; display: block; border: none; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: absolute; cursor: pointer; user-select: none; z-index: 1000002; left: -100000px; top: -100000px;"></button></div>
+                                            <div tabindex="0" aria-label="Map" aria-roledescription="map" role="group" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: pan-x pan-y;">
+                                                <div style="z-index: 1; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);">
+                                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;">
+                                                        <div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+                                                            <div style="position: absolute; z-index: 994; transform: matrix(1, 0, 0, 1, -90, -121);">
+                                                                <div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;">
+                                                                    <div style="width: 256px; height: 256px;"></div>
+                                                                </div>
+                                                                <div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;">
+                                                                    <div style="width: 256px; height: 256px;"></div>
+                                                                </div>
+                                                                <div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px;">
+                                                                    <div style="width: 256px; height: 256px;"></div>
+                                                                </div>
+                                                                <div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px;">
+                                                                    <div style="width: 256px; height: 256px;"></div>
+                                                                </div>
+                                                                <div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px;">
+                                                                    <div style="width: 256px; height: 256px;"></div>
+                                                                </div>
+                                                                <div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px;">
+                                                                    <div style="width: 256px; height: 256px;"></div>
+                                                                </div>
+                                                                <div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px;">
+                                                                    <div style="width: 256px; height: 256px;"></div>
+                                                                </div>
+                                                                <div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px;">
+                                                                    <div style="width: 256px; height: 256px;"></div>
+                                                                </div>
+                                                                <div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px;">
+                                                                    <div style="width: 256px; height: 256px;"></div>
+                                                                </div>
+                                                                <div style="position: absolute; left: -512px; top: 256px; width: 256px; height: 256px;">
+                                                                    <div style="width: 256px; height: 256px;"></div>
+                                                                </div>
+                                                                <div style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px;">
+                                                                    <div style="width: 256px; height: 256px;"></div>
+                                                                </div>
+                                                                <div style="position: absolute; left: -512px; top: -256px; width: 256px; height: 256px;">
+                                                                    <div style="width: 256px; height: 256px;"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;">
+                                                        <div style="position: absolute; left: 0px; top: 0px; z-index: 30;">
+                                                            <div style="position: absolute; z-index: 994; transform: matrix(1, 0, 0, 1, -90, -121);">
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: 0px; top: 0px;"><canvas width="256" height="256" draggable="false" style="width: 256px; height: 256px; user-select: none; position: absolute; left: 0px; top: 0px;"></canvas></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: -256px; top: 0px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: -256px; top: -256px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: 0px; top: -256px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: 256px; top: -256px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: 256px; top: 0px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: 256px; top: 256px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: 0px; top: 256px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: -256px; top: 256px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: -512px; top: 256px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: -512px; top: 0px;"></div>
+                                                                <div style="width: 256px; height: 256px; position: absolute; left: -512px; top: -256px;"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div>
+                                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;">
+                                                        <div style="position: absolute; left: 0px; top: 0px; z-index: -1;">
+                                                            <div style="position: absolute; z-index: 994; transform: matrix(1, 0, 0, 1, -90, -121);">
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 0px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 0px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: -256px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: -256px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: -256px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 0px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 256px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 256px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 256px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 256px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 0px;"></div>
+                                                                <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: -256px;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="width: 27px; height: 43px; overflow: hidden; position: absolute; left: 2px; top: 43px; z-index: 86;"><img alt="" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20viewBox%3D%220%200%2027%2043%22%3E%3Cdefs%3E%3Cpath%20id%3D%22a%22%20d%3D%22M12.5%200C5.5961%200%200%205.5961%200%2012.5c0%201.8859.54297%203.7461%201.4414%205.4617%203.425%206.6156%2010.216%2013.566%2010.216%2022.195%200%20.46562.37734.84297.84297.84297s.84297-.37734.84297-.84297c0-8.6289%206.7906-15.58%2010.216-22.195.89844-1.7156%201.4414-3.5758%201.4414-5.4617%200-6.9039-5.5961-12.5-12.5-12.5z%22/%3E%3C/defs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20transform%3D%22translate%281%201%29%22%3E%3Cuse%20fill%3D%22%23EA4335%22%20xlink%3Ahref%3D%22%23a%22/%3E%3Cpath%20d%3D%22M12.5-.5c7.18%200%2013%205.82%2013%2013%200%201.8995-.52398%203.8328-1.4974%205.6916-.91575%201.7688-1.0177%201.9307-4.169%206.7789-4.2579%206.5508-5.9907%2010.447-5.9907%2015.187%200%20.74177-.6012%201.343-1.343%201.343s-1.343-.6012-1.343-1.343c0-4.7396-1.7327-8.6358-5.9907-15.187-3.1512-4.8482-3.2532-5.01-4.1679-6.7768-.97449-1.8608-1.4985-3.7942-1.4985-5.6937%200-7.18%205.82-13%2013-13z%22%20stroke%3D%22%23fff%22/%3E%3C/g%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%20x%3D%2214%22%20y%3D%2215%22%20font-family%3D%22Roboto%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2216px%22%20fill%3D%22%23FFF%22%3EA%3C/text%3E%3C/g%3E%3C/svg%3E"
+                                                                draggable="false" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                        <div style="width: 27px; height: 43px; overflow: hidden; position: absolute; left: -37px; top: -128px; z-index: -85;"><img alt="" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20viewBox%3D%220%200%2027%2043%22%3E%3Cdefs%3E%3Cpath%20id%3D%22a%22%20d%3D%22M12.5%200C5.5961%200%200%205.5961%200%2012.5c0%201.8859.54297%203.7461%201.4414%205.4617%203.425%206.6156%2010.216%2013.566%2010.216%2022.195%200%20.46562.37734.84297.84297.84297s.84297-.37734.84297-.84297c0-8.6289%206.7906-15.58%2010.216-22.195.89844-1.7156%201.4414-3.5758%201.4414-5.4617%200-6.9039-5.5961-12.5-12.5-12.5z%22/%3E%3C/defs%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20transform%3D%22translate%281%201%29%22%3E%3Cuse%20fill%3D%22%23EA4335%22%20xlink%3Ahref%3D%22%23a%22/%3E%3Cpath%20d%3D%22M12.5-.5c7.18%200%2013%205.82%2013%2013%200%201.8995-.52398%203.8328-1.4974%205.6916-.91575%201.7688-1.0177%201.9307-4.169%206.7789-4.2579%206.5508-5.9907%2010.447-5.9907%2015.187%200%20.74177-.6012%201.343-1.343%201.343s-1.343-.6012-1.343-1.343c0-4.7396-1.7327-8.6358-5.9907-15.187-3.1512-4.8482-3.2532-5.01-4.1679-6.7768-.97449-1.8608-1.4985-3.7942-1.4985-5.6937%200-7.18%205.82-13%2013-13z%22%20stroke%3D%22%23fff%22/%3E%3C/g%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%20x%3D%2214%22%20y%3D%2215%22%20font-family%3D%22Roboto%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2216px%22%20fill%3D%22%23FFF%22%3EB%3C/text%3E%3C/g%3E%3C/svg%3E"
+                                                                draggable="false" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                    </div>
+                                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+                                                        <div style="position: absolute; z-index: 994; transform: matrix(1, 0, 0, 1, -90, -121);">
+                                                            <div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i51!3i29!4i256!2m3!1e0!2sm!3i575300777!3m12!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!4e0&amp;key=AIzaSyB2uPnpGi9NDtk5dPIhnmMY-ZL8xoZoADo&amp;token=77735"
+                                                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                            <div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i50!3i29!4i256!2m3!1e0!2sm!3i575300788!3m12!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!4e0&amp;key=AIzaSyB2uPnpGi9NDtk5dPIhnmMY-ZL8xoZoADo&amp;token=4117"
+                                                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                            <div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i50!3i28!4i256!2m3!1e0!2sm!3i575300788!3m12!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!4e0&amp;key=AIzaSyB2uPnpGi9NDtk5dPIhnmMY-ZL8xoZoADo&amp;token=124783"
+                                                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                            <div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i51!3i28!4i256!2m3!1e0!2sm!3i575300800!3m12!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!4e0&amp;key=AIzaSyB2uPnpGi9NDtk5dPIhnmMY-ZL8xoZoADo&amp;token=45864"
+                                                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                            <div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i52!3i30!4i256!2m3!1e0!2sm!3i575300777!3m12!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!4e0&amp;key=AIzaSyB2uPnpGi9NDtk5dPIhnmMY-ZL8xoZoADo&amp;token=77035"
+                                                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                            <div style="position: absolute; left: -512px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i49!3i28!4i256!2m3!1e0!2sm!3i575300788!3m12!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!4e0&amp;key=AIzaSyB2uPnpGi9NDtk5dPIhnmMY-ZL8xoZoADo&amp;token=14652"
+                                                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                            <div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i52!3i29!4i256!2m3!1e0!2sm!3i575300777!3m12!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!4e0&amp;key=AIzaSyB2uPnpGi9NDtk5dPIhnmMY-ZL8xoZoADo&amp;token=6091"
+                                                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                            <div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i52!3i28!4i256!2m3!1e0!2sm!3i575300800!3m12!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!4e0&amp;key=AIzaSyB2uPnpGi9NDtk5dPIhnmMY-ZL8xoZoADo&amp;token=105291"
+                                                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                            <div style="position: absolute; left: -512px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i49!3i30!4i256!2m3!1e0!2sm!3i575300860!3m12!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!4e0&amp;key=AIzaSyB2uPnpGi9NDtk5dPIhnmMY-ZL8xoZoADo&amp;token=2417"
+                                                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                            <div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i51!3i30!4i256!2m3!1e0!2sm!3i575300860!3m12!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!4e0&amp;key=AIzaSyB2uPnpGi9NDtk5dPIhnmMY-ZL8xoZoADo&amp;token=40904"
+                                                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                            <div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i50!3i30!4i256!2m3!1e0!2sm!3i575300860!3m12!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!4e0&amp;key=AIzaSyB2uPnpGi9NDtk5dPIhnmMY-ZL8xoZoADo&amp;token=112548"
+                                                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                            <div style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i6!2i49!3i29!4i256!2m3!1e0!2sm!3i575300788!3m12!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!4e0&amp;key=AIzaSyB2uPnpGi9NDtk5dPIhnmMY-ZL8xoZoADo&amp;token=25057"
+                                                                    style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y;">
+                                                    <div style="z-index: 4; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);">
+                                                        <div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div>
+                                                        <div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div>
+                                                        <div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;">
+                                                            <div role="button" tabindex="0" style="width: 27px; height: 43px; overflow: hidden; position: absolute; left: 2px; top: 43px; z-index: 86;"><img alt="" src="https://maps.gstatic.com/mapfiles/transparent.png" draggable="false" usemap="#gmimap0" style="width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                                                <map name="gmimap0" id="gmimap0"><area log="miw" coords="13.5,0,4,3.75,0,13.5,13.5,43,27,13.5,23,3.75" shape="poly" tabindex="-1" title="" style="cursor: pointer; touch-action: none;"></map>
+                                                            </div>
+                                                            <div role="button" tabindex="-1" style="width: 27px; height: 43px; overflow: hidden; position: absolute; left: -37px; top: -128px; z-index: -85;"><img alt="" src="https://maps.gstatic.com/mapfiles/transparent.png" draggable="false" usemap="#gmimap1" style="width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                                                <map name="gmimap1" id="gmimap1"><area log="miw" coords="13.5,0,4,3.75,0,13.5,13.5,43,27,13.5,23,3.75" shape="poly" tabindex="-1" title="" style="cursor: pointer; touch-action: none;"></map>
+                                                            </div>
+                                                        </div>
+                                                        <div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;">
+                                                            <div style="z-index: -202; cursor: pointer; display: none; touch-action: none;">
+                                                                <div style="width: 30px; height: 27px; overflow: hidden; position: absolute;"><img alt="" src="https://maps.gstatic.com/mapfiles/undo_poly.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 90px; height: 27px;"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="gm-style-moc" style="z-index: 4; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;">
+                                                    <p class="gm-style-mot"></p>
+                                                </div>
+                                            </div><iframe aria-hidden="true" frameborder="0" tabindex="-1" style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: none;"></iframe>
+                                            <div style="pointer-events: none; width: 100%; height: 100%; box-sizing: border-box; position: absolute; z-index: 1000002; opacity: 0; border: 2px solid rgb(26, 115, 232);"></div>
+                                            <div>
+                                                <div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 0px; top: 0px;">
+                                                    <div class="gm-style-mtc" style="float: left; position: relative;"><button draggable="false" aria-label="Show street map" title="Show street map" type="button" aria-pressed="true" style="background: none padding-box rgb(255, 255, 255); display: table-cell; border: 0px; margin: 0px; padding: 0px 17px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; direction: ltr; overflow: hidden; text-align: center; height: 40px; vertical-align: middle; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; font-size: 18px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 35px; font-weight: 500;"
+                                                            id="CD1D2B0B-A742-4A86-87DE-B7C7CD7DBDD3" aria-expanded="false">Map</button>
+                                                        <ul role="menu" aria-labelledby="CD1D2B0B-A742-4A86-87DE-B7C7CD7DBDD3" style="background-color: white; list-style: none; padding: 2px; margin: 0px; z-index: -1; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; left: 0px; top: 40px; text-align: left; display: none;">
+                                                            <li tabindex="-1" role="menuitemcheckbox" aria-label="Show street map with terrain" draggable="false" title="Show street map with terrain" aria-checked="false" style="color: black; font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 18px; background-color: rgb(255, 255, 255); padding: 5px 8px 5px 5px; direction: ltr; text-align: left; white-space: nowrap;"><span><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22/%3E%3Cpath%20d%3D%22M19%203H5c-1.11%200-2%20.9-2%202v14c0%201.1.89%202%202%202h14c1.11%200%202-.9%202-2V5c0-1.1-.89-2-2-2zm-9%2014l-5-5%201.41-1.41L10%2014.17l7.59-7.59L19%208l-9%209z%22/%3E%3C/svg%3E" alt="" style="height: 1em; width: 1em; transform: translateY(0.15em); display: none;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M19%205v14H5V5h14m0-2H5c-1.1%200-2%20.9-2%202v14c0%201.1.9%202%202%202h14c1.1%200%202-.9%202-2V5c0-1.1-.9-2-2-2z%22/%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22/%3E%3C/svg%3E" alt="" style="height: 1em; width: 1em; transform: translateY(0.15em);"></span>
+                                                                <label style="cursor: inherit;">Terrain</label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="gm-style-mtc" style="float: left; position: relative;"><button draggable="false" aria-label="Show satellite imagery" title="Show satellite imagery" type="button" aria-pressed="false" style="background: none padding-box rgb(255, 255, 255); display: table-cell; border: 0px; margin: 0px; padding: 0px 17px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; direction: ltr; overflow: hidden; text-align: center; height: 40px; vertical-align: middle; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; font-size: 18px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 64px;"
+                                                            id="5675AAC5-6710-473C-B908-ECC03AE33324" aria-expanded="false">Satellite</button>
+                                                        <ul role="menu" aria-labelledby="5675AAC5-6710-473C-B908-ECC03AE33324" style="background-color: white; list-style: none; padding: 2px; margin: 0px; z-index: -1; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; right: 0px; top: 40px; text-align: left; display: none;">
+                                                            <li tabindex="-1" role="menuitemcheckbox" aria-label="Show imagery with street names" draggable="false" title="Show imagery with street names" aria-checked="true" style="color: black; font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 18px; background-color: rgb(255, 255, 255); padding: 5px 8px 5px 5px; direction: ltr; text-align: left; white-space: nowrap;"><span><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22/%3E%3Cpath%20d%3D%22M19%203H5c-1.11%200-2%20.9-2%202v14c0%201.1.89%202%202%202h14c1.11%200%202-.9%202-2V5c0-1.1-.89-2-2-2zm-9%2014l-5-5%201.41-1.41L10%2014.17l7.59-7.59L19%208l-9%209z%22/%3E%3C/svg%3E" alt="" style="height: 1em; width: 1em; transform: translateY(0.15em);"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M19%205v14H5V5h14m0-2H5c-1.1%200-2%20.9-2%202v14c0%201.1.9%202%202%202h14c1.1%200%202-.9%202-2V5c0-1.1-.9-2-2-2z%22/%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22/%3E%3C/svg%3E" alt="" style="height: 1em; width: 1em; transform: translateY(0.15em); display: none;"></span>
+                                                                <label style="cursor: inherit;">Labels</label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div><button draggable="false" aria-label="Toggle fullscreen view" title="Toggle fullscreen view" type="button" class="gm-control-active gm-fullscreen-control" style="background: none rgb(255, 255, 255); border: 0px; margin: 10px; padding: 0px; text-transform: none; appearance: none; position: absolute; cursor: pointer; user-select: none; border-radius: 2px; height: 40px; width: 40px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; overflow: hidden; top: 0px; right: 0px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%200v6h2V2h4V0H0zm16%200h-4v2h4v4h2V0h-2zm0%2016h-4v2h6v-6h-2v4zM2%2012H0v6h6v-2H2v-4z%22/%3E%3C/svg%3E" alt="" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%200v6h2V2h4V0H0zm16%200h-4v2h4v4h2V0h-2zm0%2016h-4v2h6v-6h-2v4zM2%2012H0v6h6v-2H2v-4z%22/%3E%3C/svg%3E" alt="" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%200v6h2V2h4V0H0zm16%200h-4v2h4v4h2V0h-2zm0%2016h-4v2h6v-6h-2v4zM2%2012H0v6h6v-2H2v-4z%22/%3E%3C/svg%3E" alt="" style="height: 18px; width: 18px;"></button></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div>
+                                                <div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="40" controlheight="153" style="margin: 10px; user-select: none; position: absolute; bottom: 167px; right: 40px;">
+                                                    <div class="gmnoprint" controlwidth="40" controlheight="40" style="display: none; position: absolute;">
+                                                        <div style="background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; width: 40px; height: 40px;"><button draggable="false" aria-label="Rotate map clockwise" title="Rotate map clockwise" type="button" class="gm-control-active" style="background: none; display: none; border: 0px; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; left: 0px; top: 0px; overflow: hidden; width: 40px; height: 40px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M12.06%209.06l4-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74l1.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E" style="width: 20px; height: 20px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M12.06%209.06l4-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74l1.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E" style="width: 20px; height: 20px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22M12.06%209.06l4-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74l1.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E" style="width: 20px; height: 20px;"></button>
+                                                            <div style="position: relative; overflow: hidden; width: 30px; height: 1px; margin: 0px 5px; background-color: rgb(230, 230, 230); display: none;"></div><button draggable="false" aria-label="Rotate map counterclockwise" title="Rotate map counterclockwise" type="button" class="gm-control-active" style="background: none; display: none; border: 0px; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; left: 0px; top: 0px; overflow: hidden; width: 40px; height: 40px; transform: scaleX(-1);"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M12.06%209.06l4-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74l1.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E" style="width: 20px; height: 20px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M12.06%209.06l4-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74l1.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E" style="width: 20px; height: 20px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22M12.06%209.06l4-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74l1.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E" style="width: 20px; height: 20px;"></button>
+                                                            <div style="position: relative; overflow: hidden; width: 30px; height: 1px; margin: 0px 5px; background-color: rgb(230, 230, 230); display: none;"></div><button draggable="false" aria-label="Tilt map" title="Tilt map" type="button" class="gm-tilt gm-control-active" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; top: 0px; left: 0px; overflow: hidden; width: 40px; height: 40px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2016%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%2016h8V9H0v7zm10%200h8V9h-8v7zM0%207h8V0H0v7zm10-7v7h8V0h-8z%22/%3E%3C/svg%3E" style="width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2016%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%2016h8V9H0v7zm10%200h8V9h-8v7zM0%207h8V0H0v7zm10-7v7h8V0h-8z%22/%3E%3C/svg%3E" style="width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2016%22%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%2016h8V9H0v7zm10%200h8V9h-8v7zM0%207h8V0H0v7zm10-7v7h8V0h-8z%22/%3E%3C/svg%3E" style="width: 18px;"></button></div>
+                                                    </div>
+                                                    <div class="gm-svpc" dir="ltr" title="Drag Pegman onto the map to open Street View" controlwidth="40" controlheight="40" style="background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; width: 40px; height: 40px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: none; position: absolute; left: 0px; top: 0px;">
+                                                        <div style="position: absolute; left: 50%; top: 50%;"></div>
+                                                        <div style="position: absolute; left: 50%; top: 50%;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2023%2038%22%3E%3Cpath%20d%3D%22M16.6%2038.1h-5.5l-.2-2.9-.2%202.9h-5.5L5%2025.3l-.8%202a1.53%201.53%200%2001-1.9.9l-1.2-.4a1.58%201.58%200%2001-1-1.9v-.1c.3-.9%203.1-11.2%203.1-11.2a2.66%202.66%200%20012.3-2l.6-.5a6.93%206.93%200%20014.7-12%206.8%206.8%200%20014.9%202%207%207%200%20012%204.9%206.65%206.65%200%2001-2.2%205l.7.5a2.78%202.78%200%20012.4%202s2.9%2011.2%202.9%2011.3a1.53%201.53%200%2001-.9%201.9l-1.3.4a1.63%201.63%200%2001-1.9-.9l-.7-1.8-.1%2012.7zm-3.6-2h1.7L14.9%2020.3l1.9-.3%202.4%206.3.3-.1c-.2-.8-.8-3.2-2.8-10.9a.63.63%200%2000-.6-.5h-.6l-1.1-.9h-1.9l-.3-2a4.83%204.83%200%20003.5-4.7A4.78%204.78%200%200011%202.3H10.8a4.9%204.9%200%2000-1.4%209.6l-.3%202h-1.9l-1%20.9h-.6a.74.74%200%2000-.6.5c-2%207.5-2.7%2010-3%2010.9l.3.1L4.8%2020l1.9.3.2%2015.8h1.6l.6-8.4a1.52%201.52%200%20011.5-1.4%201.5%201.5%200%20011.5%201.4l.9%208.4zm-10.9-9.6zm17.5-.1z%22%20style%3D%22isolation%3Aisolate%22%20fill%3D%22%23333%22%20opacity%3D%22.7%22/%3E%3Cpath%20d%3D%22M5.9%2013.6l1.1-.9h7.8l1.2.9%22%20fill%3D%22%23ce592c%22/%3E%3Cellipse%20cx%3D%2210.9%22%20cy%3D%2213.1%22%20rx%3D%222.7%22%20ry%3D%22.3%22%20style%3D%22isolation%3Aisolate%22%20fill%3D%22%23ce592c%22%20opacity%3D%22.5%22/%3E%3Cpath%20d%3D%22M20.6%2026.1l-2.9-11.3a1.71%201.71%200%2000-1.6-1.2H5.699999999999999a1.69%201.69%200%2000-1.5%201.3l-3.1%2011.3a.61.61%200%2000.3.7l1.1.4a.61.61%200%2000.7-.3l2.7-6.7.2%2016.8h3.6l.6-9.3a.47.47%200%2001.44-.5h.06c.4%200%20.4.2.5.5l.6%209.3h3.6L15.7%2020.3l2.5%206.6a.52.52%200%2000.66.31l1.2-.4a.57.57%200%2000.5-.7z%22%20fill%3D%22%23fdbf2d%22/%3E%3Cpath%20d%3D%22M7%2013.6l3.9%206.7%203.9-6.7%22%20style%3D%22isolation%3Aisolate%22%20fill%3D%22%23cf572e%22%20opacity%3D%22.6%22/%3E%3Ccircle%20cx%3D%2210.9%22%20cy%3D%227%22%20r%3D%225.9%22%20fill%3D%22%23fdbf2d%22/%3E%3C/svg%3E"
+                                                                aria-label="Street View Pegman Control" style="height: 30px; width: 30px; position: absolute; transform: translate(-50%, -50%); pointer-events: none;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2038%22%3E%3Cpath%20d%3D%22M22%2026.6l-2.9-11.3a2.78%202.78%200%2000-2.4-2l-.7-.5a6.82%206.82%200%20002.2-5%206.9%206.9%200%2000-13.8%200%207%207%200%20002.2%205.1l-.6.5a2.55%202.55%200%2000-2.3%202s-3%2011.1-3%2011.2v.1a1.58%201.58%200%20001%201.9l1.2.4a1.63%201.63%200%20001.9-.9l.8-2%20.2%2012.8h11.3l.2-12.6.7%201.8a1.54%201.54%200%20001.5%201%201.09%201.09%200%2000.5-.1l1.3-.4a1.85%201.85%200%2000.7-2zm-1.2.9l-1.2.4a.61.61%200%2001-.7-.3l-2.5-6.6-.2%2016.8h-9.4L6.6%2021l-2.7%206.7a.52.52%200%2001-.66.31l-1.1-.4a.52.52%200%2001-.31-.66l3.1-11.3a1.69%201.69%200%20011.5-1.3h.2l1-.9h2.3a5.9%205.9%200%20113.2%200h2.3l1.1.9h.2a1.71%201.71%200%20011.6%201.2l2.9%2011.3a.84.84%200%2001-.4.7z%22%20fill%3D%22%23333%22%20fill-opacity%3D%22.2%22/%3E%26quot%3B%3C/svg%3E"
+                                                                aria-label="Pegman is on top of the Map" style="display: none; height: 30px; width: 30px; position: absolute; transform: translate(-50%, -50%); pointer-events: none;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2040%2050%22%3E%3Cpath%20d%3D%22M34-30.4l-2.9-11.3a2.78%202.78%200%2000-2.4-2l-.7-.5a6.82%206.82%200%20002.2-5%206.9%206.9%200%2000-13.8%200%207%207%200%20002.2%205.1l-.6.5a2.55%202.55%200%2000-2.3%202s-3%2011.1-3%2011.2v.1a1.58%201.58%200%20001%201.9l1.2.4a1.63%201.63%200%20001.9-.9l.8-2%20.2%2012.8h11.3l.2-12.6.7%201.8a1.54%201.54%200%20001.5%201%201.09%201.09%200%2000.5-.1l1.3-.4a1.85%201.85%200%2000.7-2zm-1.2.9l-1.2.4a.61.61%200%2001-.7-.3L28.4-36l-.2%2016.8h-9.4L18.6-36l-2.7%206.7a.52.52%200%2001-.66.31l-1.1-.4a.52.52%200%2001-.31-.66l3.1-11.3a1.69%201.69%200%20011.5-1.3h.2l1-.9h2.3a5.9%205.9%200%20113.2%200h2.3l1.1.9h.2a1.71%201.71%200%20011.6%201.2l2.9%2011.3a.84.84%200%2001-.4.7zM34%2029.6l-2.9-11.3a2.78%202.78%200%2000-2.4-2l-.7-.5a6.82%206.82%200%20002.2-5%206.9%206.9%200%2000-13.8%200%207%207%200%20002.2%205.1l-.6.5a2.55%202.55%200%2000-2.3%202s-3%2011.1-3%2011.2v.1a1.58%201.58%200%20001%201.9l1.2.4a1.63%201.63%200%20001.9-.9l.8-2%20.2%2012.8h11.3l.2-12.6.7%201.8a1.54%201.54%200%20001.5%201%201.09%201.09%200%2000.5-.1l1.3-.4a1.85%201.85%200%2000.7-2zm-1.2.9l-1.2.4a.61.61%200%2001-.7-.3L28.4%2024l-.2%2016.8h-9.4L18.6%2024l-2.7%206.7a.52.52%200%2001-.66.31l-1.1-.4a.52.52%200%2001-.31-.66l3.1-11.3a1.69%201.69%200%20011.5-1.3h.2l1-.9h2.3a5.9%205.9%200%20113.2%200h2.3l1.1.9h.2a1.71%201.71%200%20011.6%201.2l2.9%2011.3a.84.84%200%2001-.4.7z%22%20fill%3D%22%23333%22%20fill-opacity%3D%22.2%22/%3E%3Cpath%20d%3D%22M15.4%2038.8h-4a1.64%201.64%200%2001-1.4-1.1l-3.1-8a.9.9%200%2001-.5.1l-1.4.1a1.62%201.62%200%2001-1.6-1.4L2.3%2015.4l1.6-1.3a6.87%206.87%200%2001-3-4.6A7.14%207.14%200%20012%204a7.6%207.6%200%20014.7-3.1A7.14%207.14%200%200112.2%202a7.28%207.28%200%20012.3%209.6l2.1-.1.1%201c0%20.2.1.5.1.8a2.41%202.41%200%20011%201s1.9%203.2%202.8%204.9c.7%201.2%202.1%204.2%202.8%205.9a2.1%202.1%200%2001-.8%202.6l-.6.4a1.63%201.63%200%2001-1.5.2l-.6-.3a8.93%208.93%200%2000.5%201.3%207.91%207.91%200%20001.8%202.6l.6.3v4.6l-4.5-.1a7.32%207.32%200%2001-2.5-1.5l-.4%203.6zm-10-19.2l3.5%209.8%202.9%207.5h1.6V35l-1.9-9.4%203.1%205.4a8.24%208.24%200%20003.8%203.8h2.1v-1.4a14%2014%200%2001-2.2-3.1%2044.55%2044.55%200%2001-2.2-8l-1.3-6.3%203.2%205.6c.6%201.1%202.1%203.6%202.8%204.9l.6-.4c-.8-1.6-2.1-4.6-2.8-5.8-.9-1.7-2.8-4.9-2.8-4.9a.54.54%200%2000-.4-.3l-.7-.1-.1-.7a4.33%204.33%200%2000-.1-.5l-5.3.3%202.2-1.9a4.3%204.3%200%2000.9-1%205.17%205.17%200%2000.8-4%205.67%205.67%200%2000-2.2-3.4%205.09%205.09%200%2000-4-.8%205.67%205.67%200%2000-3.4%202.2%205.17%205.17%200%2000-.8%204%205.67%205.67%200%20002.2%203.4%203.13%203.13%200%20001%20.5l1.6.6-3.2%202.6%201%2011.5h.4l-.3-8.2z%22%20fill%3D%22%23333%22/%3E%3Cpath%20d%3D%22M3.35%2015.9l1.1%2012.5a.39.39%200%2000.36.42h.14l1.4-.1a.66.66%200%2000.5-.4l-.2-3.8-3.3-8.6z%22%20fill%3D%22%23fdbf2d%22/%3E%3Cpath%20d%3D%22M5.2%2028.8l1.1-.1a.66.66%200%2000.5-.4l-.2-3.8-1.2-3.1z%22%20fill%3D%22%23ce592b%22%20fill-opacity%3D%22.25%22/%3E%3Cpath%20d%3D%22M21.4%2035.7l-3.8-1.2-2.7-7.8L12%2015.5l3.4-2.9c.2%202.4%202.2%2014.1%203.7%2017.1%200%200%201.3%202.6%202.3%203.1v2.9m-8.4-8.1l-2-.3%202.5%2010.1.9.4v-2.9%22%20fill%3D%22%23e5892b%22/%3E%3Cpath%20d%3D%22M17.8%2025.4c-.4-1.5-.7-3.1-1.1-4.8-.1-.4-.1-.7-.2-1.1l-1.1-2-1.7-1.6s.9%205%202.4%207.1a19.12%2019.12%200%20001.7%202.4z%22%20style%3D%22isolation%3Aisolate%22%20fill%3D%22%23cf572e%22%20opacity%3D%22.6%22/%3E%3Cpath%20d%3D%22M14.4%2037.8h-3a.43.43%200%2001-.4-.4l-3-7.8-1.7-4.8-3-9%208.9-.4s2.9%2011.3%204.3%2014.4c1.9%204.1%203.1%204.7%205%205.8h-3.2s-4.1-1.2-5.9-7.7a.59.59%200%2000-.6-.4.62.62%200%2000-.3.7s.5%202.4.9%203.6a34.87%2034.87%200%20002%206z%22%20fill%3D%22%23fdbf2d%22/%3E%3Cpath%20d%3D%22M15.4%2012.7l-3.3%202.9-8.9.4%203.3-2.7%22%20fill%3D%22%23ce592b%22/%3E%3Cpath%20d%3D%22M9.1%2021.1l1.4-6.2-5.9.5%22%20style%3D%22isolation%3Aisolate%22%20fill%3D%22%23cf572e%22%20opacity%3D%22.6%22/%3E%3Cpath%20d%3D%22M12%2013.5a4.75%204.75%200%2001-2.6%201.1c-1.5.3-2.9.2-2.9%200s1.1-.6%202.7-1%22%20fill%3D%22%23bb3d19%22/%3E%3Ccircle%20cx%3D%227.92%22%20cy%3D%228.19%22%20r%3D%226.3%22%20fill%3D%22%23fdbf2d%22/%3E%3Cpath%20d%3D%22M4.7%2013.6a6.21%206.21%200%20008.4-1.9v-.1a8.89%208.89%200%2001-8.4%202z%22%20fill%3D%22%23ce592b%22%20fill-opacity%3D%22.25%22/%3E%3Cpath%20d%3D%22M21.2%2027.2l.6-.4a1.09%201.09%200%2000.4-1.3c-.7-1.5-2.1-4.6-2.8-5.8-.9-1.7-2.8-4.9-2.8-4.9a1.6%201.6%200%2000-2.17-.65l-.23.15a1.68%201.68%200%2000-.4%202.1s2.3%203.9%203.1%205.3c.6%201%202.1%203.7%202.9%205.1a.94.94%200%20001.24.49l.16-.09z%22%20fill%3D%22%23fdbf2d%22/%3E%3Cpath%20d%3D%22M19.4%2019.8c-.9-1.7-2.8-4.9-2.8-4.9a1.6%201.6%200%2000-2.17-.65l-.23.15-.3.3c1.1%201.5%202.9%203.8%203.9%205.4%201.1%201.8%202.9%205%203.8%206.7l.1-.1a1.09%201.09%200%2000.4-1.3%2057.67%2057.67%200%2000-2.7-5.6z%22%20fill%3D%22%23ce592b%22%20fill-opacity%3D%22.25%22/%3E%3C/svg%3E"
+                                                                aria-label="Street View Pegman Control" style="display: none; height: 40px; width: 40px; position: absolute; transform: translate(-60%, -45%); pointer-events: none;"></div>
+                                                    </div>
+                                                    <div class="gmnoprint" controlwidth="40" controlheight="81" style="position: absolute; left: 0px; top: 72px;">
+                                                        <div draggable="false" style="user-select: none; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 40px; height: 81px;"><button draggable="false" aria-label="Zoom in" title="Zoom in" type="button" class="gm-control-active" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; overflow: hidden; width: 40px; height: 40px; top: 0px; left: 0px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M18%207h-7V0H7v7H0v4h7v7h4v-7h7z%22/%3E%3C/svg%3E" alt="" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M18%207h-7V0H7v7H0v4h7v7h4v-7h7z%22/%3E%3C/svg%3E" alt="" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22M18%207h-7V0H7v7H0v4h7v7h4v-7h7z%22/%3E%3C/svg%3E" alt="" style="height: 18px; width: 18px;"></button>
+                                                            <div style="position: relative; overflow: hidden; width: 30px; height: 1px; margin: 0px 5px; background-color: rgb(230, 230, 230); top: 0px;"></div><button draggable="false" aria-label="Zoom out" title="Zoom out" type="button" class="gm-control-active" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; overflow: hidden; width: 40px; height: 40px; top: 0px; left: 0px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%207h18v4H0V7z%22/%3E%3C/svg%3E" alt="" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%207h18v4H0V7z%22/%3E%3C/svg%3E" alt="" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%207h18v4H0V7z%22/%3E%3C/svg%3E" alt="" style="height: 18px; width: 18px;"></button></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;">
+                                                    <a target="_blank" rel="noopener" href="https://maps.google.com/maps?ll=14.068801,108.854805&amp;z=6&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3" title="Open this area in Google Maps (opens a new window)" style="position: static; overflow: visible; float: none; display: inline;">
+                                                        <div style="width: 66px; height: 26px; cursor: pointer;"><img alt="" src="https://maps.gstatic.com/mapfiles/api-3/images/google4.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div></div>
+                                            <div>
+                                                <div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 192px; bottom: 0px;">
+                                                    <div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;">
+                                                        <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                                                            <div style="width: 1px;"></div>
+                                                            <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                                                        </div>
+                                                        <div style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(0, 0, 0); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><button draggable="false" aria-label="Keyboard shortcuts" title="Keyboard shortcuts" type="button" style="background: none; display: inline-block; border: 0px; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; color: rgb(0, 0, 0); font-family: inherit; line-height: normal;">Keyboard shortcuts</button></div>
+                                                    </div>
+                                                </div>
+                                                <div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 71px; bottom: 0px; width: 121px;">
+                                                    <div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;">
+                                                        <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                                                            <div style="width: 1px;"></div>
+                                                            <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                                                        </div>
+                                                        <div style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(0, 0, 0); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><button draggable="false" aria-label="Map Data" title="Map Data" type="button" style="background: none; display: none; border: 0px; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; color: rgb(0, 0, 0); font-family: inherit; line-height: normal;">Map Data</button><span>Map data ©2021 Google</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;">
+                                                    <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                                                        <div style="width: 1px;"></div>
+                                                        <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                                                    </div>
+                                                    <div style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(0, 0, 0); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" rel="noopener" style="text-decoration: none; cursor: pointer; color: rgb(0, 0, 0);">Terms of Use</a></div>
+                                                </div>
+                                                <div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px; display: none; position: absolute; right: 0px; bottom: 0px;">
+                                                    <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                                                        <div style="width: 1px;"></div>
+                                                        <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                                                    </div>
+                                                    <div style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(0, 0, 0); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_blank" rel="noopener" title="Report errors in the road map or imagery to Google" dir="ltr" href="https://www.google.com/maps/@14.0688011,108.854805,6z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3"
+                                                            style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(0, 0, 0); text-decoration: none; position: relative;">Report a map error</a></div>
+                                                </div>
+                                                <div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;">
+                                                    <div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(0, 0, 0); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2021 Google</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="related_events">
+                                <h2>Bài viết liên quan</h2>
+                                <ul>
+                                    <li>
+                                        <span>
+                                                <a href="http://myquangnam.vn/vi/detailevents/?t=pho-co-hoi-an-vao-top-thanh-thi-dep-hang-dau-chau-a&id=event_257" class="taglib-icon">
+                                                    <span class="taglib-text ">Phố cổ Hội An v&#224;o top th&#224;nh thị đẹp h&#224;ng đầu ch&#226;u &#193;</span>
+                                        </a>
+                                        </span>
+                                        <span class="cls_time">
+                                                <i class="ion-calendar"></i>
+                                                05/09/2019
+                                            </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                                <a href="http://myquangnam.vn/vi/detailevents/?t=khai-mac-festival-van-hoa-to-lua-tho-cam-viet-nam-the-gioi&id=event_247" class="taglib-icon">
+                                                    <span class="taglib-text ">Khai mạc Festival Văn h&#243;a tơ lụa thổ cẩm Việt Nam - thế giới</span>
+                                        </a>
+                                        </span>
+                                        <span class="cls_time">
+                                                <i class="ion-calendar"></i>
+                                                09/08/2019
+                                            </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                                <a href="http://myquangnam.vn/vi/detailevents/?t=giao-luu-van-hoa-hoi-an-nhat-ban-lan-thu-xvii&id=event_246" class="taglib-icon">
+                                                    <span class="taglib-text ">Giao lưu văn h&#243;a Hội An - Nhật Bản lần thứ XVII</span>
+                                        </a>
+                                        </span>
+                                        <span class="cls_time">
+                                                <i class="ion-calendar"></i>
+                                                06/08/2019
+                                            </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                                <a href="http://myquangnam.vn/vi/detailevents/?t=chuong-trinh-thuc-canh-ky-uc-hoi-an-duoc-vinh-danh&id=event_244" class="taglib-icon">
+                                                    <span class="taglib-text ">Chương tr&#236;nh thực cảnh K&#253; ức Hội An được vinh danh</span>
+                                        </a>
+                                        </span>
+                                        <span class="cls_time">
+                                                <i class="ion-calendar"></i>
+                                                19/07/2019
+                                            </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                                <a href="http://myquangnam.vn/vi/detailevents/?t=tren-4-trieu-luot-khach-den-quang-nam-trong-6-thang-dau-nam&id=event_242" class="taglib-icon">
+                                                    <span class="taglib-text ">Tr&#234;n 4 triệu lượt kh&#225;ch đến Quảng Nam trong 6 th&#225;ng đầu năm</span>
+                                        </a>
+                                        </span>
+                                        <span class="cls_time">
+                                                <i class="ion-calendar"></i>
+                                                09/07/2019
+                                            </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-16">
+                <div class="detail_new_tab box_radius_border">
+                    <ul class="nav nav-pills">
+                        <li class="active">
+                            <a href="#new_new" data-toggle="tab">Tin mới nhất</a>
+                        </li>
+                        <li class="">
+                            <a href="#new_red" data-toggle="tab">Tin nổi bật</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content clearfix">
+                        <div class="tab-pane custom-new-news active" id="new_new">
+                            <ul>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=hoi-an-duoc-khach-noi-dia-danh-gia-la-diem-den-ly-tuong-ve-nghe-thuat-va-am-thuc&amp;id=news_1215">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/sdlqnm/tientuc/22_09/hoian1_01_726863469.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>Hội An được khách nội địa đánh giá là điểm đến lý tưởng về nghệ thuật và ẩm thực</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 22/09/2021
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=thong-diep-ngay-du-lich-the-gioi-2021&amp;id=news_1214">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/sdlqnm/tientuc/22_09/thongdiep_2_799474761.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>THÔNG ĐIỆP NGÀY DU LỊCH THẾ GIỚI 2021</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 22/09/2021
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=hoi-an-vuot-singapore-trong-top-15-thanh-pho-tuyet-nhat-chau-a&amp;id=news_1213">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/sdlqnm/tientuc/22_09/hoi_an_1_13522907.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>Hội An vượt Singapore trong top 15 thành phố tuyệt nhất châu Á</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 22/09/2021
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=agoda-tiet-lo-xu-huong-du-lich-tai-viet-nam-sau-dai-dich-covid19&amp;id=news_1212">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/sdlqnm/tientuc/22_09/2_1631505983801_842529893.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>Agoda tiết lộ xu hướng du lịch tại Việt Nam sau đại dịch Covid-19</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 22/09/2021
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=chuong-trinh-phat-trien-du-lich-tinh-quang-nam-den-nam-2025-tam-nhin-den-nam-2030&amp;id=news_1211">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/sdlqnm/tientuc/22_09/pho_co_hoi_an_786253842.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>Chương trình phát triển du lịch tỉnh Quảng Nam đến năm 2025, tầm nhìn đến năm 2030.</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 22/09/2021
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=du-lich-tuong-niem-loai-hinh-nhieu-tiem-nang&amp;id=news_1210">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/sdlqnm/tientuc/22_09/hoalo_1631299437279_231762260.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>Du lịch tưởng niệm: loại hình nhiều tiềm năng</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 22/09/2021
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=kham-pha-vuon-rau-huu-co-thanh-dong-o-quang-nam&amp;id=news_1209">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/sdlqnm/tientuc/22_09/vuon_rau_thanh_dong_quang_nam_moitruong_1_273849873.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>Khám phá vườn rau hữu cơ Thanh Đông ở Quảng Nam</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 22/09/2021
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=chuan-bi-kich-cau-du-lich-mo-rong-don-khach-quoc-te&amp;id=news_1208">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/sdlqnm/tientuc/22_09/thidiemdonkhach_631034026.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>Chuẩn bị kích cầu du lịch, mở rộng đón khách quốc tế</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 22/09/2021
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=du-lich-chu-dong-chuyen-doi-so-nam-bat-co-hoi-phat-trien&amp;id=news_1207">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/sdlqnm/tientuc/22_09/200121_hang_son_doong_867187322.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>Du lịch chủ động chuyển đổi số, nắm bắt cơ hội phát triển</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 22/09/2021
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=quang-nam-dinh-huong-phat-trien-du-lich-xanh&amp;id=news_1206">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/sdlqnm/tientuc/22_09/2005_du_lych_sinh_thai_mai_thanh_chyyng_885355202.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>Quảng Nam định hướng phát triển du lịch xanh</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 22/09/2021
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane custom-new-news" id="new_red">
+                            <ul>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=quang-nam-cong-bo-chuong-trinh-ky-niem-20-nam-ngay-hoi-an-va-my-son-duoc-unesco-cong-nhan-di-san-the-gioi&amp;id=news_401">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Tin%20tuc/ha_ky_niem_20_nam_637025188243343191.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>Quảng Nam: Công bố chương trình kỷ niệm 20 năm ngày Hội An và Mỹ Sơn được UNESCO công nhận di sản thế giới</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 27/08/2019
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=le-ky-niem-20-nam-do-thi-co-hoi-an-khu-den-thap-my-son-duoc-unesco-cong-nhan-di-san-van-hoa-the-gioi-10-nam-cu-lao-cham-hoi-an-duoc-cong-nhan-khu-du-tru-sinh-quyen-the-gioi&amp;id=news_413">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Tin%20tuc/hoi_an/kn_20nam_ha_637069212350309069.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>Lễ kỷ niệm 20 năm đô thị cổ Hội An, khu đền tháp Mỹ Sơn được UNESCO công nhận di sản văn hóa thế giới, 10 năm Cù Lao Chàm – Hội An được công nhận khu dự trữ sinh quyển thế giới</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 17/10/2019
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=cnn-khen-ngoi-mon-cao-lau-cua-diem-den-am-thuc-hang-dau-hoi-an&amp;id=news_412">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Tin%20tuc/hoi_an/cao_lau_hoi_an_cnn_637069202012861067.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>CNN khen ngợi món cao lầu của ‘điểm đến ẩm thực hàng đầu’ Hội An</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 17/10/2019
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=hoi-an-dung-dau-15-thanh-pho-tuyet-voi-nhat-the-gioi&amp;id=news_354">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Tin%20tuc/60229409_1310233482465375_8318942062795816960_n_636985242565235664.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>Hội An đứng đầu 15 thành phố tuyệt vời nhất thế giới</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 12/07/2019
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=bao-tang-van-hoa-dan-gian-hoi-an&amp;id=news_376">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Tin%20tuc/bao_tang_vhdg_ha_637000960790822281.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>Bảo tàng văn hóa dân gian Hội An</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 30/07/2019
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=dinh-cam-pho&amp;id=news_375">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Tin%20tuc/dinh_cam_pho_637000956656880562.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>Đình Cẩm Phô</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 30/07/2019
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=to-chuc-gian-hang-tai-hoi-cho-du-lich-quoc-te-tphcm&amp;id=news_403">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Tin%20tuc/hoi_cho_hcm_637032955952153561.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>Tổ chức gian hàng tại Hội chợ du lịch quốc tế TP.HCM</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 05/09/2019
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=cnn-goi-y-13-diem-den-du-lich-viet-nam-doc-dao-khong-the-bo-qua&amp;id=news_406">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Tin%20tuc/son_doong_637043116619216366.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>CNN gợi ý 13 điểm đến du lịch Việt Nam độc đáo không thể bỏ qua</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 17/09/2019
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=tam-ky-mua-hoa-sua&amp;id=news_205">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Tin%20tuc/1_636915464375857392.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>Tam Kỳ – Mùa hoa Sưa</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 19/04/2019
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://myquangnam.vn/vi/detailnews/?t=den-hoi-an-ghe-4-dia-chi-noi-tieng-thuong-thuc-cao-lau&amp;id=news_405">
+                                        <div class="row">
+                                            <div class="news-image control_hover">
+                                                <div class="control_hover_img">
+                                                    <img width="94" hight="70" alt="" class="img-thumbnail pull-left" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/adminqnm/Tin%20tuc/hoi_an/sleepie_sunnie_637043092633229209.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="news-content">
+                                                <h4>Đến Hội An, ghé 4 địa chỉ nổi tiếng thưởng thức cao lầu</h4>
+                                                <div class="text-danger sub-info">
+                                                    <div class="time">
+                                                        <span class="ion-android-data icon"></span> 17/09/2019
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h3 class="home_title_right title_box">Lịch trình của bạn</h3>
+                    <div id="banner-thumbs-plan" class="owl-carousel data_tour_default">
+                        <div class="tour_item">
+                            <a href="http://myquangnam.vn/vi/tourdetail/?tourid=785" title="">
+                                <img class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/quyetthang.qnm/dem-ram-hoi-an.jpg_636722720883552810.jpg" />
+                                <div class="tour_item_info">
+                                    <h3>Lịch tr&#236;nh của t&#244;i_23-09-2019</h3>
+                                    <ul>
+                                        <li>
+                                            <span class="fleft"><i class="ion-cash"></i> Chi phí</span>
+                                            <span class="fright"><b>3.600.000 đ</b></span>
+                                        </li>
+                                        <li>
+                                            <span class="fleft"><i class="ion-pricetags"></i> Số ngày</span>
+                                            <span class="fright"><b>3</b> <small> Ngày</small></span>
+                                        </li>
+                                        <li>
+                                            <span class="fleft"><i class="ion-location"></i> Số địa điểm</span>
+                                            <span class="fright"><b>14</b> <small> Địa điểm</small></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="http://myquangnam.vn/vi/tourdetail/?tourid=1462" title="">
+                                <img class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/ducnm2.qnm/images1283642_mh_1_636924762483765851.jpg" />
+                                <div class="tour_item_info">
+                                    <h3>Lịch tr&#236;nh của t&#244;i_21-05</h3>
+                                    <ul>
+                                        <li>
+                                            <span class="fleft"><i class="ion-cash"></i> Chi phí</span>
+                                            <span class="fright"><b>500.000 đ</b></span>
+                                        </li>
+                                        <li>
+                                            <span class="fleft"><i class="ion-pricetags"></i> Số ngày</span>
+                                            <span class="fright"><b>1</b> <small> Ngày</small></span>
+                                        </li>
+                                        <li>
+                                            <span class="fleft"><i class="ion-location"></i> Số địa điểm</span>
+                                            <span class="fright"><b>5</b> <small> Địa điểm</small></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="tour_item">
+                            <a href="http://myquangnam.vn/vi/tourdetail/?tourid=1961" title="">
+                                <img class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/thphuong.qnm/Tam%20Ky%20cafe/53544652_1127718164101396_5141730865889411072_n_636939017876686808.jpg" />
+                                <div class="tour_item_info">
+                                    <h3>Lịch tr&#236;nh của t&#244;i _ 25-05</h3>
+                                    <ul>
+                                        <li>
+                                            <span class="fleft"><i class="ion-cash"></i> Chi phí</span>
+                                            <span class="fright"><b>550.000 đ</b></span>
+                                        </li>
+                                        <li>
+                                            <span class="fleft"><i class="ion-pricetags"></i> Số ngày</span>
+                                            <span class="fright"><b>1</b> <small> Ngày</small></span>
+                                        </li>
+                                        <li>
+                                            <span class="fleft"><i class="ion-location"></i> Số địa điểm</span>
+                                            <span class="fright"><b>4</b> <small> Địa điểm</small></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="http://myquangnam.vn/vi/tourdetail/?tourid=1542" title="">
+                                <img class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/thphuong.qnm/Tam%20Ky%20cafe/53544652_1127718164101396_5141730865889411072_n_636939017876686808.jpg" />
+                                <div class="tour_item_info">
+                                    <h3>Lịch tr&#236;nh của t&#244;i _ 25-05</h3>
+                                    <ul>
+                                        <li>
+                                            <span class="fleft"><i class="ion-cash"></i> Chi phí</span>
+                                            <span class="fright"><b>550.000 đ</b></span>
+                                        </li>
+                                        <li>
+                                            <span class="fleft"><i class="ion-pricetags"></i> Số ngày</span>
+                                            <span class="fright"><b>1</b> <small> Ngày</small></span>
+                                        </li>
+                                        <li>
+                                            <span class="fleft"><i class="ion-location"></i> Số địa điểm</span>
+                                            <span class="fright"><b>4</b> <small> Địa điểm</small></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="tour_item">
+                            <a href="http://myquangnam.vn/vi/tourdetail/?tourid=2441" title="">
+                                <img class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/namtramy.qnm/img_20210526_161458_80866137.jpg" />
+                                <div class="tour_item_info">
+                                    <h3>Lịch tr&#236;nh của t&#244;i</h3>
+                                    <ul>
+                                        <li>
+                                            <span class="fleft"><i class="ion-cash"></i> Chi phí</span>
+                                            <span class="fright"><b>500.000 đ</b></span>
+                                        </li>
+                                        <li>
+                                            <span class="fleft"><i class="ion-pricetags"></i> Số ngày</span>
+                                            <span class="fright"><b>2</b> <small> Ngày</small></span>
+                                        </li>
+                                        <li>
+                                            <span class="fleft"><i class="ion-location"></i> Số địa điểm</span>
+                                            <span class="fright"><b>6</b> <small> Địa điểm</small></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="http://myquangnam.vn/vi/tourdetail/?tourid=1544" title="">
+                                <img class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/thphuong.qnm/Tam%20Ky%20cafe/53544652_1127718164101396_5141730865889411072_n_636939017876686808.jpg" />
+                                <div class="tour_item_info">
+                                    <h3>Lịch tr&#236;nh của t&#244;i _ 26-05</h3>
+                                    <ul>
+                                        <li>
+                                            <span class="fleft"><i class="ion-cash"></i> Chi phí</span>
+                                            <span class="fright"><b>1.050.000 đ</b></span>
+                                        </li>
+                                        <li>
+                                            <span class="fleft"><i class="ion-pricetags"></i> Số ngày</span>
+                                            <span class="fright"><b>2</b> <small> Ngày</small></span>
+                                        </li>
+                                        <li>
+                                            <span class="fleft"><i class="ion-location"></i> Số địa điểm</span>
+                                            <span class="fright"><b>8</b> <small> Địa điểm</small></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="tour_item">
+                            <a href="http://myquangnam.vn/vi/tourdetail/?tourid=2044" title="">
+                                <img class="lazy img-responsive" src="https://scontent.smarttourism.vn/resources/portal/Images/QNM/tienphuoc.qnm/hangdoitienan_9_1443545254_680x0_e1516782564163_3624158_730483544.jpg" />
+                                <div class="tour_item_info">
+                                    <h3>Lịch tr&#236;nh của t&#244;i 12/08</h3>
+                                    <ul>
+                                        <li>
+                                            <span class="fleft"><i class="ion-cash"></i> Chi phí</span>
+                                            <span class="fright"><b>2.000.000 đ</b></span>
+                                        </li>
+                                        <li>
+                                            <span class="fleft"><i class="ion-pricetags"></i> Số ngày</span>
+                                            <span class="fright"><b>1</b> <small> Ngày</small></span>
+                                        </li>
+                                        <li>
+                                            <span class="fleft"><i class="ion-location"></i> Số địa điểm</span>
+                                            <span class="fright"><b>6</b> <small> Địa điểm</small></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="footer-section">
+
+
+        <footer class="footer">
+
+            <div class="footer-inner">
+                <div class="container">
+                    <div class="">
+                        <div class="col-md-6 col-sm-16 col-xs-16 footer-address">
+                            <div class="footer-gallery-inner">
+                                <h3 class="text-uppercase text-orag sp-module-title">Thông tin liên hệ</h3>
+                                <div class="footer-address-outer footer-address">
+
+                                    <ul>
+                                        <li><strong>Trung tâm Thông Tin Xúc tiến Du lịch Tỉnh Quảng Nam</strong></li>
+                                        <li><i class="fas fa-map-marker"></i>Địa chỉ: 47, 49, 51 Phan Châu Trinh, TP Hội An,<br /> Tỉnh Quảng Nam, Việt Nam.</li>
+                                        <li><i class="fas fa-phone-alt"></i>Số điện thoại: (+84) 235 3916961 - <i class="ficon ficon-fax-or-photo"></i>Fax: (+84) 235 3916961</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-16 col-xs-16 footer-menu">
+                            <div class="footer-menu-inner">
+                                <h3 class="text-uppercase text-orag sp-module-title">Danh mục</h3>
+                                <div class="col-lg-8 col-xs-8 col-sm-8">
+                                    <ul class="fa-ul">
+                                        <li><span class="fa-li"><i class="fas fa-angle-right"></i> </span><a href="#">Khách sạn</a></li>
+                                        <li><span class="fa-li"><i class="fas fa-angle-right"></i> </span><a href="#">Ẩm thực</a></li>
+                                        <li><span class="fa-li"><i class="fas fa-angle-right"></i></span> <a href="#">Khám phá</a></li>
+                                        <li><span class="fa-li"><i class="fas fa-angle-right"></i> </span> <a href="#">Mua sắm</a></li>
+                                        <li><span class="fa-li"><i class="fas fa-angle-right"></i> </span><a href="#">Lịch trình</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-lg-8 col-xs-8 col-sm-8">
+                                    <ul class="fa-ul">
+
+                                        <li><span class="fa-li"><i class="fas fa-angle-right"></i> </span><a href="#">Tour</a></li>
+                                        <li><span class="fa-li"><i class="fas fa-angle-right"></i> </span><a href="#">Lễ hội &amp; Sự kiện</a></li>
+                                        <li><span class="fa-li"><i class="fas fa-angle-right"></i> </span> <a href="#">Tin tức</a></li>
+                                        <li><span class="fa-li"><i class="fas fa-angle-right"></i> </span><a href="#">Giới thiệu</a></li>
+                                        <li><span class="fa-li"><i class="fas fa-angle-right"></i> </span> <a href="#">Tiện ích</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-16 col-xs-16">
+
+                            <div class="footer-address-outer footer-address">
+                                <div class="download-apps footer-menu-inner">
+                                    <h3 class="text-uppercase text-orag sp-module-title">Tải ứng dụng</h3>
+
+                                    <div class="list-download-app">
+                                        <a href="https://play.google.com/store/apps/details?id=com.quangnam.tourism"><img alt="android-img" src="images/android.png" class="img-responsive"></a>
+                                        <a href="https://apps.apple.com/vn/app/quang-nam-tourism/id1436827272?l=vi"><img alt="ios-img" src="images/ios.png" class="img-responsive"></a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="socials">
+                                <h3 class="text-uppercase text-orag sp-module-title">Xem chúng tôi trên mạng xã hội</h3>
+                                <ul>
+                                    <li><a target="_blank" href="https://www.facebook.com/quangnamtourism.com.vn"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a target="_blank" href="https://www.instagram.com/quangnamtourism"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a target="_blank" href="https://www.youtube.com/channel/UCCV69qcb_ZtdzyPoGZeY2xg"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a target="_blank" href="https://twitter.com/quangnamtourism"><i class="fab fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container copyright-inner">
+                    <div style="float:left;padding:10px 0;">
+                        Copyright © 2021 - Trung tâm Thông Tin Xúc tiến Du lịch Tỉnh Quảng Nam
+                    </div>
+
+
+                </div>
+            </div>
+        </footer>
+
+    </section>
+    <div id="show_download_my_app" style="display: none">
+        <div class="app-inner">
+            <span class="ion-close mobile_close"></span>
+            <div class="show_mobile_container">
+                <img class="img-responsive" src="/Images/general/Logo20.png" />
+                <div class="info_mobile">
+                    <a target="_blank" id="link_download" href="https://play.google.com/store/apps/details?id=com.quangnam.tourism">Trải nghiệm trên di động</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="modal-login-system" class="basic-popup mfp-with-anim mfp-hide" style="max-width: 380px">
+        <div class="mtp-header">
+            <h3 class="text-center text-uppercase">Đăng nhập</h3>
+        </div>
+        <div class="mtp-content">
+            <div id="login_form">
+                <form action="/Modules/Home/SubmitLogin" autocomplete="off" method="post">
+                    <input name="__RequestVerificationToken" type="hidden" value="PAY14lrBZMYnLSx97l8h7r6UfMeTvonm7nTRhRNx7r0AFFHwthvIHlDxiH8TBsRhrBIPn0WCh-Rlux6w1YmIQ0cYVdMtYk2rBbtgXWYJvLcNGi3mFn8v7wNapSmgMbivEiUJ81859zHsGqIJc4z12g2" />
+                    <div class="col-md-16 fields form-group">
+
+                        <input class="form-control item_log" id="UserName" name="UserName" placeholder="Tên đăng nhập" type="text" value="" />
+                        <i class="ion-person"></i>
+
+                    </div>
+                    <div class="col-md-16 fields form-group">
+
+                        <input class="form-control item_log" id="Password" name="Password" placeholder="Mật khẩu" type="password" />
+                        <i class="ion-locked"></i>
+
+                    </div>
+                    <div class="col-md-16 fields">
+                        <button class="btn btn-primary btn-block">Đăng nhập</button>
+                    </div>
+                    <div class="col-md-16 fields text-center form-group">
+                        <div class="checkbox i-checks">
+
+                            <input id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" />
+                            <label class="pd-l-n" for="remember">Lưu tài khoản</label>
+                        </div>
+                    </div>
+                </form>
+                <div class="col-md-16 fields text-center hidden-xs">
+                    <p class="type_login">hoặc đăng nhập với</p>
+                </div>
+                <form action="/Modules/Home/ExternalLogin" method="post">
+                    <input name="__RequestVerificationToken" type="hidden" value="QyrdMYabloGY_HwQJBgdjBKB4PD-du3A9HqzF8OssLHT_znlRZQifHfEoMVbLjXfQxViU_9ueDJ6x5SWAvtEUlsJtOPCtSOyYlQ-vd1-iQ7ejwzK14EaNFsNTaN0oT5IB8gUJf6P0FBYxSi3OIoq3Q2" />
+                    <div class="col-md-16 fields other_login">
+                        <div class="col-md-8 form-group col-sm-8 col-xs-16 pd-l-n">
+                            <button type="submit" class="btn btn-inverse pull-left btn-block btn-google" id="Google" name="provider" value="Google" title="Đăng nhập bằng tài khoản Google">
+                                    <i class="ion-social-google"></i> Google
+                                </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <div class="mtp-footer">
+            <div class="row">
+                <a class="col-md-8 text-left col-sm-8 col-xs-8" href="http://myquangnam.vn/vi/signup"> <i class="ion-person-add"></i> Đăng ký</a>
+                <a class="col-md-8 text-right col-sm-8 col-xs-8" href="http://myquangnam.vn/vi/forgotpassword"> <i class="ion-refresh"></i> Quên mật khẩu</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-choose-register" class="basic-popup mfp-with-anim mfp-hide" style="max-width: 30%">
+        <div class="mtp-header">
+            <h3 class="text-center text-uppercase">Đăng ký</h3>
+        </div>
+        <div class="mtp-content">
+            <div class="row" style="text-align: center;font-size: 90px;">
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    <a href="http://myquangnam.vn/vi/signupguest">
+                        <i class="ion-android-contact"></i>
+                        <p style="font-size: 20px;">Khách</p>
+                    </a>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    <a href="http://myquangnam.vn/vi/signupcompany">
+                        <i class="ion-briefcase"></i>
+                        <p style="font-size: 20px;">Doanh nghiệp</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="loading-box modal_load col-xs-16 text-center load-more-page-mobile" id="loading-box" aria-hidden="true" style="display: none;">
+        <div class="box-show">
+            <div class="loading-page-mobile col-xs-2"></div>
+            <div class="box-content col-xs-13">Đang tải...</div>
+        </div>
+    </div>
+
+    <script src="Scripts/jquery.simpleWeather.min.js"></script>
+    <script src="Scripts/jquery.magnific-popup.js"></script>
+    <script src="Scripts/wow.min.js"></script>
+    <script src="Scripts/unveil2.min.js"></script>
+    <script src="Scripts/jquery.scrollUp.js"></script>
+    <script src="Scripts/swiper.min.js"></script>
+    <script src="Scripts/moment.min.js"></script>
+    <script src="Scripts/custom-fun.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/respond.js"></script>
+    <script src="Scripts/bootbox.min.js"></script>
+    <script src="Scripts/Utilities/badwords.js"></script>
+
+
+
+
+
+    <script src="Scripts/qnm/simplecalendar2.js"></script>
+    <script type="text/javascript">
+        var sortType = '',
+            keyword = '';
+        $('#newsSort').on('change', function() {
+            sortType = $(this).val();
+            itemRequest = $.ajax({
+                type: 'POST',
+                url: '/Modules/Event/GetListEvents',
+                data: {
+                    keyword: $("#keyword").val(),
+                    sortOrder: sortType
+                },
+                success: function(result) {
+                    $('#data-pagination').html(result);
+                    loading.hideLoadingMobile();
+                },
+                error: function() {
+                    loading.hideLoadingMobile();
+                    console.log("Error connection!")
+                },
+                timeout: 10000
+            });
+        });
+
+        $(document).ready(function() {
+            $("#banner-thumbs-plan").owlCarousel({
+                autoPlay: false,
+                navigation: true,
+                stopOnHover: true,
+                pagination: false,
+                items: 1,
+                itemsDesktop: [1199, 1],
+                itemsDesktopSmall: [979, 1],
+                itemsTablet: [768, 2],
+                itemsMobile: [479, 1],
+            });
+            $("#keyword").blur(function() {
+                keyword = convertToUnsignChar($(this).val());
+                sortOrder = $("#newsSort").val();
+                processData(sortType, keyword);
+            });
+            $(document).keypress(function(e) {
+                if (e.which == 13) {
+                    keyword = convertToUnsignChar($(this).val());
+                    sortOrder = $("#newsSort").val();
+                    processData(sortType, keyword);
+                }
+            });
+            $("#keyword").keyup(function(e) {
+                if (e.which == 13)
+                    $(this).blur();
+            });
+
+            $('#keyword').keypress(function(e) {
+                return e.which != 13;
+            });
+
+            function processData(sortType, keyword) {
+                $.ajax({
+                    type: 'POST',
+                    url: '/Modules/Event/GetListEvents',
+                    data: {
+                        keyword: keyword,
+                        sortOrder: sortType
+                    },
+                    success: function(result) {
+                        console.log(result);
+                        if (result.trim() == '') {
+                            var htmlNot = '<div class="alert alert-info fade in text-center"> <b class="fs18"><i class="ion-search"></i> Không tìm thấy dữ liệu nào phù hợp!</b></div>';
+                            $('#data-pagination').html(htmlNot);
+                        } else {
+                            $('#data-pagination').html(result);
+                        }
+                        //$('#data-pagination').html(result);
+                        loading.hideLoadingMobile();
+                    },
+                    error: function() {
+                        loading.hideLoadingMobile();
+                        console.log("Error connection!")
+                    },
+                    timeout: 10000
+                });
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        function geturl() {
+            return "https://myquangnam.vn/vi/restaurants/";
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            var raido = $(".cls_wrap").attr("data-toggle");
+            if (raido == 0) {
+                $(".cls_tuvan").css("display", "none");
+                $(".cls_x").click(function() {
+                    $(".cls_wrap").slideToggle();
+                    $(".cls_tuvan").slideToggle();
+                });
+                $(".cls_tuvan").click(function() {
+                    $(".cls_wrap").slideToggle();
+                    $(this).slideToggle();
+                });
+            } else {
+                $(".cls_wrap").css("display", "none");
+                $(".cls_x").click(function() {
+                    $(".cls_wrap").slideToggle();
+                    $(".cls_tuvan").slideToggle();
+                });
+                $(".cls_tuvan").click(function() {
+                    $(".cls_wrap").slideToggle();
+                    $(this).slideToggle();
+                });
+            }
+            //jQuery.simpleWeather({
+            //    woeid: '1252375',
+            //    unit: 'c',
+            //    success: function (weather) {
+            //        var html = '<i class="icon-' + weather.code + '"></i> <span class="data">' + weather.city +
+            //            ', ' + weather.region + ' ' + weather.temp + '&deg;' +
+            //            weather.units.temp + ' </span>';
+
+            //        var rootWeather = jQuery('body').find('#weather');
+            //        rootWeather.html(html);
+            //    },
+            //    error: function (error) {
+            //        var rootWeather = jQuery('body').find('#weather');
+            //        rootWeather.html('<p>' + error + '</p>');
+            //    }
+            //});
+
+            $('img.lazy').unveil();
+
+            if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0, 4))) {
+                $('#toggle_form_search').trigger('click');
+                if (sessionStorage.getItem("show_mobile_app") == null || sessionStorage.getItem("show_mobile_app") != 0) {
+                    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                    if (/windows phone/i.test(userAgent)) {} else if (/android/i.test(userAgent)) {
+                        $.ajax({
+                            type: 'POST',
+                            //url: "/Modules/Home/GetLinkDownLoadApp",
+                            url: "/Modules/Home/GetLinkDownLoadApp",
+                            data: {
+                                operatingSystem: "android"
+                            },
+                            success: function(result) {
+                                if (result.Success) {
+                                    $('#link_download').attr('href', result.LinkHref);
+                                    $('#android-app').attr('href', result.LinkHref);
+                                    $('#show_download_my_app').addClass('show_popup');
+                                }
+                            },
+                            error: function() {
+                                console.log("Error connection");
+                            },
+                            timeout: 10000
+                        });
+                    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                        $.ajax({
+                            type: 'POST',
+                            //url: "/Modules/Home/GetLinkDownLoadApp",
+                            url: "/Modules/Home/GetLinkDownLoadApp",
+                            data: {
+                                operatingSystem: "ios"
+                            },
+                            success: function(result) {
+                                if (result.Success) {
+                                    $('#link_download').attr('href', result.LinkHref);
+                                    $('#ios-app').attr('href', result.LinkHref);
+                                    $('#show_download_my_app').addClass('show_popup');
+                                }
+                            },
+                            error: function() {
+                                console.log("Error connection");
+                            },
+                            timeout: 10000
+                        });
+                    } else {
+                        $('#show_download_my_app').removeClass('show_popup');
+                    }
+                }
+            }
+        });
+
+        $('.mobile_close').on('click', function() {
+            $('#show_download_my_app').removeClass('show_popup');
+            sessionStorage.setItem("show_mobile_app", 0);
+        });
+
+        $('.lst_img_footer').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            closeOnContentClick: false,
+            closeBtnInside: false,
+            mainClass: 'mfp-with-zoom mfp-img-mobile',
+            image: {
+                verticalFit: true
+            },
+            gallery: {
+                enabled: true
+            },
+            zoom: {
+                enabled: true,
+                duration: 300,
+                opener: function(element) {
+                    return element.find('img');
+                }
+            }
+        });
+
+        $('#login_system, .login').on('click', function() {
+            $.magnificPopup.open({
+                removalDelay: 500,
+                items: {
+                    src: '#modal-login-system'
+                },
+                callbacks: {
+                    beforeOpen: function(e) {
+                        this.st.mainClass = 'mfp-zoom-in';
+                    },
+                    close: function(e) {}
+                },
+                midClick: true,
+                closeOnBgClick: false
+            });
+        });
+
+        $('#openChoosePopup').on('click', function() {
+            $.magnificPopup.open({
+                removalDelay: 500,
+                items: {
+                    src: '#modal-choose-register'
+                },
+                callbacks: {
+                    beforeOpen: function(e) {
+                        this.st.mainClass = 'mfp-zoom-in';
+                    },
+                    close: function(e) {}
+                },
+                midClick: true,
+                closeOnBgClick: false
+            });
+        });
+
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '1551808748211571',
+                cookie: true,
+                xfbml: true,
+                version: 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+        };
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        $(document).ready(function() {
+            if (window.innerWidth <= 767) {
+                var text = '<span class="sub-arrow"></span>';
+                $('#myNavbar .dropdown .dropbtn').append(text);
+                $('#myNavbar .dropdown .dropdown-content').css("display", "none");
+                $('#myNavbar .dropdown .dropbtn .sub-arrow').on('click', function(e) {
+                    e.preventDefault();
+                    var selector = $(this).closest(".dropdown");
+                    selector.find(".dropdown-content").toggle();
+                    return false;
+                });
+            } else {
+                //$('#myNavbar .dropdown .dropdown-content').css("display", "none");
+
+                //$("#myNavbar .dropdown").hover(
+                //  function () {
+                //      $(this).find(".dropdown-content").toggle();
+                //  }, function () {
+                //      $(this).find(".dropdown-content").toggle();
+                //  }
+                //);
+            }
+
+        });
+    </script>
+</body>
+
+</html>

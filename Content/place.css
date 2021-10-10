@@ -1,0 +1,501 @@
+.dropdown-menu li:hover {
+    cursor: pointer !important;
+}
+
+.media img {
+    width: 100%;
+}
+
+.tags {
+    padding-top: 4px;
+}
+
+.add-button-tour {
+    width: 49% !important;
+    font-size: 10px !important;
+    margin-top: 25px !important;
+    padding: 7px 6px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.add-tour {
+    background: #1AB394;
+    float: left;
+}
+
+.btn-create-tour {
+    background: #35C350;
+    float: right;
+}
+
+.guide-city-list {
+    list-style: none;
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+    .guide-city-list > li {
+        text-align: center;
+        font-size: 12px;
+        display: inline-block;
+        height: 150px;
+        min-height: 250px;
+        padding: 10px !important;
+    }
+
+        .guide-city-list > li .media {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 4px !important;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .guide-city-list > li img {
+            min-width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transition: width .5s, height .5s, top .1s, left .1s;
+            max-width: none !important;
+            min-height: 175px;
+        }
+
+        .guide-city-list > li:hover .media-body {
+            display: block;
+            z-index: 100;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            padding: 0px 15px 15px 15px;
+            top: 15px;
+            height: 40px;
+            color: #fff;
+            background: transparent;
+        }
+
+            .guide-city-list > li:hover .media-body a {
+                color: #fff;
+            }
+
+.guide-city-list > li:hover h3.place-name {
+    color: #fff !important;
+}
+
+.guide-city-list > li:hover .tags {
+    display: none;
+}
+
+.guide-city-list .media-body {
+    position: absolute;
+    bottom: 0px;
+    margin-left: -10px;
+    width: 100%;
+    background: #fff;
+    padding: 0 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+    .guide-city-list .media-body > span {
+        text-shadow: 1px 1px 1px #333;
+        color: #fff;
+        font-size: 15px;
+        text-transform: capitalize;
+        line-height: 20px !important;
+        display: none;
+    }
+
+    .guide-city-list .media-body > h3 {
+        margin-bottom: 3px !important;
+        margin-top: 3px !important;
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .guide-city-list .media-body a {
+        font-size: 18px;
+        font-weight: bold;
+        color: #965306;
+        text-transform: capitalize;
+    }
+
+.guide-city-list > li .city-opts {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background: rgba(150, 83, 6, 0.6);
+    padding-top: 40px;
+    text-align: center;
+    display: none;
+}
+
+    .guide-city-list > li .city-opts .btn {
+        color: white;
+        text-transform: uppercase;
+        box-shadow: 1px 1px 1px rgba(100, 100, 100, 0.2);
+        transition: width .5s, height .5s, background-color .5s, opacity 2s;
+        border: 0;
+        border-radius: 2px !important;
+        margin-top: 5px !important;
+        width: 100%;
+        text-shadow: none !important;
+    }
+
+        .guide-city-list > li .city-opts .btn.btn-explore:focus {
+            background: #3fbfdf !important;
+        }
+
+        .guide-city-list > li .city-opts .btn.btn-planner:focus {
+            background: #fb7a19 !important;
+        }
+
+        .guide-city-list > li .city-opts .btn i {
+            color: white;
+        }
+
+.guide-city-list > li:hover .city-opts {
+    display: block;
+}
+
+.guide-city-list > li .buttons {
+    width: 70%;
+    margin: auto;
+    display: block;
+    text-align: center;
+    z-index: 999;
+}
+
+.guide-city-list li .list-buttons {
+    height: 0;
+    transition: height .5s;
+}
+
+.guide-city-list > li:hover .list-buttons {
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 130px;
+    bottom: 0;
+    height: auto;
+}
+
+.guide-city-list li .list-buttons-3d {
+    height: 0;
+    transition: height .5s;
+}
+
+.guide-city-list > li:hover .list-buttons-3d {
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 171px;
+    bottom: 0;
+    height: auto;
+}
+
+.guide-city-list .intro {
+    width: 100%;
+    padding: 10px 10px 0;
+    height: 63px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    line-height: 18px !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.guide-city-list > li .btn-explore {
+    background: #d08025;
+}
+
+.guide-city-list > li .btn-planner {
+    background: #fb6a09;
+}
+
+.guide-city-list > li .city-opts .btn-explore:hover {
+    background: #965306;
+}
+
+.guide-city-list > li .city-opts .btn-planner:hover {
+    background: #fb7a19;
+}
+
+.item-city .tags {
+    margin-top: 0px;
+    margin-bottom: 2px;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 25px;
+}
+
+.item-city .label {
+    margin-right: 0px;
+    border-top-left-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
+
+.tags .label-info {
+    /*background-color:#5bc0de!important;*/
+    font-size: 14px !important;
+    color:#333 !important;
+    font-family:Arial;
+}
+
+.group-filter li a span.caret {
+    vertical-align: middle !important;
+}
+
+#filters .checkbox label, #filters .radio label {
+    color: #333;
+    font-size: 1.1em;
+
+}
+
+#filters .checkbox {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    cursor: pointer;
+    margin-top: 0 !important;
+}
+
+#filters .item-filter {
+    background: #fff;
+}
+
+#left-show-data #sort-menu li a,
+#left-show-data .lst-data-title {
+    padding-left: 4px;
+}
+
+#left-show-data .lst-data-title {
+    color: #f50;
+}
+
+#left-show-data .group-filter {
+    margin-bottom: 0;
+}
+
+#left-show-data #sort-menu li a:hover {
+    cursor: pointer;
+    background: none;
+}
+
+#left-show-data #sort-menu li ul li a:hover {
+    background: #0af;
+}
+
+#filters {
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+}
+
+.group-filter ul li .sub-menu-list li a:hover {
+    width: 98%;
+}
+
+#pagination a {
+    padding: 0px 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+    #pagination a.jp-current {
+        color: red;
+        cursor: default;
+    }
+
+    #pagination a.jp-disabled {
+        color: #999;
+        cursor: default;
+    }
+
+.group-filter ul li .sub-menu-list li a {
+    padding: 2px 10px;
+}
+
+    .group-filter ul li .sub-menu-list li a:hover {
+        background: #009ae5;
+        color: #fff;
+        cursor: pointer;
+    }
+
+#filters .btn-search {
+    border: 0;
+    left: -1px;
+    top: 0px;
+    position: relative;
+    height: 34px;
+    background: #719ff3 !important;
+    border-top-right-radius: 3px !important;
+    border-bottom-right-radius: 3px !important;
+    color: #fff;
+    font-weight: bold !important;
+}
+
+#filters .input-findname {
+    border-top-left-radius: 3px !important;
+    border-bottom-left-radius: 3px !important;
+    border: 1px solid #719ff3 !important;
+}
+
+#left-show-data .group-filter .btn-clear-filter {
+    top: 0px !important;
+    border-radius: 3px !important;
+    background: #fff;
+    border: 0;
+    padding: 6px 12px;
+    border: 1px solid #cfcfcf;
+    border-bottom: 1px solid #b5b5b5;
+}
+
+#left-show-data .group-filter .sort-price button {
+    padding: 6px 12px !important;
+    outline: 0 !important;
+}
+
+#left-show-data .group-filter .btn-title-sort {
+    background: #fff !important;
+    font-weight: bold !important;
+    color: #009ae5 !important;
+    border-top-left-radius: 3px !important;
+    border-bottom-left-radius: 3px !important;
+    box-shadow: none !important;
+    pointer-events: none !important;
+}
+
+#filters .main-title-custom {
+    padding: 0 10px 0 13px !important;
+}
+
+#filters .item-filter .filter-icon {
+    font-size: 16px;
+    position: relative;
+    top: 8px;
+    right: 7px;
+    float: right;
+    color: rgb(158,94,9,.8);
+}
+
+#filters .item-filter fieldset {
+    padding: 0em 1em 0 !important;
+}
+
+#filters .item-filter .service-data {
+    /*margin-top: -5px!important;*/
+}
+
+#filters .item-filter .service {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+}
+
+#filters .item-filter .filter-title {
+    position: relative;
+    z-index: 1;
+    float: left;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: left;
+    height: 36px;
+    line-height: 36px;
+    width: 90%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color:#d08025;
+    font-weight:600;
+}
+
+#filters .m_menu_sort a {
+    padding: 3px 12px !important;
+}
+
+#filters .m_menu_sort {
+    box-shadow: none !important;
+}
+
+.btn-info-htc {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+.btn-upload-htc {
+    color: #fff;
+    background-color: #5b95de;
+    border-color: #46b8da;
+    width: 100%;
+}
+.klk-button {
+    min-width: 86px;
+    display: inline-block;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 0;
+    text-align: center;
+    line-height: 22px;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-transform: none;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    background-color:#eb501f;
+    color:#fff;
+    border:none;
+}
+.dropdown-menu {
+    min-width:184px !important;
+}
+
+/*@media (max-width: 767px) {
+    #filters .m_menu_sort {
+        margin-top: 10px;
+    }
+}*/
+
+@media (min-width: 992px) {
+    #data-pagination .col-md-5 {
+        width: 33.33333333%;
+    }
+}
+@media (min-width: 768px) {
+    #data-pagination .col-sm-5 {
+        width: 33.33333333%;
+    }
+}
+@media (max-width:480px) {
+    #data-pagination .item-city {
+        width: 100%;
+    }
+}

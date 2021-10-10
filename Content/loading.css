@@ -1,0 +1,89 @@
+﻿.loading-product-item {
+    height: 100%;
+    display: inline-block;
+    width: 100%;
+}
+.loading-product-item .loading-left [class*=loading-],
+.loading-product-item .loading-right [class*=loading-] {
+    height: 10px;
+    width: 100%;
+    float: left;
+    background: #ddd;
+    margin-bottom: 10px;
+    animation-name: c;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(90deg, #fff 8%, #ddd 18%, #fff 33%);
+    background-size: 800px auto;
+    border-radius: 50px
+}
+.loading-product-item .loading-left [class*=loading-content] {
+    width: calc(100% - 210px);
+    margin-left: 10px;
+}
+.loading-product-item .loading-left .loading-name {
+    height: 20px;
+    margin-bottom: 15px
+}
+.loading-product-item .loading-left .loading-img {
+    height: 170px;
+    width: 200px;
+    /*margin-bottom: 20px;*/
+    border-radius: 10px
+}
+.loading-product-item .loading-left .loading-content-lg {
+    height: 30px
+}
+.loading-product-item .loading-left .loading-content-xs {
+    height: 12px
+}
+.loading-product-item .loading-right [class*=loading-] {
+    float: right;
+    display: block;
+    clear: both
+}
+.loading-product-item .loading-right {
+    height: 170px;
+}
+.loading-mvbinh {
+    position: relative;
+    top: 84px;
+}
+
+.loading-product-item .loading-right .loading-price {
+    height: 20px
+}
+
+@keyframes c {
+    0% {
+        background-position: -350px 0
+    }
+    to {
+        background-position: 400px 0
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .loading-product-item .loading-left .loading-img {
+        width: 130px;
+        height: 147px;
+    }
+
+    .loading-product-item .loading-left [class*=loading-content] {
+        width: calc(100% - 140px);
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .loading-product-item .loading-left .loading-img {
+        width: 240px;
+        height: 193px;
+    }
+
+    .loading-product-item .loading-left [class*=loading-content] {
+        width: calc(100% - 250px);
+    }
+}

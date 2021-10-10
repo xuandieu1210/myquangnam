@@ -1,0 +1,49 @@
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    #menu-home a.logo {
+        left: 0px;
+    }
+
+    .new_hcm_menu ul {
+        margin-left: 11rem !important;
+    }
+
+    
+    #login-system {
+        float: right;
+    }
+
+    #modal-choose-register {
+        max-width: 40% !important;
+    }
+
+        #modal-choose-register div.row {
+            font-size: 30px !important;
+        }
+
+        #modal-choose-register p {
+            font-size: 12px !important;
+        }
+}
+
+.language-menu button, #login-system a.login {
+    height: 27px !important;
+     color:#fff;
+}
+
+@media only screen and (max-width: 600px) {
+    #login-system {
+        /*float: right;*/
+    }
+
+    #modal-choose-register {
+        max-width: 60% !important;
+    }
+
+        #modal-choose-register div.row {
+            font-size: 30px !important;
+        }
+
+        #modal-choose-register p {
+            font-size: 12px !important;
+        }
+}

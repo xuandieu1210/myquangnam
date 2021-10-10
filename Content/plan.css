@@ -1,0 +1,395 @@
+#lst_tour_created {
+    max-height: 250px;
+}
+#left-show-data .input-findname {
+  border-top-left-radius: 3px!important;
+  border-bottom-left-radius: 3px!important;
+  border: 1px solid #1AB394!important;
+}
+#left-show-data #menu-sort-price .filter-search {
+    margin-bottom: 10px;
+}
+#left-show-data .btn-search {
+  height: 34px;
+  background: #1AB394!important;
+  border-top-right-radius: 3px!important;
+  border-bottom-right-radius: 3px!important;
+  color: #fff;
+  font-weight: bold!important;
+}
+
+.fleft {
+    float: left;
+}
+.fright {
+    float: right;
+}
+#data-pagination {
+    display: inline-block;
+    list-style: none;
+	padding: 0;
+	margin-top: 10px;
+	width: 100%;
+    min-height: 300px;
+}
+#data-pagination li.plan-item {
+    margin-bottom: 10px;
+}
+#data-pagination li a.tour-image img {
+    background: #fff;
+    border-top-left-radius: 4px!important;
+    border-top-right-radius: 4px!important;
+    height: 183px;
+    width: 100%;
+}
+#data-pagination li .plan-item-info {
+    background: #fff;
+    border-bottom-left-radius: 4px!important;
+    border-bottom-right-radius: 4px!important;
+}
+    #data-pagination li .plan-item-info h3 {
+        margin-top: 0 !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 15px !important;
+        color: rgb(158,94,9) !important;
+        border-bottom: 1px solid;
+        padding: 8px 10px;
+    }
+.plan-item-info ul {
+    padding: 0px 10px!important
+}
+.plan-item-info ul li {
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+    font-size: 14px;
+}
+    .plan-item-info ul li span i {
+        color: #b20e13;
+        min-width: 20px;
+        display: inline-block;
+    }
+
+    .plan-item-info ul li .fright b {
+        color: #b20e13;
+    }
+.plan-info-action {
+    border-top: 1px solid #ebebeb;
+    text-align: right;
+    padding: 5px 10px;
+}
+
+    .plan-info-action span {
+        margin-left: 12px;
+        font-size: 12px;
+        color: #abaec5;
+    }
+
+.tour-image .tour-propose {
+    z-index: 1;
+    line-height: 80px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9167em;
+    letter-spacing: 0.04em;
+    text-indent: 5px;
+    display: block;
+    position: absolute;
+    left: 6px;
+    top: -4px;
+    width: 100px;
+    height: 102px;
+    color: #fff;
+    background: url(../images/general/propose.png) no-repeat;
+}
+.tour-image .tour-discount {
+    z-index: 1;
+    line-height: 70px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9167em;
+    letter-spacing: 0.04em;
+    text-indent: 4px;
+    display: block;
+    position: absolute;
+    left: 6px;
+    top: -3px;
+    width: 100px;
+    height: 102px;
+    color: #fff;
+    background: url(../images/general/discount.png) no-repeat;
+}
+.tour-image .tour-propose .tour-propose-text {
+  display: inline-block;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    writing-mode: lr-tb;
+}
+.tour-image .tour-discount .tour-discount-text {
+  display: inline-block;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    writing-mode: lr-tb;
+}
+
+
+/*checkbox*/
+#filters .checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin-top: 0!important;
+}
+#filters .checkbox label,
+#filters .radio label {
+	color: #333;
+    font-size: 1.1em;
+}
+#filters .radio {
+	margin-top: 0!important;
+}
+/*custom page 'add new title'*/
+
+#filters .item-filter {
+  background: #fff;
+}
+#left-show-data #sort-menu li a,
+#left-show-data .lst-data-title {
+  padding-left: 4px;
+}
+#left-show-data .lst-data-title {
+  color: #f50;
+}
+
+#left-show-data #sort-menu li a:hover {
+  cursor: pointer;
+  background: none;
+}
+
+#left-show-data #sort-menu li ul li a:hover {
+  background: #0af;
+}
+#filters {
+  display: inline-block;
+  width: 100%;
+}
+/*end*/
+@media (min-width: 992px) {
+    #data-pagination .col-md-5 {
+        width: 33.33333333%;
+    }
+}
+@media (min-width: 768px) {
+    #data-pagination .col-sm-5 {
+        width: 33.33333333%;
+    }
+}
+@media (max-width: 979px) {
+	.aui.ios input{
+		max-width: 100%!important;
+	}
+	.aui .btn {
+		padding: 10px 12px!important;
+		width: 100%!important;
+	}
+}
+@media (max-width: 767px) {
+  #data-pagination .custom-btn-view {
+    margin-top: 20px!important;
+  }
+    #data-pagination li a.tour-image img {
+        max-height: 236px;
+    }
+}
+
+/*search hotel*/
+#data-pagination .custom-btn-view {
+  background: #FF8918!important;
+  color: #fff!important;
+  text-shadow: none!important;
+  font-weight: bold!important;
+  border: 0!important;
+}
+/*end*/
+
+#sort-menu {
+  display: block;
+}
+
+#sort-menu li {
+  float: left;
+}
+
+#sort-menu li ul li {
+  display: block;
+  float: none;
+}
+
+#left-show-data .btn-clear-filter {
+	 top: 0px!important;
+	 border-radius: 3px!important;
+	 background: #fff;
+	 border: 0;
+	 padding: 6px 12px;
+	 border: 1px solid #cfcfcf;
+	 border-bottom: 1px solid #b5b5b5;
+}
+
+#left-show-data .sort-price button {
+	padding: 6px 12px!important;
+	outline: 0!important;
+}
+
+#left-show-data .btn-title-sort {
+	background: #fff!important;
+    font-weight: bold!important;
+    color: #009ae5!important;
+    border-top-left-radius: 3px!important;
+    border-bottom-left-radius: 3px!important;
+    box-shadow: none!important;
+    pointer-events: none!important;
+}
+
+#filters .item-filter .filter-icon {
+	font-size: 18px;
+	position: relative;
+	top: 8px;
+	right: 7px;
+	float: right;
+	color: rgb(158,94,9,.8);
+}
+
+#filters .item-filter fieldset {
+	padding: 0em 1em 0!important;
+}
+
+/* #filters .item-filter .service-data {
+	margin-top: -6px!important;
+} */
+
+#filters .item-filter .service {
+	cursor: pointer;
+	display: inline-block;
+    width: 100%;
+}
+
+#filters .item-filter .filter-title {
+	position: relative;
+	z-index: 1;
+	float: left;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: left;
+	height: 36px;
+	line-height: 36px;
+	width: 90%;
+    padding: 0 10px 0 13px !important;
+}
+
+.place-item-img {
+    position: relative;
+}
+.place-item-img .place-order {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: -10px;
+    right: -5px;
+    font-size: 13px;
+    border-radius: 50%!important;
+    background: #FF4343;
+    color: #fff;
+    border: 2px solid #FF4343;
+    z-index: -1;
+    text-align: center;
+    padding-top: 2px;
+}
+.place-item-img img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%!important;
+    border: 3px solid #FF4343;
+}
+.info-detail-tour {
+  height: auto;
+  width: 150px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 3px!important;
+  padding: 10px;
+  position: absolute;
+  left: 65px;
+  top: 10px;
+  box-shadow: 2px 2px 2px #454545
+}
+
+.info-detail-tour span {
+  display: block;
+}
+
+.info-detail-tour span.place_name {
+  color: #FF4343;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+.info-detail-tour span.place_address {
+  font-size: 11px;
+}
+
+.info-detail-tour span.place_address i {
+  color: #DA3B01!important
+}
+
+.title-link{
+	font-size: 15px;
+	font-weight: 200;
+	display: inline-block;
+    width: 100%;
+	margin-bottom: 5px;
+	line-height: 25px;
+}
+.title-link .name-link{
+	color: #3af;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.title-link .date-link{
+	color: red;
+	text-align: right;
+}
+		
+.quick_view_map {
+	font-weight: bold;
+	font-size: 0.9167em;
+	position: absolute;
+	right: 5px;
+	top: 0px;
+	padding: 4px;
+	color: #fff;
+	background: rgba(0,0,0, 0.8);
+	border-radius: 3px!important;
+}
+#modal-map-quickview {
+	max-width: 768px;
+	padding: 0;
+}
+#modal-map-quickview .mfp-close {
+	font-size: 30px!important;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1300px) {
+	#data-pagination li a.tour-image img {
+		min-height: 160px;
+	}
+}
