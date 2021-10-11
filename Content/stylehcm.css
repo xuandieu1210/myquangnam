@@ -3,16 +3,15 @@
     height: 216px !important;
 }
 
-#bodychild {
-}
+#bodychild {}
 
 #myNavbar ul li ul {
-    background: rgba(150,83,6,.9) !important;
+    background: rgba(150, 83, 6, .9) !important;
 }
 
-    #myNavbar ul li ul li a {
-        color: #fff;
-    }
+#myNavbar ul li ul li a {
+    color: #fff;
+}
 
 #scrollUp:hover {
     opacity: 1;
@@ -22,20 +21,20 @@
     padding: 0 !important;
 }
 
-    #menu-home a.logo {
-        position: absolute;
-        top: 3px;
-        z-index: 101;
-        left: 10px;
-    }
+#menu-home a.logo {
+    position: absolute;
+    top: 3px;
+    z-index: 101;
+    left: 10px;
+}
 
-    #menu-home #m-menubar {
-        padding-left: 18rem;
-        width: 100%;
-        height: 60px;
-        padding-top: 14px;
-        font-size: 14px;
-    }
+#menu-home #m-menubar {
+    padding-left: 18rem;
+    width: 100%;
+    height: 60px;
+    padding-top: 14px;
+    font-size: 14px;
+}
 
 .new_hcm_menu {
     height: 35px;
@@ -44,63 +43,64 @@
     width: 100%;
 }
 
-    .new_hcm_menu .container {
-        position: relative;
-    }
+.new_hcm_menu .container {
+    position: relative;
+}
 
-    .new_hcm_menu::before {
-        z-index: 0;
-        content: ' ';
-        display: block;
-        background: #fff;
-        position: absolute;
-        top: 0;
-        right: 65%;
-        bottom: 0;
-        left: 0;
-    }
+.new_hcm_menu::before {
+    z-index: 0;
+    content: ' ';
+    display: block;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 65%;
+    bottom: 0;
+    left: 0;
+}
 
-    .new_hcm_menu ul {
-        /*width: 81rem !important;*/
-        max-width: 712px;
-        height: 37px;
-        margin-left: 170px;
-        background: url(Images/submenu-top-qnm.png) no-repeat center center/cover;
-        padding: 0;
-    }
+.new_hcm_menu ul {
+    /*width: 81rem !important;*/
+    max-width: 712px;
+    height: 37px;
+    margin-left: 170px;
+    background: url(images/submenu-top-qnm.png) no-repeat center center/cover;
+    padding: 0;
+}
 
-        .new_hcm_menu ul li {
-            text-align: center;
-            width: 19%;
-            display: inline-block;
-            vertical-align: middle;
-            position: relative;
-            cursor: pointer;
-            padding: 8px 10px;
-        }
+.new_hcm_menu ul li {
+    text-align: center;
+    width: 19%;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+    padding: 8px 10px;
+}
 
-            .new_hcm_menu ul li a {
-                color: #fff;
-                font-weight: normal;
-                font-family: 'Oswald', sans-serif;
-            }
+.new_hcm_menu ul li a {
+    color: #fff;
+    font-weight: normal;
+    font-family: 'Oswald', sans-serif;
+}
 
-    .new_hcm_menu li.hm_sub1 a {
-        margin-left: 20px;
-    }
+.new_hcm_menu li.hm_sub1 a {
+    margin-left: 20px;
+}
 
-    .new_hcm_menu li.hm_sub2 a {
-        margin-left: 15px;
-    }
+.new_hcm_menu li.hm_sub2 a {
+    margin-left: 15px;
+}
 
-    .new_hcm_menu .hm_sub1:hover a,
-    .new_hcm_menu .hm_sub2:hover a,
-    .new_hcm_menu .hm_sub3:hover a {
-        border-radius: 10px;
-        background: #fff;
-        color: #6160ca;
-        padding: 2px 5px;
-    }
+.new_hcm_menu .hm_sub1:hover a,
+.new_hcm_menu .hm_sub2:hover a,
+.new_hcm_menu .hm_sub3:hover a {
+    border-radius: 10px;
+    background: #fff;
+    color: #6160ca;
+    padding: 2px 5px;
+}
+
 
 /*.new_hcm_menu .hm_sub2:hover a {
     border-radius: 10px;
@@ -122,15 +122,14 @@
         height: auto;
     }
     #menu-home a.logo {
-    position: absolute;
-    top: 3px;
-    z-index: 101;
-    left: 41%;
-}
-    .new_hcm_menu::before {        
-        right: 77%;       
+        position: absolute;
+        top: 3px;
+        z-index: 101;
+        left: 41%;
     }
-
+    .new_hcm_menu::before {
+        right: 77%;
+    }
     .new_hcm_menu ul {
         /*width: 81rem !important;*/
         height: 27px;
@@ -139,36 +138,31 @@
         padding: 0;
         background-size: cover;
     }
-
-        .new_hcm_menu ul li {
-            text-align: center;
-            width: 19%;
-            display: inline-block;
-            vertical-align: middle;
-            position: relative;
-            cursor: pointer;
-            padding: 0px 5px;
-            line-height: 10px;
-        }
-
-            .new_hcm_menu ul li a {
-                font-size: 10px;
-            }
-
+    .new_hcm_menu ul li {
+        text-align: center;
+        width: 19%;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        cursor: pointer;
+        padding: 0px 5px;
+        line-height: 10px;
+    }
+    .new_hcm_menu ul li a {
+        font-size: 10px;
+    }
     .new_hcm_menu {
         height: 0;
         position: absolute;
         z-index: 2;
         width: 100%;
     }
-
-        .new_hcm_menu li.hm_sub1 a {
-            margin-left: auto;
-        }
-
-        .new_hcm_menu li.hm_sub2 a {
-            margin-left: auto;
-        }
+    .new_hcm_menu li.hm_sub1 a {
+        margin-left: auto;
+    }
+    .new_hcm_menu li.hm_sub2 a {
+        margin-left: auto;
+    }
 }
 
 .rm-div-htc {
@@ -237,9 +231,9 @@
     font-size: 16px !important;
 }
 
-    .breadcrumb-htc-ol li {
-        font-weight: normal !important;
-    }
+.breadcrumb-htc-ol li {
+    font-weight: normal !important;
+}
 
 .active-htc {
     font-weight: bold !important;
@@ -263,16 +257,16 @@
     border-radius: 4px;
 }
 
-    .btnCustom-htc:hover,
-    .btnCustom-htc:focus,
-    .btnCustom-htc.focus {
-        text-decoration: none;
-    }
+.btnCustom-htc:hover,
+.btnCustom-htc:focus,
+.btnCustom-htc.focus {
+    text-decoration: none;
+}
 
-    .btnCustom-htc:active,
-    .btnCustom-htc.active {
-        background-image: none;
-    }
+.btnCustom-htc:active,
+.btnCustom-htc.active {
+    background-image: none;
+}
 
 .mg-top {
     margin-top: 88px !important;
