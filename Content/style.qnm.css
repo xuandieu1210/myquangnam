@@ -1440,3 +1440,8 @@ img.conma-top {
     height: 30px;
     width: 30px;
 }
+
+#selected_event {
+    max-height: 500px;
+    overflow-y: scroll;
+}
