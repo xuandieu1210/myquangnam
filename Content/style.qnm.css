@@ -1445,3 +1445,12 @@ img.conma-top {
     max-height: 500px;
     overflow-y: scroll;
 }
+
+.transport_news {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    height: 800px;
+    max-height: 500px;
+    overflow-y: scroll;
+}
